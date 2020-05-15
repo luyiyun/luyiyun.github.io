@@ -1,0 +1,1955 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="探索hexo博客实现">
+    <meta name="description" content="数学、统计、计算机及人工智能">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Hexo博客搭建 | 卢一云的博客</title>
+    <link rel="icon" type="image/png" href="/favicon1.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="卢一云的博客" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo1.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">卢一云的博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>Medias</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/musics">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Musics</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/movies">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Movies</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/books">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Books</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/galleries">
+          
+          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Galleries</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo1.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">卢一云的博客</div>
+        <div class="logo-desc">
+            
+            数学、统计、计算机及人工智能
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			Medias
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/musics " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Musics</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/movies " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Movies</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/books " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Books</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/galleries " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Galleries</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Hexo博客搭建</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/hexo/">
+                                <span class="chip bg-color">hexo</span>
+                            </a>
+                        
+                            <a href="/tags/vscode/">
+                                <span class="chip bg-color">vscode</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%BF%90%E7%BB%B4/" class="post-category">
+                                运维
+                            </a>
+                        
+                            <a href="/categories/%E8%BF%90%E7%BB%B4/Blog/" class="post-category">
+                                Blog
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-05-10
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2020-05-15
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    3.4k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    13 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>自己在学习的过程中，积累了大量的学习材料和笔记。对于增量学习过程，这些学习材料和笔记应该得到较好的组织，而且有些内容很容易因为不常使用而忘记。所以将其进行有条理的整理，便于进行随时查阅，是非常有必要的。</p>
+<p>显然，搭建一个个人博客是一个比较合适的选择。我希望我的个人博客能够满足下面的特点：</p>
+<ul>
+<li>漂亮，好看，逼格满满。</li>
+<li>拥有足够的表现力，可以满足我的多种需求（比如学习笔记、论文笔记等）。</li>
+<li>可以自动化处理多种格式的文件（比如<code>.ipynb</code>和<code>.Rmd</code>，这些文件是我学习python和R时常使用的格式）。</li>
+<li>可以进行自定义修改。</li>
+</ul>
+<p>经过一番的折腾，我选择了vscode + Hexo + pandoc + github page + 脚本辅助的模式。我希望它能够满足我的以上的需求：</p>
+<ul>
+<li>vscode借助其各种插件（vim、Paste Image等）可以实现舒适的文本编辑体验。</li>
+<li>Hexo有各种漂亮的主题，简单的操作就可以定制化一个漂亮的个人博客；Hexo也有各种js脚本制作的插件，可以实现更多的功能以（字数统计、词云、插入音乐等）。</li>
+<li>pandoc版的markdown拥有比传统markdown更多的语法，更强的表现力。</li>
+<li>github page提供了免费的静态网页托管站点，而且依托其issue还可以增加评论功能。</li>
+<li>通过python、js等脚本语言，可以进一步扩宽Hexo的功能（编写新的Hexo脚本），这样我们可以将更多类型的文本整合到博客系统中，并且进行高度的自定义。</li>
+</ul>
+<p>现在，我将我搭建博客的全过程进行记录，以便于发现问题和总结，并探索一个快速的、可重复的操作步骤。</p>
+<h1 id="第一部分-依赖安装">第一部分 依赖安装</h1>
+<h2 id="git安装">1. git安装</h2>
+<p>对于linux系统，使用root权限下的包管理器安装即可；对于windows，使用可执行安装文件，一步一步根据引导即可完成安装。</p>
+<h2 id="node.js安装">2. node.js安装</h2>
+<p>如果是windows系统，同样使用引导界面安装即可。</p>
+<p>如果是linux系统，除了使用包管理器安装以外，还可以使用下面的方式（不需要root权限，便于管理）:</p>
+<ol type="1">
+<li>从<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">node官网</a>中下载linux的2进制安装包；</li>
+<li><code>tar -Jxvf node-v12.16.3-linux-x64.tar.xz</code>，解压；</li>
+<li>（创建<code>.local/bin</code>，没有必要将这个路径加入到环境变量中，其默认就在环境变量中），将<code>bin/node</code>（别忘了<code>npm</code>和<code>npx</code>）软连接到<code>.local/bin</code>中；</li>
+<li><code>node -v</code>查看是否成功。</li>
+</ol>
+<h2 id="hexo安装">3. Hexo安装</h2>
+<p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo</a>依赖于<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git</a>和<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">node.js</a>，其作为node.js的一个软件包存在的，可以使用npm进行安装管理。</p>
+<blockquote>
+<p>这里需要介绍以下<code>npm</code>的规则，其默认是局部安装模式。如果使用全局安装模式（<code>-g</code>），则相关内容会被安装到<code>prefix/lib/node_modules</code>中（可以使用<code>npm help npm</code>来查看，windows是在C盘下面）。如果是局部安装模式，则相关内容会被安装到当前的文件夹下的node_modules中。</p>
+</blockquote>
+<p>为了提高npm的安装速度，可以<a href="https://blog.csdn.net/quuqu/article/details/64121812" target="_blank" rel="noopener">设置一下淘宝镜像</a>或使用<a href="https://developer.aliyun.com/mirror/NPM" target="_blank" rel="noopener"><code>cnpm</code></a>，然后全局安装hexo-cli（全局安装可以使得我们在任何位置使用<code>hexo</code>命令）：</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">npm</span> config set registry https://registry.npm.taobao.org</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="ex">npm</span> install hexo-cli -g</span></code></pre></div>
+<p>注意，如果在linux上解压二进制安装包安装的node.js，则其全局安装位置可能并不在环境变量中，需要手动再将<code>hexo</code>加入环境变量才好使用。</p>
+<h2 id="pandoc部分">4. Pandoc部分</h2>
+<p>其安装和node.js的安装方式类似，比照其安装即可。</p>
+<h2 id="vscode">5. vscode</h2>
+<p>vscode的安装不再赘述，这里侧重于工作流程、配置和一些好用的插件。</p>
+<p>整个工作流程可以是这样的：</p>
+<ol type="1">
+<li>直接在<code>_posts</code>文件夹下创建工作环境，编辑markdown文件，需要导入图片的时候，就在其同级目录下创建一个同名文件夹，将图片放入其中来引用即可（使用<a href="https://marketplace.visualstudio.com/items?itemName=mushan.vscode-paste-image" target="_blank" rel="noopener">Paste Image</a>插件可以自动创建这个目录）。</li>
+<li>因为所有的markdown文件都必须在<code>_post</code>目录下，所以为了容易区分，文件命名很重要，可以使用<code>-</code>来增加可读性，比如关于pytorch的学习可以使用<code>python-pytorch-xx</code>、论文的阅读总结可以使用<code>paper-xx</code>。</li>
+</ol>
+<h2 id="paste-image">5.1 <a href="https://marketplace.visualstudio.com/items?itemName=mushan.vscode-paste-image" target="_blank" rel="noopener">Paste Image</a></h2>
+<p>其作用是可以将剪切板中的图片直接放入markdown中（快捷键为C-A-v），并保存到指定的文件夹下。我对此插件进行了下列配置：</p>
+<ol type="1">
+<li>保存剪切板图片的时候，使用当前正在编辑的文件的名称作为图片文件名称的前缀，使用时间作为其名称的主题；</li>
+<li>设置其保存路径为当前文件同级目录下的同名文件夹；</li>
+<li>在保存图片的时候，会出现vscode input box，从而可以更改路径； <img src="/2020/05/10/blog-build/BlogBuild_2020-05-10-18-03-00.png" alt="PasteImage的配置"></li>
+</ol>
+<h1 id="第二部分-配置博客">第二部分 配置博客</h1>
+<p>本次博客配置使用的主题为<a href="https://github.com/blinkfox/hexo-theme-matery.git" target="_blank" rel="noopener">hexo-theme-matery</a>，其有比较全面的<a href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md" target="_blank" rel="noopener">中文配置说明</a>。另外，博客的配置还参考了两位大佬 -- <a href="https://zhuanlan.zhihu.com/p/35668237" target="_blank" rel="noopener">godweiyang</a>和<a href="https://qinnian.xyz/CreateBlog.html" target="_blank" rel="noopener">钦の念</a>的配置过程，受益匪浅。</p>
+<p>另外，在配置过程中，为了添加更多的功能，安装了众多的hexo插件，这些插件都集中记录在此：</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># --save表示安装使用依赖</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="ex">npm</span> install hexo-deployer-git --save           <span class="co"># 用于进行git部署</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="ex">npm</span> install hexo-wordcount --save              <span class="co"># 统计文章字数</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="ex">npm</span> install gitalk --save                      <span class="co"># gitalk评论系统</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="ex">npm</span> install valine --save                      <span class="co"># valine评论系统</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="ex">npm</span> install hexo-prism-plugin --save           <span class="co"># 代码高亮</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="ex">npm</span> install hexo-generator-search --save       <span class="co"># 搜索</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="ex">npm</span> install hexo-permalink-pinyin --save       <span class="co"># 汉字转拼音</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a><span class="ex">npm</span> install hexo-filter-github-emojis --save   <span class="co"># emojis表情</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a><span class="ex">npm</span> install hexo-generator-feed --save         <span class="co"># RSS订阅</span></span>
+<span id="cb2-11"><a href="#cb2-11"></a><span class="ex">npm</span> install https://github.com/xcodebuild/hexo-asset-image --save</span>
+<span id="cb2-12"><a href="#cb2-12"></a><span class="ex">npm</span> install hexo-renderer-pandoc --save</span>
+<span id="cb2-13"><a href="#cb2-13"></a><span class="ex">npm</span> install hexo-helper-live2d --save          <span class="co"># 动画人物支持</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a><span class="ex">npm</span> install live2d-widget-model-shizuku --save <span class="co"># 动画人物支持</span></span>
+<span id="cb2-15"><a href="#cb2-15"></a><span class="ex">npm</span> install hexo-generator-sitemap --save      <span class="co"># 添加站点地图</span></span>
+<span id="cb2-16"><a href="#cb2-16"></a><span class="ex">npm</span> install hexo-lazyload-image --save         <span class="co"># 图片懒加载</span></span></code></pre></div>
+<h2 id="创建站点">1. 创建站点</h2>
+<ol type="1">
+<li>在站点文件夹下使用<code>hexo init</code>命令；</li>
+<li>别忘了使用<code>npm install</code>来安装一些必要的组件；</li>
+<li>现在可以通过<code>npm g &amp;&amp; npm s</code>来打开本地服务器，然后连接<code>http://localhost:4000/</code>来查看是否成功： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-10-23.png" alt="页面效果"></li>
+</ol>
+<h2 id="博客部署至github">2. 博客部署至github</h2>
+<ol type="1">
+<li><p>创建一个名为<code>luyiyun.github.io</code>的repository；</p></li>
+<li><p>配置SSH key（为了不用每次都输密码）；</p></li>
+<li><p>安装<code>hexo-deployer-git</code>插件，更改博客<code>_config.yml</code>文件，添加deploy项： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-12-51.png" alt="添加deploy配置"></p></li>
+<li><p>运行以下的命令：</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">hexo</span> clean <span class="kw">&amp;&amp;</span> <span class="ex">hexo</span> g <span class="kw">&amp;&amp;</span> <span class="ex">hexo</span> d</span></code></pre></div>
+<p>然后打开<code>luyiyun.github.io</code>，看是否部署成功： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-19-05.png" alt="部署成功"></p></li>
+</ol>
+<p>以上在<a href="https://qinnian.xyz/CreateBlog.html" target="_blank" rel="noopener">钦の念</a>的博客中有更加详细的叙述。</p>
+<h2 id="申请个人域名">2. 申请个人域名</h2>
+<ol type="1">
+<li><p>申请一个新的域名<code>luyiyun.online</code>（腾讯云），别忘了添加一条解析记录使之能够正常解析；</p></li>
+<li><p>在<code>/source</code>目录下，新建<code>CNAME</code>文件，然后写上域名，保存，然后<code>hexo g &amp;&amp; hexo d</code>部署；</p></li>
+<li><p><code>CNAME</code>文件会被放到<code>public</code>中并一并上传到github上；</p></li>
+<li><p>查看repository的settings，发现以下结果，代表可正常使用： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-38-16.png" alt="个人域名配置成功"></p></li>
+<li><p>可以使用这个域名来打开看看了： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-39-38.png" alt="个人域名解析成功"></p></li>
+</ol>
+<h2 id="博客配置文件">3. 博客配置文件</h2>
+<p>博客的配置文件是根目录下的<code>_config.yml</code>，现在我们对其中的内容依次进行处理：</p>
+<ol type="1">
+<li><p>站点基本信息配置： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-43-06.png" alt="site"></p></li>
+<li><p>网站的url： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-44-21.png" alt="url"></p></li>
+<li><p>分页，设置这个是为了适配<a href="https://github.com/blinkfox/hexo-theme-matery.git" target="_blank" rel="noopener">hexo-theme-matery</a>： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-46-33.png" alt="per_page"></p></li>
+<li><p>主题，这里使用<a href="https://github.com/blinkfox/hexo-theme-matery.git" target="_blank" rel="noopener">hexo-theme-matery</a>： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-48-13.png" alt="theme"></p>
+<blockquote>
+<p>我们在<code>/themes</code>文件夹下使用git来下载该主题：</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">git</span> clone https://github.com/blinkfox/hexo-theme-matery.git</span></code></pre></div>
+</blockquote></li>
+<li><p>代码高亮，使用<code>hexo-prism-plugin</code>，并在<code>_config.yml</code>中加入以下内容： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-50-24.png" alt="hightlight"></p>
+<blockquote>
+<p>前面有默认有<code>highlight: enable</code>的配置，所以这两个只保留一个即可。</p>
+</blockquote></li>
+<li><p>搜索，使用<code>hexo-generator-search</code>插件，并在配置文件中加入： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-52-45.png" alt="search"></p></li>
+<li><p>中文链接转拼音，使用<code>hexo-permalink-pinyin</code>： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-54-47.png" alt="pinyin"></p></li>
+<li><p>添加对<code>emoji</code>表情的支持，<code>hexo-filter-github-emojis</code> <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-56-43.png" alt="emoji"></p></li>
+<li><p>添加RSS订阅支持，<code>hexo-generator-feed</code>， <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-58-22.png" alt="RSS"></p>
+<p>出现下面情况，说明RSS配置成功： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-18-12-25.png" alt="RSS-OK"></p></li>
+<li><p>图片路径改为绝对路径，需要安装<code>hexo-asset-image</code>，并将<code>post_asset_folder</code>改为<code>true</code>。</p>
+<blockquote>
+<p>设置<code>_config.yml</code>中的<code>post_asset_folder: true</code>，这意味着使用<code>hexo new &lt;blog&gt;</code>时，在<code>_posts</code>中不只生成了一个md文件，而且还出现了一个同名文件夹，用来放md文件引用的内容。<del>我们可以在md文件中使用<code>![](name.jpg)</code>来引入图片。</del>但我们不会这样做，因为如此引入图片，在编写博客的时候是无法预览的，我们应该使用<code>![](&lt;blog&gt;/name.jpg)</code>的格式来引入。该插件使得我们就算这样引入图片，hexo也可以正确读取并处理它。</p>
+</blockquote></li>
+<li><p>安装<code>hexo-renderer-pandoc</code>，提供pandoc语法支持。</p></li>
+<li><p>添加动漫人物，需要安装两个插件，并在根目录配置文件中添加下面的配置：</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode yml"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">live2d</span><span class="kw">:</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="at">    </span><span class="fu">enable</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="at">    </span><span class="fu">scriptFrom</span><span class="kw">:</span><span class="at"> local</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="at">    </span><span class="fu">pluginRootPath</span><span class="kw">:</span><span class="at"> live2dw/</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="at">    </span><span class="fu">pluginJsPath</span><span class="kw">:</span><span class="at"> lib/</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="at">    </span><span class="fu">pluginModelPath</span><span class="kw">:</span><span class="at"> assets/</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="at">    </span><span class="fu">tagMode</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="at">    </span><span class="fu">log</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a><span class="at">    </span><span class="fu">model</span><span class="kw">:</span></span>
+<span id="cb5-10"><a href="#cb5-10"></a><span class="at">        </span><span class="fu">use</span><span class="kw">:</span><span class="at"> live2d-widget-model-shizuku</span></span>
+<span id="cb5-11"><a href="#cb5-11"></a><span class="at">    </span><span class="fu">display</span><span class="kw">:</span></span>
+<span id="cb5-12"><a href="#cb5-12"></a><span class="at">        </span><span class="fu">position</span><span class="kw">:</span><span class="at"> right</span></span>
+<span id="cb5-13"><a href="#cb5-13"></a><span class="at">        </span><span class="fu">width</span><span class="kw">:</span><span class="at"> </span><span class="dv">150</span></span>
+<span id="cb5-14"><a href="#cb5-14"></a><span class="at">        </span><span class="fu">height</span><span class="kw">:</span><span class="at"> </span><span class="dv">300</span></span>
+<span id="cb5-15"><a href="#cb5-15"></a><span class="at">    </span><span class="fu">mobile</span><span class="kw">:</span></span>
+<span id="cb5-16"><a href="#cb5-16"></a><span class="at">        </span><span class="fu">show</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb5-17"><a href="#cb5-17"></a><span class="at">    </span><span class="fu">react</span><span class="kw">:</span></span>
+<span id="cb5-18"><a href="#cb5-18"></a><span class="at">        </span><span class="fu">opacity</span><span class="kw">:</span><span class="at"> </span><span class="fl">0.7</span></span></code></pre></div></li>
+<li><p>SEO配置</p>
+<p>SEO（Search Engine Optimization），即搜索引擎优化：</p>
+<blockquote>
+<p>搜索引擎优化是一种通过了解搜索引擎的运作规则来调整网站，以及提高目的网站在有关搜索引擎内排名的方式。</p>
+</blockquote>
+<ol type="a">
+<li><p>验证网站。如果在谷歌搜索<code>site:luyiyun.online</code>查不到，这说明未被收录，则需要前往Google Search Console，进行验证： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-18-53-12.png" alt="gsc"></p>
+<p>方式和添加解析是一样，在腾讯云的控制台，添加DNS解析记录即可，其中记录值使用Google Search Console提供的值： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-18-55-35.png" alt="gsc2"></p>
+<p>等待几分钟后，在Google Search Console中进行验证，通过即可。</p></li>
+<li><p>添加站点地图作用是告诉搜索引擎你的网站结构等信息，让搜索引擎更智能抓取内容。需要安装<code>hexo-generator-sitemap</code>插件，并在根目录的配置文件下添加： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-18-59-19.png" alt="sitemap"></p></li>
+<li><p>当<code>hexo g</code>后，public中出现了<code>sitemap.xml</code>文件。我们可以再进入Google Search Console，然后把这个站点地图（是这个sitemap文件）添加进去， <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-19-10-01.png" alt="sitemap2"></p></li>
+<li><p>简化路径： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-19-12-03.png" alt="path"></p></li>
+</ol></li>
+</ol>
+<h2 id="新建主题文章模板">4. 新建主题文章模板</h2>
+<p>建议将<code>/scaffolds/post.md</code>修改至：</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1"></a><span class="co">---</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="an">title:</span><span class="co"> Hexo博客搭建</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="an">date:</span><span class="co"> 1589105282000</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="an">author:</span><span class="co"> Lu Yiyun</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="an">img:</span><span class="co"> "文章特色图，空则hexo-theme-matery自动进行填补"</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="an">coverImg:</span><span class="co"> "文章在首页轮播封面时显示的图片，默认使用文章特色图"</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a><span class="an">top:</span><span class="co"> true</span></span>
+<span id="cb6-8"><a href="#cb6-8"></a><span class="an">cover:</span><span class="co"> true</span></span>
+<span id="cb6-9"><a href="#cb6-9"></a><span class="an">toc:</span><span class="co"> true</span></span>
+<span id="cb6-10"><a href="#cb6-10"></a><span class="an">mathjax:</span><span class="co"> true</span></span>
+<span id="cb6-11"><a href="#cb6-11"></a><span class="an">summary:</span><span class="co"> "自定义文章的摘要，不然自动从文章正文中吸取"</span></span>
+<span id="cb6-12"><a href="#cb6-12"></a><span class="an">categories:</span></span>
+<span id="cb6-13"><a href="#cb6-13"></a><span class="co">  - A</span></span>
+<span id="cb6-14"><a href="#cb6-14"></a><span class="co">  - B</span></span>
+<span id="cb6-15"><a href="#cb6-15"></a><span class="an">tags:</span></span>
+<span id="cb6-16"><a href="#cb6-16"></a><span class="co">  - a</span></span>
+<span id="cb6-17"><a href="#cb6-17"></a><span class="co">  - b</span></span>
+<span id="cb6-18"><a href="#cb6-18"></a><span class="an">keywords:</span></span>
+<span id="cb6-19"><a href="#cb6-19"></a><span class="co">---</span></span></code></pre></div>
+<h2 id="新建工具页面">5. 新建工具页面</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="ex">hexo</span> new page <span class="st">"categories"</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="ex">hexo</span> new page <span class="st">"tags"</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="ex">hexo</span> new page <span class="st">"about"</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="ex">hexo</span> new page <span class="st">"contact"</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="ex">hexo</span> new page <span class="st">"friends"</span></span></code></pre></div>
+<p>并都将其中的<code>index.md</code>文件改写为以下格式：</p>
+<pre><code>---
+title: categories
+date: 2020-05-10 13:25:48
+type: "categories"
+layout: "categories"
+---</code></pre>
+<p>然后手动再<code>/source/</code>下创建一个<code>404.md</code>，并填写一下内容：</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1"></a><span class="ex">---</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="ex">title</span>: 404</span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="ex">date</span>: 2019-07-19 16:41:10</span>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="ex">type</span>: <span class="st">"404"</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a><span class="ex">layout</span>: <span class="st">"404"</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a><span class="ex">description</span>: <span class="st">"你来到了没有知识的荒原 :("</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a><span class="ex">---</span></span></code></pre></div>
+<p>并在<code>/themes/hexo-theme-matery/layout/</code>下新建<code>404.ejs</code>，并添加以下内容：</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb10-1"><a href="#cb10-1"></a><span class="op">&lt;</span>style type<span class="op">=</span><span class="st">"text/css"</span><span class="op">&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a>    <span class="co">/* don't remove. */</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a>    <span class="op">.</span><span class="at">about</span><span class="op">-</span>cover {</span>
+<span id="cb10-4"><a href="#cb10-4"></a>        <span class="dt">height</span><span class="op">:</span> 75vh<span class="op">;</span></span>
+<span id="cb10-5"><a href="#cb10-5"></a>    }</span>
+<span id="cb10-6"><a href="#cb10-6"></a><span class="op">&lt;/</span>style<span class="op">&gt;</span></span>
+<span id="cb10-7"><a href="#cb10-7"></a></span>
+<span id="cb10-8"><a href="#cb10-8"></a><span class="op">&lt;</span>div <span class="kw">class</span><span class="op">=</span><span class="st">"bg-cover pd-header about-cover"</span><span class="op">&gt;</span></span>
+<span id="cb10-9"><a href="#cb10-9"></a>    <span class="op">&lt;</span>div <span class="kw">class</span><span class="op">=</span><span class="st">"container"</span><span class="op">&gt;</span></span>
+<span id="cb10-10"><a href="#cb10-10"></a>        <span class="op">&lt;</span>div <span class="kw">class</span><span class="op">=</span><span class="st">"row"</span><span class="op">&gt;</span></span>
+<span id="cb10-11"><a href="#cb10-11"></a>            <span class="op">&lt;</span>div <span class="kw">class</span><span class="op">=</span><span class="st">"col s10 offset-s1 m8 offset-m2 l8 offset-l2"</span><span class="op">&gt;</span></span>
+<span id="cb10-12"><a href="#cb10-12"></a>                <span class="op">&lt;</span>div <span class="kw">class</span><span class="op">=</span><span class="st">"brand"</span><span class="op">&gt;</span></span>
+<span id="cb10-13"><a href="#cb10-13"></a>                    <span class="op">&lt;</span>div <span class="kw">class</span><span class="op">=</span><span class="st">"title center-align"</span><span class="op">&gt;</span></span>
+<span id="cb10-14"><a href="#cb10-14"></a>                        <span class="dv">404</span></span>
+<span id="cb10-15"><a href="#cb10-15"></a>                    <span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
+<span id="cb10-16"><a href="#cb10-16"></a>                    <span class="op">&lt;</span>div <span class="kw">class</span><span class="op">=</span><span class="st">"description center-align"</span><span class="op">&gt;</span></span>
+<span id="cb10-17"><a href="#cb10-17"></a>                        <span class="op">&lt;%=</span> page<span class="op">.</span><span class="at">description</span> <span class="op">%&gt;</span></span>
+<span id="cb10-18"><a href="#cb10-18"></a>                    <span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
+<span id="cb10-19"><a href="#cb10-19"></a>                <span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
+<span id="cb10-20"><a href="#cb10-20"></a>            <span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
+<span id="cb10-21"><a href="#cb10-21"></a>        <span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
+<span id="cb10-22"><a href="#cb10-22"></a>    <span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
+<span id="cb10-23"><a href="#cb10-23"></a><span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
+<span id="cb10-24"><a href="#cb10-24"></a></span>
+<span id="cb10-25"><a href="#cb10-25"></a><span class="op">&lt;</span>script<span class="op">&gt;</span></span>
+<span id="cb10-26"><a href="#cb10-26"></a>    <span class="co">// 每天切换 banner 图.  Switch banner image every day.</span></span>
+<span id="cb10-27"><a href="#cb10-27"></a>    $(<span class="st">'.bg-cover'</span>)<span class="op">.</span><span class="fu">css</span>(<span class="st">'background-image'</span><span class="op">,</span> <span class="st">'url(/medias/banner/'</span> <span class="op">+</span> <span class="kw">new</span> <span class="bu">Date</span>()<span class="op">.</span><span class="fu">getDay</span>() <span class="op">+</span> <span class="st">'.jpg)'</span>)<span class="op">;</span></span>
+<span id="cb10-28"><a href="#cb10-28"></a><span class="op">&lt;/</span>script<span class="op">&gt;</span></span></code></pre></div>
+<p>这样，我们就添加了一个404页面了。</p>
+<h2 id="主题配置文件">6. 主题配置文件</h2>
+<p>在<code>/themes/hexo-theme-matery</code>下有一个<code>_config.yml</code>文件，用来控制主题的诸多属性。</p>
+<ol type="1">
+<li><p>第一部分配置菜单导航，icon可以在<a href="https://fontawesome.com/" target="_blank" rel="noopener">Font Awesome</a>中找： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-15-18-16.png" alt="theme-menu"></p></li>
+<li><p>站点运行时间： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-15-21-03.png" alt="theme-start-time"></p></li>
+<li><p>首页配置，包括封面轮播图、“梦想”和音乐： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-15-23-59.png" alt="theme-index"></p></li>
+<li><p>配置logo、favicon： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-16-42-12.png" alt="theme-logo"></p></li>
+<li><p>联系方式： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-16-44-00.png" alt="theme-link"></p></li>
+<li><p>文章目录设置： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-16-45-03.png" alt="theme-toc"></p></li>
+<li><p>代码块部分： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-16-45-50.png" alt="theme-code-block"></p></li>
+<li><p>打赏部分，记得替换为自己的二维码： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-16-46-43.png" alt="theme-reward"></p></li>
+<li><p>复制时追加版权信息： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-16-48-45.png" alt="theme-copyright"></p></li>
+<li><p>激活mathjax： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-16-49-25.png" alt="theme-math"></p></li>
+<li><p>开启文章信息，需要安装<code>hexo-wordcount</code>插件： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-16-52-08.png" alt="theme-word"></p></li>
+<li><p>"关于"页面的配置： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-16-55-47.png" alt="theme-about"></p></li>
+<li><p>评论配置，这里会开启两个评论：基于github issue的gitalk和无后端的valine：</p>
+<ul>
+<li><p>gitalk，安装相关插件<code>gitalk</code>：</p>
+<ol type="a">
+<li><p>我们需要创建一个新的github repository来储存评论： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-01-01.png" alt="theme-gitalk1"></p></li>
+<li><p>开启issue功能（默认开启）： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-02-49.png" alt="theme-gitalk2"></p></li>
+<li><p>注册一个github application： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-08-21.png" alt="theme-gitalk3"></p>
+<p>并得到Client ID和Client Secret： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-09-29.png" alt="theme-gitalk4"></p></li>
+<li><p>将这些信息配置到<code>_config.yml</code>文件中： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-12-25.png" alt="theme-gitalk5"></p></li>
+<li><p>最终效果： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-22-28.png" alt="theme-gitalk6"> <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-23-05.png" alt="theme-gitalk7"></p></li>
+</ol></li>
+<li><p><a href="https://valine.js.org/quickstart.html" target="_blank" rel="noopener">valine</a>，需要先安装插件<code>valine</code>：</p>
+<ol type="a">
+<li><p>首先我们需要注册一个LeanCloud账户，并完成实名认证；</p></li>
+<li><p>创建一个应用，然后找到其ID和Key： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-31-24.png" alt="theme-valine1"></p></li>
+<li><p>将这些信息配置到<code>_config.yml</code>文件中： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-34-10.png" alt="theme-valine2"></p></li>
+<li><p>效果： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-36-40.png" alt="theme-valine3"></p></li>
+<li><p>我们可以在LeanCloud中对这些评论进行管理： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-38-10.png" alt="theme-valine4"></p></li>
+</ol></li>
+</ul></li>
+</ol>
+<h2 id="提高加载速度">7. 提高加载速度</h2>
+<p>可以使用<a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank" rel="noopener">Google PageSpeed Insights</a>来对网站的速度进行测试，并找到其瓶颈所在，其他的各种测速工具可以见<a href="https://qinnian.xyz/CreateBlog.html" target="_blank" rel="noopener">钦の念</a>的博客。</p>
+<h3 id="图片懒加载">7.1 图片懒加载</h3>
+<p>第一种可以提高速度的方式是进行图片的懒加载，安装<code>hexo-lazyload-image</code>，并在站点配置文件中加入：</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode yml"><code class="sourceCode yaml"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">lazyload</span><span class="kw">:</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="fu">enable</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="fu">onlypost</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span><span class="co">   # true则只会懒加载文章中的图片，logo头像什么的不会</span></span>
+<span id="cb11-4"><a href="#cb11-4"></a><span class="fu">loadingImg</span><span class="kw">:</span><span class="at"> ./medias/loading.gif</span></span></code></pre></div>
+<p><em>此插件与<code>hexo-asset-image</code>似乎不兼容，未解决。</em></p>
+<h3 id="gitee和github双线部署">7.2 gitee和github双线部署</h3>
+<p><em>未完待续...</em></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Luyiyun</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://luyiyun.online/2020/05/10/blog-build/">http://luyiyun.online/2020/05/10/blog-build/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Luyiyun</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/hexo/">
+                                    <span class="chip bg-color">hexo</span>
+                                </a>
+                            
+                                <a href="/tags/vscode/">
+                                    <span class="chip bg-color">vscode</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '4e7ebe26963be2b65c6c',
+        clientSecret: '6d98c54068ee323b25ad3cc4951365b0a0f9a837',
+        repo: 'luyiyun.github.io',
+        owner: 'luyiyun',
+        admin: ["luyiyun"],
+        id: '2020-05-10T18-08-02',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: '3LgoChPNG6wyjHmjSYBF587o-gzGzoHsz',
+        appKey: 'JF5J72u3hdEK2QD6vilmf6Be',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'wavatar',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '如果你没有GitHub账号，还可以在这里评论啦！'
+    });
+</script>
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2020/05/13/html-ji-chu/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="HTML基础">
+                        
+                        <span class="card-title">HTML基础</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            HTML (HyperText Markup Language) 不是一门编程语言，而是一种用来告知浏览器如何组织页面的标记语言。HTML 可复杂、可简单，一切取决于开发者。它由一系列的元素（elements）组成，这些元素可以用来包围不同
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-13
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Web/" class="post-category">
+                                    Web
+                                </a>
+                            
+                            <a href="/categories/Web/HTML/" class="post-category">
+                                    HTML
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/MDN%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">MDN学习</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/05/10/zsh-an-zhuang/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="zsh及oh-my-zsh安装">
+                        
+                        <span class="card-title">zsh及oh-my-zsh安装</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            zsh以及oh-my-zsh除了可以提高终端的颜值，而且通过众多的插件可以提高我们的使用体验，所以这里将其安装和使用总结在这里，便于之后使用。
+zsh安装
+zsh是一个类似bash的shell，同样也是一个脚本语言集。
+包管理器安装
+这就不
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%BF%90%E7%BB%B4/" class="post-category">
+                                    运维
+                                </a>
+                            
+                            <a href="/categories/%E8%BF%90%E7%BB%B4/Linux/" class="post-category">
+                                    Linux
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/zsh/">
+                        <span class="chip bg-color">zsh</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 卢一云的博客<br />'
+            + '文章作者: Lu Yiyun<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('1'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="81582182"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.3'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">Lu Yiyun</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">9.8k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "5";
+                    var startDate = "10";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/luyiyun" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:18845728185@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1035724078" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1035724078" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+
+</html>

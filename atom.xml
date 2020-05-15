@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>卢一云的博客</title>
+  
+  <subtitle>不只是学习</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://luyiyun.online/"/>
+  <updated>2020-05-15T06:56:22.318Z</updated>
+  <id>http://luyiyun.online/</id>
+  
+  <author>
+    <name>Lu Yiyun</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HTML表格</title>
+    <link href="http://luyiyun.online/2020/05/14/html-biao-ge/"/>
+    <id>http://luyiyun.online/2020/05/14/html-biao-ge/</id>
+    <published>2020-05-14T15:38:49.000Z</published>
+    <updated>2020-05-15T06:56:22.318Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;主要使用到的标签：&lt;code&gt;table&lt;/code&gt;、&lt;code&gt;tr&lt;/code&gt;、&lt;code&gt;th&lt;/code&gt;、&lt;code&gt;td&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;使用表格进行布局的坏处：&lt;/p&gt;
+&lt;ol
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Web" scheme="http://luyiyun.online/categories/Web/"/>
+    
+      <category term="HTML" scheme="http://luyiyun.online/categories/Web/HTML/"/>
+    
+    
+      <category term="MDN学习" scheme="http://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTML多媒体</title>
+    <link href="http://luyiyun.online/2020/05/13/html-duo-mei-ti/"/>
+    <id>http://luyiyun.online/2020/05/13/html-duo-mei-ti/</id>
+    <published>2020-05-13T15:03:55.000Z</published>
+    <updated>2020-05-15T06:55:04.582Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;html图片&quot;&gt;HTML图片&lt;/h1&gt;
+&lt;p&gt;警告：大多数图片是有版权的。除非是以下的情况，不然不要在你的网页上使用图片：&lt;/p&gt;
+&lt;ol
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Web" scheme="http://luyiyun.online/categories/Web/"/>
+    
+      <category term="HTML" scheme="http://luyiyun.online/categories/Web/HTML/"/>
+    
+    
+      <category term="MDN学习" scheme="http://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTML基础</title>
+    <link href="http://luyiyun.online/2020/05/13/html-ji-chu/"/>
+    <id>http://luyiyun.online/2020/05/13/html-ji-chu/</id>
+    <published>2020-05-13T10:59:34.000Z</published>
+    <updated>2020-05-15T06:48:01.170Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;HTML (HyperText Markup Language)&lt;/strong&gt; 不是一门编程语言，而是一种用来告知浏览器如何组织页面的标记语言。HTML
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Web" scheme="http://luyiyun.online/categories/Web/"/>
+    
+      <category term="HTML" scheme="http://luyiyun.online/categories/Web/HTML/"/>
+    
+    
+      <category term="MDN学习" scheme="http://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo博客搭建</title>
+    <link href="http://luyiyun.online/2020/05/10/blog-build/"/>
+    <id>http://luyiyun.online/2020/05/10/blog-build/</id>
+    <published>2020-05-10T10:08:02.000Z</published>
+    <updated>2020-05-15T06:17:47.943Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;自己在学习的过程中，积累了大量的学习材料和笔记。对于增量学习过程，这些学习材料和笔记应该得到较好的组织，而且有些内容很容易因为不常使用而忘记。所以将其进行有条理的整理，便于进行随时查阅，是非常有必要的。&lt;/p&gt;
+&lt;p&gt;显然，搭建一个个人博客是一个比较合适的选择。我希望我的个
+        
+      
+    
+    </summary>
+    
+    
+      <category term="运维" scheme="http://luyiyun.online/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+      <category term="Blog" scheme="http://luyiyun.online/categories/%E8%BF%90%E7%BB%B4/Blog/"/>
+    
+    
+      <category term="hexo" scheme="http://luyiyun.online/tags/hexo/"/>
+    
+      <category term="vscode" scheme="http://luyiyun.online/tags/vscode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>zsh及oh-my-zsh安装</title>
+    <link href="http://luyiyun.online/2020/05/10/zsh-an-zhuang/"/>
+    <id>http://luyiyun.online/2020/05/10/zsh-an-zhuang/</id>
+    <published>2020-05-10T07:53:34.000Z</published>
+    <updated>2020-05-15T06:22:14.985Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;zsh以及oh-my-zsh除了可以提高终端的颜值，而且通过众多的插件可以提高我们的使用体验，所以这里将其安装和使用总结在这里，便于之后使用。&lt;/p&gt;
+&lt;h1 id=&quot;zsh安装&quot;&gt;zsh安装&lt;/h1&gt;
+&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="运维" scheme="http://luyiyun.online/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+      <category term="Linux" scheme="http://luyiyun.online/categories/%E8%BF%90%E7%BB%B4/Linux/"/>
+    
+    
+      <category term="zsh" scheme="http://luyiyun.online/tags/zsh/"/>
+    
+  </entry>
+  
+</feed>
