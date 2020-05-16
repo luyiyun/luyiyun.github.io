@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://luyiyun.online/"/>
-  <updated>2020-05-15T06:56:22.318Z</updated>
+  <updated>2020-05-16T10:28:32.725Z</updated>
   <id>http://luyiyun.online/</id>
   
   <author>
@@ -17,11 +17,103 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>CSS层叠、优先级和继承</title>
+    <link href="http://luyiyun.online/2020/05/16/css-ceng-die-you-xian-ji-ji-cheng/"/>
+    <id>http://luyiyun.online/2020/05/16/css-ceng-die-you-xian-ji-ji-cheng/</id>
+    <published>2020-05-16T09:13:57.000Z</published>
+    <updated>2020-05-16T10:28:32.725Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;总的来说，层叠机制要先与优先级算法，默认继承最弱，指定继承则被优先级算法包括。&lt;/p&gt;
+&lt;h1
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Web" scheme="http://luyiyun.online/categories/Web/"/>
+    
+      <category term="CSS" scheme="http://luyiyun.online/categories/Web/CSS/"/>
+    
+    
+      <category term="MDN学习" scheme="http://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>论文精读-深度学习组学应用-2018综述</title>
+    <link href="http://luyiyun.online/2020/05/15/dl-in-omics2019/"/>
+    <id>http://luyiyun.online/2020/05/15/dl-in-omics2019/</id>
+    <published>2020-05-15T08:00:11.000Z</published>
+    <updated>2020-05-15T15:49:52.535Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;deep-learning-in-omics-a-survey-and-guideline&quot;&gt;Deep learning in omics: a survey and guideline&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;杂志: Briefings in
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Paper" scheme="http://luyiyun.online/categories/Paper/"/>
+    
+      <category term="Deep Learning" scheme="http://luyiyun.online/categories/Paper/Deep-Learning/"/>
+    
+      <category term="Omics" scheme="http://luyiyun.online/categories/Paper/Deep-Learning/Omics/"/>
+    
+    
+      <category term="综述" scheme="http://luyiyun.online/tags/%E7%BB%BC%E8%BF%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS基础</title>
+    <link href="http://luyiyun.online/2020/05/15/css-ji-chu/"/>
+    <id>http://luyiyun.online/2020/05/15/css-ji-chu/</id>
+    <published>2020-05-15T04:01:21.000Z</published>
+    <updated>2020-05-16T10:22:24.074Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;MDN CSS
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Web" scheme="http://luyiyun.online/categories/Web/"/>
+    
+      <category term="CSS" scheme="http://luyiyun.online/categories/Web/CSS/"/>
+    
+    
+      <category term="MDN学习" scheme="http://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>HTML表格</title>
     <link href="http://luyiyun.online/2020/05/14/html-biao-ge/"/>
     <id>http://luyiyun.online/2020/05/14/html-biao-ge/</id>
     <published>2020-05-14T15:38:49.000Z</published>
-    <updated>2020-05-15T06:56:22.318Z</updated>
+    <updated>2020-05-16T05:47:59.351Z</updated>
     
     <summary type="html">
     
@@ -52,7 +144,7 @@
     <link href="http://luyiyun.online/2020/05/13/html-duo-mei-ti/"/>
     <id>http://luyiyun.online/2020/05/13/html-duo-mei-ti/</id>
     <published>2020-05-13T15:03:55.000Z</published>
-    <updated>2020-05-15T06:55:04.582Z</updated>
+    <updated>2020-05-16T05:47:15.702Z</updated>
     
     <summary type="html">
     
@@ -83,7 +175,7 @@
     <link href="http://luyiyun.online/2020/05/13/html-ji-chu/"/>
     <id>http://luyiyun.online/2020/05/13/html-ji-chu/</id>
     <published>2020-05-13T10:59:34.000Z</published>
-    <updated>2020-05-15T06:48:01.170Z</updated>
+    <updated>2020-05-16T05:45:15.927Z</updated>
     
     <summary type="html">
     
@@ -112,7 +204,7 @@
     <link href="http://luyiyun.online/2020/05/10/blog-build/"/>
     <id>http://luyiyun.online/2020/05/10/blog-build/</id>
     <published>2020-05-10T10:08:02.000Z</published>
-    <updated>2020-05-15T06:17:47.943Z</updated>
+    <updated>2020-05-16T05:49:49.562Z</updated>
     
     <summary type="html">
     
@@ -144,7 +236,7 @@
     <link href="http://luyiyun.online/2020/05/10/zsh-an-zhuang/"/>
     <id>http://luyiyun.online/2020/05/10/zsh-an-zhuang/</id>
     <published>2020-05-10T07:53:34.000Z</published>
-    <updated>2020-05-15T06:22:14.985Z</updated>
+    <updated>2020-05-16T05:50:28.197Z</updated>
     
     <summary type="html">
     

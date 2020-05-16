@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="HTML表格, math, statistics, computer, ai">
+    <meta name="keywords" content="论文精读-深度学习组学应用-2018综述, math, statistics, computer, ai">
     <meta name="description" content="数学、统计、计算机及人工智能">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>HTML表格 | 卢一云的博客</title>
+    <title>论文精读-深度学习组学应用-2018综述 | 卢一云的博客</title>
     <link rel="icon" type="image/png" href="/favicon1.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -416,12 +416,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">HTML表格</h1>
+                    <h1 class="description center-align post-title">论文精读-深度学习组学应用-2018综述</h1>
                 </div>
             </div>
         </div>
@@ -538,8 +538,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/MDN%E5%AD%A6%E4%B9%A0/">
-                                <span class="chip bg-color">MDN学习</span>
+                            <a href="/tags/%E7%BB%BC%E8%BF%B0/">
+                                <span class="chip bg-color">综述</span>
                             </a>
                         
                     </div>
@@ -550,12 +550,16 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Web/" class="post-category">
-                                Web
+                            <a href="/categories/Paper/" class="post-category">
+                                Paper
                             </a>
                         
-                            <a href="/categories/Web/HTML/" class="post-category">
-                                HTML
+                            <a href="/categories/Paper/Deep-Learning/" class="post-category">
+                                Deep Learning
+                            </a>
+                        
+                            <a href="/categories/Paper/Deep-Learning/Omics/" class="post-category">
+                                Omics
                             </a>
                         
                     </div>
@@ -567,28 +571,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-14
+                    2020-05-15
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-16
+                    2020-05-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    629
+                    3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    11 分
                 </div>
                 
 
@@ -603,97 +607,218 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>主要使用到的标签：<code>table</code>、<code>tr</code>、<code>th</code>、<code>td</code></p>
-<p>使用表格进行布局的坏处：</p>
-<ol type="1">
-<li>减少了视觉受损用户的可访问性；</li>
-<li>表格会产生很多标签；</li>
-<li>表格不能自动响应（使用正确的语义块级标签或<code>&lt;div&gt;</code>其默认宽度是父元素的100%，而表格不是），所以我们需要更多的操作来进行更改；</li>
-</ol>
-<h1 id="合并单元格">合并单元格</h1>
-<p><code>th</code>和<code>td</code>标签有<code>colspan</code>和<code>rowspan</code>属性来控制。</p>
-<h1 id="为表格的列提供共同的样式">为表格的列提供共同的样式</h1>
-<p>使用<code>colgroup</code>和<code>col</code>标签进行如下定义：</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">&lt;table&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a>  <span class="kw">&lt;colgroup&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a>    <span class="kw">&lt;col&gt;</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a>    <span class="kw">&lt;col</span><span class="ot"> style=</span><span class="st">"background-color: yellow"</span><span class="kw">&gt;</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a>  <span class="kw">&lt;/colgroup&gt;</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a>  <span class="kw">&lt;tr&gt;</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a>    <span class="kw">&lt;th&gt;</span>Data 1<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a>    <span class="kw">&lt;th&gt;</span>Data 2<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a>  <span class="kw">&lt;/tr&gt;</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a>  <span class="kw">&lt;tr&gt;</span></span>
-<span id="cb1-11"><a href="#cb1-11"></a>    <span class="kw">&lt;td&gt;</span>Calcutta<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb1-12"><a href="#cb1-12"></a>    <span class="kw">&lt;td&gt;</span>Orange<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb1-13"><a href="#cb1-13"></a>  <span class="kw">&lt;/tr&gt;</span></span>
-<span id="cb1-14"><a href="#cb1-14"></a>  <span class="kw">&lt;tr&gt;</span></span>
-<span id="cb1-15"><a href="#cb1-15"></a>    <span class="kw">&lt;td&gt;</span>Robots<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb1-16"><a href="#cb1-16"></a>    <span class="kw">&lt;td&gt;</span>Jazz<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb1-17"><a href="#cb1-17"></a>  <span class="kw">&lt;/tr&gt;</span></span>
-<span id="cb1-18"><a href="#cb1-18"></a><span class="kw">&lt;/table&gt;</span></span></code></pre></div>
-<table>
-<colgroup>
-<col>
-<col style="background-color: yellow">
-</colgroup>
-<tbody><tr>
-<th>
-Data 1
-</th>
-<th>
-Data 2
-</th>
-</tr>
-<tr>
-<td>
-Calcutta
-</td>
-<td>
-Orange
-</td>
-</tr>
-<tr>
-<td>
-Robots
-</td>
-<td>
-Jazz
-</td>
-</tr>
-</tbody></table>
+                <h1 id="deep-learning-in-omics-a-survey-and-guideline">Deep learning in omics: a survey and guideline</h1>
 <ul>
-<li>有多少列，就写多少个<code>col</code></li>
-<li>想要改变格式的列，在其对应的<code>col</code>元素中加入样式；</li>
-<li>如果想要一次定义多列，使用<code>span</code>属性；</li>
+<li>杂志: Briefings in functional genomics</li>
+<li>IF: 3.133</li>
+<li>分区: 2区</li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">&lt;colgroup&gt;</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a>  <span class="kw">&lt;col</span><span class="ot"> style=</span><span class="st">"background-color: yellow"</span><span class="ot"> span=</span><span class="st">"2"</span><span class="kw">&gt;</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="kw">&lt;/colgroup&gt;</span></span></code></pre></div>
-<h1 id="给表格增加一个标题">给表格增加一个标题</h1>
-<p>使用<code>caption</code>元素。</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">&lt;table&gt;</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>  <span class="kw">&lt;caption&gt;</span>Dinosaurs in the Jurassic period<span class="kw">&lt;/caption&gt;</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a></span>
-<span id="cb3-4"><a href="#cb3-4"></a>  ...</span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="kw">&lt;/table&gt;</span></span></code></pre></div>
-<h1 id="使用一些标签更加结构化表格">使用一些标签更加结构化表格</h1>
-<p>表头：<code>thead</code>、页脚：<code>tfoot</code>、正文：<code>tbody</code>。</p>
-<p>主要是为了方便使用CSS控制表格样式。</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1"></a></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="kw">&lt;table&gt;</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a>  <span class="kw">&lt;caption&gt;</span> ... <span class="kw">&lt;/caption&gt;</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a>  <span class="kw">&lt;thead&gt;</span> <span class="kw">&lt;tr&gt;</span> <span class="kw">&lt;th&gt;&lt;/th&gt;</span> ... <span class="kw">&lt;/tr&gt;</span> <span class="kw">&lt;/thead&gt;</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a>  <span class="kw">&lt;tbody&gt;</span> <span class="kw">&lt;tr&gt;</span> <span class="kw">&lt;td&gt;&lt;/td&gt;</span> ... <span class="kw">&lt;/tr&gt;</span> ... <span class="kw">&lt;/tbody&gt;</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a>  <span class="kw">&lt;tfoot&gt;</span> <span class="kw">&lt;tr&gt;</span> <span class="kw">&lt;td&gt;&lt;/td&gt;</span> ... <span class="kw">&lt;/tr&gt;</span> <span class="kw">&lt;/tbody&gt;</span></span>
-<span id="cb4-7"><a href="#cb4-7"></a><span class="kw">&lt;/table&gt;</span></span></code></pre></div>
-<h1 id="嵌套表格">嵌套表格</h1>
-<p>即在<code>td</code>元素内再写一个完整的<code>table</code>，不推荐使用。</p>
-<h1 id="为视力受损者">为视力受损者</h1>
+<hr>
+<h2 id="introduction">Introduction</h2>
 <ol type="1">
-<li>在行标目和列表目分别使用<code>scope="row"</code>和<code>scope="col"</code>来指定其存在，如果这个标目是多个行或列的标题，则使用<code>rowgroup</code>或<code>colgroup</code>；</li>
-<li>为行标目和列表目添加唯一的<code>id</code>，然后在属于其的单元格上加入属性<code>headers</code>，值为其属于的行标目和列表目的<code>id</code>，这样可以表示单元格和行、列直接的关系，便于视力受损者使用阅读器来识别；</li>
+<li><p>1943年MCP原型首次提出【1】--&gt; Rosenblatt提出感知机模型【2】--&gt; 1974年首次提出了back propagation（bp，反向传播算法）【3】--&gt; 2006年Hinton首次解决了梯度消失问题并显示了DL技术的重大潜力【4】。之后，因为：</p>
+<ul>
+<li>数据量大，数据维度高且复杂使得传统Machine Learning（ML）方法变得吃力；</li>
+<li>硬件发展使得计算能力达到要求；</li>
+<li>DL社区，特别是想Google的大公司推动了DL技术的发展；</li>
+</ul>
+<p>DL得到了空前的发展。其中也包括一系列bioinformatics领域的应用：</p>
+<ul>
+<li>利用电子病历数据进行疾病预测【5,6】；</li>
+<li>生物医学图像分类【7-10】；</li>
+<li>生物信号处理【11-13】；</li>
+</ul></li>
+<li><p>现代omics研究面临两个难题：</p>
+<ul>
+<li>在诊断、预测等应用领域，实验室方法昂贵且费时；</li>
+<li>现存数据复杂、多态，传统方法已经难以处理；</li>
+</ul>
+<p>但这些难题都有望被深度学习克服。</p></li>
 </ol>
+<p><img src="/2020/05/15/dl-in-omics2019/DL-in-omics2019_2020-05-15-16-51-26.png" alt="深度学习及其在omics上的应用的文章数量变化"><br>
+</p>
+<h2 id="dl-models-in-omics">DL Models in Omics</h2>
+<blockquote>
+<p>这里涉及到很多基础的DL知识的，就不赘述了。</p>
+</blockquote>
+<h3 id="deep-neural-networks-dnns">Deep neural networks （DNNs）</h3>
+<p>这里指代了MLP、AEs、RBMs和DBNs【4】等多种模型。其中DBNs解决了蛋白质残基连接预测【27】和RNA结合蛋白位点预测问题【28】。</p>
+<h3 id="convolution-neural-networks-cnns">Convolution neural networks （CNNs）</h3>
+<p>略。</p>
+<h3 id="recurrent-neural-networks-rnns">Recurrent neural networks （RNNs）</h3>
+<p>略。</p>
+<h2 id="applications-in-omics">Applications in omics</h2>
+<p>分为以下3个领域来介绍:</p>
+<h3 id="genomics">Genomics</h3>
+<ol type="1">
+<li><p>预测DNA序列的功能单元，如复制域（replication domain）、转录因子结合位点（transcription factor binding sites, TFBS）、转录起始点、启动子、增强子、基因删除位点等。</p>
+<blockquote>
+<ul>
+<li>复制域：DNA复制时间调控的单位。<br>
+</li>
+<li><a href="https://zh.wikipedia.org/wiki/%E8%BD%AC%E5%BD%95%E5%9B%A0%E5%AD%90" target="_blank" rel="noopener">转录因子</a>：指能够结合在某基因上游特异核苷酸序列上的蛋白质，这些蛋白质能调控其基因的转录。方法是转录因子可以调控核糖核酸聚合酶（RNA聚合酶，或叫RNA合成酶）与DNA模板的结合。<br>
+</li>
+<li><a href="https://zh.wikipedia.org/wiki/%E5%95%9F%E5%8B%95%E5%AD%90" target="_blank" rel="noopener">启动子</a>：指一段能使特定基因进行转录的脱氧核糖核酸（DNA）序列。启动子可以被RNA聚合酶辨认，并开始转录合成RNA。在核糖核酸（RNA）合成中，启动子可以和调控基因转录的转录因子产生相互作用，控制基因表达（转录）的起始时间和表达的程度，包含核心启动子区域和调控区域，就像“开关”，决定基因的活动，继而控制细胞开始生产哪一种蛋白质。<br>
+</li>
+<li><a href="https://zh.wikipedia.org/wiki/%E5%BC%B7%E5%8C%96%E5%AD%90" target="_blank" rel="noopener">增强子</a>：是DNA上一小段可与蛋白质（反式作用因子；transacting factor，也就是转录因子）结合的区域，与蛋白质结合之后，基因的转录作用将会加强。增强子可能位于基因上游，也可能位于下游。且不一定接近所要作用的基因，甚至不一定与基因位于同一染色体。这是因为染色质的缠绕结构，使序列上相隔很远的位置也有机会相互接触。</li>
+</ul>
+</blockquote>
+<ol type="a">
+<li>2015年，将预训练、DNN和hidden Markov model结合的模型实现了对复制域分类的突破【34】；</li>
+<li>2016年，【35】通过使用convolutional/highway的MLP框架，依据TFBS来对基因序列进行分类，AUC达到了0.946；</li>
+<li>【36】使用CNN模型来对启动子进行分子，实现了0.9左右的ACC；</li>
+<li>【37】使用3层全连接来进行增强子和启动子的分类，达到了93.59的ACC；</li>
+<li>【38】开发了一个浅层CNN模型-CNNdel，来进行基因删除位点的预测，使用来自1000 Genomes Projects的数据进行训练，也得到了超过其他方法的结果。</li>
+</ol>
+<p>总体来说，CNNs逐渐压过了DNNs称为主流，并且开始出现了CNNs+LSTMs的杂交模型。</p></li>
+<li><p>预测基因表达。比如目标基因的表达量、预测基因功能、建模基因调控网络等。</p>
+<ol type="a">
+<li>【39】利用GEO的microarray数据，训练了一个DNN model来预测目标基因的表达量，明显好于Logistic；</li>
+<li>【40】基于stAEs和MLP，通过基因变异的基因型来预测基因表达；</li>
+<li>【41】提出了一个基于CNN-biLSTM的模型，称为DanQ，来预测非编码区域的功能，实现了97.6的AUPR；</li>
+<li>【42】使用RNN来建立基因调控网络，超越了其他的方法；</li>
+</ol>
+<p>CNNs依然是此领域的主要模型，而在研究比较少的基因调控网络领域，还是主要以RNN为主。</p></li>
+<li><p>探索基因和疾病的关系。</p>
+<ol type="a">
+<li>2017年，【43】使用MLP模型来预测cancer risk和生存，使用的是TCGA的数据，并和cox弹性网得到了类似的表现；</li>
+<li>【44】使用CNNs来预测序列变异对近端CpG位点（DNA甲基化）的影响，得到了0.854的AUC；</li>
+<li>【45】，即DeepCpG，在单细胞领域来预测甲基化位点，其使用的是CNN-RNN的杂交模型，并且模型可以解释；</li>
+</ol>
+<p>在预测甲基化的领域，还是以CNNs为主，RNNs可能会有所应用，但一般也要CNNs配合。而在探索基因和疾病的关系领域，主要使用DNNs，并且AEs和DBN也有所应用。</p></li>
+</ol>
+<h3 id="transcriptomics">Transcriptomics</h3>
+<ol type="1">
+<li><p>预测RNA序列的结构，比如预测RBP结合位点、可变剪切位点和RNA类型。</p>
+<ol type="a">
+<li>2015，基于DBN模型即可探索潜在的结合位点【28】，使用到的数据有RNA序列信息、RNA二级结构和RNA三级结构信息，相对于之前的方法MRE下降了22%；</li>
+<li>【84】开发了一个deep CNNs model来进行剪切点的分类，称为DeeSpline，提高了预测ACC；</li>
+<li>2017年，基于MLP的模型的成功实现了pre-miRNAs和psudo hair-pins的分类，并得到了0.968的ACC【46】；</li>
+</ol></li>
+<li><p>探索RNA和疾病的关联。</p>
+<ol type="a">
+<li>2017年，基于DBN的一个分类模型，成功利用miRNA属性进行疾病的分类，平均提高了6%-10%【47】；</li>
+<li>【48】使用转录组数据并结合DNN模型，来确定各种药物在不同生物系统下的药理学性质，此模型的效果要好于SVM；</li>
+</ol></li>
+</ol>
+<h3 id="proteomics">Proteomics</h3>
+<ol type="1">
+<li><p>蛋白质结构预测。比如蛋白质二级结构预测、蛋白质模型质量评估、protein contact map等。</p>
+<ol type="a">
+<li>【49】通过st-sp AEs来预测二级结构和扭转角，使用原始氨基酸序列作为输入，达到了82%的ACC；</li>
+<li>【36】使用DNN替代SVM来进行蛋白质模型质量评价，就PCC从0.85提高到了0.9；</li>
+<li>【50】结合了两个deep residual networks来预测contacts，其接受sequence conservation information和evoluationary coupling作为输入，得到了最高的F1-score；</li>
+</ol></li>
+<li><p>蛋白质功能预测。</p>
+<ol type="a">
+<li>【51】中，使用CNN模型来预测蛋白质功能，使用蛋白质三级结构作为输入，得到了87.6%的准确率；</li>
+<li>【52】使用LSTM来预测4种类型蛋白质的功能，使用的是原始氨基酸序列作为输入，得到了99%的ACC；</li>
+</ol></li>
+<li><p>预测蛋白质交互作用、蛋白质亚细胞定位或其他功能。</p>
+<ol type="a">
+<li>【53】使用stAEs来预测蛋白质交互作用，得到97.19%的ACC；</li>
+<li>【54】使用CNNs模型来自动检测亚细胞定位，在每个细胞定位分类任务中得到了91%的ACC，在每个蛋白质上得到了99%的ACC；</li>
+</ol></li>
+</ol>
+<h3 id="开源软件">开源软件</h3>
+<p>很多人将开发的模型、工具的开源代码放在了网上，或者做成了web服务，现在将其列举如下： <img src="/2020/05/15/dl-in-omics2019/DL-in-omics2019_2020-05-15-18-32-19.png" alt="各种开源工具和代码"></p>
+<h2 id="使用dl来解决omics问题">使用DL来解决omics问题</h2>
+<p>这里总结了使用DL来进行omics研究的流程。</p>
+<h3 id="数据获得">数据获得</h3>
+<p>以下是常用的omics数据库：</p>
+<p><img src="/2020/05/15/dl-in-omics2019/DL-in-omics2019_2020-05-15-18-40-03.png" alt="常用组学数据库"><br>
+</p>
+<p>需要对其进行一定的处理。</p>
+<h3 id="数据预处理">数据预处理</h3>
+<ol type="1">
+<li><p>data cleaning。</p>
+<ul>
+<li>缺失值填补，异常值处理：可使用k近邻、regression或决策树等方法来进行填补；</li>
+<li>去除重复的数据：把相似性超过某个阈值的样本删除；</li>
+<li>处理噪声：使用聚类方法、regression或binning；</li>
+</ul>
+<p>这个工作是time-consuming和labor-intensive，也没有什么统一的标准。可以使用一些方便的软件包：<code>OpenRefine</code>【124】或<code>DataKleenr</code>。</p></li>
+<li><p>Normalization。</p>
+<p>主要的作用是将数据缩放至一个合适的范围内。</p>
+<ul>
+<li>如果我们的数据比较集中，并且不服从正态分布，没有涉及到距离、相关性的计算，我们可以使用<strong>min-max normalization</strong>。比如图像数据。</li>
+<li>如果数据大约服从正态分布，并且我们希望保留样本间距离关系，则可以使用<strong>zero-mean normalization</strong>。比如基因表达谱数据等。这也是最常用的normalization方法。</li>
+</ul></li>
+<li><p>Dimensionality reduction。</p>
+<p>删除一些无关的变量，使用AEs来进行降维，或者使用PCA等等。</p></li>
+</ol>
+<h3 id="编码">编码</h3>
+<dl>
+<dt><strong>one-hot encoding</strong></dt>
+<dd>略。
+</dd>
+<dt><strong><a href="https://en.wikipedia.org/wiki/Position-Specific_Scoring_Matrix" target="_blank" rel="noopener">position-specific scoring matrix（PSSM, PWM, PSWM）</a></strong></dt>
+<dd><p>也可以用来编码核苷酸序列或蛋白质序列，这里使用wiki的例子进行解释：</p>
+<ol type="a">
+<li><p>我们有以下9条序列：</p>
+<pre><code>GAGGTAAAC
+TCCGTAAGT
+CAGGTTGGA
+ACAGTCAGT
+TAGGTCATT
+TAGGTACTG
+ATGGTAACT
+CAGGTATAC
+TGTGTGAGT
+AAGGTAAGT</code></pre></li>
+<li><p>首先将每个位置上的频数进行计算，称为PFM（position frequency matrix）： <img src="/2020/05/15/dl-in-omics2019/DL-in-omics2019_2020-05-15-22-07-33.png" alt="PFM"></p></li>
+<li><p>然后每个位置归一化为概率，得到PPM（position probability matrix）： <img src="/2020/05/15/dl-in-omics2019/DL-in-omics2019_2020-05-15-22-09-13.png" alt="PPM"></p></li>
+<li><p>最后将概率转换为权重，即使用<span class="math inline">\(log_2(M_{k,j}/b_k)\)</span>，其中<span class="math inline">\(b_k=1/|k|\)</span>，其中<span class="math inline">\(k\)</span>表示每个位置上的离散值有多少个，对于氨基酸序列<span class="math inline">\(k=20\)</span>，而对于核苷酸序列则<span class="math inline">\(k=4\)</span>，最后得到PWM（position weight matrix）： <img src="/2020/05/15/dl-in-omics2019/DL-in-omics2019_2020-05-15-22-13-04.png" alt="PWM"></p></li>
+<li><p>然后使用其来编码数据即可。</p></li>
+</ol>
+<p>有一些现有的程序可以实现（比如PSI-BLAST），在这些算法中，其计算过程更加复杂，但基本思想是一致的。</p>
+</dd>
+</dl>
+<p><strong><a href="https://en.wikipedia.org/wiki/Point_accepted_mutation" target="_blank" rel="noopener">PAM（point accepted mutation）matrix</a> and <a href="https://en.wikipedia.org/wiki/BLOSUM" target="_blank" rel="noopener">BLOSUM（blocks substitution）matrix</a></strong></p>
+<p>除了以上3种方法外，对于蛋白质序列，还有autocovariance method和conjoint triad method 【126】方法。</p>
+<p>另外，还有一些方法致力于将多种类型的数据进行整合分析【128,49,50,98,129】。</p>
+<h3 id="模型选择">模型选择</h3>
+<ol type="1">
+<li>尽量针对不同的任务使用不同的架构；</li>
+<li>可以将多种不同的架构进行结合，从而得到更好的结果；</li>
+<li>时刻关注最先进模型的研究，关于新技术。</li>
+</ol>
+<h3 id="模型训练">模型训练</h3>
+<ol type="1">
+<li>考虑一下硬件配置是否支持；</li>
+<li>注意数据集要分成training、validation和testing，本研究作者常用的分发为70%用作training和validation，30%用作testing；</li>
+<li>合理选择激活函数，本研究作者建议的隐藏层激活函数为ReLU和maxout；</li>
+<li>考虑试验一下dropout、early stop和weight decay，来预防过拟合。</li>
+</ol>
+<h3 id="评价">评价</h3>
+<p>推荐使用交叉验证。</p>
+<h3 id="深度学习框架">深度学习框架</h3>
+<blockquote>
+<p>这里总结了一下框架，但内容有点过时，就不贴了。</p>
+</blockquote>
+<h2 id="机会和挑战">机会和挑战</h2>
+<ul>
+<li><p>数据量：omics数据量一般不足，并且有imbalance的问题；</p>
+<p>解决数据量不足：zero-shot learning【135】、one-shot learning【136】和GAN【137】； 解决imbalance：resamling、cost-sensitive learning【138】。</p></li>
+<li><p>数据质量：omics数据一般来自不同平台，数据质量比较难以保证；</p>
+<p>解决：上面提到的数据清洗过程。</p></li>
+<li><p>计算花销：有硬件门槛；</p></li>
+<li><p>“黑盒”问题：无法进行解释；</p>
+<p>关于“黑盒”问题，也有所进展。比如【139】提出的Deep Motif Dashboard，就为TFBS的分类提供了一种可视化策略。</p></li>
+<li><p>模型选择和训练：选择一个合适的模型和合适的超参数是困难的；</p></li>
+</ul>
+<p>当然，未来，还有一些其他的DL概念会对omics的研究产生影响：</p>
+<ul>
+<li>reinforcement leanring 【140】</li>
+<li>incremental learning 【141】</li>
+<li>transfer learning 【142】</li>
+</ul>
+<h2 id="结论">结论</h2>
+<p>DL技术非常适合解决omics的问题。</p>
+<hr>
+<h2 id="questions">Questions</h2>
+<p><em>这篇文章的一些结论或者内容感觉有些老了，之前以为是19年的文章，可能会比较新。但读到才发现可能是18年的。</em></p>
+<p><em>但还是有所收获，特别是其介绍的一些序列编码方法是第一次听说。总结了一些文章的github。另外，其提到的文章中也有一些值得关注的。比如那个使用RNN来建网的方法，还有提到的一系列基于DBN的方法。</em></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -737,7 +862,7 @@ Jazz
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://luyiyun.online/2020/05/14/html-biao-ge/">http://luyiyun.online/2020/05/14/html-biao-ge/</a>
+                    <a href="http://luyiyun.online/2020/05/15/dl-in-omics2019/">http://luyiyun.online/2020/05/15/dl-in-omics2019/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -775,8 +900,8 @@ Jazz
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/MDN%E5%AD%A6%E4%B9%A0/">
-                                    <span class="chip bg-color">MDN学习</span>
+                                <a href="/tags/%E7%BB%BC%E8%BF%B0/">
+                                    <span class="chip bg-color">综述</span>
                                 </a>
                             
                         </div>
@@ -947,7 +1072,7 @@ Jazz
         repo: 'luyiyun.github.io',
         owner: 'luyiyun',
         admin: ["luyiyun"],
-        id: '2020-05-14T23-38-49',
+        id: '2020-05-15T16-00-11',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1238,24 +1363,24 @@ Jazz
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/05/15/css-ji-chu/">
+                <a href="/2020/05/16/css-ceng-die-you-xian-ji-ji-cheng/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="CSS基础">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="CSS层叠、优先级和继承">
                         
-                        <span class="card-title">CSS基础</span>
+                        <span class="card-title">CSS层叠、优先级和继承</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            MDN教程中关于CSS的第一部分，主要内容有CSS的注释、引用、函数和规则示例和CSS的工作流程，内容比较简单，教程的这一部分主要是为了让学习者对CSS构建出一个大概的认识，我则只从中提取出我需要的部分。
+                            是MDN教程中CSS学习第二部分中的第一段，主要内容为CSS的层叠性、优先级权重计算和继承。
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-15
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-16
                         </span>
                         <span class="publish-author">
                             
@@ -1291,24 +1416,24 @@ Jazz
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/05/13/html-duo-mei-ti/">
+                <a href="/2020/05/15/css-ji-chu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="HTML多媒体">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="CSS基础">
                         
-                        <span class="card-title">HTML多媒体</span>
+                        <span class="card-title">CSS基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            MDN中HTML教程的第二部分，主要介绍了HTML中关于图片、矢量图、音频、视频和iframe的插入方法，另外还重点介绍了如何创建响应式的图片
+                            MDN教程中关于CSS的第一部分，主要内容有CSS的注释、引用、函数和规则示例和CSS的工作流程，内容比较简单，教程的这一部分主要是为了让学习者对CSS构建出一个大概的认识，我则只从中提取出我需要的部分。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-15
                             </span>
                         <span class="publish-author">
                             
@@ -1318,8 +1443,8 @@ Jazz
                                     Web
                                 </a>
                             
-                            <a href="/categories/Web/HTML/" class="post-category">
-                                    HTML
+                            <a href="/categories/Web/CSS/" class="post-category">
+                                    CSS
                                 </a>
                             
                             

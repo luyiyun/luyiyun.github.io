@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="HTML表格, math, statistics, computer, ai">
+    <meta name="keywords" content="CSS基础, math, statistics, computer, ai">
     <meta name="description" content="数学、统计、计算机及人工智能">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>HTML表格 | 卢一云的博客</title>
+    <title>CSS基础 | 卢一云的博客</title>
     <link rel="icon" type="image/png" href="/favicon1.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -416,12 +416,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">HTML表格</h1>
+                    <h1 class="description center-align post-title">CSS基础</h1>
                 </div>
             </div>
         </div>
@@ -554,8 +554,8 @@
                                 Web
                             </a>
                         
-                            <a href="/categories/Web/HTML/" class="post-category">
-                                HTML
+                            <a href="/categories/Web/CSS/" class="post-category">
+                                CSS
                             </a>
                         
                     </div>
@@ -567,7 +567,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-14
+                    2020-05-15
                 </div>
                 
 
@@ -581,7 +581,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    629
+                    660
                 </div>
                 
 
@@ -603,97 +603,64 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>主要使用到的标签：<code>table</code>、<code>tr</code>、<code>th</code>、<code>td</code></p>
-<p>使用表格进行布局的坏处：</p>
+                <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference" target="_blank" rel="noopener">MDN CSS reference</a>列举了所有的CSS属性页面，可以作为文档查阅。</p>
+<p>CSS中的注释：<code>/* ... */</code></p>
+<h1 id="引用css的3种方式">引用CSS的3种方式</h1>
 <ol type="1">
-<li>减少了视觉受损用户的可访问性；</li>
-<li>表格会产生很多标签；</li>
-<li>表格不能自动响应（使用正确的语义块级标签或<code>&lt;div&gt;</code>其默认宽度是父元素的100%，而表格不是），所以我们需要更多的操作来进行更改；</li>
+<li><p>引用css文件：</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">&lt;link</span><span class="ot"> rel=</span><span class="st">"stylesheet"</span><span class="ot"> href=</span><span class="st">"style.css"</span><span class="kw">&gt;</span></span></code></pre></div></li>
+<li><p>使用<code>head</code>中的<code>style</code>标签；</p></li>
+<li><p>内联式，<code>&lt;p style="color: red; font-size: 10px;"&gt;</code>；</p></li>
 </ol>
-<h1 id="合并单元格">合并单元格</h1>
-<p><code>th</code>和<code>td</code>标签有<code>colspan</code>和<code>rowspan</code>属性来控制。</p>
-<h1 id="为表格的列提供共同的样式">为表格的列提供共同的样式</h1>
-<p>使用<code>colgroup</code>和<code>col</code>标签进行如下定义：</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">&lt;table&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a>  <span class="kw">&lt;colgroup&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a>    <span class="kw">&lt;col&gt;</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a>    <span class="kw">&lt;col</span><span class="ot"> style=</span><span class="st">"background-color: yellow"</span><span class="kw">&gt;</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a>  <span class="kw">&lt;/colgroup&gt;</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a>  <span class="kw">&lt;tr&gt;</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a>    <span class="kw">&lt;th&gt;</span>Data 1<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a>    <span class="kw">&lt;th&gt;</span>Data 2<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a>  <span class="kw">&lt;/tr&gt;</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a>  <span class="kw">&lt;tr&gt;</span></span>
-<span id="cb1-11"><a href="#cb1-11"></a>    <span class="kw">&lt;td&gt;</span>Calcutta<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb1-12"><a href="#cb1-12"></a>    <span class="kw">&lt;td&gt;</span>Orange<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb1-13"><a href="#cb1-13"></a>  <span class="kw">&lt;/tr&gt;</span></span>
-<span id="cb1-14"><a href="#cb1-14"></a>  <span class="kw">&lt;tr&gt;</span></span>
-<span id="cb1-15"><a href="#cb1-15"></a>    <span class="kw">&lt;td&gt;</span>Robots<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb1-16"><a href="#cb1-16"></a>    <span class="kw">&lt;td&gt;</span>Jazz<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb1-17"><a href="#cb1-17"></a>  <span class="kw">&lt;/tr&gt;</span></span>
-<span id="cb1-18"><a href="#cb1-18"></a><span class="kw">&lt;/table&gt;</span></span></code></pre></div>
-<table>
-<colgroup>
-<col>
-<col style="background-color: yellow">
-</colgroup>
-<tbody><tr>
-<th>
-Data 1
-</th>
-<th>
-Data 2
-</th>
-</tr>
-<tr>
-<td>
-Calcutta
-</td>
-<td>
-Orange
-</td>
-</tr>
-<tr>
-<td>
-Robots
-</td>
-<td>
-Jazz
-</td>
-</tr>
-</tbody></table>
-<ul>
-<li>有多少列，就写多少个<code>col</code></li>
-<li>想要改变格式的列，在其对应的<code>col</code>元素中加入样式；</li>
-<li>如果想要一次定义多列，使用<code>span</code>属性；</li>
-</ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">&lt;colgroup&gt;</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a>  <span class="kw">&lt;col</span><span class="ot"> style=</span><span class="st">"background-color: yellow"</span><span class="ot"> span=</span><span class="st">"2"</span><span class="kw">&gt;</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="kw">&lt;/colgroup&gt;</span></span></code></pre></div>
-<h1 id="给表格增加一个标题">给表格增加一个标题</h1>
-<p>使用<code>caption</code>元素。</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">&lt;table&gt;</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>  <span class="kw">&lt;caption&gt;</span>Dinosaurs in the Jurassic period<span class="kw">&lt;/caption&gt;</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a></span>
-<span id="cb3-4"><a href="#cb3-4"></a>  ...</span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="kw">&lt;/table&gt;</span></span></code></pre></div>
-<h1 id="使用一些标签更加结构化表格">使用一些标签更加结构化表格</h1>
-<p>表头：<code>thead</code>、页脚：<code>tfoot</code>、正文：<code>tbody</code>。</p>
-<p>主要是为了方便使用CSS控制表格样式。</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1"></a></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="kw">&lt;table&gt;</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a>  <span class="kw">&lt;caption&gt;</span> ... <span class="kw">&lt;/caption&gt;</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a>  <span class="kw">&lt;thead&gt;</span> <span class="kw">&lt;tr&gt;</span> <span class="kw">&lt;th&gt;&lt;/th&gt;</span> ... <span class="kw">&lt;/tr&gt;</span> <span class="kw">&lt;/thead&gt;</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a>  <span class="kw">&lt;tbody&gt;</span> <span class="kw">&lt;tr&gt;</span> <span class="kw">&lt;td&gt;&lt;/td&gt;</span> ... <span class="kw">&lt;/tr&gt;</span> ... <span class="kw">&lt;/tbody&gt;</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a>  <span class="kw">&lt;tfoot&gt;</span> <span class="kw">&lt;tr&gt;</span> <span class="kw">&lt;td&gt;&lt;/td&gt;</span> ... <span class="kw">&lt;/tr&gt;</span> <span class="kw">&lt;/tbody&gt;</span></span>
-<span id="cb4-7"><a href="#cb4-7"></a><span class="kw">&lt;/table&gt;</span></span></code></pre></div>
-<h1 id="嵌套表格">嵌套表格</h1>
-<p>即在<code>td</code>元素内再写一个完整的<code>table</code>，不推荐使用。</p>
-<h1 id="为视力受损者">为视力受损者</h1>
+<h1 id="函数">函数</h1>
+<div class="sourceCode" id="cb2"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">.box</span> {</span>
+<span id="cb2-2"><a href="#cb2-2"></a>  <span class="kw">padding</span>: <span class="dv">10</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a>  <span class="kw">width</span>: <span class="fu">calc(</span><span class="dv">90</span><span class="dt">%</span> <span class="op">-</span> <span class="dv">30</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a>  <span class="kw">background-color</span>: <span class="cn">rebeccapurple</span><span class="op">;</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a>  <span class="kw">color</span>: <span class="cn">white</span><span class="op">;</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a>}</span></code></pre></div>
+<h1 id="规则">规则</h1>
+<div class="sourceCode" id="cb3"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1"></a>body {</span>
+<span id="cb3-2"><a href="#cb3-2"></a>  <span class="kw">background-color</span>: <span class="cn">pink</span><span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a>}</span>
+<span id="cb3-4"><a href="#cb3-4"></a></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="im">@media</span> (<span class="kw">min-width</span>: <span class="dv">30</span><span class="dt">em</span>) {</span>
+<span id="cb3-6"><a href="#cb3-6"></a>  body {</span>
+<span id="cb3-7"><a href="#cb3-7"></a>    <span class="kw">background-color</span>: <span class="cn">blue</span><span class="op">;</span></span>
+<span id="cb3-8"><a href="#cb3-8"></a>  }</span>
+<span id="cb3-9"><a href="#cb3-9"></a>}</span></code></pre></div>
+<h1 id="css的工作流程">CSS的工作流程</h1>
+<p>这里将CSS的工作原理，这种偏理论性质的东西放在最后面。</p>
+<p><img src="/2020/05/15/css-ji-chu/CSS基础_2020-05-15-12-56-14.png" alt="CSS工作原理"><br>
+</p>
 <ol type="1">
-<li>在行标目和列表目分别使用<code>scope="row"</code>和<code>scope="col"</code>来指定其存在，如果这个标目是多个行或列的标题，则使用<code>rowgroup</code>或<code>colgroup</code>；</li>
-<li>为行标目和列表目添加唯一的<code>id</code>，然后在属于其的单元格上加入属性<code>headers</code>，值为其属于的行标目和列表目的<code>id</code>，这样可以表示单元格和行、列直接的关系，便于视力受损者使用阅读器来识别；</li>
+<li>浏览器载入HTML文件（比如从网络上获取）。</li>
+<li>将HTML文件转化成一个DOM（Document Object Model），DOM是文件在计算机内存中的表现形式，下一节将更加详细的解释DOM。</li>
+<li>接下来，浏览器会拉取该HTML相关的大部分资源，比如嵌入到页面的图片、视频和CSS样式。JavaScript则会稍后进行处理，简单起见，同时此节主讲CSS，所以这里对如何加载JavaScript不会展开叙述。</li>
+<li>浏览器拉取到CSS之后会进行解析，根据选择器的不同类型（比如element、class、id等等）把他们分到不同的“桶”中。浏览器基于它找到的不同的选择器，将不同的规则（基于选择器的规则，如元素选择器、类选择器、id选择器等）应用在对应的DOM的节点中，并添加节点依赖的样式（这个中间步骤称为渲染树）。</li>
+<li>上述的规则应用于渲染树之后，渲染树会依照应该出现的结构进行布局。</li>
+<li>网页展示在屏幕上（这一步被称为着色）。</li>
 </ol>
+<h2 id="dom">DOM</h2>
+<p>一个DOM有一个树形结构，标记语言中的每一个元素、属性以及每一段文字都对应着结构树中的一个节点（Node/DOM或DOM node）。节点由节点本身和其他DOM节点的关系定义，有些节点有父节点，有些节点有兄弟节点（同级节点）。</p>
+<p>其将下面的代码解析成下面的树形结构：</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">&lt;p&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a>  Let's use:</span>
+<span id="cb4-3"><a href="#cb4-3"></a>  <span class="kw">&lt;span&gt;</span>Cascading<span class="kw">&lt;/span&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a>  <span class="kw">&lt;span&gt;</span>Style<span class="kw">&lt;/span&gt;</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a>  <span class="kw">&lt;span&gt;</span>Sheets<span class="kw">&lt;/span&gt;</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<pre><code>P
+├─ "Let's use:"
+├─ SPAN
+|  └─ "Cascading"
+├─ SPAN
+|  └─ "Style"
+└─ SPAN
+   └─ "Sheets"</code></pre>
+<p>解析完成后，CSS会将样式逐一应用于DOM节点。</p>
+<h2 id="当出现错误">当出现错误</h2>
+<p>当出现错误时，浏览器会忽略掉整个选择器的设置，调到下一个选择器。</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -737,7 +704,7 @@ Jazz
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://luyiyun.online/2020/05/14/html-biao-ge/">http://luyiyun.online/2020/05/14/html-biao-ge/</a>
+                    <a href="http://luyiyun.online/2020/05/15/css-ji-chu/">http://luyiyun.online/2020/05/15/css-ji-chu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -947,7 +914,7 @@ Jazz
         repo: 'luyiyun.github.io',
         owner: 'luyiyun',
         admin: ["luyiyun"],
-        id: '2020-05-14T23-38-49',
+        id: '2020-05-15T12-01-21',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1238,19 +1205,19 @@ Jazz
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/05/15/css-ji-chu/">
+                <a href="/2020/05/15/dl-in-omics2019/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="CSS基础">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="论文精读-深度学习组学应用-2018综述">
                         
-                        <span class="card-title">CSS基础</span>
+                        <span class="card-title">论文精读-深度学习组学应用-2018综述</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            MDN教程中关于CSS的第一部分，主要内容有CSS的注释、引用、函数和规则示例和CSS的工作流程，内容比较简单，教程的这一部分主要是为了让学习者对CSS构建出一个大概的认识，我则只从中提取出我需要的部分。
+                            本研究旨在为研究者提供入门级（entry-level）的指导，使得研究者可以使用deep learning（DL）技术来解决组学问题。首先介绍了多种DL models，然后介绍了其和omics在特定研究领域的结合，另外总结了DL技术分析omics数据的一般套路，并总结了一些还未被系统研究的问题，最后比较了现存的开源DL框架和总结了DL领域的机会和挑战。
                         
                     </div>
                     <div class="publish-info">
@@ -1261,12 +1228,16 @@ Jazz
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Web/" class="post-category">
-                                    Web
+                            <a href="/categories/Paper/" class="post-category">
+                                    Paper
                                 </a>
                             
-                            <a href="/categories/Web/CSS/" class="post-category">
-                                    CSS
+                            <a href="/categories/Paper/Deep-Learning/" class="post-category">
+                                    Deep Learning
+                                </a>
+                            
+                            <a href="/categories/Paper/Deep-Learning/Omics/" class="post-category">
+                                    Omics
                                 </a>
                             
                             
@@ -1276,8 +1247,8 @@ Jazz
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/MDN%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">MDN学习</span>
+                    <a href="/tags/%E7%BB%BC%E8%BF%B0/">
+                        <span class="chip bg-color">综述</span>
                     </a>
                     
                 </div>
@@ -1291,24 +1262,24 @@ Jazz
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/05/13/html-duo-mei-ti/">
+                <a href="/2020/05/14/html-biao-ge/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="HTML多媒体">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="HTML表格">
                         
-                        <span class="card-title">HTML多媒体</span>
+                        <span class="card-title">HTML表格</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            MDN中HTML教程的第二部分，主要介绍了HTML中关于图片、矢量图、音频、视频和iframe的插入方法，另外还重点介绍了如何创建响应式的图片
+                            MDN中HTML教程的第3篇，主要介绍了如何创建表格
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-14
                             </span>
                         <span class="publish-author">
                             
