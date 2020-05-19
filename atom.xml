@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://luyiyun.online/"/>
-  <updated>2020-05-16T10:28:32.725Z</updated>
+  <updated>2020-05-19T07:16:56.528Z</updated>
   <id>http://luyiyun.online/</id>
   
   <author>
@@ -17,11 +17,165 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>CSS溢出</title>
+    <link href="http://luyiyun.online/2020/05/18/css-yi-chu/"/>
+    <id>http://luyiyun.online/2020/05/18/css-yi-chu/</id>
+    <published>2020-05-18T15:27:25.000Z</published>
+    <updated>2020-05-19T07:16:56.528Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;我们知道，CSS中万物皆盒，因此我们可以通过给&lt;code&gt;width&lt;/code&gt;和&lt;code&gt;height&lt;/code&gt;（或者 &lt;code&gt;inline-size&lt;/code&gt; 和
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Web" scheme="http://luyiyun.online/categories/Web/"/>
+    
+      <category term="CSS" scheme="http://luyiyun.online/categories/Web/CSS/"/>
+    
+    
+      <category term="MDN学习" scheme="http://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS文本</title>
+    <link href="http://luyiyun.online/2020/05/18/css-wen-ben/"/>
+    <id>http://luyiyun.online/2020/05/18/css-wen-ben/</id>
+    <published>2020-05-18T13:59:51.000Z</published>
+    <updated>2020-05-19T07:16:56.520Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;书写模式&quot;&gt;书写模式&lt;/h1&gt;
+&lt;p&gt;CSS中的书写模式是指文本的排列方向是横向还是纵向的。&lt;code&gt;writing-mode&lt;/code&gt;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Web" scheme="http://luyiyun.online/categories/Web/"/>
+    
+      <category term="CSS" scheme="http://luyiyun.online/categories/Web/CSS/"/>
+    
+    
+      <category term="MDN学习" scheme="http://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS盒子模型</title>
+    <link href="http://luyiyun.online/2020/05/17/css-he-zi-mo-xing/"/>
+    <id>http://luyiyun.online/2020/05/17/css-he-zi-mo-xing/</id>
+    <published>2020-05-17T06:40:20.000Z</published>
+    <updated>2020-05-19T07:16:56.538Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在CSS中，将所有的元素都看做是一个box。&lt;/p&gt;
+&lt;h1 id=&quot;块级盒子block-box和内联盒子inline-box&quot;&gt;块级盒子（block box）和内联盒子（inline box）&lt;/h1&gt;
+&lt;p&gt;两者在page
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Web" scheme="http://luyiyun.online/categories/Web/"/>
+    
+      <category term="CSS" scheme="http://luyiyun.online/categories/Web/CSS/"/>
+    
+    
+      <category term="MDN学习" scheme="http://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>论文精读-基于RNN的GRN-2016</title>
+    <link href="http://luyiyun.online/2020/05/17/rnn-jian-wang-2016/"/>
+    <id>http://luyiyun.online/2020/05/17/rnn-jian-wang-2016/</id>
+    <published>2020-05-17T03:00:14.000Z</published>
+    <updated>2020-05-19T07:16:56.475Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;recurrent-neural-network-based-hybrid-model-of-gene-regulatory-network&quot;&gt;Recurrent Neural Network Based Hybrid Model of Gene
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Paper" scheme="http://luyiyun.online/categories/Paper/"/>
+    
+      <category term="Method" scheme="http://luyiyun.online/categories/Paper/Method/"/>
+    
+    
+      <category term="Deep Learning" scheme="http://luyiyun.online/tags/Deep-Learning/"/>
+    
+      <category term="Omics" scheme="http://luyiyun.online/tags/Omics/"/>
+    
+      <category term="Network" scheme="http://luyiyun.online/tags/Network/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS选择器</title>
+    <link href="http://luyiyun.online/2020/05/16/css-xuan-ze-qi/"/>
+    <id>http://luyiyun.online/2020/05/16/css-xuan-ze-qi/</id>
+    <published>2020-05-16T13:06:22.000Z</published>
+    <updated>2020-05-19T07:16:56.447Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;元素选择器&quot;&gt;元素选择器&lt;/h1&gt;
+&lt;p&gt;例：&lt;/p&gt;
+&lt;div class=&quot;sourceCode&quot; id=&quot;cb1&quot;&gt;&lt;pre class=&quot;sourceCode css&quot;&gt;&lt;code class=&quot;sourceCode css&quot;&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Web" scheme="http://luyiyun.online/categories/Web/"/>
+    
+      <category term="CSS" scheme="http://luyiyun.online/categories/Web/CSS/"/>
+    
+    
+      <category term="MDN学习" scheme="http://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CSS层叠、优先级和继承</title>
     <link href="http://luyiyun.online/2020/05/16/css-ceng-die-you-xian-ji-ji-cheng/"/>
     <id>http://luyiyun.online/2020/05/16/css-ceng-die-you-xian-ji-ji-cheng/</id>
     <published>2020-05-16T09:13:57.000Z</published>
-    <updated>2020-05-16T10:28:32.725Z</updated>
+    <updated>2020-05-19T07:16:56.433Z</updated>
     
     <summary type="html">
     
@@ -51,7 +205,7 @@
     <link href="http://luyiyun.online/2020/05/15/dl-in-omics2019/"/>
     <id>http://luyiyun.online/2020/05/15/dl-in-omics2019/</id>
     <published>2020-05-15T08:00:11.000Z</published>
-    <updated>2020-05-15T15:49:52.535Z</updated>
+    <updated>2020-05-19T07:16:56.458Z</updated>
     
     <summary type="html">
     
@@ -70,12 +224,12 @@
     
       <category term="Paper" scheme="http://luyiyun.online/categories/Paper/"/>
     
-      <category term="Deep Learning" scheme="http://luyiyun.online/categories/Paper/Deep-Learning/"/>
-    
-      <category term="Omics" scheme="http://luyiyun.online/categories/Paper/Deep-Learning/Omics/"/>
+      <category term="Review" scheme="http://luyiyun.online/categories/Paper/Review/"/>
     
     
-      <category term="综述" scheme="http://luyiyun.online/tags/%E7%BB%BC%E8%BF%B0/"/>
+      <category term="Deep Learning" scheme="http://luyiyun.online/tags/Deep-Learning/"/>
+    
+      <category term="Omics" scheme="http://luyiyun.online/tags/Omics/"/>
     
   </entry>
   
@@ -84,7 +238,7 @@
     <link href="http://luyiyun.online/2020/05/15/css-ji-chu/"/>
     <id>http://luyiyun.online/2020/05/15/css-ji-chu/</id>
     <published>2020-05-15T04:01:21.000Z</published>
-    <updated>2020-05-16T10:22:24.074Z</updated>
+    <updated>2020-05-19T07:16:56.440Z</updated>
     
     <summary type="html">
     
@@ -113,7 +267,7 @@
     <link href="http://luyiyun.online/2020/05/14/html-biao-ge/"/>
     <id>http://luyiyun.online/2020/05/14/html-biao-ge/</id>
     <published>2020-05-14T15:38:49.000Z</published>
-    <updated>2020-05-16T05:47:59.351Z</updated>
+    <updated>2020-05-19T07:16:56.417Z</updated>
     
     <summary type="html">
     
@@ -144,7 +298,7 @@
     <link href="http://luyiyun.online/2020/05/13/html-duo-mei-ti/"/>
     <id>http://luyiyun.online/2020/05/13/html-duo-mei-ti/</id>
     <published>2020-05-13T15:03:55.000Z</published>
-    <updated>2020-05-16T05:47:15.702Z</updated>
+    <updated>2020-05-19T07:16:56.419Z</updated>
     
     <summary type="html">
     
@@ -175,7 +329,7 @@
     <link href="http://luyiyun.online/2020/05/13/html-ji-chu/"/>
     <id>http://luyiyun.online/2020/05/13/html-ji-chu/</id>
     <published>2020-05-13T10:59:34.000Z</published>
-    <updated>2020-05-16T05:45:15.927Z</updated>
+    <updated>2020-05-19T07:16:56.426Z</updated>
     
     <summary type="html">
     
@@ -204,7 +358,7 @@
     <link href="http://luyiyun.online/2020/05/10/blog-build/"/>
     <id>http://luyiyun.online/2020/05/10/blog-build/</id>
     <published>2020-05-10T10:08:02.000Z</published>
-    <updated>2020-05-16T05:49:49.562Z</updated>
+    <updated>2020-05-19T07:16:56.337Z</updated>
     
     <summary type="html">
     
@@ -236,7 +390,7 @@
     <link href="http://luyiyun.online/2020/05/10/zsh-an-zhuang/"/>
     <id>http://luyiyun.online/2020/05/10/zsh-an-zhuang/</id>
     <published>2020-05-10T07:53:34.000Z</published>
-    <updated>2020-05-16T05:50:28.197Z</updated>
+    <updated>2020-05-19T07:16:56.416Z</updated>
     
     <summary type="html">
     
