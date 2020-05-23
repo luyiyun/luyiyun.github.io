@@ -677,7 +677,7 @@
 <p><img src="/2020/05/17/rnn-jian-wang-2016/RNN建网2016_2020-05-17-12-37-59.png"><br>
 </p>
 <h3 id="kalman-filter">Kalman filter</h3>
-<p>关于卡尔曼滤波器的基本信息，可以查看<a href="https://zh.wikipedia.org/wiki/%E5%8D%A1%E5%B0%94%E6%9B%BC%E6%BB%A4%E6%B3%A2" target="_blank" rel="noopener">wiki</a>。</p>
+<p>关于卡尔曼滤波器的基本信息，可以查看<a href="https://en.wikipedia.org/wiki/Kalman_filter" target="_blank" rel="noopener">wiki</a>。</p>
 <p><a href="https://zhuanlan.zhihu.com/p/39912633" target="_blank" rel="noopener">这里</a>是一个关于kalman filter的解释，可能更加容易理解。</p>
 <blockquote>
 <p>一个时间序列，我们已知一个时间点<span class="math inline">\(t\)</span>的最佳估计（当然这个估计也是随机的，有一个方差），我们有两种方式来得到下一个时间点<span class="math inline">\(t+1\)</span>的估计：</p>
@@ -691,7 +691,7 @@
 <p>如果上一个时间点的估计是精确的，即此时方差为0，则计算权重的时候将不会再为<strong>观测</strong>分配权重，则整个时间序列过程退化为一个确定性过程。</p>
 <p>更加general的模型还会有一个外部环境影响因素，这个也是一个随机变量，则此时，就算是初始估计是精确地，因为此随机外部环境的影响，我们也无法忽略<strong>观测</strong>过程。</p>
 <p>在本文的例子中，RNN所预测的权重被看做是一个<strong>预测</strong>。</p>
-<p>对于本文用到的generalized extended kalman filter （GEKF），是更加general的清楚，将非线性的过程加入其中。****</p>
+<p>对于本文用到的generalized extended kalman filter （GEKF），是更加general的清楚，将非线性的过程加入其中。</p>
 </blockquote>
 <p><img src="/2020/05/17/rnn-jian-wang-2016/RNN建网2016_2020-05-17-14-36-38.png" alt="GEKF for RNNs"><br>
 </p>
@@ -1585,7 +1585,7 @@
 </main>
 
 
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script>
     MathJax.Hub.Config({
         tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
@@ -1660,7 +1660,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">28k</span>&nbsp;字
+                class="white-color">28.4k</span>&nbsp;字
             
             
             

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://luyiyun.online/"/>
-  <updated>2020-05-23T02:56:57.410Z</updated>
+  <updated>2020-05-23T07:53:49.614Z</updated>
   <id>http://luyiyun.online/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://luyiyun.online/2020/05/21/gitignore-wen-jian-hu-lue-gui-ze/"/>
     <id>http://luyiyun.online/2020/05/21/gitignore-wen-jian-hu-lue-gui-ze/</id>
     <published>2020-05-21T14:02:25.000Z</published>
-    <updated>2020-05-23T02:56:57.410Z</updated>
+    <updated>2020-05-23T07:53:49.614Z</updated>
     
     <summary type="html">
     
@@ -47,11 +47,11 @@
   </entry>
   
   <entry>
-    <title>论文精读\-OmiVAE(使用VAE整合多组学数据进行PanCancer分析)\-2019</title>
+    <title>论文精读-使用VAE整合多组学数据进行PanCancer分析-OmiVAE2019</title>
     <link href="http://luyiyun.online/2020/05/21/vae-jian-mo-pancancer2019/"/>
     <id>http://luyiyun.online/2020/05/21/vae-jian-mo-pancancer2019/</id>
     <published>2020-05-21T02:04:40.000Z</published>
-    <updated>2020-05-23T02:56:57.756Z</updated>
+    <updated>2020-05-23T07:53:50.560Z</updated>
     
     <summary type="html">
     
@@ -84,7 +84,7 @@
     <link href="http://luyiyun.online/2020/05/19/pamogk2019/"/>
     <id>http://luyiyun.online/2020/05/19/pamogk2019/</id>
     <published>2020-05-19T08:57:01.000Z</published>
-    <updated>2020-05-23T02:56:57.533Z</updated>
+    <updated>2020-05-23T07:53:50.181Z</updated>
     
     <summary type="html">
     
@@ -113,41 +113,11 @@
   </entry>
   
   <entry>
-    <title>HTML表单</title>
-    <link href="http://luyiyun.online/2020/05/19/html-biao-dan/"/>
-    <id>http://luyiyun.online/2020/05/19/html-biao-dan/</id>
-    <published>2020-05-18T16:14:11.000Z</published>
-    <updated>2020-05-23T02:56:57.695Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;HTML表单是用户和web站点或应用程序之间交互的主要内容之一。它们允许用户将数据发送到web站点。大多数情况下，数据被发送到web服务器，但是web页面也可以自己拦截它并使用它。&lt;/p&gt;
-&lt;p&gt;HTML表单是由一个或多个小部件组成的。这些小部件可以是文本字段(单行或多行)
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Web" scheme="http://luyiyun.online/categories/Web/"/>
-    
-      <category term="HTML" scheme="http://luyiyun.online/categories/Web/HTML/"/>
-    
-    
-      <category term="MDN学习" scheme="http://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
     <title>CSS溢出</title>
     <link href="http://luyiyun.online/2020/05/18/css-yi-chu/"/>
     <id>http://luyiyun.online/2020/05/18/css-yi-chu/</id>
     <published>2020-05-18T15:27:25.000Z</published>
-    <updated>2020-05-23T02:56:57.732Z</updated>
+    <updated>2020-05-23T07:53:50.517Z</updated>
     
     <summary type="html">
     
@@ -176,7 +146,7 @@
     <link href="http://luyiyun.online/2020/05/18/css-wen-ben/"/>
     <id>http://luyiyun.online/2020/05/18/css-wen-ben/</id>
     <published>2020-05-18T13:59:51.000Z</published>
-    <updated>2020-05-23T02:56:57.412Z</updated>
+    <updated>2020-05-23T07:53:49.657Z</updated>
     
     <summary type="html">
     
@@ -206,7 +176,7 @@
     <link href="http://luyiyun.online/2020/05/17/css-he-zi-mo-xing/"/>
     <id>http://luyiyun.online/2020/05/17/css-he-zi-mo-xing/</id>
     <published>2020-05-17T06:40:20.000Z</published>
-    <updated>2020-05-23T02:56:57.704Z</updated>
+    <updated>2020-05-23T07:53:50.472Z</updated>
     
     <summary type="html">
     
@@ -237,7 +207,7 @@
     <link href="http://luyiyun.online/2020/05/17/rnn-jian-wang-2016/"/>
     <id>http://luyiyun.online/2020/05/17/rnn-jian-wang-2016/</id>
     <published>2020-05-17T03:00:14.000Z</published>
-    <updated>2020-05-23T02:56:57.575Z</updated>
+    <updated>2020-05-23T07:53:50.257Z</updated>
     
     <summary type="html">
     
@@ -270,7 +240,7 @@
     <link href="http://luyiyun.online/2020/05/16/css-xuan-ze-qi/"/>
     <id>http://luyiyun.online/2020/05/16/css-xuan-ze-qi/</id>
     <published>2020-05-16T13:06:22.000Z</published>
-    <updated>2020-05-23T02:56:57.638Z</updated>
+    <updated>2020-05-23T07:53:50.368Z</updated>
     
     <summary type="html">
     
@@ -297,11 +267,11 @@
   </entry>
   
   <entry>
-    <title>CSS层叠、优先级和继承</title>
+    <title>CSS层叠优先级和继承</title>
     <link href="http://luyiyun.online/2020/05/16/css-ceng-die-you-xian-ji-ji-cheng/"/>
     <id>http://luyiyun.online/2020/05/16/css-ceng-die-you-xian-ji-ji-cheng/</id>
     <published>2020-05-16T09:13:57.000Z</published>
-    <updated>2020-05-23T02:56:57.416Z</updated>
+    <updated>2020-05-23T07:53:49.727Z</updated>
     
     <summary type="html">
     
@@ -331,7 +301,7 @@
     <link href="http://luyiyun.online/2020/05/15/dl-in-omics2019/"/>
     <id>http://luyiyun.online/2020/05/15/dl-in-omics2019/</id>
     <published>2020-05-15T08:00:11.000Z</published>
-    <updated>2020-05-23T02:56:57.662Z</updated>
+    <updated>2020-05-23T07:53:50.413Z</updated>
     
     <summary type="html">
     
@@ -364,7 +334,7 @@
     <link href="http://luyiyun.online/2020/05/15/css-ji-chu/"/>
     <id>http://luyiyun.online/2020/05/15/css-ji-chu/</id>
     <published>2020-05-15T04:01:21.000Z</published>
-    <updated>2020-05-23T02:56:57.529Z</updated>
+    <updated>2020-05-23T07:53:50.135Z</updated>
     
     <summary type="html">
     
@@ -393,7 +363,7 @@
     <link href="http://luyiyun.online/2020/05/14/html-biao-ge/"/>
     <id>http://luyiyun.online/2020/05/14/html-biao-ge/</id>
     <published>2020-05-14T15:38:49.000Z</published>
-    <updated>2020-05-23T02:56:57.425Z</updated>
+    <updated>2020-05-23T07:53:49.822Z</updated>
     
     <summary type="html">
     
@@ -424,7 +394,7 @@
     <link href="http://luyiyun.online/2020/05/13/html-duo-mei-ti/"/>
     <id>http://luyiyun.online/2020/05/13/html-duo-mei-ti/</id>
     <published>2020-05-13T15:03:55.000Z</published>
-    <updated>2020-05-23T02:56:57.519Z</updated>
+    <updated>2020-05-23T07:53:50.077Z</updated>
     
     <summary type="html">
     
@@ -455,7 +425,7 @@
     <link href="http://luyiyun.online/2020/05/13/html-ji-chu/"/>
     <id>http://luyiyun.online/2020/05/13/html-ji-chu/</id>
     <published>2020-05-13T10:59:34.000Z</published>
-    <updated>2020-05-23T02:56:57.796Z</updated>
+    <updated>2020-05-23T07:53:50.638Z</updated>
     
     <summary type="html">
     
@@ -484,7 +454,7 @@
     <link href="http://luyiyun.online/2020/05/10/blog-build/"/>
     <id>http://luyiyun.online/2020/05/10/blog-build/</id>
     <published>2020-05-10T10:08:02.000Z</published>
-    <updated>2020-05-23T02:56:57.428Z</updated>
+    <updated>2020-05-23T07:53:49.851Z</updated>
     
     <summary type="html">
     
@@ -516,7 +486,7 @@
     <link href="http://luyiyun.online/2020/05/10/zsh-an-zhuang/"/>
     <id>http://luyiyun.online/2020/05/10/zsh-an-zhuang/</id>
     <published>2020-05-10T07:53:34.000Z</published>
-    <updated>2020-05-23T02:56:57.423Z</updated>
+    <updated>2020-05-23T07:53:49.789Z</updated>
     
     <summary type="html">
     
