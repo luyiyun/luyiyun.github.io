@@ -578,21 +578,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-19
+                    2020-05-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.4k
+                    2.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    13 分
+                    10 分
                 </div>
                 
 
@@ -631,17 +631,17 @@
 <p>如果是windows系统，同样使用引导界面安装即可。</p>
 <p>如果是linux系统，除了使用包管理器安装以外，还可以使用下面的方式（不需要root权限，便于管理）:</p>
 <ol type="1">
-<li>从<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">node官网</a>中下载linux的2进制安装包；</li>
+<li>从[node官网][node]中下载linux的2进制安装包；</li>
 <li><code>tar -Jxvf node-v12.16.3-linux-x64.tar.xz</code>，解压；</li>
 <li>（创建<code>.local/bin</code>，没有必要将这个路径加入到环境变量中，其默认就在环境变量中），将<code>bin/node</code>（别忘了<code>npm</code>和<code>npx</code>）软连接到<code>.local/bin</code>中；</li>
 <li><code>node -v</code>查看是否成功。</li>
 </ol>
 <h2 id="hexo安装">3. Hexo安装</h2>
-<p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo</a>依赖于<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git</a>和<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">node.js</a>，其作为node.js的一个软件包存在的，可以使用npm进行安装管理。</p>
+<p>[Hexo]依赖于[git]和[node.js][node]，其作为node.js的一个软件包存在的，可以使用npm进行安装管理。</p>
 <blockquote>
 <p>这里需要介绍以下<code>npm</code>的规则，其默认是局部安装模式。如果使用全局安装模式（<code>-g</code>），则相关内容会被安装到<code>prefix/lib/node_modules</code>中（可以使用<code>npm help npm</code>来查看，windows是在C盘下面）。如果是局部安装模式，则相关内容会被安装到当前的文件夹下的node_modules中。</p>
 </blockquote>
-<p>为了提高npm的安装速度，可以<a href="https://blog.csdn.net/quuqu/article/details/64121812" target="_blank" rel="noopener">设置一下淘宝镜像</a>或使用<a href="https://developer.aliyun.com/mirror/NPM" target="_blank" rel="noopener"><code>cnpm</code></a>，然后全局安装hexo-cli（全局安装可以使得我们在任何位置使用<code>hexo</code>命令）：</p>
+<p>为了提高npm的安装速度，可以[设置一下淘宝镜像][npm_mirro]或使用[<code>cnpm</code>][cnpm]，然后全局安装hexo-cli（全局安装可以使得我们在任何位置使用<code>hexo</code>命令）：</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">npm</span> config set registry https://registry.npm.taobao.org</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="ex">npm</span> install hexo-cli -g</span></code></pre></div>
 <p>注意，如果在linux上解压二进制安装包安装的node.js，则其全局安装位置可能并不在环境变量中，需要手动再将<code>hexo</code>加入环境变量才好使用。</p>
@@ -651,10 +651,10 @@
 <p>vscode的安装不再赘述，这里侧重于工作流程、配置和一些好用的插件。</p>
 <p>整个工作流程可以是这样的：</p>
 <ol type="1">
-<li>直接在<code>_posts</code>文件夹下创建工作环境，编辑markdown文件，需要导入图片的时候，就在其同级目录下创建一个同名文件夹，将图片放入其中来引用即可（使用<a href="https://marketplace.visualstudio.com/items?itemName=mushan.vscode-paste-image" target="_blank" rel="noopener">Paste Image</a>插件可以自动创建这个目录）。</li>
+<li>直接在<code>_posts</code>文件夹下创建工作环境，编辑markdown文件，需要导入图片的时候，就在其同级目录下创建一个同名文件夹，将图片放入其中来引用即可（使用[Paste Image]插件可以自动创建这个目录）。</li>
 <li>因为所有的markdown文件都必须在<code>_post</code>目录下，所以为了容易区分，文件命名很重要，可以使用<code>-</code>来增加可读性，比如关于pytorch的学习可以使用<code>python-pytorch-xx</code>、论文的阅读总结可以使用<code>paper-xx</code>。</li>
 </ol>
-<h2 id="paste-image">5.1 <a href="https://marketplace.visualstudio.com/items?itemName=mushan.vscode-paste-image" target="_blank" rel="noopener">Paste Image</a></h2>
+<h2 id="paste-image">5.1 [Paste Image]</h2>
 <p>其作用是可以将剪切板中的图片直接放入markdown中（快捷键为C-A-v），并保存到指定的文件夹下。我对此插件进行了下列配置：</p>
 <ol type="1">
 <li>保存剪切板图片的时候，使用当前正在编辑的文件的名称作为图片文件名称的前缀，使用时间作为其名称的主题；</li>
@@ -662,7 +662,7 @@
 <li>在保存图片的时候，会出现vscode input box，从而可以更改路径； <img src="/2020/05/10/blog-build/BlogBuild_2020-05-10-18-03-00.png" alt="PasteImage的配置"></li>
 </ol>
 <h1 id="第二部分-配置博客">第二部分 配置博客</h1>
-<p>本次博客配置使用的主题为<a href="https://github.com/blinkfox/hexo-theme-matery.git" target="_blank" rel="noopener">hexo-theme-matery</a>，其有比较全面的<a href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md" target="_blank" rel="noopener">中文配置说明</a>。另外，博客的配置还参考了两位大佬 -- <a href="https://zhuanlan.zhihu.com/p/35668237" target="_blank" rel="noopener">godweiyang</a>和<a href="https://qinnian.xyz/CreateBlog.html" target="_blank" rel="noopener">钦の念</a>的配置过程，受益匪浅。</p>
+<p>本次博客配置使用的主题为[hexo-theme-matery]，其有比较全面的[中文配置说明][theme-guide]。另外，博客的配置还参考了两位大佬 -- [godweiyang]和[钦の念]的配置过程，受益匪浅。</p>
 <p>另外，在配置过程中，为了添加更多的功能，安装了众多的hexo插件，这些插件都集中记录在此：</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># --save表示安装使用依赖</span></span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="ex">npm</span> install hexo-deployer-git --save           <span class="co"># 用于进行git部署</span></span>
@@ -695,7 +695,7 @@
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">hexo</span> clean <span class="kw">&amp;&amp;</span> <span class="ex">hexo</span> g <span class="kw">&amp;&amp;</span> <span class="ex">hexo</span> d</span></code></pre></div>
 <p>然后打开<code>luyiyun.github.io</code>，看是否部署成功： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-19-05.png" alt="部署成功"></p></li>
 </ol>
-<p>以上在<a href="https://qinnian.xyz/CreateBlog.html" target="_blank" rel="noopener">钦の念</a>的博客中有更加详细的叙述。</p>
+<p>以上在[钦の念]的博客中有更加详细的叙述。</p>
 <h2 id="申请个人域名">2. 申请个人域名</h2>
 <ol type="1">
 <li><p>申请一个新的域名<code>luyiyun.online</code>（腾讯云），别忘了添加一条解析记录使之能够正常解析；</p></li>
@@ -709,8 +709,8 @@
 <ol type="1">
 <li><p>站点基本信息配置： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-43-06.png" alt="site"></p></li>
 <li><p>网站的url： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-44-21.png" alt="url"></p></li>
-<li><p>分页，设置这个是为了适配<a href="https://github.com/blinkfox/hexo-theme-matery.git" target="_blank" rel="noopener">hexo-theme-matery</a>： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-46-33.png" alt="per_page"></p></li>
-<li><p>主题，这里使用<a href="https://github.com/blinkfox/hexo-theme-matery.git" target="_blank" rel="noopener">hexo-theme-matery</a>： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-48-13.png" alt="theme"></p>
+<li><p>分页，设置这个是为了适配[hexo-theme-matery]： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-46-33.png" alt="per_page"></p></li>
+<li><p>主题，这里使用[hexo-theme-matery]： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-48-13.png" alt="theme"></p>
 <blockquote>
 <p>我们在<code>/themes</code>文件夹下使用git来下载该主题：</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">git</span> clone https://github.com/blinkfox/hexo-theme-matery.git</span></code></pre></div>
@@ -764,123 +764,7 @@
 </ol>
 <h2 id="新建主题文章模板">4. 新建主题文章模板</h2>
 <p>建议将<code>/scaffolds/post.md</code>修改至：</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1"></a><span class="co">---</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="an">title:</span><span class="co"> Hexo博客搭建</span></span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="an">date:</span><span class="co"> 1589105282000</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a><span class="an">author:</span><span class="co"> Lu Yiyun</span></span>
-<span id="cb6-5"><a href="#cb6-5"></a><span class="an">img:</span><span class="co"> "文章特色图，空则hexo-theme-matery自动进行填补"</span></span>
-<span id="cb6-6"><a href="#cb6-6"></a><span class="an">coverImg:</span><span class="co"> "文章在首页轮播封面时显示的图片，默认使用文章特色图"</span></span>
-<span id="cb6-7"><a href="#cb6-7"></a><span class="an">top:</span><span class="co"> true</span></span>
-<span id="cb6-8"><a href="#cb6-8"></a><span class="an">cover:</span><span class="co"> true</span></span>
-<span id="cb6-9"><a href="#cb6-9"></a><span class="an">toc:</span><span class="co"> true</span></span>
-<span id="cb6-10"><a href="#cb6-10"></a><span class="an">mathjax:</span><span class="co"> true</span></span>
-<span id="cb6-11"><a href="#cb6-11"></a><span class="an">summary:</span><span class="co"> "自定义文章的摘要，不然自动从文章正文中吸取"</span></span>
-<span id="cb6-12"><a href="#cb6-12"></a><span class="an">categories:</span></span>
-<span id="cb6-13"><a href="#cb6-13"></a><span class="co">  - A</span></span>
-<span id="cb6-14"><a href="#cb6-14"></a><span class="co">  - B</span></span>
-<span id="cb6-15"><a href="#cb6-15"></a><span class="an">tags:</span></span>
-<span id="cb6-16"><a href="#cb6-16"></a><span class="co">  - a</span></span>
-<span id="cb6-17"><a href="#cb6-17"></a><span class="co">  - b</span></span>
-<span id="cb6-18"><a href="#cb6-18"></a><span class="an">keywords:</span></span>
-<span id="cb6-19"><a href="#cb6-19"></a><span class="co">---</span></span></code></pre></div>
-<h2 id="新建工具页面">5. 新建工具页面</h2>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="ex">hexo</span> new page <span class="st">"categories"</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="ex">hexo</span> new page <span class="st">"tags"</span></span>
-<span id="cb7-3"><a href="#cb7-3"></a><span class="ex">hexo</span> new page <span class="st">"about"</span></span>
-<span id="cb7-4"><a href="#cb7-4"></a><span class="ex">hexo</span> new page <span class="st">"contact"</span></span>
-<span id="cb7-5"><a href="#cb7-5"></a><span class="ex">hexo</span> new page <span class="st">"friends"</span></span></code></pre></div>
-<p>并都将其中的<code>index.md</code>文件改写为以下格式：</p>
-<pre><code>---
-title: categories
-date: 2020-05-10 13:25:48
-type: "categories"
-layout: "categories"
----</code></pre>
-<p>然后手动再<code>/source/</code>下创建一个<code>404.md</code>，并填写一下内容：</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1"></a><span class="ex">---</span></span>
-<span id="cb9-2"><a href="#cb9-2"></a><span class="ex">title</span>: 404</span>
-<span id="cb9-3"><a href="#cb9-3"></a><span class="ex">date</span>: 2019-07-19 16:41:10</span>
-<span id="cb9-4"><a href="#cb9-4"></a><span class="ex">type</span>: <span class="st">"404"</span></span>
-<span id="cb9-5"><a href="#cb9-5"></a><span class="ex">layout</span>: <span class="st">"404"</span></span>
-<span id="cb9-6"><a href="#cb9-6"></a><span class="ex">description</span>: <span class="st">"你来到了没有知识的荒原 :("</span></span>
-<span id="cb9-7"><a href="#cb9-7"></a><span class="ex">---</span></span></code></pre></div>
-<p>并在<code>/themes/hexo-theme-matery/layout/</code>下新建<code>404.ejs</code>，并添加以下内容：</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb10-1"><a href="#cb10-1"></a><span class="op">&lt;</span>style type<span class="op">=</span><span class="st">"text/css"</span><span class="op">&gt;</span></span>
-<span id="cb10-2"><a href="#cb10-2"></a>    <span class="co">/* don't remove. */</span></span>
-<span id="cb10-3"><a href="#cb10-3"></a>    <span class="op">.</span><span class="at">about</span><span class="op">-</span>cover {</span>
-<span id="cb10-4"><a href="#cb10-4"></a>        <span class="dt">height</span><span class="op">:</span> 75vh<span class="op">;</span></span>
-<span id="cb10-5"><a href="#cb10-5"></a>    }</span>
-<span id="cb10-6"><a href="#cb10-6"></a><span class="op">&lt;/</span>style<span class="op">&gt;</span></span>
-<span id="cb10-7"><a href="#cb10-7"></a></span>
-<span id="cb10-8"><a href="#cb10-8"></a><span class="op">&lt;</span>div <span class="kw">class</span><span class="op">=</span><span class="st">"bg-cover pd-header about-cover"</span><span class="op">&gt;</span></span>
-<span id="cb10-9"><a href="#cb10-9"></a>    <span class="op">&lt;</span>div <span class="kw">class</span><span class="op">=</span><span class="st">"container"</span><span class="op">&gt;</span></span>
-<span id="cb10-10"><a href="#cb10-10"></a>        <span class="op">&lt;</span>div <span class="kw">class</span><span class="op">=</span><span class="st">"row"</span><span class="op">&gt;</span></span>
-<span id="cb10-11"><a href="#cb10-11"></a>            <span class="op">&lt;</span>div <span class="kw">class</span><span class="op">=</span><span class="st">"col s10 offset-s1 m8 offset-m2 l8 offset-l2"</span><span class="op">&gt;</span></span>
-<span id="cb10-12"><a href="#cb10-12"></a>                <span class="op">&lt;</span>div <span class="kw">class</span><span class="op">=</span><span class="st">"brand"</span><span class="op">&gt;</span></span>
-<span id="cb10-13"><a href="#cb10-13"></a>                    <span class="op">&lt;</span>div <span class="kw">class</span><span class="op">=</span><span class="st">"title center-align"</span><span class="op">&gt;</span></span>
-<span id="cb10-14"><a href="#cb10-14"></a>                        <span class="dv">404</span></span>
-<span id="cb10-15"><a href="#cb10-15"></a>                    <span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
-<span id="cb10-16"><a href="#cb10-16"></a>                    <span class="op">&lt;</span>div <span class="kw">class</span><span class="op">=</span><span class="st">"description center-align"</span><span class="op">&gt;</span></span>
-<span id="cb10-17"><a href="#cb10-17"></a>                        <span class="op">&lt;%=</span> page<span class="op">.</span><span class="at">description</span> <span class="op">%&gt;</span></span>
-<span id="cb10-18"><a href="#cb10-18"></a>                    <span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
-<span id="cb10-19"><a href="#cb10-19"></a>                <span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
-<span id="cb10-20"><a href="#cb10-20"></a>            <span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
-<span id="cb10-21"><a href="#cb10-21"></a>        <span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
-<span id="cb10-22"><a href="#cb10-22"></a>    <span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
-<span id="cb10-23"><a href="#cb10-23"></a><span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
-<span id="cb10-24"><a href="#cb10-24"></a></span>
-<span id="cb10-25"><a href="#cb10-25"></a><span class="op">&lt;</span>script<span class="op">&gt;</span></span>
-<span id="cb10-26"><a href="#cb10-26"></a>    <span class="co">// 每天切换 banner 图.  Switch banner image every day.</span></span>
-<span id="cb10-27"><a href="#cb10-27"></a>    $(<span class="st">'.bg-cover'</span>)<span class="op">.</span><span class="fu">css</span>(<span class="st">'background-image'</span><span class="op">,</span> <span class="st">'url(/medias/banner/'</span> <span class="op">+</span> <span class="kw">new</span> <span class="bu">Date</span>()<span class="op">.</span><span class="fu">getDay</span>() <span class="op">+</span> <span class="st">'.jpg)'</span>)<span class="op">;</span></span>
-<span id="cb10-28"><a href="#cb10-28"></a><span class="op">&lt;/</span>script<span class="op">&gt;</span></span></code></pre></div>
-<p>这样，我们就添加了一个404页面了。</p>
-<h2 id="主题配置文件">6. 主题配置文件</h2>
-<p>在<code>/themes/hexo-theme-matery</code>下有一个<code>_config.yml</code>文件，用来控制主题的诸多属性。</p>
-<ol type="1">
-<li><p>第一部分配置菜单导航，icon可以在<a href="https://fontawesome.com/" target="_blank" rel="noopener">Font Awesome</a>中找： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-15-18-16.png" alt="theme-menu"></p></li>
-<li><p>站点运行时间： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-15-21-03.png" alt="theme-start-time"></p></li>
-<li><p>首页配置，包括封面轮播图、“梦想”和音乐： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-15-23-59.png" alt="theme-index"></p></li>
-<li><p>配置logo、favicon： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-16-42-12.png" alt="theme-logo"></p></li>
-<li><p>联系方式： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-16-44-00.png" alt="theme-link"></p></li>
-<li><p>文章目录设置： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-16-45-03.png" alt="theme-toc"></p></li>
-<li><p>代码块部分： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-16-45-50.png" alt="theme-code-block"></p></li>
-<li><p>打赏部分，记得替换为自己的二维码： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-16-46-43.png" alt="theme-reward"></p></li>
-<li><p>复制时追加版权信息： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-16-48-45.png" alt="theme-copyright"></p></li>
-<li><p>激活mathjax： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-16-49-25.png" alt="theme-math"></p></li>
-<li><p>开启文章信息，需要安装<code>hexo-wordcount</code>插件： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-16-52-08.png" alt="theme-word"></p></li>
-<li><p>"关于"页面的配置： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-16-55-47.png" alt="theme-about"></p></li>
-<li><p>评论配置，这里会开启两个评论：基于github issue的gitalk和无后端的valine：</p>
-<ul>
-<li><p>gitalk，安装相关插件<code>gitalk</code>：</p>
-<ol type="a">
-<li><p>我们需要创建一个新的github repository来储存评论： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-01-01.png" alt="theme-gitalk1"></p></li>
-<li><p>开启issue功能（默认开启）： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-02-49.png" alt="theme-gitalk2"></p></li>
-<li><p>注册一个github application： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-08-21.png" alt="theme-gitalk3"></p>
-<p>并得到Client ID和Client Secret： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-09-29.png" alt="theme-gitalk4"></p></li>
-<li><p>将这些信息配置到<code>_config.yml</code>文件中： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-12-25.png" alt="theme-gitalk5"></p></li>
-<li><p>最终效果： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-22-28.png" alt="theme-gitalk6"> <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-23-05.png" alt="theme-gitalk7"></p></li>
-</ol></li>
-<li><p><a href="https://valine.js.org/quickstart.html" target="_blank" rel="noopener">valine</a>，需要先安装插件<code>valine</code>：</p>
-<ol type="a">
-<li><p>首先我们需要注册一个LeanCloud账户，并完成实名认证；</p></li>
-<li><p>创建一个应用，然后找到其ID和Key： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-31-24.png" alt="theme-valine1"></p></li>
-<li><p>将这些信息配置到<code>_config.yml</code>文件中： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-34-10.png" alt="theme-valine2"></p></li>
-<li><p>效果： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-36-40.png" alt="theme-valine3"></p></li>
-<li><p>我们可以在LeanCloud中对这些评论进行管理： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-38-10.png" alt="theme-valine4"></p></li>
-</ol></li>
-</ul></li>
-</ol>
-<h2 id="提高加载速度">7. 提高加载速度</h2>
-<p>可以使用<a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank" rel="noopener">Google PageSpeed Insights</a>来对网站的速度进行测试，并找到其瓶颈所在，其他的各种测速工具可以见<a href="https://qinnian.xyz/CreateBlog.html" target="_blank" rel="noopener">钦の念</a>的博客。</p>
-<h3 id="图片懒加载">7.1 图片懒加载</h3>
-<p>第一种可以提高速度的方式是进行图片的懒加载，安装<code>hexo-lazyload-image</code>，并在站点配置文件中加入：</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode yml"><code class="sourceCode yaml"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">lazyload</span><span class="kw">:</span></span>
-<span id="cb11-2"><a href="#cb11-2"></a><span class="fu">enable</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb11-3"><a href="#cb11-3"></a><span class="fu">onlypost</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span><span class="co">   # true则只会懒加载文章中的图片，logo头像什么的不会</span></span>
-<span id="cb11-4"><a href="#cb11-4"></a><span class="fu">loadingImg</span><span class="kw">:</span><span class="at"> ./medias/loading.gif</span></span></code></pre></div>
-<p><em>此插件与<code>hexo-asset-image</code>似乎不兼容，未解决。</em></p>
-<h3 id="gitee和github双线部署">7.2 gitee和github双线部署</h3>
-<p><em>未完待续...</em></p>
+<p>```markdown</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1768,7 +1652,7 @@ layout: "categories"
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">22.8k</span>&nbsp;字
+                class="white-color">28k</span>&nbsp;字
             
             
             

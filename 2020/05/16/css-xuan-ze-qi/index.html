@@ -574,21 +574,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-19
+                    2020-05-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    4 分
                 </div>
                 
 
@@ -725,37 +725,6 @@
 <div class="sourceCode" id="cb19"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb19-1"><a href="#cb19-1"></a><span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">"box"</span><span class="kw">&gt;</span>Content in the box in my HTML page.<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
 <p>将出现下面的结果： <img src="/2020/05/16/css-xuan-ze-qi/CSS选择器_2020-05-16-22-10-29.png" alt="before伪元素选择器示例2"></p>
 <p>......</p>
-<hr>
-<p>伪类和伪元素有许多，这里链接到了<a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements" target="_blank" rel="noopener">MDN相关教程的参考节</a>上，其列举出了所有的伪类和伪元素，以及它们的作用，另外还链接到其各自的详情页上。</p>
-<h1 id="全局选择器">全局选择器</h1>
-<p>例：</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb20-1"><a href="#cb20-1"></a><span class="op">*</span> {</span>
-<span id="cb20-2"><a href="#cb20-2"></a>    <span class="kw">margin</span>: <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb20-3"><a href="#cb20-3"></a>    <span class="kw">padding</span>: <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb20-4"><a href="#cb20-4"></a>}</span></code></pre></div>
-<p>以上做法很流行，这样做的好处是会把原来很多代理用户样式表中的元素自带的一些边距、填充值变为0，方便我们之后进行重新的部署。</p>
-<p>全局选择器的另一个用途是为了让选择器更加易读。比如下面的例子，我们想要选择所有<code>&lt;article&gt;</code>元素中的第一个，则可以将伪类选择器<code>:first-child</code>设置为其兄弟选择器实现，但这可能导致不好读：</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb21-1"><a href="#cb21-1"></a>article <span class="in">:first-child</span> {</span>
-<span id="cb21-2"><a href="#cb21-2"></a></span>
-<span id="cb21-3"><a href="#cb21-3"></a>}</span></code></pre></div>
-<p>我们可以加上全局选择器使之更加清楚：</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb22-1"><a href="#cb22-1"></a>article <span class="op">*</span><span class="in">:first-child</span> { </span>
-<span id="cb22-2"><a href="#cb22-2"></a></span>
-<span id="cb22-3"><a href="#cb22-3"></a>} </span></code></pre></div>
-<h1 id="运算符组合选择器">*运算符（组合选择器）</h1>
-<h2 id="取交集">取交集</h2>
-<p>即同时符合多个选择器标准的元素 ，直接将多个选择器连接在一起即可：</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb23-1"><a href="#cb23-1"></a>p<span class="fu">.AA</span>   <span class="co">/* class是AA的元素 */</span></span>
-<span id="cb23-2"><a href="#cb23-2"></a></span>
-<span id="cb23-3"><a href="#cb23-3"></a>p<span class="ex">[class</span><span class="op">~=</span><span class="st">"a"</span><span class="ex">]</span>   <span class="co">/* 有一个类是a的p元素 */</span></span></code></pre></div>
-<h2 id="后代选择器">后代选择器</h2>
-<div class="sourceCode" id="cb24"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb24-1"><a href="#cb24-1"></a>body article p</span></code></pre></div>
-<h2 id="子代选择器">子代选择器</h2>
-<div class="sourceCode" id="cb25"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb25-1"><a href="#cb25-1"></a>article <span class="op">&gt;</span> p</span></code></pre></div>
-<h2 id="邻接兄弟选择器">邻接兄弟选择器</h2>
-<div class="sourceCode" id="cb26"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb26-1"><a href="#cb26-1"></a>p <span class="op">+</span> img <span class="co">/* 紧随在p之后的img标签 */</span></span></code></pre></div>
-<h2 id="通用兄弟选择器">通用兄弟选择器</h2>
-<div class="sourceCode" id="cb27"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb27-1"><a href="#cb27-1"></a>p <span class="op">~</span> img <span class="co">/* 和p是兄弟关系的img标签，不必与p相邻 */</span></span></code></pre></div>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1647,7 +1616,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">22.8k</span>&nbsp;字
+                class="white-color">28k</span>&nbsp;字
             
             
             

@@ -578,7 +578,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-19
+                    2020-05-23
                 </div>
                 
 
@@ -632,36 +632,27 @@
 <ul>
 <li>在诊断、预测等应用领域，实验室方法昂贵且费时；</li>
 <li>现存数据复杂、多态，传统方法已经难以处理；</li>
-</ul>
-<p>但这些难题都有望被深度学习克服。</p></li>
+</ul></li>
 </ol>
+<p>但这些难题都有望被深度学习克服。</p>
 <p><img src="/2020/05/15/dl-in-omics2019/DL-in-omics2019_2020-05-15-16-51-26.png" alt="深度学习及其在omics上的应用的文章数量变化"><br>
 </p>
 <h2 id="dl-models-in-omics">DL Models in Omics</h2>
 <blockquote>
 <p>这里涉及到很多基础的DL知识的，就不赘述了。</p>
 </blockquote>
-<h3 id="deep-neural-networks-dnns">Deep neural networks （DNNs）</h3>
+<h3 id="dnns">DNNs</h3>
 <p>这里指代了MLP、AEs、RBMs和DBNs【4】等多种模型。其中DBNs解决了蛋白质残基连接预测【27】和RNA结合蛋白位点预测问题【28】。</p>
-<h3 id="convolution-neural-networks-cnns">Convolution neural networks （CNNs）</h3>
+<h3 id="cnns">CNNs</h3>
 <p>略。</p>
-<h3 id="recurrent-neural-networks-rnns">Recurrent neural networks （RNNs）</h3>
+<h3 id="rnns">RNNs</h3>
 <p>略。</p>
 <h2 id="applications-in-omics">Applications in omics</h2>
-<p>分为以下3个领域来介绍:</p>
 <h3 id="genomics">Genomics</h3>
 <ol type="1">
 <li><p>预测DNA序列的功能单元，如复制域（replication domain）、转录因子结合位点（transcription factor binding sites, TFBS）、转录起始点、启动子、增强子、基因删除位点等。</p>
 <blockquote>
-<ul>
-<li>复制域：DNA复制时间调控的单位。<br>
-</li>
-<li><a href="https://zh.wikipedia.org/wiki/%E8%BD%AC%E5%BD%95%E5%9B%A0%E5%AD%90" target="_blank" rel="noopener">转录因子</a>：指能够结合在某基因上游特异核苷酸序列上的蛋白质，这些蛋白质能调控其基因的转录。方法是转录因子可以调控核糖核酸聚合酶（RNA聚合酶，或叫RNA合成酶）与DNA模板的结合。<br>
-</li>
-<li><a href="https://zh.wikipedia.org/wiki/%E5%95%9F%E5%8B%95%E5%AD%90" target="_blank" rel="noopener">启动子</a>：指一段能使特定基因进行转录的脱氧核糖核酸（DNA）序列。启动子可以被RNA聚合酶辨认，并开始转录合成RNA。在核糖核酸（RNA）合成中，启动子可以和调控基因转录的转录因子产生相互作用，控制基因表达（转录）的起始时间和表达的程度，包含核心启动子区域和调控区域，就像“开关”，决定基因的活动，继而控制细胞开始生产哪一种蛋白质。<br>
-</li>
-<li><a href="https://zh.wikipedia.org/wiki/%E5%BC%B7%E5%8C%96%E5%AD%90" target="_blank" rel="noopener">增强子</a>：是DNA上一小段可与蛋白质（反式作用因子；transacting factor，也就是转录因子）结合的区域，与蛋白质结合之后，基因的转录作用将会加强。增强子可能位于基因上游，也可能位于下游。且不一定接近所要作用的基因，甚至不一定与基因位于同一染色体。这是因为染色质的缠绕结构，使序列上相隔很远的位置也有机会相互接触。</li>
-</ul>
+<p>复制域：DNA复制时间调控的单位。 转录因子：指能够结合在某基因上游特异核苷酸序列上的蛋白质，这些蛋白质能调控其基因的转录。方法是转录因子可以调控核糖核酸聚合酶（RNA聚合酶，或叫RNA合成酶）与DNA模板的结合。 启动子：指一段能使特定基因进行转录的脱氧核糖核酸（DNA）序列。启动子可以被RNA聚合酶辨认，并开始转录合成RNA。在核糖核酸（RNA）合成中，启动子可以和调控基因转录的转录因子产生相互作用，控制基因表达（转录）的起始时间和表达的程度，包含核心启动子区域和调控区域，就像“开关”，决定基因的活动，继而控制细胞开始生产哪一种蛋白质。 增强子：是DNA上一小段可与蛋白质（反式作用因子；transacting factor，也就是转录因子）结合的区域，与蛋白质结合之后，基因的转录作用将会加强。增强子可能位于基因上游，也可能位于下游。且不一定接近所要作用的基因，甚至不一定与基因位于同一染色体。这是因为染色质的缠绕结构，使序列上相隔很远的位置也有机会相互接触。</p>
 </blockquote>
 <ol type="a">
 <li>2015年，将预训练、DNN和hidden Markov model结合的模型实现了对复制域分类的突破【34】；</li>
@@ -687,13 +678,12 @@
 </ol>
 <p>在预测甲基化的领域，还是以CNNs为主，RNNs可能会有所应用，但一般也要CNNs配合。而在探索基因和疾病的关系领域，主要使用DNNs，并且AEs和DBN也有所应用。</p></li>
 </ol>
-<h3 id="transcriptomics">Transcriptomics</h3>
+<h3 id="transcriptions">Transcriptions</h3>
 <ol type="1">
 <li><p>预测RNA序列的结构，比如预测RBP结合位点、可变剪切位点和RNA类型。</p>
 <ol type="a">
 <li>2015，基于DBN模型即可探索潜在的结合位点【28】，使用到的数据有RNA序列信息、RNA二级结构和RNA三级结构信息，相对于之前的方法MRE下降了22%；</li>
-<li>【84】开发了一个deep CNNs model来进行剪切点的分类，称为DeeSpline，提高了预测ACC；</li>
-<li>2017年，基于MLP的模型的成功实现了pre-miRNAs和psudo hair-pins的分类，并得到了0.968的ACC【46】；</li>
+<li>【84】开发了一个deep CNNs model来进行剪切点的分类，称为DeeSpline，提高了预测ACC； c.2017年，基于MLP的模型的成功实现了pre-miRNAs和psudo hair-pins的分类，并得到了0.968的ACC【46】；</li>
 </ol></li>
 <li><p>探索RNA和疾病的关联。</p>
 <ol type="a">
@@ -721,7 +711,9 @@
 </ol></li>
 </ol>
 <h3 id="开源软件">开源软件</h3>
-<p>很多人将开发的模型、工具的开源代码放在了网上，或者做成了web服务，现在将其列举如下： <img src="/2020/05/15/dl-in-omics2019/DL-in-omics2019_2020-05-15-18-32-19.png" alt="各种开源工具和代码"></p>
+<p>很多人将开发的模型、工具的开源代码放在了网上，或者做成了web服务，现在将其列举如下：</p>
+<p><img src="/2020/05/15/dl-in-omics2019/DL-in-omics2019_2020-05-15-18-32-19.png" alt="各种开源工具和代码"><br>
+</p>
 <h2 id="使用dl来解决omics问题">使用DL来解决omics问题</h2>
 <p>这里总结了使用DL来进行omics研究的流程。</p>
 <h3 id="数据获得">数据获得</h3>
@@ -741,19 +733,18 @@
 <li><p>Normalization。</p>
 <p>主要的作用是将数据缩放至一个合适的范围内。</p>
 <ul>
-<li>如果我们的数据比较集中，并且不服从正态分布，没有涉及到距离、相关性的计算，我们可以使用<strong>min-max normalization</strong>。比如图像数据。</li>
-<li>如果数据大约服从正态分布，并且我们希望保留样本间距离关系，则可以使用<strong>zero-mean normalization</strong>。比如基因表达谱数据等。这也是最常用的normalization方法。</li>
+<li>如果我们的数据比较集中，并且不服从正态分布，没有涉及到距离、相关性的计算，我们可以使用min-max normalization。比如图像数据。</li>
+<li>如果数据大约服从正态分布，并且我们希望保留样本间距离关系，则可以使用zero-mean normalization。比如基因表达谱数据等。这也是最常用的normalization方法。</li>
 </ul></li>
 <li><p>Dimensionality reduction。</p>
 <p>删除一些无关的变量，使用AEs来进行降维，或者使用PCA等等。</p></li>
 </ol>
 <h3 id="编码">编码</h3>
-<dl>
-<dt><strong>one-hot encoding</strong></dt>
-<dd>略。
-</dd>
-<dt><strong><a href="https://en.wikipedia.org/wiki/Position-Specific_Scoring_Matrix" target="_blank" rel="noopener">position-specific scoring matrix（PSSM, PWM, PSWM）</a></strong></dt>
-<dd><p>也可以用来编码核苷酸序列或蛋白质序列，这里使用wiki的例子进行解释：</p>
+<ul>
+<li><p><strong>one-hot encoding</strong></p>
+<p>略</p></li>
+<li><p><a href="https://en.wikipedia.org/wiki/Position-Specific_Scoring_Matrix" target="_blank" rel="noopener"><strong>position-specific scoring matrix（PSSM, PWM, PSWM）</strong></a></p>
+<p>也可以用来编码核苷酸序列或蛋白质序列，这里使用wiki的例子进行解释：</p>
 <ol type="a">
 <li><p>我们有以下9条序列：</p>
 <pre><code>GAGGTAAAC
@@ -766,15 +757,20 @@ ATGGTAACT
 CAGGTATAC
 TGTGTGAGT
 AAGGTAAGT</code></pre></li>
-<li><p>首先将每个位置上的频数进行计算，称为PFM（position frequency matrix）： <img src="/2020/05/15/dl-in-omics2019/DL-in-omics2019_2020-05-15-22-07-33.png" alt="PFM"></p></li>
-<li><p>然后每个位置归一化为概率，得到PPM（position probability matrix）： <img src="/2020/05/15/dl-in-omics2019/DL-in-omics2019_2020-05-15-22-09-13.png" alt="PPM"></p></li>
-<li><p>最后将概率转换为权重，即使用<span class="math inline">\(log_2(M_{k,j}/b_k)\)</span>，其中<span class="math inline">\(b_k=1/|k|\)</span>，其中<span class="math inline">\(k\)</span>表示每个位置上的离散值有多少个，对于氨基酸序列<span class="math inline">\(k=20\)</span>，而对于核苷酸序列则<span class="math inline">\(k=4\)</span>，最后得到PWM（position weight matrix）： <img src="/2020/05/15/dl-in-omics2019/DL-in-omics2019_2020-05-15-22-13-04.png" alt="PWM"></p></li>
+<li><p>首先将每个位置上的频数进行计算，称为PFM（position frequency matrix）：</p>
+<p><img src="/2020/05/15/dl-in-omics2019/DL-in-omics2019_2020-05-15-22-07-33.png" alt="PFM"><br>
+</p></li>
+<li><p>然后每个位置归一化为概率，得到PPM（position probability matrix）：</p>
+<p><img src="/2020/05/15/dl-in-omics2019/DL-in-omics2019_2020-05-15-22-09-13.png" alt="PPM"><br>
+</p></li>
+<li><p>最后将概率转换为权重，即使用<span class="math inline">\(\log2(M_{k,j}/b_k)\)</span>，其中<span class="math inline">\(b_k=1/|k|\)</span>，其中<span class="math inline">\(k\)</span>表示每个位置上的离散值有多少个，对于氨基酸序列<span class="math inline">\(k=20\)</span>，而对于核苷酸序列则<span class="math inline">\(k=4\)</span>，最后得到PWM（position weight matrix）：</p>
+<p><img src="/2020/05/15/dl-in-omics2019/DL-in-omics2019_2020-05-15-22-13-04.png" alt="PWM"><br>
+</p></li>
 <li><p>然后使用其来编码数据即可。</p></li>
 </ol>
-<p>有一些现有的程序可以实现（比如PSI-BLAST），在这些算法中，其计算过程更加复杂，但基本思想是一致的。</p>
-</dd>
-</dl>
-<p><strong><a href="https://en.wikipedia.org/wiki/Point_accepted_mutation" target="_blank" rel="noopener">PAM（point accepted mutation）matrix</a> and <a href="https://en.wikipedia.org/wiki/BLOSUM" target="_blank" rel="noopener">BLOSUM（blocks substitution）matrix</a></strong></p>
+<p>有一些现有的程序可以实现（比如PSI-BLAST），在这些算法中，其计算过程更加复杂，但基本思想是一致的。</p></li>
+<li><p>**<a href="https://en.wikipedia.org/wiki/Point_accepted_mutation" target="_blank" rel="noopener">PAM（point accepted mutation）matrix</a> and <a href="https://en.wikipedia.org/wiki/BLOSUM" target="_blank" rel="noopener">BLOSUM（blocks substitution）matrix**</a></p></li>
+</ul>
 <p>除了以上3种方法外，对于蛋白质序列，还有autocovariance method和conjoint triad method 【126】方法。</p>
 <p>另外，还有一些方法致力于将多种类型的数据进行整合分析【128,49,50,98,129】。</p>
 <h3 id="模型选择">模型选择</h3>
@@ -798,14 +794,14 @@ AAGGTAAGT</code></pre></li>
 </blockquote>
 <h2 id="机会和挑战">机会和挑战</h2>
 <ul>
-<li><p>数据量：omics数据量一般不足，并且有imbalance的问题；</p>
-<p>解决数据量不足：zero-shot learning【135】、one-shot learning【136】和GAN【137】； 解决imbalance：resamling、cost-sensitive learning【138】。</p></li>
-<li><p>数据质量：omics数据一般来自不同平台，数据质量比较难以保证；</p>
-<p>解决：上面提到的数据清洗过程。</p></li>
-<li><p>计算花销：有硬件门槛；</p></li>
-<li><p>“黑盒”问题：无法进行解释；</p>
-<p>关于“黑盒”问题，也有所进展。比如【139】提出的Deep Motif Dashboard，就为TFBS的分类提供了一种可视化策略。</p></li>
-<li><p>模型选择和训练：选择一个合适的模型和合适的超参数是困难的；</p></li>
+<li>数据量：omics数据量一般不足，并且有imbalance的问题；</li>
+<li>解决数据量不足：zero-shot learning【135】、one-shot learning【136】和GAN【137】； 解决imbalance：resamling、cost-sensitive learning【138】。</li>
+<li>数据质量：omics数据一般来自不同平台，数据质量比较难以保证；</li>
+<li>解决：上面提到的数据清洗过程。</li>
+<li>计算花销：有硬件门槛；</li>
+<li>“黑盒”问题：无法进行解释；</li>
+<li>关于“黑盒”问题，也有所进展。比如【139】提出的Deep Motif Dashboard，就为TFBS的分类提供了一种可视化策略。</li>
+<li>模型选择和训练：选择一个合适的模型和合适的超参数是困难的；</li>
 </ul>
 <p>当然，未来，还有一些其他的DL概念会对omics的研究产生影响：</p>
 <ul>
@@ -818,7 +814,9 @@ AAGGTAAGT</code></pre></li>
 <hr>
 <h2 id="questions">Questions</h2>
 <p><em>这篇文章的一些结论或者内容感觉有些老了，之前以为是19年的文章，可能会比较新。但读到才发现可能是18年的。</em></p>
-<p><em>但还是有所收获，特别是其介绍的一些序列编码方法是第一次听说。总结了一些文章的github。另外，其提到的文章中也有一些值得关注的。比如那个使用RNN来建网的方法，还有提到的一系列基于DBN的方法。</em></p>
+<ul>
+<li>但还是有所收获，特别是其介绍的一些序列编码方法是第一次听说。总结了一些文章的github。另外，其提到的文章中也有一些值得关注的。比如那个使用RNN来建网的方法，还有提到的一系列基于DBN的方法。*</li>
+</ul>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1706,7 +1704,7 @@ AAGGTAAGT</code></pre></li>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">22.8k</span>&nbsp;字
+                class="white-color">28k</span>&nbsp;字
             
             
             
