@@ -5,9 +5,9 @@
   <subtitle>不只是学习</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://luyiyun.online/"/>
-  <updated>2020-05-23T07:53:49.614Z</updated>
-  <id>http://luyiyun.online/</id>
+  <link href="https://luyiyun.online/"/>
+  <updated>2020-05-24T05:14:37.537Z</updated>
+  <id>https://luyiyun.online/</id>
   
   <author>
     <name>Lu Yiyun</name>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>gitignore的文件忽略规则</title>
-    <link href="http://luyiyun.online/2020/05/21/gitignore-wen-jian-hu-lue-gui-ze/"/>
-    <id>http://luyiyun.online/2020/05/21/gitignore-wen-jian-hu-lue-gui-ze/</id>
+    <link href="https://luyiyun.online/2020/05/21/gitignore-wen-jian-hu-lue-gui-ze/"/>
+    <id>https://luyiyun.online/2020/05/21/gitignore-wen-jian-hu-lue-gui-ze/</id>
     <published>2020-05-21T14:02:25.000Z</published>
-    <updated>2020-05-23T07:53:49.614Z</updated>
+    <updated>2020-05-24T05:14:37.537Z</updated>
     
     <summary type="html">
     
@@ -37,21 +37,21 @@
     </summary>
     
     
-      <category term="运维" scheme="http://luyiyun.online/categories/%E8%BF%90%E7%BB%B4/"/>
+      <category term="Tools" scheme="https://luyiyun.online/categories/Tools/"/>
     
-      <category term="git" scheme="http://luyiyun.online/categories/%E8%BF%90%E7%BB%B4/git/"/>
+      <category term="Git" scheme="https://luyiyun.online/categories/Tools/Git/"/>
     
     
-      <category term="tools" scheme="http://luyiyun.online/tags/tools/"/>
+      <category term="tools" scheme="https://luyiyun.online/tags/tools/"/>
     
   </entry>
   
   <entry>
     <title>论文精读-使用VAE整合多组学数据进行PanCancer分析-OmiVAE2019</title>
-    <link href="http://luyiyun.online/2020/05/21/vae-jian-mo-pancancer2019/"/>
-    <id>http://luyiyun.online/2020/05/21/vae-jian-mo-pancancer2019/</id>
+    <link href="https://luyiyun.online/2020/05/21/vae-jian-mo-pancancer2019/"/>
+    <id>https://luyiyun.online/2020/05/21/vae-jian-mo-pancancer2019/</id>
     <published>2020-05-21T02:04:40.000Z</published>
-    <updated>2020-05-23T07:53:50.560Z</updated>
+    <updated>2020-05-24T05:14:37.412Z</updated>
     
     <summary type="html">
     
@@ -66,25 +66,25 @@
     </summary>
     
     
-      <category term="Paper" scheme="http://luyiyun.online/categories/Paper/"/>
+      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
     
-      <category term="Method" scheme="http://luyiyun.online/categories/Paper/Method/"/>
+      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
     
     
-      <category term="Deep Learning" scheme="http://luyiyun.online/tags/Deep-Learning/"/>
+      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
     
-      <category term="Omics" scheme="http://luyiyun.online/tags/Omics/"/>
+      <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
     
-      <category term="VAE" scheme="http://luyiyun.online/tags/VAE/"/>
+      <category term="VAE" scheme="https://luyiyun.online/tags/VAE/"/>
     
   </entry>
   
   <entry>
     <title>论文精读-PAMOGK-2019</title>
-    <link href="http://luyiyun.online/2020/05/19/pamogk2019/"/>
-    <id>http://luyiyun.online/2020/05/19/pamogk2019/</id>
+    <link href="https://luyiyun.online/2020/05/19/pamogk2019/"/>
+    <id>https://luyiyun.online/2020/05/19/pamogk2019/</id>
     <published>2020-05-19T08:57:01.000Z</published>
-    <updated>2020-05-23T07:53:50.181Z</updated>
+    <updated>2020-05-24T05:14:37.244Z</updated>
     
     <summary type="html">
     
@@ -99,25 +99,25 @@
     </summary>
     
     
-      <category term="Paper" scheme="http://luyiyun.online/categories/Paper/"/>
+      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
     
-      <category term="Method" scheme="http://luyiyun.online/categories/Paper/Method/"/>
+      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
     
     
-      <category term="Omics" scheme="http://luyiyun.online/tags/Omics/"/>
+      <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
     
-      <category term="Machine Learning" scheme="http://luyiyun.online/tags/Machine-Learning/"/>
+      <category term="Machine Learning" scheme="https://luyiyun.online/tags/Machine-Learning/"/>
     
-      <category term="Cluster" scheme="http://luyiyun.online/tags/Cluster/"/>
+      <category term="Cluster" scheme="https://luyiyun.online/tags/Cluster/"/>
     
   </entry>
   
   <entry>
     <title>CSS溢出</title>
-    <link href="http://luyiyun.online/2020/05/18/css-yi-chu/"/>
-    <id>http://luyiyun.online/2020/05/18/css-yi-chu/</id>
+    <link href="https://luyiyun.online/2020/05/18/css-yi-chu/"/>
+    <id>https://luyiyun.online/2020/05/18/css-yi-chu/</id>
     <published>2020-05-18T15:27:25.000Z</published>
-    <updated>2020-05-23T07:53:50.517Z</updated>
+    <updated>2020-05-24T05:14:37.387Z</updated>
     
     <summary type="html">
     
@@ -132,21 +132,21 @@
     </summary>
     
     
-      <category term="Web" scheme="http://luyiyun.online/categories/Web/"/>
+      <category term="Web" scheme="https://luyiyun.online/categories/Web/"/>
     
-      <category term="CSS" scheme="http://luyiyun.online/categories/Web/CSS/"/>
+      <category term="CSS" scheme="https://luyiyun.online/categories/Web/CSS/"/>
     
     
-      <category term="MDN学习" scheme="http://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
+      <category term="MDN学习" scheme="https://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>CSS文本</title>
-    <link href="http://luyiyun.online/2020/05/18/css-wen-ben/"/>
-    <id>http://luyiyun.online/2020/05/18/css-wen-ben/</id>
+    <link href="https://luyiyun.online/2020/05/18/css-wen-ben/"/>
+    <id>https://luyiyun.online/2020/05/18/css-wen-ben/</id>
     <published>2020-05-18T13:59:51.000Z</published>
-    <updated>2020-05-23T07:53:49.657Z</updated>
+    <updated>2020-05-24T05:14:37.218Z</updated>
     
     <summary type="html">
     
@@ -162,21 +162,21 @@
     </summary>
     
     
-      <category term="Web" scheme="http://luyiyun.online/categories/Web/"/>
+      <category term="Web" scheme="https://luyiyun.online/categories/Web/"/>
     
-      <category term="CSS" scheme="http://luyiyun.online/categories/Web/CSS/"/>
+      <category term="CSS" scheme="https://luyiyun.online/categories/Web/CSS/"/>
     
     
-      <category term="MDN学习" scheme="http://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
+      <category term="MDN学习" scheme="https://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>CSS盒子模型</title>
-    <link href="http://luyiyun.online/2020/05/17/css-he-zi-mo-xing/"/>
-    <id>http://luyiyun.online/2020/05/17/css-he-zi-mo-xing/</id>
+    <link href="https://luyiyun.online/2020/05/17/css-he-zi-mo-xing/"/>
+    <id>https://luyiyun.online/2020/05/17/css-he-zi-mo-xing/</id>
     <published>2020-05-17T06:40:20.000Z</published>
-    <updated>2020-05-23T07:53:50.472Z</updated>
+    <updated>2020-05-24T05:14:37.361Z</updated>
     
     <summary type="html">
     
@@ -193,21 +193,21 @@
     </summary>
     
     
-      <category term="Web" scheme="http://luyiyun.online/categories/Web/"/>
+      <category term="Web" scheme="https://luyiyun.online/categories/Web/"/>
     
-      <category term="CSS" scheme="http://luyiyun.online/categories/Web/CSS/"/>
+      <category term="CSS" scheme="https://luyiyun.online/categories/Web/CSS/"/>
     
     
-      <category term="MDN学习" scheme="http://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
+      <category term="MDN学习" scheme="https://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>论文精读-基于RNN的GRN-2016</title>
-    <link href="http://luyiyun.online/2020/05/17/rnn-jian-wang-2016/"/>
-    <id>http://luyiyun.online/2020/05/17/rnn-jian-wang-2016/</id>
+    <link href="https://luyiyun.online/2020/05/17/rnn-jian-wang-2016/"/>
+    <id>https://luyiyun.online/2020/05/17/rnn-jian-wang-2016/</id>
     <published>2020-05-17T03:00:14.000Z</published>
-    <updated>2020-05-23T07:53:50.257Z</updated>
+    <updated>2020-05-24T05:14:37.262Z</updated>
     
     <summary type="html">
     
@@ -222,25 +222,25 @@
     </summary>
     
     
-      <category term="Paper" scheme="http://luyiyun.online/categories/Paper/"/>
+      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
     
-      <category term="Method" scheme="http://luyiyun.online/categories/Paper/Method/"/>
+      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
     
     
-      <category term="Deep Learning" scheme="http://luyiyun.online/tags/Deep-Learning/"/>
+      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
     
-      <category term="Omics" scheme="http://luyiyun.online/tags/Omics/"/>
+      <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
     
-      <category term="Network" scheme="http://luyiyun.online/tags/Network/"/>
+      <category term="Network" scheme="https://luyiyun.online/tags/Network/"/>
     
   </entry>
   
   <entry>
     <title>CSS选择器</title>
-    <link href="http://luyiyun.online/2020/05/16/css-xuan-ze-qi/"/>
-    <id>http://luyiyun.online/2020/05/16/css-xuan-ze-qi/</id>
+    <link href="https://luyiyun.online/2020/05/16/css-xuan-ze-qi/"/>
+    <id>https://luyiyun.online/2020/05/16/css-xuan-ze-qi/</id>
     <published>2020-05-16T13:06:22.000Z</published>
-    <updated>2020-05-23T07:53:50.368Z</updated>
+    <updated>2020-05-24T05:14:37.308Z</updated>
     
     <summary type="html">
     
@@ -257,21 +257,21 @@
     </summary>
     
     
-      <category term="Web" scheme="http://luyiyun.online/categories/Web/"/>
+      <category term="Web" scheme="https://luyiyun.online/categories/Web/"/>
     
-      <category term="CSS" scheme="http://luyiyun.online/categories/Web/CSS/"/>
+      <category term="CSS" scheme="https://luyiyun.online/categories/Web/CSS/"/>
     
     
-      <category term="MDN学习" scheme="http://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
+      <category term="MDN学习" scheme="https://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>CSS层叠优先级和继承</title>
-    <link href="http://luyiyun.online/2020/05/16/css-ceng-die-you-xian-ji-ji-cheng/"/>
-    <id>http://luyiyun.online/2020/05/16/css-ceng-die-you-xian-ji-ji-cheng/</id>
+    <link href="https://luyiyun.online/2020/05/16/css-ceng-die-you-xian-ji-ji-cheng/"/>
+    <id>https://luyiyun.online/2020/05/16/css-ceng-die-you-xian-ji-ji-cheng/</id>
     <published>2020-05-16T09:13:57.000Z</published>
-    <updated>2020-05-23T07:53:49.727Z</updated>
+    <updated>2020-05-24T05:14:37.224Z</updated>
     
     <summary type="html">
     
@@ -287,21 +287,21 @@
     </summary>
     
     
-      <category term="Web" scheme="http://luyiyun.online/categories/Web/"/>
+      <category term="Web" scheme="https://luyiyun.online/categories/Web/"/>
     
-      <category term="CSS" scheme="http://luyiyun.online/categories/Web/CSS/"/>
+      <category term="CSS" scheme="https://luyiyun.online/categories/Web/CSS/"/>
     
     
-      <category term="MDN学习" scheme="http://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
+      <category term="MDN学习" scheme="https://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>论文精读-深度学习组学应用-2018综述</title>
-    <link href="http://luyiyun.online/2020/05/15/dl-in-omics2019/"/>
-    <id>http://luyiyun.online/2020/05/15/dl-in-omics2019/</id>
+    <link href="https://luyiyun.online/2020/05/15/dl-in-omics2019/"/>
+    <id>https://luyiyun.online/2020/05/15/dl-in-omics2019/</id>
     <published>2020-05-15T08:00:11.000Z</published>
-    <updated>2020-05-23T07:53:50.413Z</updated>
+    <updated>2020-05-24T05:14:37.330Z</updated>
     
     <summary type="html">
     
@@ -318,23 +318,23 @@
     </summary>
     
     
-      <category term="Paper" scheme="http://luyiyun.online/categories/Paper/"/>
+      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
     
-      <category term="Review" scheme="http://luyiyun.online/categories/Paper/Review/"/>
+      <category term="Review" scheme="https://luyiyun.online/categories/Paper/Review/"/>
     
     
-      <category term="Deep Learning" scheme="http://luyiyun.online/tags/Deep-Learning/"/>
+      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
     
-      <category term="Omics" scheme="http://luyiyun.online/tags/Omics/"/>
+      <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
     
   </entry>
   
   <entry>
     <title>CSS基础</title>
-    <link href="http://luyiyun.online/2020/05/15/css-ji-chu/"/>
-    <id>http://luyiyun.online/2020/05/15/css-ji-chu/</id>
+    <link href="https://luyiyun.online/2020/05/15/css-ji-chu/"/>
+    <id>https://luyiyun.online/2020/05/15/css-ji-chu/</id>
     <published>2020-05-15T04:01:21.000Z</published>
-    <updated>2020-05-23T07:53:50.135Z</updated>
+    <updated>2020-05-24T05:14:37.239Z</updated>
     
     <summary type="html">
     
@@ -349,21 +349,21 @@
     </summary>
     
     
-      <category term="Web" scheme="http://luyiyun.online/categories/Web/"/>
+      <category term="Web" scheme="https://luyiyun.online/categories/Web/"/>
     
-      <category term="CSS" scheme="http://luyiyun.online/categories/Web/CSS/"/>
+      <category term="CSS" scheme="https://luyiyun.online/categories/Web/CSS/"/>
     
     
-      <category term="MDN学习" scheme="http://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
+      <category term="MDN学习" scheme="https://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>HTML表格</title>
-    <link href="http://luyiyun.online/2020/05/14/html-biao-ge/"/>
-    <id>http://luyiyun.online/2020/05/14/html-biao-ge/</id>
+    <link href="https://luyiyun.online/2020/05/14/html-biao-ge/"/>
+    <id>https://luyiyun.online/2020/05/14/html-biao-ge/</id>
     <published>2020-05-14T15:38:49.000Z</published>
-    <updated>2020-05-23T07:53:49.822Z</updated>
+    <updated>2020-05-24T05:14:37.230Z</updated>
     
     <summary type="html">
     
@@ -380,21 +380,21 @@
     </summary>
     
     
-      <category term="Web" scheme="http://luyiyun.online/categories/Web/"/>
+      <category term="Web" scheme="https://luyiyun.online/categories/Web/"/>
     
-      <category term="HTML" scheme="http://luyiyun.online/categories/Web/HTML/"/>
+      <category term="HTML" scheme="https://luyiyun.online/categories/Web/HTML/"/>
     
     
-      <category term="MDN学习" scheme="http://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
+      <category term="MDN学习" scheme="https://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>HTML多媒体</title>
-    <link href="http://luyiyun.online/2020/05/13/html-duo-mei-ti/"/>
-    <id>http://luyiyun.online/2020/05/13/html-duo-mei-ti/</id>
+    <link href="https://luyiyun.online/2020/05/13/html-duo-mei-ti/"/>
+    <id>https://luyiyun.online/2020/05/13/html-duo-mei-ti/</id>
     <published>2020-05-13T15:03:55.000Z</published>
-    <updated>2020-05-23T07:53:50.077Z</updated>
+    <updated>2020-05-24T05:14:37.232Z</updated>
     
     <summary type="html">
     
@@ -411,21 +411,21 @@
     </summary>
     
     
-      <category term="Web" scheme="http://luyiyun.online/categories/Web/"/>
+      <category term="Web" scheme="https://luyiyun.online/categories/Web/"/>
     
-      <category term="HTML" scheme="http://luyiyun.online/categories/Web/HTML/"/>
+      <category term="HTML" scheme="https://luyiyun.online/categories/Web/HTML/"/>
     
     
-      <category term="MDN学习" scheme="http://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
+      <category term="MDN学习" scheme="https://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>HTML基础</title>
-    <link href="http://luyiyun.online/2020/05/13/html-ji-chu/"/>
-    <id>http://luyiyun.online/2020/05/13/html-ji-chu/</id>
+    <link href="https://luyiyun.online/2020/05/13/html-ji-chu/"/>
+    <id>https://luyiyun.online/2020/05/13/html-ji-chu/</id>
     <published>2020-05-13T10:59:34.000Z</published>
-    <updated>2020-05-23T07:53:50.638Z</updated>
+    <updated>2020-05-24T05:14:37.438Z</updated>
     
     <summary type="html">
     
@@ -440,21 +440,21 @@
     </summary>
     
     
-      <category term="Web" scheme="http://luyiyun.online/categories/Web/"/>
+      <category term="Web" scheme="https://luyiyun.online/categories/Web/"/>
     
-      <category term="HTML" scheme="http://luyiyun.online/categories/Web/HTML/"/>
+      <category term="HTML" scheme="https://luyiyun.online/categories/Web/HTML/"/>
     
     
-      <category term="MDN学习" scheme="http://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
+      <category term="MDN学习" scheme="https://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>Hexo博客搭建</title>
-    <link href="http://luyiyun.online/2020/05/10/blog-build/"/>
-    <id>http://luyiyun.online/2020/05/10/blog-build/</id>
+    <link href="https://luyiyun.online/2020/05/10/blog-build/"/>
+    <id>https://luyiyun.online/2020/05/10/blog-build/</id>
     <published>2020-05-10T10:08:02.000Z</published>
-    <updated>2020-05-23T07:53:49.851Z</updated>
+    <updated>2020-05-24T05:14:37.457Z</updated>
     
     <summary type="html">
     
@@ -470,23 +470,23 @@
     </summary>
     
     
-      <category term="运维" scheme="http://luyiyun.online/categories/%E8%BF%90%E7%BB%B4/"/>
+      <category term="Tools" scheme="https://luyiyun.online/categories/Tools/"/>
     
-      <category term="Blog" scheme="http://luyiyun.online/categories/%E8%BF%90%E7%BB%B4/Blog/"/>
+      <category term="Blog" scheme="https://luyiyun.online/categories/Tools/Blog/"/>
     
     
-      <category term="hexo" scheme="http://luyiyun.online/tags/hexo/"/>
+      <category term="hexo" scheme="https://luyiyun.online/tags/hexo/"/>
     
-      <category term="vscode" scheme="http://luyiyun.online/tags/vscode/"/>
+      <category term="vscode" scheme="https://luyiyun.online/tags/vscode/"/>
     
   </entry>
   
   <entry>
     <title>zsh及oh-my-zsh安装</title>
-    <link href="http://luyiyun.online/2020/05/10/zsh-an-zhuang/"/>
-    <id>http://luyiyun.online/2020/05/10/zsh-an-zhuang/</id>
+    <link href="https://luyiyun.online/2020/05/10/zsh-an-zhuang/"/>
+    <id>https://luyiyun.online/2020/05/10/zsh-an-zhuang/</id>
     <published>2020-05-10T07:53:34.000Z</published>
-    <updated>2020-05-23T07:53:49.789Z</updated>
+    <updated>2020-05-24T05:14:37.545Z</updated>
     
     <summary type="html">
     
@@ -503,12 +503,12 @@
     </summary>
     
     
-      <category term="运维" scheme="http://luyiyun.online/categories/%E8%BF%90%E7%BB%B4/"/>
+      <category term="Tools" scheme="https://luyiyun.online/categories/Tools/"/>
     
-      <category term="Linux" scheme="http://luyiyun.online/categories/%E8%BF%90%E7%BB%B4/Linux/"/>
+      <category term="Linux" scheme="https://luyiyun.online/categories/Tools/Linux/"/>
     
     
-      <category term="zsh" scheme="http://luyiyun.online/tags/zsh/"/>
+      <category term="zsh" scheme="https://luyiyun.online/tags/zsh/"/>
     
   </entry>
   
