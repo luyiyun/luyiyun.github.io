@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://luyiyun.online/"/>
-  <updated>2020-05-25T15:32:28.074Z</updated>
+  <updated>2020-05-27T17:47:47.654Z</updated>
   <id>https://luyiyun.online/</id>
   
   <author>
@@ -17,11 +17,75 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>vae2013/vae2013_slide</title>
+    <link href="https://luyiyun.online/2020/05/28/vae2013/vae2013-slide/"/>
+    <id>https://luyiyun.online/2020/05/28/vae2013/vae2013-slide/</id>
+    <published>2020-05-27T17:48:17.631Z</published>
+    <updated>2020-05-27T17:47:47.654Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+&lt;div class=&quot;slide titlepage&quot;&gt;
+  &lt;h1 class=&quot;title&quot;&gt;论文精读-VAE-2013&lt;/h1&gt;
+  &lt;p class=&quot;author&quot;&gt;
+Luyiyun
+  &lt;/p&gt;
+  &lt;p class=&quot;date&quot;&gt;2020-05-27
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>论文精读-VAE-2013</title>
+    <link href="https://luyiyun.online/2020/05/27/vae2013/"/>
+    <id>https://luyiyun.online/2020/05/27/vae2013/</id>
+    <published>2020-05-27T07:04:19.000Z</published>
+    <updated>2020-05-27T17:57:16.389Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;auto-encoding-variational-bayes&quot;&gt;Auto-Encoding Variational Bayes&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;杂志: None&lt;/li&gt;
+&lt;li&gt;IF: None&lt;/li&gt;
+&lt;li&gt;分区:
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
+    
+      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
+    
+    
+      <category term="Machine Leanring" scheme="https://luyiyun.online/tags/Machine-Leanring/"/>
+    
+      <category term="Unsupervised Learning" scheme="https://luyiyun.online/tags/Unsupervised-Learning/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Web技术学习--基于MDN</title>
     <link href="https://luyiyun.online/2020/05/25/web-xue-xi/"/>
     <id>https://luyiyun.online/2020/05/25/web-xue-xi/</id>
     <published>2020-05-25T14:48:39.000Z</published>
-    <updated>2020-05-25T15:32:28.074Z</updated>
+    <updated>2020-05-27T17:48:17.606Z</updated>
     
     <summary type="html">
     
@@ -48,7 +112,7 @@
     <link href="https://luyiyun.online/2020/05/24/ucsc-demo1/"/>
     <id>https://luyiyun.online/2020/05/24/ucsc-demo1/</id>
     <published>2020-05-24T06:51:14.000Z</published>
-    <updated>2020-05-25T15:16:31.427Z</updated>
+    <updated>2020-05-27T17:48:17.553Z</updated>
     
     <summary type="html">
     
@@ -79,7 +143,7 @@
     <link href="https://luyiyun.online/2020/05/24/ucsc-inroduction/"/>
     <id>https://luyiyun.online/2020/05/24/ucsc-inroduction/</id>
     <published>2020-05-24T06:19:58.000Z</published>
-    <updated>2020-05-25T15:16:31.422Z</updated>
+    <updated>2020-05-27T17:48:17.548Z</updated>
     
     <summary type="html">
     
@@ -111,7 +175,7 @@
     <link href="https://luyiyun.online/2020/05/21/gitignore-wen-jian-hu-lue-gui-ze/"/>
     <id>https://luyiyun.online/2020/05/21/gitignore-wen-jian-hu-lue-gui-ze/</id>
     <published>2020-05-21T14:02:25.000Z</published>
-    <updated>2020-05-25T15:16:31.381Z</updated>
+    <updated>2020-05-27T17:48:17.537Z</updated>
     
     <summary type="html">
     
@@ -141,7 +205,7 @@
     <link href="https://luyiyun.online/2020/05/21/vae-jian-mo-pancancer2019/"/>
     <id>https://luyiyun.online/2020/05/21/vae-jian-mo-pancancer2019/</id>
     <published>2020-05-21T02:04:40.000Z</published>
-    <updated>2020-05-25T15:16:30.550Z</updated>
+    <updated>2020-05-27T17:48:17.345Z</updated>
     
     <summary type="html">
     
@@ -174,7 +238,7 @@
     <link href="https://luyiyun.online/2020/05/19/pamogk2019/"/>
     <id>https://luyiyun.online/2020/05/19/pamogk2019/</id>
     <published>2020-05-19T08:57:01.000Z</published>
-    <updated>2020-05-25T15:16:29.829Z</updated>
+    <updated>2020-05-27T17:48:17.207Z</updated>
     
     <summary type="html">
     
@@ -207,7 +271,7 @@
     <link href="https://luyiyun.online/2020/05/19/html-biao-dan/"/>
     <id>https://luyiyun.online/2020/05/19/html-biao-dan/</id>
     <published>2020-05-18T16:14:11.000Z</published>
-    <updated>2020-05-25T15:30:58.694Z</updated>
+    <updated>2020-05-27T17:48:17.585Z</updated>
     
     <summary type="html">
     
@@ -237,7 +301,7 @@
     <link href="https://luyiyun.online/2020/05/18/css-yi-chu/"/>
     <id>https://luyiyun.online/2020/05/18/css-yi-chu/</id>
     <published>2020-05-18T15:27:25.000Z</published>
-    <updated>2020-05-25T15:16:30.486Z</updated>
+    <updated>2020-05-27T17:48:17.325Z</updated>
     
     <summary type="html">
     
@@ -266,7 +330,7 @@
     <link href="https://luyiyun.online/2020/05/18/css-wen-ben/"/>
     <id>https://luyiyun.online/2020/05/18/css-wen-ben/</id>
     <published>2020-05-18T13:59:51.000Z</published>
-    <updated>2020-05-25T15:16:29.654Z</updated>
+    <updated>2020-05-27T17:48:17.188Z</updated>
     
     <summary type="html">
     
@@ -296,7 +360,7 @@
     <link href="https://luyiyun.online/2020/05/17/css-he-zi-mo-xing/"/>
     <id>https://luyiyun.online/2020/05/17/css-he-zi-mo-xing/</id>
     <published>2020-05-17T06:40:20.000Z</published>
-    <updated>2020-05-25T15:16:30.420Z</updated>
+    <updated>2020-05-27T17:48:17.307Z</updated>
     
     <summary type="html">
     
@@ -327,7 +391,7 @@
     <link href="https://luyiyun.online/2020/05/17/rnn-jian-wang-2016/"/>
     <id>https://luyiyun.online/2020/05/17/rnn-jian-wang-2016/</id>
     <published>2020-05-17T03:00:14.000Z</published>
-    <updated>2020-05-25T15:16:29.955Z</updated>
+    <updated>2020-05-27T17:48:17.225Z</updated>
     
     <summary type="html">
     
@@ -360,7 +424,7 @@
     <link href="https://luyiyun.online/2020/05/16/css-xuan-ze-qi/"/>
     <id>https://luyiyun.online/2020/05/16/css-xuan-ze-qi/</id>
     <published>2020-05-16T13:06:22.000Z</published>
-    <updated>2020-05-25T15:16:30.205Z</updated>
+    <updated>2020-05-27T17:48:17.266Z</updated>
     
     <summary type="html">
     
@@ -370,7 +434,7 @@
         
           &lt;h1 id=&quot;元素选择器&quot;&gt;元素选择器&lt;/h1&gt;
 &lt;p&gt;例：&lt;/p&gt;
-&lt;div class=&quot;sourceCode&quot; id=&quot;cb1&quot;&gt;&lt;pre class=&quot;sourceCode css&quot;&gt;&lt;code class=&quot;sourceCode css&quot;&gt;&lt;span
+&lt;pre class=&quot;line-numbers language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;span
         
       
     
@@ -391,7 +455,7 @@
     <link href="https://luyiyun.online/2020/05/16/css-ceng-die-you-xian-ji-ji-cheng/"/>
     <id>https://luyiyun.online/2020/05/16/css-ceng-die-you-xian-ji-ji-cheng/</id>
     <published>2020-05-16T09:13:57.000Z</published>
-    <updated>2020-05-25T15:16:29.752Z</updated>
+    <updated>2020-05-27T17:48:17.193Z</updated>
     
     <summary type="html">
     
@@ -421,7 +485,7 @@
     <link href="https://luyiyun.online/2020/05/15/dl-in-omics2019/"/>
     <id>https://luyiyun.online/2020/05/15/dl-in-omics2019/</id>
     <published>2020-05-15T08:00:11.000Z</published>
-    <updated>2020-05-25T15:16:30.273Z</updated>
+    <updated>2020-05-27T17:48:17.282Z</updated>
     
     <summary type="html">
     
@@ -454,7 +518,7 @@
     <link href="https://luyiyun.online/2020/05/15/css-ji-chu/"/>
     <id>https://luyiyun.online/2020/05/15/css-ji-chu/</id>
     <published>2020-05-15T04:01:21.000Z</published>
-    <updated>2020-05-25T15:16:29.811Z</updated>
+    <updated>2020-05-27T17:48:17.204Z</updated>
     
     <summary type="html">
     
@@ -483,7 +547,7 @@
     <link href="https://luyiyun.online/2020/05/14/html-biao-ge/"/>
     <id>https://luyiyun.online/2020/05/14/html-biao-ge/</id>
     <published>2020-05-14T15:38:49.000Z</published>
-    <updated>2020-05-25T15:16:29.778Z</updated>
+    <updated>2020-05-27T17:48:17.197Z</updated>
     
     <summary type="html">
     
@@ -514,7 +578,7 @@
     <link href="https://luyiyun.online/2020/05/13/html-duo-mei-ti/"/>
     <id>https://luyiyun.online/2020/05/13/html-duo-mei-ti/</id>
     <published>2020-05-13T15:03:55.000Z</published>
-    <updated>2020-05-25T15:16:29.779Z</updated>
+    <updated>2020-05-27T17:48:17.199Z</updated>
     
     <summary type="html">
     
@@ -545,7 +609,7 @@
     <link href="https://luyiyun.online/2020/05/13/html-ji-chu/"/>
     <id>https://luyiyun.online/2020/05/13/html-ji-chu/</id>
     <published>2020-05-13T10:59:34.000Z</published>
-    <updated>2020-05-25T15:16:30.654Z</updated>
+    <updated>2020-05-27T17:48:17.372Z</updated>
     
     <summary type="html">
     
@@ -566,69 +630,6 @@
     
     
       <category term="MDN学习" scheme="https://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo博客搭建</title>
-    <link href="https://luyiyun.online/2020/05/10/blog-build/"/>
-    <id>https://luyiyun.online/2020/05/10/blog-build/</id>
-    <published>2020-05-10T10:08:02.000Z</published>
-    <updated>2020-05-25T15:16:30.682Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;自己在学习的过程中，积累了大量的学习材料和笔记。对于增量学习过程，这些学习材料和笔记应该得到较好的组织，而且有些内容很容易因为不常使用而忘记。所以将其进行有条理的整理，便于进行随时查阅，是非常有必要的。&lt;/p&gt;
-&lt;p&gt;显然，搭建一个个人博客是一个比较合适的选择。我希望我的个
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Tools" scheme="https://luyiyun.online/categories/Tools/"/>
-    
-      <category term="Blog" scheme="https://luyiyun.online/categories/Tools/Blog/"/>
-    
-    
-      <category term="hexo" scheme="https://luyiyun.online/tags/hexo/"/>
-    
-      <category term="vscode" scheme="https://luyiyun.online/tags/vscode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>zsh及oh-my-zsh安装</title>
-    <link href="https://luyiyun.online/2020/05/10/zsh-an-zhuang/"/>
-    <id>https://luyiyun.online/2020/05/10/zsh-an-zhuang/</id>
-    <published>2020-05-10T07:53:34.000Z</published>
-    <updated>2020-05-25T15:16:31.413Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;zsh以及oh-my-zsh除了可以提高终端的颜值，而且通过众多的插件可以提高我们的使用体验，所以这里将其安装和使用总结在这里，便于之后使用。&lt;/p&gt;
-&lt;h1 id=&quot;zsh安装&quot;&gt;zsh安装&lt;/h1&gt;
-&lt;p&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Tools" scheme="https://luyiyun.online/categories/Tools/"/>
-    
-      <category term="Linux" scheme="https://luyiyun.online/categories/Tools/Linux/"/>
-    
-    
-      <category term="zsh" scheme="https://luyiyun.online/tags/zsh/"/>
     
   </entry>
   

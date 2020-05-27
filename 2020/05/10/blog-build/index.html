@@ -30,7 +30,8 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="卢一云的博客" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -578,21 +579,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-25
+                    2020-05-28
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.5k
+                    4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    14 分
+                    15 分
                 </div>
                 
 
@@ -642,8 +643,8 @@
 <p>这里需要介绍以下<code>npm</code>的规则，其默认是局部安装模式。如果使用全局安装模式（<code>-g</code>），则相关内容会被安装到<code>prefix/lib/node_modules</code>中（可以使用<code>npm help npm</code>来查看，windows是在C盘下面）。如果是局部安装模式，则相关内容会被安装到当前的文件夹下的node_modules中。</p>
 </blockquote>
 <p>为了提高npm的安装速度，可以<a href="https://blog.csdn.net/quuqu/article/details/64121812" target="_blank" rel="noopener">设置一下淘宝镜像</a>或使用<a href="https://developer.aliyun.com/mirror/NPM" target="_blank" rel="noopener"><code>cnpm</code></a>，然后全局安装hexo-cli（全局安装可以使得我们在任何位置使用<code>hexo</code>命令）：</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">npm</span> config set registry https://registry.npm.taobao.org</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="ex">npm</span> install hexo-cli -g</span></code></pre></div>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> config <span class="token keyword">set</span> registry https://registry.npm.taobao.org
+<span class="token function">npm</span> <span class="token function">install</span> hexo-cli -g<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>注意，如果在linux上解压二进制安装包安装的node.js，则其全局安装位置可能并不在环境变量中，需要手动再将<code>hexo</code>加入环境变量才好使用。</p>
 <h2 id="pandoc部分">4. Pandoc部分</h2>
 <p>其安装和node.js的安装方式类似，比照其安装即可。</p>
@@ -657,47 +658,55 @@
 <h2 id="paste-image">5.1 <a href="https://marketplace.visualstudio.com/items?itemName=mushan.vscode-paste-image" target="_blank" rel="noopener">Paste Image</a></h2>
 <p>其作用是可以将剪切板中的图片直接放入markdown中（快捷键为C-A-v），并保存到指定的文件夹下。我对此插件进行了下列配置：</p>
 <ol type="1">
-<li>保存剪切板图片的时候，使用当前正在编辑的文件的名称作为图片文件名称的前缀，使用时间作为其名称的主题；</li>
-<li>设置其保存路径为当前文件同级目录下的同名文件夹；</li>
-<li>在保存图片的时候，会出现vscode input box，从而可以更改路径； <img src="/2020/05/10/blog-build/BlogBuild_2020-05-10-18-03-00.png" alt="PasteImage的配置"></li>
+<li><p>保存剪切板图片的时候，使用当前正在编辑的文件的名称作为图片文件名称的前缀，使用时间作为其名称的主题；</p></li>
+<li><p>设置其保存路径为当前文件同级目录下的同名文件夹；</p></li>
+<li><p>在保存图片的时候，会出现vscode input box，从而可以更改路径；</p>
+<p><img src="/2020/05/10/blog-build/BlogBuild_2020-05-10-18-03-00.png" alt="PasteImage的配置"><br>
+</p></li>
 </ol>
 <h1 id="第二部分-配置博客">第二部分 配置博客</h1>
 <p>本次博客配置使用的主题为<a href="https://github.com/blinkfox/hexo-theme-matery.git" target="_blank" rel="noopener">hexo-theme-matery</a>，其有比较全面的<a href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md" target="_blank" rel="noopener">中文配置说明</a>。另外，博客的配置还参考了两位大佬 -- <a href="https://zhuanlan.zhihu.com/p/35668237" target="_blank" rel="noopener">godweiyang</a>和<a href="https://qinnian.xyz/CreateBlog.html" target="_blank" rel="noopener">钦の念</a>的配置过程，受益匪浅。</p>
 <p>另外，在配置过程中，为了添加更多的功能，安装了众多的hexo插件，这些插件都集中记录在此：</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># --save表示安装使用依赖</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="ex">npm</span> install hexo-deployer-git --save           <span class="co"># 用于进行git部署</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="ex">npm</span> install hexo-wordcount --save              <span class="co"># 统计文章字数</span></span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="ex">npm</span> install gitalk --save                      <span class="co"># gitalk评论系统</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="ex">npm</span> install valine --save                      <span class="co"># valine评论系统</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a><span class="ex">npm</span> install hexo-prism-plugin --save           <span class="co"># 代码高亮</span></span>
-<span id="cb2-7"><a href="#cb2-7"></a><span class="ex">npm</span> install hexo-generator-search --save       <span class="co"># 搜索</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a><span class="ex">npm</span> install hexo-permalink-pinyin --save       <span class="co"># 汉字转拼音</span></span>
-<span id="cb2-9"><a href="#cb2-9"></a><span class="ex">npm</span> install hexo-filter-github-emojis --save   <span class="co"># emojis表情</span></span>
-<span id="cb2-10"><a href="#cb2-10"></a><span class="ex">npm</span> install hexo-generator-feed --save         <span class="co"># RSS订阅</span></span>
-<span id="cb2-11"><a href="#cb2-11"></a><span class="ex">npm</span> install https://github.com/xcodebuild/hexo-asset-image --save</span>
-<span id="cb2-12"><a href="#cb2-12"></a><span class="ex">npm</span> install hexo-renderer-pandoc --save        <span class="co"># 一个新的markdown渲染器</span></span>
-<span id="cb2-13"><a href="#cb2-13"></a><span class="ex">npm</span> install hexo-helper-live2d --save          <span class="co"># 动画人物支持</span></span>
-<span id="cb2-14"><a href="#cb2-14"></a><span class="ex">npm</span> install live2d-widget-model-shizuku --save <span class="co"># 动画人物支持</span></span>
-<span id="cb2-15"><a href="#cb2-15"></a><span class="ex">npm</span> install hexo-generator-sitemap --save      <span class="co"># 添加站点地图</span></span>
-<span id="cb2-16"><a href="#cb2-16"></a><span class="ex">npm</span> install hexo-lazyload-image --save         <span class="co"># 图片懒加载</span></span>
-<span id="cb2-17"><a href="#cb2-17"></a><span class="ex">npm</span> install hexo-renderer-mathjax --save       <span class="co"># 解析公式</span></span></code></pre></div>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># --save表示安装使用依赖</span>
+<span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git --save           <span class="token comment" spellcheck="true"># 用于进行git部署</span>
+<span class="token function">npm</span> <span class="token function">install</span> hexo-wordcount --save              <span class="token comment" spellcheck="true"># 统计文章字数</span>
+<span class="token function">npm</span> <span class="token function">install</span> gitalk --save                      <span class="token comment" spellcheck="true"># gitalk评论系统</span>
+<span class="token function">npm</span> <span class="token function">install</span> valine --save                      <span class="token comment" spellcheck="true"># valine评论系统</span>
+<span class="token function">npm</span> <span class="token function">install</span> hexo-prism-plugin --save           <span class="token comment" spellcheck="true"># 代码高亮</span>
+<span class="token function">npm</span> <span class="token function">install</span> hexo-generator-search --save       <span class="token comment" spellcheck="true"># 搜索</span>
+<span class="token function">npm</span> <span class="token function">install</span> hexo-permalink-pinyin --save       <span class="token comment" spellcheck="true"># 汉字转拼音</span>
+<span class="token function">npm</span> <span class="token function">install</span> hexo-filter-github-emojis --save   <span class="token comment" spellcheck="true"># emojis表情</span>
+<span class="token function">npm</span> <span class="token function">install</span> hexo-generator-feed --save         <span class="token comment" spellcheck="true"># RSS订阅</span>
+<span class="token function">npm</span> <span class="token function">install</span> https://github.com/xcodebuild/hexo-asset-image --save
+<span class="token function">npm</span> <span class="token function">install</span> hexo-renderer-pandoc --save        <span class="token comment" spellcheck="true"># 一个新的markdown渲染器</span>
+<span class="token function">npm</span> <span class="token function">install</span> hexo-helper-live2d --save          <span class="token comment" spellcheck="true"># 动画人物支持</span>
+<span class="token function">npm</span> <span class="token function">install</span> live2d-widget-model-shizuku --save <span class="token comment" spellcheck="true"># 动画人物支持</span>
+<span class="token function">npm</span> <span class="token function">install</span> hexo-generator-sitemap --save      <span class="token comment" spellcheck="true"># 添加站点地图</span>
+<span class="token function">npm</span> <span class="token function">install</span> hexo-lazyload-image --save         <span class="token comment" spellcheck="true"># 图片懒加载</span>
+<span class="token function">npm</span> <span class="token function">install</span> hexo-renderer-mathjax --save       <span class="token comment" spellcheck="true"># 解析公式</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>另外，因为我们想要使用pandoc作为markdown的渲染器，所以就必须把默认的渲染器卸载</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">npm</span> uninstall hexo-renderer-marked --save</span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="ex">npm</span> uninstall hexo-math --save            <span class="co"># 一般来说这个插件是没有安装的，但为了hexo-renderer-mathjax可以工作，最好确认一下</span></span></code></pre></div>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> uninstall hexo-renderer-marked --save
+<span class="token function">npm</span> uninstall hexo-math --save            <span class="token comment" spellcheck="true"># 一般来说这个插件是没有安装的，但为了hexo-renderer-mathjax可以工作，最好确认一下</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h2 id="创建站点">1. 创建站点</h2>
 <ol type="1">
-<li>在站点文件夹下使用<code>hexo init</code>命令；</li>
-<li>别忘了使用<code>npm install</code>来安装一些必要的组件；</li>
-<li>现在可以通过<code>npm g &amp;&amp; npm s</code>来打开本地服务器，然后连接<code>http://localhost:4000/</code>来查看是否成功： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-10-23.png" alt="页面效果"></li>
+<li><p>在站点文件夹下使用<code>hexo init</code>命令；</p></li>
+<li><p>别忘了使用<code>npm install</code>来安装一些必要的组件；</p></li>
+<li><p>现在可以通过<code>npm g &amp;&amp; npm s</code>来打开本地服务器，然后连接<code>http://localhost:4000/</code>来查看是否成功：</p>
+<p><img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-10-23.png" alt="页面效果"><br>
+</p></li>
 </ol>
 <h2 id="博客部署至github">2. 博客部署至github</h2>
 <ol type="1">
 <li><p>创建一个名为<code>luyiyun.github.io</code>的repository；</p></li>
 <li><p>配置SSH key（为了不用每次都输密码）；</p></li>
-<li><p>安装<code>hexo-deployer-git</code>插件，更改博客<code>_config.yml</code>文件，添加deploy项： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-12-51.png" alt="添加deploy配置"></p></li>
+<li><p>安装<code>hexo-deployer-git</code>插件，更改博客<code>_config.yml</code>文件，添加deploy项：</p>
+<p><img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-12-51.png" alt="添加deploy配置"><br>
+</p></li>
 <li><p>运行以下的命令：</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="ex">hexo</span> clean <span class="kw">&amp;&amp;</span> <span class="ex">hexo</span> g <span class="kw">&amp;&amp;</span> <span class="ex">hexo</span> d</span></code></pre></div>
-<p>然后打开<code>luyiyun.github.io</code>，看是否部署成功： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-19-05.png" alt="部署成功"></p></li>
+<pre class="line-numbers language-bash"><code class="language-bash">hexo clean <span class="token operator">&amp;&amp;</span> hexo g <span class="token operator">&amp;&amp;</span> hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>然后打开<code>luyiyun.github.io</code>，看是否部署成功：</p>
+<p><img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-19-05.png" alt="部署成功"><br>
+</p></li>
 </ol>
 <p>以上在<a href="https://qinnian.xyz/CreateBlog.html" target="_blank" rel="noopener">钦の念</a>的博客中有更加详细的叙述。</p>
 <h2 id="申请个人域名">2. 申请个人域名</h2>
@@ -705,138 +714,212 @@
 <li><p>申请一个新的域名<code>luyiyun.online</code>（腾讯云），别忘了添加一条解析记录使之能够正常解析；</p></li>
 <li><p>在<code>/source</code>目录下，新建<code>CNAME</code>文件，然后写上域名，保存，然后<code>hexo g &amp;&amp; hexo d</code>部署；</p></li>
 <li><p><code>CNAME</code>文件会被放到<code>public</code>中并一并上传到github上；</p></li>
-<li><p>查看repository的settings，发现以下结果，代表可正常使用： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-38-16.png" alt="个人域名配置成功"></p></li>
-<li><p>可以使用这个域名来打开看看了： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-39-38.png" alt="个人域名解析成功"></p></li>
+<li><p>查看repository的settings，发现以下结果，代表可正常使用：</p>
+<p><img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-38-16.png" alt="个人域名配置成功"><br>
+</p></li>
+<li><p>可以使用这个域名来打开看看了：</p>
+<p><img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-39-38.png" alt="个人域名解析成功"><br>
+</p></li>
 </ol>
 <h2 id="博客配置文件">3. 博客配置文件</h2>
 <p>博客的配置文件是根目录下的<code>_config.yml</code>，现在我们对其中的内容依次进行处理：</p>
 <ol type="1">
-<li><p>站点基本信息配置： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-43-06.png" alt="site"></p></li>
-<li><p>网站的url： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-44-21.png" alt="url"></p></li>
-<li><p>分页，设置这个是为了适配<a href="https://github.com/blinkfox/hexo-theme-matery.git" target="_blank" rel="noopener">hexo-theme-matery</a>： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-46-33.png" alt="per_page"></p></li>
-<li><p>主题，这里使用<a href="https://github.com/blinkfox/hexo-theme-matery.git" target="_blank" rel="noopener">hexo-theme-matery</a>： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-48-13.png" alt="theme"></p>
+<li><p>站点基本信息配置：</p>
+<p><img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-43-06.png" alt="site"><br>
+</p></li>
+<li><p>网站的url：</p>
+<p><img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-44-21.png" alt="url"><br>
+</p></li>
+<li><p>分页，设置这个是为了适配<a href="https://github.com/blinkfox/hexo-theme-matery.git" target="_blank" rel="noopener">hexo-theme-matery</a>：</p>
+<p><img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-46-33.png" alt="per_page"><br>
+</p></li>
+<li><p>主题，这里使用<a href="https://github.com/blinkfox/hexo-theme-matery.git" target="_blank" rel="noopener">hexo-theme-matery</a>：</p>
+<p><img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-14-48-13.png" alt="theme"><br>
+</p>
 <blockquote>
 <p>我们在<code>/themes</code>文件夹下使用git来下载该主题：</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">git</span> clone https://github.com/blinkfox/hexo-theme-matery.git</span></code></pre></div>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/blinkfox/hexo-theme-matery.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </blockquote></li>
-<li><p>代码高亮，使用<code>hexo-prism-plugin</code>，并在<code>_config.yml</code>中加入以下内容： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-50-24.png" alt="hightlight"></p>
+<li><p>渲染器，这里使用<a href="https://pandoc.org/MANUAL.html" target="_blank" rel="noopener">pandoc</a>作为渲染器，自然我们需要安装<a href="https://github.com/wzpan/hexo-renderer-pandoc" target="_blank" rel="noopener">hexo-renderer-pandoc</a>插件。</p>
+<p><a href="https://pandoc.org/MANUAL.html" target="_blank" rel="noopener">pandoc</a>的缺点在于比较笨重，如果只是为了渲染markdownd的话，有点杀鸡用牛刀的感觉。但对于我而言，有以下几点原因，使得我选择了它：</p>
+<ul>
+<li>更多可以使用的语法，有更强的表现力（前面提到了）。</li>
+<li>我希望兼容<code>Rmarkdown</code>，其中其使用的就是pandoc语法。</li>
+<li>pandoc直接兼容公式渲染，我们只需要改一个好用的CDN链接即可。</li>
+</ul>
+<p>但其和下面讲到的语法高亮插件<code>hexo-prism-plugin</code>有冲突，所以需要进行一些修改。</p>
+<p>在<code>node-modules/hexo-renderer-pandoc/index.js</code>中，找到：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">var</span> args <span class="token operator">=</span> <span class="token punctuation">[</span> <span class="token string">'-f'</span><span class="token punctuation">,</span> <span class="token string">'markdown-smart'</span><span class="token operator">+</span>extensions<span class="token punctuation">,</span> <span class="token string">'-t'</span><span class="token punctuation">,</span> <span class="token string">'html-smart'</span><span class="token punctuation">,</span> math<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>将其改为</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">var</span> args <span class="token operator">=</span> <span class="token punctuation">[</span> <span class="token string">'-f'</span><span class="token punctuation">,</span> <span class="token string">'markdown-smart'</span><span class="token operator">+</span>extensions<span class="token punctuation">,</span> <span class="token string">'-t'</span><span class="token punctuation">,</span> <span class="token string">'html-smart'</span><span class="token punctuation">,</span> math<span class="token punctuation">,</span> <span class="token string">"--no-highlight"</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>即将pandoc自己的代码高亮关掉，不然其会影响到后面<code>hexo-prism-plugin</code>的使用。</p></li>
+<li><p>代码高亮，使用<code>hexo-prism-plugin</code>，并在<code>_config.yml</code>中加入以下内容：</p>
+<p><img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-50-24.png" alt="hightlight"><br>
+</p>
 <blockquote>
 <p>前面有默认有<code>highlight: enable</code>的配置，所以这两个只保留一个即可。</p>
-</blockquote></li>
-<li><p>搜索，使用<code>hexo-generator-search</code>插件，并在配置文件中加入： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-52-45.png" alt="search"></p></li>
-<li><p>中文链接转拼音，使用<code>hexo-permalink-pinyin</code>： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-54-47.png" alt="pinyin"></p></li>
-<li><p>添加对<code>emoji</code>表情的支持，<code>hexo-filter-github-emojis</code> <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-56-43.png" alt="emoji"></p></li>
-<li><p>添加RSS订阅支持，<code>hexo-generator-feed</code>， <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-58-22.png" alt="RSS"></p>
-<p>出现下面情况，说明RSS配置成功： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-18-12-25.png" alt="RSS-OK"></p></li>
+</blockquote>
+<p><code>hexo-prism-plugin</code>使用的是<a href="https://prismjs.com/index.html" target="_blank" rel="noopener">prism</a>来提供代码高亮。这个是一个在网页中提供代码高亮的解决方案，为几乎所有的语言提供了对应的代码高亮，而且还提供了一些插件，可以做到一键复制、增加行号等操作。</p>
+<p><a href="https://prismjs.com/index.html" target="_blank" rel="noopener">prism</a>需要渲染后的网页中的代码块以下面的形式存在：</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pre</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>langauge-python<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        import numpy as np
+        np.random.rand(10)
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>hexo-prism-plugin</code>可以将下面的形式更改为上面的：</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pre</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>python<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        import numpy as np
+        np.random.rand(10)
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>而pandoc渲染后是下面的形式</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pre</span> <span class="token attr-name">code</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>python<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span><span class="token punctuation">></span></span>
+        import numpy as np
+        np.random.rand(10)
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>所以我们需要更改<code>node-modules/hexo-prism-plugin/src/index.js</code>中的正则表达式</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">const</span> regex <span class="token operator">=</span>  <span class="token regex">/&lt;pre>&lt;code class="(.*)?">([\s\S]*?)&lt;\/code>&lt;\/pre>/igm</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>改为</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">const</span> regex <span class="token operator">=</span>  <span class="token regex">/&lt;pre class="(.*)?">&lt;code>([\s\S]*?)&lt;\/code>&lt;\/pre>/igm</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这样就可以了。</p></li>
+<li><p>搜索，使用<code>hexo-generator-search</code>插件，并在配置文件中加入：</p>
+<p><img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-52-45.png" alt="search"><br>
+</p></li>
+<li><p>中文链接转拼音，使用<code>hexo-permalink-pinyin</code>：</p>
+<p><img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-54-47.png" alt="pinyin"><br>
+</p></li>
+<li><p>添加对<code>emoji</code>表情的支持，<code>hexo-filter-github-emojis</code></p>
+<p><img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-56-43.png" alt="emoji"><br>
+</p></li>
+<li><p>添加RSS订阅支持，<code>hexo-generator-feed</code>，</p>
+<p><img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-17-58-22.png" alt="RSS"><br>
+</p>
+<p>出现下面情况，说明RSS配置成功：</p>
+<p><img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-18-12-25.png" alt="RSS-OK"><br>
+</p></li>
 <li><p>图片路径改为绝对路径，需要安装<code>hexo-asset-image</code>，并将<code>post_asset_folder</code>改为<code>true</code>。</p>
 <blockquote>
 <p>设置<code>_config.yml</code>中的<code>post_asset_folder: true</code>，这意味着使用<code>hexo new &lt;blog&gt;</code>时，在<code>_posts</code>中不只生成了一个md文件，而且还出现了一个同名文件夹，用来放md文件引用的内容。<del>我们可以在md文件中使用<code>![](name.jpg)</code>来引入图片。</del>但我们不会这样做，因为如此引入图片，在编写博客的时候是无法预览的，我们应该使用<code>![](&lt;blog&gt;/name.jpg)</code>的格式来引入。该插件使得我们就算这样引入图片，hexo也可以正确读取并处理它。</p>
 </blockquote></li>
 <li><p>安装<code>hexo-renderer-pandoc</code>，提供pandoc语法支持。</p></li>
 <li><p>添加动漫人物，需要安装两个插件，并在根目录配置文件中添加下面的配置：</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode yml"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">live2d</span><span class="kw">:</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="at">    </span><span class="fu">enable</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="at">    </span><span class="fu">scriptFrom</span><span class="kw">:</span><span class="at"> local</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a><span class="at">    </span><span class="fu">pluginRootPath</span><span class="kw">:</span><span class="at"> live2dw/</span></span>
-<span id="cb6-5"><a href="#cb6-5"></a><span class="at">    </span><span class="fu">pluginJsPath</span><span class="kw">:</span><span class="at"> lib/</span></span>
-<span id="cb6-6"><a href="#cb6-6"></a><span class="at">    </span><span class="fu">pluginModelPath</span><span class="kw">:</span><span class="at"> assets/</span></span>
-<span id="cb6-7"><a href="#cb6-7"></a><span class="at">    </span><span class="fu">tagMode</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
-<span id="cb6-8"><a href="#cb6-8"></a><span class="at">    </span><span class="fu">log</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
-<span id="cb6-9"><a href="#cb6-9"></a><span class="at">    </span><span class="fu">model</span><span class="kw">:</span></span>
-<span id="cb6-10"><a href="#cb6-10"></a><span class="at">        </span><span class="fu">use</span><span class="kw">:</span><span class="at"> live2d-widget-model-shizuku</span></span>
-<span id="cb6-11"><a href="#cb6-11"></a><span class="at">    </span><span class="fu">display</span><span class="kw">:</span></span>
-<span id="cb6-12"><a href="#cb6-12"></a><span class="at">        </span><span class="fu">position</span><span class="kw">:</span><span class="at"> right</span></span>
-<span id="cb6-13"><a href="#cb6-13"></a><span class="at">        </span><span class="fu">width</span><span class="kw">:</span><span class="at"> </span><span class="dv">150</span></span>
-<span id="cb6-14"><a href="#cb6-14"></a><span class="at">        </span><span class="fu">height</span><span class="kw">:</span><span class="at"> </span><span class="dv">300</span></span>
-<span id="cb6-15"><a href="#cb6-15"></a><span class="at">    </span><span class="fu">mobile</span><span class="kw">:</span></span>
-<span id="cb6-16"><a href="#cb6-16"></a><span class="at">        </span><span class="fu">show</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb6-17"><a href="#cb6-17"></a><span class="at">    </span><span class="fu">react</span><span class="kw">:</span></span>
-<span id="cb6-18"><a href="#cb6-18"></a><span class="at">        </span><span class="fu">opacity</span><span class="kw">:</span><span class="at"> </span><span class="fl">0.7</span></span></code></pre></div></li>
+<pre class="line-numbers language-yml"><code class="language-yml">live2d:
+    enable: true
+    scriptFrom: local
+    pluginRootPath: live2dw/
+    pluginJsPath: lib/
+    pluginModelPath: assets/
+    tagMode: false
+    log: false
+    model:
+        use: live2d-widget-model-shizuku
+    display:
+        position: right
+        width: 150
+        height: 300
+    mobile:
+        show: true
+    react:
+        opacity: 0.7<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 <li><p>SEO配置</p>
 <p>SEO（Search Engine Optimization），即搜索引擎优化：</p>
 <blockquote>
 <p>搜索引擎优化是一种通过了解搜索引擎的运作规则来调整网站，以及提高目的网站在有关搜索引擎内排名的方式。</p>
 </blockquote>
 <ol type="a">
-<li><p>验证网站。如果在谷歌搜索<code>site:luyiyun.online</code>查不到，这说明未被收录，则需要前往Google Search Console，进行验证： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-18-53-12.png" alt="gsc"></p>
-<p>方式和添加解析是一样，在腾讯云的控制台，添加DNS解析记录即可，其中记录值使用Google Search Console提供的值： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-18-55-35.png" alt="gsc2"></p>
+<li><p>验证网站。如果在谷歌搜索<code>site:luyiyun.online</code>查不到，这说明未被收录，则需要前往Google Search Console，进行验证：</p>
+<p><img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-18-53-12.png" alt="gsc"><br>
+</p>
+<p>方式和添加解析是一样，在腾讯云的控制台，添加DNS解析记录即可，其中记录值使用Google Search Console提供的值：</p>
+<p><img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-18-55-35.png" alt="gsc2"><br>
+</p>
 <p>等待几分钟后，在Google Search Console中进行验证，通过即可。</p></li>
-<li><p>添加站点地图作用是告诉搜索引擎你的网站结构等信息，让搜索引擎更智能抓取内容。需要安装<code>hexo-generator-sitemap</code>插件，并在根目录的配置文件下添加： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-18-59-19.png" alt="sitemap"></p></li>
-<li><p>当<code>hexo g</code>后，public中出现了<code>sitemap.xml</code>文件。我们可以再进入Google Search Console，然后把这个站点地图（是这个sitemap文件）添加进去， <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-19-10-01.png" alt="sitemap2"></p></li>
-<li><p>简化路径： <img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-19-12-03.png" alt="path"></p></li>
+<li><p>添加站点地图作用是告诉搜索引擎你的网站结构等信息，让搜索引擎更智能抓取内容。需要安装<code>hexo-generator-sitemap</code>插件，并在根目录的配置文件下添加：</p>
+<p><img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-18-59-19.png" alt="sitemap"><br>
+</p></li>
+<li><p>当<code>hexo g</code>后，public中出现了<code>sitemap.xml</code>文件。我们可以再进入Google Search Console，然后把这个站点地图（是这个sitemap文件）添加进去，</p>
+<p><img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-19-10-01.png" alt="sitemap2"><br>
+</p></li>
+<li><p>简化路径：</p>
+<p><img src="/2020/05/10/blog-build/BlogBuild_2020-05-11-19-12-03.png" alt="path"><br>
+</p></li>
 </ol></li>
 </ol>
 <h2 id="新建主题文章模板">4. 新建主题文章模板</h2>
 <p>建议将<code>/scaffolds/post.md</code>修改至：</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1"></a><span class="co">---</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="an">title:</span><span class="co"> Hexo博客搭建</span></span>
-<span id="cb7-3"><a href="#cb7-3"></a><span class="an">date:</span><span class="co"> 1589105282000</span></span>
-<span id="cb7-4"><a href="#cb7-4"></a><span class="an">author:</span><span class="co"> Lu Yiyun</span></span>
-<span id="cb7-5"><a href="#cb7-5"></a><span class="an">img:</span><span class="co"> "文章特色图，空则hexo-theme-matery自动进行填补"</span></span>
-<span id="cb7-6"><a href="#cb7-6"></a><span class="an">coverImg:</span><span class="co"> "文章在首页轮播封面时显示的图片，默认使用文章特色图"</span></span>
-<span id="cb7-7"><a href="#cb7-7"></a><span class="an">top:</span><span class="co"> true</span></span>
-<span id="cb7-8"><a href="#cb7-8"></a><span class="an">cover:</span><span class="co"> true</span></span>
-<span id="cb7-9"><a href="#cb7-9"></a><span class="an">toc:</span><span class="co"> true</span></span>
-<span id="cb7-10"><a href="#cb7-10"></a><span class="an">mathjax:</span><span class="co"> true</span></span>
-<span id="cb7-11"><a href="#cb7-11"></a><span class="an">summary:</span><span class="co"> "自定义文章的摘要，不然自动从文章正文中吸取"</span></span>
-<span id="cb7-12"><a href="#cb7-12"></a><span class="an">categories:</span></span>
-<span id="cb7-13"><a href="#cb7-13"></a><span class="co">- A</span></span>
-<span id="cb7-14"><a href="#cb7-14"></a><span class="co">- B</span></span>
-<span id="cb7-15"><a href="#cb7-15"></a><span class="an">tags:</span></span>
-<span id="cb7-16"><a href="#cb7-16"></a><span class="co">- a</span></span>
-<span id="cb7-17"><a href="#cb7-17"></a><span class="co">- b</span></span>
-<span id="cb7-18"><a href="#cb7-18"></a><span class="an">keywords:</span></span>
-<span id="cb7-19"><a href="#cb7-19"></a><span class="co">---</span></span></code></pre></div>
+<pre class="line-numbers language-markdown"><code class="language-markdown"><span class="token hr punctuation">---</span>
+title: Hexo博客搭建
+date: 1589105282000
+author: Lu Yiyun
+img: "文章特色图，空则hexo-theme-matery自动进行填补"
+coverImg: "文章在首页轮播封面时显示的图片，默认使用文章特色图"
+top: true
+cover: true
+toc: true
+mathjax: true
+summary: "自定义文章的摘要，不然自动从文章正文中吸取"
+categories:
+<span class="token list punctuation">-</span> A
+<span class="token list punctuation">-</span> B
+tags:
+<span class="token list punctuation">-</span> a
+<span class="token list punctuation">-</span> b
+<span class="token title important">keywords:
+<span class="token punctuation">---</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="新建工具页面">5. 新建工具页面</h2>
-<div class="sourceCode" id="cb8"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1"></a>hexo new page "categories"</span>
-<span id="cb8-2"><a href="#cb8-2"></a>hexo new page "tags"</span>
-<span id="cb8-3"><a href="#cb8-3"></a>hexo new page "about"</span>
-<span id="cb8-4"><a href="#cb8-4"></a>hexo new page "contact"</span>
-<span id="cb8-5"><a href="#cb8-5"></a>hexo new page "friends"</span></code></pre></div>
+<pre class="line-numbers language-markdown"><code class="language-markdown">hexo new page "categories"
+hexo new page "tags"
+hexo new page "about"
+hexo new page "contact"
+hexo new page "friends"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>并都将其中的<code>index.md</code>文件改写为以下格式：</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1"></a><span class="co">---</span></span>
-<span id="cb9-2"><a href="#cb9-2"></a><span class="an">title:</span><span class="co"> categories</span></span>
-<span id="cb9-3"><a href="#cb9-3"></a><span class="an">date:</span><span class="co"> 2020-05-10 13:25:48</span></span>
-<span id="cb9-4"><a href="#cb9-4"></a><span class="an">type:</span><span class="co"> "categories"</span></span>
-<span id="cb9-5"><a href="#cb9-5"></a><span class="an">layout:</span><span class="co"> "categories"</span></span>
-<span id="cb9-6"><a href="#cb9-6"></a><span class="co">---</span></span></code></pre></div>
+<pre class="line-numbers language-markdown"><code class="language-markdown"><span class="token hr punctuation">---</span>
+title: categories
+date: 2020-05-10 13:25:48
+type: "categories"
+<span class="token title important">layout: "categories"
+<span class="token punctuation">---</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>然后手动再<code>/source/</code>下创建一个<code>404.md</code>，并填写一下内容：</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1"></a><span class="co">---</span></span>
-<span id="cb10-2"><a href="#cb10-2"></a><span class="an">title:</span><span class="co"> 404</span></span>
-<span id="cb10-3"><a href="#cb10-3"></a><span class="an">date:</span><span class="co"> 2019-07-19 16:41:10</span></span>
-<span id="cb10-4"><a href="#cb10-4"></a><span class="an">type:</span><span class="co"> "404"</span></span>
-<span id="cb10-5"><a href="#cb10-5"></a><span class="an">layout:</span><span class="co"> "404"</span></span>
-<span id="cb10-6"><a href="#cb10-6"></a><span class="an">description:</span><span class="co"> "你来到了没有知识的荒原 :("</span></span>
-<span id="cb10-7"><a href="#cb10-7"></a><span class="co">---</span></span></code></pre></div>
+<pre class="line-numbers language-markdown"><code class="language-markdown"><span class="token hr punctuation">---</span>
+title: 404
+date: 2019-07-19 16:41:10
+type: "404"
+layout: "404"
+<span class="token title important">description: "你来到了没有知识的荒原 :("
+<span class="token punctuation">---</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>并在<code>/themes/hexo-theme-matery/layout/</code>下新建<code>404.ejs</code>，并添加以下内容：</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb11-1"><a href="#cb11-1"></a><span class="op">&lt;</span>style type<span class="op">=</span><span class="st">"text/css"</span><span class="op">&gt;</span></span>
-<span id="cb11-2"><a href="#cb11-2"></a>    <span class="co">/* don't remove. */</span></span>
-<span id="cb11-3"><a href="#cb11-3"></a>    <span class="op">.</span><span class="at">about</span><span class="op">-</span>cover {</span>
-<span id="cb11-4"><a href="#cb11-4"></a>        <span class="dt">height</span><span class="op">:</span> 75vh<span class="op">;</span></span>
-<span id="cb11-5"><a href="#cb11-5"></a>    }</span>
-<span id="cb11-6"><a href="#cb11-6"></a><span class="op">&lt;/</span>style<span class="op">&gt;</span></span>
-<span id="cb11-7"><a href="#cb11-7"></a></span>
-<span id="cb11-8"><a href="#cb11-8"></a><span class="op">&lt;</span>div <span class="kw">class</span><span class="op">=</span><span class="st">"bg-cover pd-header about-cover"</span><span class="op">&gt;</span></span>
-<span id="cb11-9"><a href="#cb11-9"></a>    <span class="op">&lt;</span>div <span class="kw">class</span><span class="op">=</span><span class="st">"container"</span><span class="op">&gt;</span></span>
-<span id="cb11-10"><a href="#cb11-10"></a>        <span class="op">&lt;</span>div <span class="kw">class</span><span class="op">=</span><span class="st">"row"</span><span class="op">&gt;</span></span>
-<span id="cb11-11"><a href="#cb11-11"></a>            <span class="op">&lt;</span>div <span class="kw">class</span><span class="op">=</span><span class="st">"col s10 offset-s1 m8 offset-m2 l8 offset-l2"</span><span class="op">&gt;</span></span>
-<span id="cb11-12"><a href="#cb11-12"></a>                <span class="op">&lt;</span>div <span class="kw">class</span><span class="op">=</span><span class="st">"brand"</span><span class="op">&gt;</span></span>
-<span id="cb11-13"><a href="#cb11-13"></a>                    <span class="op">&lt;</span>div <span class="kw">class</span><span class="op">=</span><span class="st">"title center-align"</span><span class="op">&gt;</span></span>
-<span id="cb11-14"><a href="#cb11-14"></a>                        <span class="dv">404</span></span>
-<span id="cb11-15"><a href="#cb11-15"></a>                    <span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
-<span id="cb11-16"><a href="#cb11-16"></a>                    <span class="op">&lt;</span>div <span class="kw">class</span><span class="op">=</span><span class="st">"description center-align"</span><span class="op">&gt;</span></span>
-<span id="cb11-17"><a href="#cb11-17"></a>                        <span class="op">&lt;%=</span> page<span class="op">.</span><span class="at">description</span> <span class="op">%&gt;</span></span>
-<span id="cb11-18"><a href="#cb11-18"></a>                    <span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
-<span id="cb11-19"><a href="#cb11-19"></a>                <span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
-<span id="cb11-20"><a href="#cb11-20"></a>            <span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
-<span id="cb11-21"><a href="#cb11-21"></a>        <span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
-<span id="cb11-22"><a href="#cb11-22"></a>    <span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
-<span id="cb11-23"><a href="#cb11-23"></a><span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
-<span id="cb11-24"><a href="#cb11-24"></a></span>
-<span id="cb11-25"><a href="#cb11-25"></a><span class="op">&lt;</span>script<span class="op">&gt;</span></span>
-<span id="cb11-26"><a href="#cb11-26"></a>    <span class="co">// 每天切换 banner 图.  Switch banner image every day.</span></span>
-<span id="cb11-27"><a href="#cb11-27"></a>    $(<span class="st">'.bg-cover'</span>)<span class="op">.</span><span class="fu">css</span>(<span class="st">'background-image'</span><span class="op">,</span> <span class="st">'url(/medias/banner/'</span> <span class="op">+</span> <span class="kw">new</span> <span class="bu">Date</span>()<span class="op">.</span><span class="fu">getDay</span>() <span class="op">+</span> <span class="st">'.jpg)'</span>)<span class="op">;</span></span>
-<span id="cb11-28"><a href="#cb11-28"></a><span class="op">&lt;/</span>script<span class="op">&gt;</span></span></code></pre></div>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>style type<span class="token operator">=</span><span class="token string">"text/css"</span><span class="token operator">></span>
+    <span class="token comment" spellcheck="true">/* don't remove. */</span>
+    <span class="token punctuation">.</span>about<span class="token operator">-</span>cover <span class="token punctuation">{</span>
+        height<span class="token punctuation">:</span> 75vh<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">></span>
+
+<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"bg-cover pd-header about-cover"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"row"</span><span class="token operator">></span>
+            <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"col s10 offset-s1 m8 offset-m2 l8 offset-l2"</span><span class="token operator">></span>
+                <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"brand"</span><span class="token operator">></span>
+                    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"title center-align"</span><span class="token operator">></span>
+                        <span class="token number">404</span>
+                    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+                    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"description center-align"</span><span class="token operator">></span>
+                        <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> page<span class="token punctuation">.</span>description <span class="token operator">%</span><span class="token operator">></span>
+                    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+                <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">></span>
+    <span class="token comment" spellcheck="true">// 每天切换 banner 图.  Switch banner image every day.</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'.bg-cover'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">'background-image'</span><span class="token punctuation">,</span> <span class="token string">'url(/medias/banner/'</span> <span class="token operator">+</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDay</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'.jpg)'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>这样，我们就添加了一个404页面了。</p>
 <h2 id="主题配置文件">6. 主题配置文件</h2>
 <p>在<code>/themes/hexo-theme-matery</code>下有一个<code>_config.yml</code>文件，用来控制主题的诸多属性。</p>
@@ -925,10 +1008,10 @@
 <p>可以使用<a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank" rel="noopener">Google PageSpeed Insights</a>来对网站的速度进行测试，并找到其瓶颈所在，其他的各种测速工具可以见<a href="https://qinnian.xyz/CreateBlog.html" target="_blank" rel="noopener">钦の念</a>的博客。</p>
 <h3 id="图片懒加载">7.1 图片懒加载</h3>
 <p>第一种可以提高速度的方式是进行图片的懒加载，安装<code>hexo-lazyload-image</code>，并在站点配置文件中加入：</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode yml"><code class="sourceCode yaml"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">lazyload</span><span class="kw">:</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a><span class="fu">enable</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb12-3"><a href="#cb12-3"></a><span class="fu">onlypost</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span><span class="co">   # true则只会懒加载文章中的图片，logo头像什么的不会</span></span>
-<span id="cb12-4"><a href="#cb12-4"></a><span class="fu">loadingImg</span><span class="kw">:</span><span class="at"> ./medias/loading.gif</span></span></code></pre></div>
+<pre class="line-numbers language-yml"><code class="language-yml">lazyload:
+enable: true
+onlypost: false   # true则只会懒加载文章中的图片，logo头像什么的不会
+loadingImg: ./medias/loading.gif<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p><em>此插件与hexo-asset-image似乎不兼容，未解决。</em></p>
 <h3 id="gitee和github双线部署">7.2 gitee和github双线部署</h3>
 <p><em>未完待续...</em></p>
@@ -1744,13 +1827,6 @@
 </main>
 
 
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
-
 
 
     <footer class="page-footer bg-color">
@@ -1819,7 +1895,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">36.6k</span>&nbsp;字
+                class="white-color">46.5k</span>&nbsp;字
             
             
             

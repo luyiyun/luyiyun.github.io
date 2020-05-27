@@ -30,7 +30,8 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="卢一云的博客" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -500,7 +501,7 @@
 
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
-    $('.bg-cover').css('background-image', 'url(/medias/banner/1.jpg)');
+    $('.bg-cover').css('background-image', 'url(/medias/banner/4.jpg)');
 </script>
 
 
@@ -649,6 +650,29 @@
         
             
             <div class="carousel-item amber white-text carousel-post bg-cover"
+                 style="background-image: url('/medias/featureimages/14.jpg');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s10 offset-s1">
+                            <div class="title center-align">论文精读-VAE-2013</div>
+                            <div class="description center-align">
+                                
+                                    对变分自编码器（VAE）原论文的阅读。本文提出了一种新的技术，可以非常有效率地建模带有连续隐变量的数据。即特定是使用了神经网络来参数化后验分布和似然函数，并提出了重参数化的技巧来配合Monte Carlo梯度估计，从而可以使用SGD对上述模型进行训练。从另一个角度，其将自编码器和概率模型结合在一起，探索了一种新的自编码器框架。
+                                
+                            </div>
+                            <div class="cover-btns">
+                                <a href="/2020/05/27/vae2013/" class="waves-effect waves-light btn"
+                                   target="_blank">
+                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="carousel-item amber white-text carousel-post bg-cover"
                  style="background-image: url('/medias/featureimages/12.jpg');">
                 <div class="container">
                     <div class="row">
@@ -778,7 +802,7 @@
 
     
     
-    <div class="col s12" >
+    <div class="col s12 m6" >
         <div class="post-card" style="background-image: url('/medias/featureimages/2.jpg')">
             <div class="post-body">
                 <div class="post-categories">
@@ -793,7 +817,11 @@
                 <a href="/2020/05/15/dl-in-omics2019/">
                     <h3 class="post-title">论文精读-深度学习组学应用-2018综述</h3>
                 </a>
-                <p class="post-description">本研究旨在为研究者提供入门级（entry-level）的指导，使得研究者可以使用deep learning（DL）技术来解决组学问题。首先介绍了多种DL-models，然后介绍了其和omics在特定研究领域的结合，另外总结了DL技术分析omics数据的一般套路，并总结了一些还未被系统研究的问题，最后比较了现存的开源DL框架和总结了DL领域的机会和挑战。</p>
+                <p class="post-description">
+                    
+                        本研究旨在为研究者提供入门级（entry-level）的指导，使得研究者可以使用deep learning（DL）技术来解决组学问题。首先介绍了多种DL-models，然后介绍了其和omics在特定研究领域的结合，另外总结了DL技术分析omics数据的一般套路，并总结了一些还未被系统研究的问题，最后比较了现存的开源DL框架和总结了DL领域的机会和挑战。
+                    
+                </p>
                 <a href="/2020/05/15/dl-in-omics2019/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
@@ -802,7 +830,7 @@
     </div>
     
     
-    <div class="col s12 m6" data-aos="zoom-in-up">
+    <div class="col s12 m6" >
         <div class="post-card" style="background-image: url('/medias/featureimages/15.jpg')">
             <div class="post-body">
                 <div class="post-categories">
@@ -817,8 +845,12 @@
                 <a href="/2020/05/19/pamogk2019/">
                     <h3 class="post-title">论文精读-PAMOGK-2019</h3>
                 </a>
-                <p class="post-description">本研究是一项多组学亚组聚类的方法学研究。本研究提出了一种基于graph kernel和multi-view clustering的多组学聚类方法，其可以将pathway数据和多组学数据（RNAseq、somatic
-mutations和RPPA等）结合进行聚类分析。在TCGA-KIRC上进行了验证，效果不错。</p>
+                <p class="post-description">
+                    
+                        本研究是一项多组学亚组聚类的方法学研究。本研究提出了一种基于graph kernel和multi-view clustering的多组学聚类方法，其可以将pathway数据和多组学数据（RNAseq、somatic
+mutations和RPPA等）结合进行聚类分析。在TCGA-KIRC上进行了验证，效果不错。
+                    
+                </p>
                 <a href="/2020/05/19/pamogk2019/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
@@ -842,7 +874,11 @@ mutations和RPPA等）结合进行聚类分析。在TCGA-KIRC上进行了验证�
                 <a href="/2020/05/17/rnn-jian-wang-2016/">
                     <h3 class="post-title">论文精读-基于RNN的GRN-2016</h3>
                 </a>
-                <p class="post-description">本研究提出了一种混合方法，将RNN和Kalman滤波器结合在一起，来构建基因调控网络，并在多个数据集上进行了验证。</p>
+                <p class="post-description">
+                    
+                        本研究提出了一种混合方法，将RNN和Kalman滤波器结合在一起，来构建基因调控网络，并在多个数据集上进行了验证。
+                    
+                </p>
                 <a href="/2020/05/17/rnn-jian-wang-2016/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #1AD6FD 0%, #1D62F0 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
@@ -851,7 +887,7 @@ mutations和RPPA等）结合进行聚类分析。在TCGA-KIRC上进行了验证�
     </div>
     
     
-    <div class="col s12" data-aos="zoom-in-up">
+    <div class="col s12 m6" data-aos="zoom-in-up">
         <div class="post-card" style="background-image: url('/medias/featureimages/12.jpg')">
             <div class="post-body">
                 <div class="post-categories">
@@ -866,7 +902,11 @@ mutations和RPPA等）结合进行聚类分析。在TCGA-KIRC上进行了验证�
                 <a href="/2020/05/21/vae-jian-mo-pancancer2019/">
                     <h3 class="post-title">论文精读-使用VAE整合多组学数据进行PanCancer分析-OmiVAE2019</h3>
                 </a>
-                <p class="post-description">本研究提出了一个基于VAE的多组学模型，可以进行多组学降维和基于此的end-to-end的分类任务。本研究在TCGA pan-cancer的癌症类型分类任务上验证了该模型，体现出优异的性能。在我看来，其依据染色体分组提取特征的思路是亮点之一。</p>
+                <p class="post-description">
+                    
+                        本研究提出了一个基于VAE的多组学模型，可以进行多组学降维和基于此的end-to-end的分类任务。本研究在TCGA pan-cancer的癌症类型分类任务上验证了该模型，体现出优异的性能。在我看来，其依据染色体分组提取特征的思路是亮点之一。
+                    
+                </p>
                 <a href="/2020/05/21/vae-jian-mo-pancancer2019/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FFCC00 0%, #FF9500 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
@@ -888,8 +928,40 @@ mutations和RPPA等）结合进行聚类分析。在TCGA-KIRC上进行了验证�
                 <a href="/2020/05/25/web-xue-xi/">
                     <h3 class="post-title">Web技术学习--基于MDN</h3>
                 </a>
-                <p class="post-description">对于Web学习的一个汇总篇章，其有到每个具体部分的链接，以及一些通向其他有用工具的链接。</p>
+                <p class="post-description">
+                    
+                        对于Web学习的一个汇总篇章，其有到每个具体部分的链接，以及一些通向其他有用工具的链接。
+                    
+                </p>
                 <a href="/2020/05/25/web-xue-xi/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="col s12 m6" data-aos="zoom-in-up">
+        <div class="post-card" style="background-image: url('/medias/featureimages/17.jpg')">
+            <div class="post-body">
+                <div class="post-categories">
+                    
+                        
+                            <a href="/categories/Tools/" class="category">Tools</a>
+                        
+                            <a href="/categories/Tools/Blog/" class="category">Blog</a>
+                        
+                    
+                </div>
+                <a href="/2020/05/10/blog-build/">
+                    <h3 class="post-title">Hexo博客搭建</h3>
+                </a>
+                <p class="post-description">
+                    
+                        本篇将自己搭建hexo静态博客时的整个历程进行了记录，包括需要安装的插件和进行的配置，方便进行相似的博客搭建
+                    
+                </p>
+                <a href="/2020/05/10/blog-build/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #C644FC 0%, #5856D6 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
@@ -912,8 +984,12 @@ mutations和RPPA等）结合进行聚类分析。在TCGA-KIRC上进行了验证�
                 <a href="/2020/05/21/gitignore-wen-jian-hu-lue-gui-ze/">
                     <h3 class="post-title">gitignore的文件忽略规则</h3>
                 </a>
-                <p class="post-description">在正常的工作中，经常使用到git，那自然.gitignore文件的使用是必须要掌握的。所幸我们一般用到的的.gitignore的规则都比较简</p>
-                <a href="/2020/05/21/gitignore-wen-jian-hu-lue-gui-ze/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #C644FC 0%, #5856D6 100%)" target="_blank">
+                <p class="post-description">
+                    
+                        在正常的工作中，经常使用到git，那自然.gitignore文件的使用是必须要掌握的。所幸我们一般用到的的.gitignore的规则都比较简
+                    
+                </p>
+                <a href="/2020/05/21/gitignore-wen-jian-hu-lue-gui-ze/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #55EFCB 0%, #5BCAFF 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
@@ -921,23 +997,27 @@ mutations和RPPA等）结合进行聚类分析。在TCGA-KIRC上进行了验证�
     </div>
     
     
-    <div class="col s12" data-aos="zoom-in-up">
-        <div class="post-card" style="background-image: url('/medias/featureimages/17.jpg')">
+    <div class="col s12 m6" data-aos="zoom-in-up">
+        <div class="post-card" style="background-image: url('/medias/featureimages/14.jpg')">
             <div class="post-body">
                 <div class="post-categories">
                     
                         
-                            <a href="/categories/Tools/" class="category">Tools</a>
+                            <a href="/categories/Paper/" class="category">Paper</a>
                         
-                            <a href="/categories/Tools/Blog/" class="category">Blog</a>
+                            <a href="/categories/Paper/Method/" class="category">Method</a>
                         
                     
                 </div>
-                <a href="/2020/05/10/blog-build/">
-                    <h3 class="post-title">Hexo博客搭建</h3>
+                <a href="/2020/05/27/vae2013/">
+                    <h3 class="post-title">论文精读-VAE-2013</h3>
                 </a>
-                <p class="post-description">本篇将自己搭建hexo静态博客时的整个历程进行了记录，包括需要安装的插件和进行的配置，方便进行相似的博客搭建</p>
-                <a href="/2020/05/10/blog-build/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #55EFCB 0%, #5BCAFF 100%)" target="_blank">
+                <p class="post-description">
+                    
+                        对变分自编码器（VAE）原论文的阅读。本文提出了一种新的技术，可以非常有效率地建模带有连续隐变量的数据。即特定是使用了神经网络来参数化后验分布和似然函数，并提出了重参数化的技巧来配合Monte Carlo梯度估计，从而可以使用SGD对上述模型进行训练。从另一个角度，其将自编码器和概率模型结合在一起，探索了一种新的自编码器框架。
+                    
+                </p>
+                <a href="/2020/05/27/vae2013/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
@@ -960,8 +1040,12 @@ mutations和RPPA等）结合进行聚类分析。在TCGA-KIRC上进行了验证�
                 <a href="/2020/05/24/ucsc-inroduction/">
                     <h3 class="post-title">UCSC Xena介绍</h3>
                 </a>
-                <p class="post-description">简单介绍了UCSC Xena网站的功能，并且可以链接到其他关于UCSC的笔记</p>
-                <a href="/2020/05/24/ucsc-inroduction/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
+                <p class="post-description">
+                    
+                        简单介绍了UCSC Xena网站的功能，并且可以链接到其他关于UCSC的笔记
+                    
+                </p>
+                <a href="/2020/05/24/ucsc-inroduction/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
@@ -984,8 +1068,12 @@ mutations和RPPA等）结合进行聚类分析。在TCGA-KIRC上进行了验证�
                 <a href="/2020/05/10/zsh-an-zhuang/">
                     <h3 class="post-title">zsh及oh-my-zsh安装</h3>
                 </a>
-                <p class="post-description">介绍了在linux环境下安装zsh以及oh-my-zsh的流程</p>
-                <a href="/2020/05/10/zsh-an-zhuang/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)" target="_blank">
+                <p class="post-description">
+                    
+                        介绍了在linux环境下安装zsh以及oh-my-zsh的流程
+                    
+                </p>
+                <a href="/2020/05/10/zsh-an-zhuang/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #1AD6FD 0%, #1D62F0 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
@@ -1009,6 +1097,114 @@ mutations和RPPA等）结合进行聚类分析。在TCGA-KIRC上进行了验证�
     <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
         <div class="row article-row">
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2020/05/28/vae2013/vae2013-slide/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="vae2013/vae2013_slide">
+                            
+                            <span class="card-title">vae2013/vae2013_slide</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                
+
+  论文精读-VAE-2013
+  
+Luyiyun
+  
+  2020-05-27 15:04:19
+
+
+
+
+
+Auto-Encoding Variational Bayes
+
+杂志: None
+IF: None
+分区: None
+
+
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-28
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                Lu Yiyun
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2020/05/27/vae2013/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="论文精读-VAE-2013">
+                            
+                            <span class="card-title">论文精读-VAE-2013</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                对变分自编码器（VAE）原论文的阅读。本文提出了一种新的技术，可以非常有效率地建模带有连续隐变量的数据。即特定是使用了神经网络来参数化后验分布和似然函数，并提出了重参数化的技巧来配合Monte Carlo梯度估计，从而可以使用SGD对上述模型进行训练。从另一个角度，其将自编码器和概率模型结合在一起，探索了一种新的自编码器框架。
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-27
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Paper/" class="post-category">
+                                    Paper
+                                </a>
+                                
+                                <a href="/categories/Paper/Method/" class="post-category">
+                                    Method
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Machine-Leanring/">
+                            <span class="chip bg-color">Machine Leanring</span>
+                        </a>
+                        
+                        <a href="/tags/Unsupervised-Learning/">
+                            <span class="chip bg-color">Unsupervised Learning</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
@@ -1543,116 +1739,6 @@ HTML表单是由一个或多个小部件组成的。这些小部件可以是文
                 </div>
             </div>
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2020/05/17/rnn-jian-wang-2016/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="论文精读-基于RNN的GRN-2016">
-                            
-                            <span class="card-title">论文精读-基于RNN的GRN-2016</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                本研究提出了一种混合方法，将RNN和Kalman滤波器结合在一起，来构建基因调控网络，并在多个数据集上进行了验证。
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-17
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Paper/" class="post-category">
-                                    Paper
-                                </a>
-                                
-                                <a href="/categories/Paper/Method/" class="post-category">
-                                    Method
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Deep-Learning/">
-                            <span class="chip bg-color">Deep Learning</span>
-                        </a>
-                        
-                        <a href="/tags/Omics/">
-                            <span class="chip bg-color">Omics</span>
-                        </a>
-                        
-                        <a href="/tags/Network/">
-                            <span class="chip bg-color">Network</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2020/05/16/css-xuan-ze-qi/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="CSS选择器">
-                            
-                            <span class="card-title">CSS选择器</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                本篇是MDN教程中CSS第三部分，主要内容为选择器，主要是不同种类的分类器及其使用方法。
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-16
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Web/" class="post-category">
-                                    Web
-                                </a>
-                                
-                                <a href="/categories/Web/CSS/" class="post-category">
-                                    CSS
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/MDN%E5%AD%A6%E4%B9%A0/">
-                            <span class="chip bg-color">MDN学习</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
         </div>
     </article>
 
@@ -1751,7 +1837,7 @@ HTML表单是由一个或多个小部件组成的。这些小部件可以是文
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">36.6k</span>&nbsp;字
+                class="white-color">46.5k</span>&nbsp;字
             
             
             

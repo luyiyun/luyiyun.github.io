@@ -30,7 +30,8 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="卢一云的博客" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -574,14 +575,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-25
+                    2020-05-28
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    660
+                    651
                 </div>
                 
 
@@ -608,27 +609,27 @@
 <h1 id="引用css的3种方式">引用CSS的3种方式</h1>
 <ol type="1">
 <li><p>引用css文件：</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">&lt;link</span><span class="ot"> rel=</span><span class="st">"stylesheet"</span><span class="ot"> href=</span><span class="st">"style.css"</span><span class="kw">&gt;</span></span></code></pre></div></li>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>style.css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>使用<code>head</code>中的<code>style</code>标签；</p></li>
 <li><p>内联式，<code>&lt;p style="color: red; font-size: 10px;"&gt;</code>；</p></li>
 </ol>
 <h1 id="函数">函数</h1>
-<div class="sourceCode" id="cb2"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">.box</span> {</span>
-<span id="cb2-2"><a href="#cb2-2"></a>  <span class="kw">padding</span>: <span class="dv">10</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a>  <span class="kw">width</span>: <span class="fu">calc(</span><span class="dv">90</span><span class="dt">%</span> <span class="op">-</span> <span class="dv">30</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb2-4"><a href="#cb2-4"></a>  <span class="kw">background-color</span>: <span class="cn">rebeccapurple</span><span class="op">;</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a>  <span class="kw">color</span>: <span class="cn">white</span><span class="op">;</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a>}</span></code></pre></div>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.box</span> </span><span class="token punctuation">{</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span><span class="token number">90%</span> - <span class="token number">30</span>px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> rebeccapurple<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h1 id="规则">规则</h1>
-<div class="sourceCode" id="cb3"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1"></a>body {</span>
-<span id="cb3-2"><a href="#cb3-2"></a>  <span class="kw">background-color</span>: <span class="cn">pink</span><span class="op">;</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a>}</span>
-<span id="cb3-4"><a href="#cb3-4"></a></span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="im">@media</span> (<span class="kw">min-width</span>: <span class="dv">30</span><span class="dt">em</span>) {</span>
-<span id="cb3-6"><a href="#cb3-6"></a>  body {</span>
-<span id="cb3-7"><a href="#cb3-7"></a>    <span class="kw">background-color</span>: <span class="cn">blue</span><span class="op">;</span></span>
-<span id="cb3-8"><a href="#cb3-8"></a>  }</span>
-<span id="cb3-9"><a href="#cb3-9"></a>}</span></code></pre></div>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">body </span><span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> pink<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 30em<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">body </span><span class="token punctuation">{</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h1 id="css的工作流程">CSS的工作流程</h1>
 <p>这里将CSS的工作原理，这种偏理论性质的东西放在最后面。</p>
 <p><img src="/2020/05/15/css-ji-chu/CSS基础_2020-05-15-12-56-14.png" alt="CSS工作原理"><br>
@@ -644,12 +645,12 @@
 <h2 id="dom">DOM</h2>
 <p>一个DOM有一个树形结构，标记语言中的每一个元素、属性以及每一段文字都对应着结构树中的一个节点（Node/DOM或DOM node）。节点由节点本身和其他DOM节点的关系定义，有些节点有父节点，有些节点有兄弟节点（同级节点）。</p>
 <p>其将下面的代码解析成下面的树形结构：</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">&lt;p&gt;</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a>  Let's use:</span>
-<span id="cb4-3"><a href="#cb4-3"></a>  <span class="kw">&lt;span&gt;</span>Cascading<span class="kw">&lt;/span&gt;</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a>  <span class="kw">&lt;span&gt;</span>Style<span class="kw">&lt;/span&gt;</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a>  <span class="kw">&lt;span&gt;</span>Sheets<span class="kw">&lt;/span&gt;</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a><span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+  Let's use:
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>Cascading<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>Style<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>Sheets<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <pre><code>P
 ├─ "Let's use:"
 ├─ SPAN
@@ -1548,7 +1549,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">36.6k</span>&nbsp;字
+                class="white-color">46.5k</span>&nbsp;字
             
             
             

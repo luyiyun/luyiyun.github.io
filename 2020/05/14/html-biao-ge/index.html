@@ -30,7 +30,8 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="卢一云的博客" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -574,14 +575,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-25
+                    2020-05-28
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    629
+                    576
                 </div>
                 
 
@@ -614,24 +615,24 @@
 <p><code>th</code>和<code>td</code>标签有<code>colspan</code>和<code>rowspan</code>属性来控制。</p>
 <h1 id="为表格的列提供共同的样式">为表格的列提供共同的样式</h1>
 <p>使用<code>colgroup</code>和<code>col</code>标签进行如下定义：</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">&lt;table&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a>  <span class="kw">&lt;colgroup&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a>    <span class="kw">&lt;col&gt;</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a>    <span class="kw">&lt;col</span><span class="ot"> style=</span><span class="st">"background-color: yellow"</span><span class="kw">&gt;</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a>  <span class="kw">&lt;/colgroup&gt;</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a>  <span class="kw">&lt;tr&gt;</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a>    <span class="kw">&lt;th&gt;</span>Data 1<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a>    <span class="kw">&lt;th&gt;</span>Data 2<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a>  <span class="kw">&lt;/tr&gt;</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a>  <span class="kw">&lt;tr&gt;</span></span>
-<span id="cb1-11"><a href="#cb1-11"></a>    <span class="kw">&lt;td&gt;</span>Calcutta<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb1-12"><a href="#cb1-12"></a>    <span class="kw">&lt;td&gt;</span>Orange<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb1-13"><a href="#cb1-13"></a>  <span class="kw">&lt;/tr&gt;</span></span>
-<span id="cb1-14"><a href="#cb1-14"></a>  <span class="kw">&lt;tr&gt;</span></span>
-<span id="cb1-15"><a href="#cb1-15"></a>    <span class="kw">&lt;td&gt;</span>Robots<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb1-16"><a href="#cb1-16"></a>    <span class="kw">&lt;td&gt;</span>Jazz<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb1-17"><a href="#cb1-17"></a>  <span class="kw">&lt;/tr&gt;</span></span>
-<span id="cb1-18"><a href="#cb1-18"></a><span class="kw">&lt;/table&gt;</span></span></code></pre></div>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>colgroup</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>col</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>col</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">background-color</span><span class="token punctuation">:</span> yellow</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>colgroup</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">></span></span>Data 1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">></span></span>Data 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>Calcutta<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>Orange<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>Robots<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>Jazz<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <table>
 <colgroup>
 <col>
@@ -667,26 +668,26 @@ Jazz
 <li>想要改变格式的列，在其对应的<code>col</code>元素中加入样式；</li>
 <li>如果想要一次定义多列，使用<code>span</code>属性；</li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">&lt;colgroup&gt;</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a>  <span class="kw">&lt;col</span><span class="ot"> style=</span><span class="st">"background-color: yellow"</span><span class="ot"> span=</span><span class="st">"2"</span><span class="kw">&gt;</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="kw">&lt;/colgroup&gt;</span></span></code></pre></div>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>colgroup</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>col</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">background-color</span><span class="token punctuation">:</span> yellow</span><span class="token punctuation">"</span></span> <span class="token attr-name">span</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>colgroup</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h1 id="给表格增加一个标题">给表格增加一个标题</h1>
 <p>使用<code>caption</code>元素。</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">&lt;table&gt;</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>  <span class="kw">&lt;caption&gt;</span>Dinosaurs in the Jurassic period<span class="kw">&lt;/caption&gt;</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a></span>
-<span id="cb3-4"><a href="#cb3-4"></a>  ...</span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="kw">&lt;/table&gt;</span></span></code></pre></div>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>caption</span><span class="token punctuation">></span></span>Dinosaurs in the Jurassic period<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>caption</span><span class="token punctuation">></span></span>
+
+  ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h1 id="使用一些标签更加结构化表格">使用一些标签更加结构化表格</h1>
 <p>表头：<code>thead</code>、页脚：<code>tfoot</code>、正文：<code>tbody</code>。</p>
 <p>主要是为了方便使用CSS控制表格样式。</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1"></a></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="kw">&lt;table&gt;</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a>  <span class="kw">&lt;caption&gt;</span> ... <span class="kw">&lt;/caption&gt;</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a>  <span class="kw">&lt;thead&gt;</span> <span class="kw">&lt;tr&gt;</span> <span class="kw">&lt;th&gt;&lt;/th&gt;</span> ... <span class="kw">&lt;/tr&gt;</span> <span class="kw">&lt;/thead&gt;</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a>  <span class="kw">&lt;tbody&gt;</span> <span class="kw">&lt;tr&gt;</span> <span class="kw">&lt;td&gt;&lt;/td&gt;</span> ... <span class="kw">&lt;/tr&gt;</span> ... <span class="kw">&lt;/tbody&gt;</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a>  <span class="kw">&lt;tfoot&gt;</span> <span class="kw">&lt;tr&gt;</span> <span class="kw">&lt;td&gt;&lt;/td&gt;</span> ... <span class="kw">&lt;/tr&gt;</span> <span class="kw">&lt;/tbody&gt;</span></span>
-<span id="cb4-7"><a href="#cb4-7"></a><span class="kw">&lt;/table&gt;</span></span></code></pre></div>
+<pre class="line-numbers language-html"><code class="language-html">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>caption</span><span class="token punctuation">></span></span> ... <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>caption</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>thead</span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span> ... <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>thead</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tbody</span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span> ... <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span> ... <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tbody</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tfoot</span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span> ... <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tbody</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h1 id="嵌套表格">嵌套表格</h1>
 <p>即在<code>td</code>元素内再写一个完整的<code>table</code>，不推荐使用。</p>
 <h1 id="为视力受损者">为视力受损者</h1>
@@ -1577,7 +1578,7 @@ Jazz
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">36.6k</span>&nbsp;字
+                class="white-color">46.5k</span>&nbsp;字
             
             
             

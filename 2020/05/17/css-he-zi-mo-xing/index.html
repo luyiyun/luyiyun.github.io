@@ -30,7 +30,8 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="卢一云的博客" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -574,7 +575,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-25
+                    2020-05-28
                 </div>
                 
 
@@ -621,9 +622,7 @@
 </ul>
 <p>可以使用<code>display: block/inline</code>来进行控制外部显示类型。</p>
 <blockquote>
-<p>外部显示类型通过<code>display</code>来控制，让box是block还是inline。<br>
-同样的，盒模型还有内部显示类型，决定了盒子内的元素如何布局。<br>
-默认是正常文档流，即盒子内的元素根据其是block还是inline来进行布局，规则如上所示。但我们可以使用<code>display: flex</code>，这样外部显示类型是<code>block</code>，但内部显示类型变成了<code>flex</code>，则内部的元素将采用弹性盒子（Flexbox）的规则进行布局。（这将是CSS布局的主要内容）</p>
+<p>外部显示类型通过<code>display</code>来控制，让box是block还是inline。 同样的，盒模型还有内部显示类型，决定了盒子内的元素如何布局。 默认是正常文档流，即盒子内的元素根据其是block还是inline来进行布局，规则如上所示。但我们可以使用<code>display: flex</code>，这样外部显示类型是<code>block</code>，但内部显示类型变成了<code>flex</code>，则内部的元素将采用弹性盒子（Flexbox）的规则进行布局。（这将是CSS布局的主要内容）</p>
 </blockquote>
 <blockquote>
 <p>下面将专注于外部显示类型。</p>
@@ -642,26 +641,28 @@
 <blockquote>
 <p>注意，盒子的大小是<code>width</code>和<code>height</code>再加上<code>padding</code>和<code>border</code>。<code>margin</code>没有算入内，<code>margin</code>不影响盒子的大小，只影响盒子所占的空间的大小。</p>
 </blockquote>
-<p>例： <img src="/2020/05/17/css-he-zi-mo-xing/CSS盒子模型_2020-05-17-16-29-48.png" alt="block示例"></p>
+<p>例：</p>
+<p><img src="/2020/05/17/css-he-zi-mo-xing/CSS盒子模型_2020-05-17-16-29-48.png" alt="block示例"><br>
+</p>
 <p>当然，如果感觉去进行计算很麻烦，可以使用替代盒模型（IE）。即给元素加入下列的属性，则设定的<code>height</code>和<code>width</code>是<code>content</code>+<code>padding</code>+<code>border</code>的大小，即可见大小。</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">.box</span> {</span>
-<span id="cb1-2"><a href="#cb1-2"></a>  <span class="kw">box-sizing</span>: <span class="dv">border-box</span><span class="op">;</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a>}</span></code></pre></div>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.box</span> </span><span class="token punctuation">{</span>
+  <span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>如果想要所有的元素都使用替代盒模型，则可以使用以下代码（就是让所有的元素都继承<code>box-sizing</code>属性）：</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#cb2-1"></a>html {</span>
-<span id="cb2-2"><a href="#cb2-2"></a>  <span class="kw">box-sizing</span>: <span class="dv">border-box</span><span class="op">;</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a>}</span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="op">*,</span> <span class="op">*</span><span class="in">::before</span><span class="op">,</span> <span class="op">*</span><span class="in">::after</span> {</span>
-<span id="cb2-5"><a href="#cb2-5"></a>  <span class="kw">box-sizing</span>: <span class="bu">inherit</span><span class="op">;</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a>}</span></code></pre></div>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">html </span><span class="token punctuation">{</span>
+  <span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">*, *<span class="token pseudo-element">::before</span>, *<span class="token pseudo-element">::after</span> </span><span class="token punctuation">{</span>
+  <span class="token property">box-sizing</span><span class="token punctuation">:</span> inherit<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="内外边距和边框的声明方式">内外边距和边框的声明方式</h2>
 <h3 id="margin"><code>margin</code></h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">.box</span> {</span>
-<span id="cb3-2"><a href="#cb3-2"></a>  <span class="kw">margin-top</span>: <span class="dv">-60</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a>  <span class="kw">margin-right</span>: <span class="dv">30</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a>  <span class="kw">margin-bottom</span>: <span class="dv">40</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb3-5"><a href="#cb3-5"></a>  <span class="kw">margin-left</span>: <span class="dv">4</span><span class="dt">em</span><span class="op">;</span></span>
-<span id="cb3-6"><a href="#cb3-6"></a>}</span></code></pre></div>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.box</span> </span><span class="token punctuation">{</span>
+  <span class="token property">margin-top</span><span class="token punctuation">:</span> -<span class="token number">60</span>px<span class="token punctuation">;</span>
+  <span class="token property">margin-right</span><span class="token punctuation">:</span> <span class="token number">30</span>px<span class="token punctuation">;</span>
+  <span class="token property">margin-bottom</span><span class="token punctuation">:</span> <span class="token number">40</span>px<span class="token punctuation">;</span>
+  <span class="token property">margin-left</span><span class="token punctuation">:</span> <span class="token number">4</span>em<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>要点：</p>
 <ol type="1">
 <li><strong>外边距相接</strong>，两个相邻的元素，都设置了外边距，则两个盒子（指的是两个盒子的border）之间的距离是两个外边距的最大值而不是相加值。</li>
@@ -670,32 +671,32 @@
 </ol>
 <h3 id="border"><code>border</code></h3>
 <p>单独设置：</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb4-1"><a href="#cb4-1"></a>border-top-width</span>
-<span id="cb4-2"><a href="#cb4-2"></a>border-top-style</span>
-<span id="cb4-3"><a href="#cb4-3"></a>border-top-color</span>
-<span id="cb4-4"><a href="#cb4-4"></a>border-right-width</span>
-<span id="cb4-5"><a href="#cb4-5"></a>border-right-style</span>
-<span id="cb4-6"><a href="#cb4-6"></a>border-right-color</span>
-<span id="cb4-7"><a href="#cb4-7"></a>border-bottom-width</span>
-<span id="cb4-8"><a href="#cb4-8"></a>border-bottom-style</span>
-<span id="cb4-9"><a href="#cb4-9"></a>border-bottom-color</span>
-<span id="cb4-10"><a href="#cb4-10"></a>border-left-width</span>
-<span id="cb4-11"><a href="#cb4-11"></a>border-left-style</span>
-<span id="cb4-12"><a href="#cb4-12"></a>border-left-color</span></code></pre></div>
+<pre class="line-numbers language-css"><code class="language-css">border-top-width
+border-top-style
+border-top-color
+border-right-width
+border-right-style
+border-right-color
+border-bottom-width
+border-bottom-style
+border-bottom-color
+border-left-width
+border-left-style
+border-left-color<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>一起设置4个边框的单个属性：</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb5-1"><a href="#cb5-1"></a>border-width</span>
-<span id="cb5-2"><a href="#cb5-2"></a>border-style</span>
-<span id="cb5-3"><a href="#cb5-3"></a>border-color</span></code></pre></div>
+<pre class="line-numbers language-css"><code class="language-css">border-width
+border-style
+border-color<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>一次设置单个变量的3个属性：</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb6-1"><a href="#cb6-1"></a>border-top</span>
-<span id="cb6-2"><a href="#cb6-2"></a>border-right</span>
-<span id="cb6-3"><a href="#cb6-3"></a>border-bottom</span>
-<span id="cb6-4"><a href="#cb6-4"></a>border-left</span></code></pre></div>
+<pre class="line-numbers language-css"><code class="language-css">border-top
+border-right
+border-bottom
+border-left<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="padding"><code>padding</code></h3>
-<div class="sourceCode" id="cb7"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb7-1"><a href="#cb7-1"></a>padding-top</span>
-<span id="cb7-2"><a href="#cb7-2"></a>padding-right</span>
-<span id="cb7-3"><a href="#cb7-3"></a>padding-bottom</span>
-<span id="cb7-4"><a href="#cb7-4"></a>padding-left</span></code></pre></div>
+<pre class="line-numbers language-css"><code class="language-css">padding-top
+padding-right
+padding-bottom
+padding-left<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <h1 id="内联模式inline">内联模式（inline）</h1>
 <p>在inline box中，<code>height</code>和<code>width</code>不会生效，但<code>padding</code>、<code>border</code>和<code>margin</code>是生效的，但不会改变其和其他inline boxes的关系。</p>
 <p><img src="/2020/05/17/css-he-zi-mo-xing/CSS盒子模型_2020-05-17-16-13-46.png" alt="inline示例"><br>
@@ -714,28 +715,28 @@
 </p>
 <p>当您想要通过添加内边距使链接具有更大的命中区域时，这是很有用的。<code>&lt;a&gt;</code>是像<code>&lt;span&gt;</code>一样的内联元素；你可以使用<code>display: inline-block</code>来设置内边距，让用户更容易点击链接。这种情况在导航栏中很常见。</p>
 <h1 id="背景">背景</h1>
-<div class="sourceCode" id="cb8"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">.box</span> { </span>
-<span id="cb8-2"><a href="#cb8-2"></a>  <span class="kw">background</span>: <span class="fu">linear-gradient(</span><span class="dv">105</span><span class="dt">deg</span><span class="op">,</span> rgba(<span class="dv">255</span><span class="op">,</span><span class="dv">255</span><span class="op">,</span><span class="dv">255</span><span class="op">,</span><span class="dv">.2</span><span class="fu">)</span> <span class="dv">39</span><span class="dt">%</span><span class="op">,</span> <span class="fu">rgba(</span><span class="dv">51</span><span class="op">,</span><span class="dv">56</span><span class="op">,</span><span class="dv">57</span><span class="op">,</span><span class="dv">1</span><span class="fu">)</span> <span class="dv">96</span><span class="dt">%</span>) <span class="dv">center</span> <span class="dv">center</span> / <span class="dv">400</span><span class="dt">px</span> <span class="dv">200</span><span class="dt">px</span> <span class="dv">no-repeat</span><span class="op">,</span> </span>
-<span id="cb8-3"><a href="#cb8-3"></a>  <span class="fu">url(</span><span class="st">big-star.png</span><span class="fu">)</span> <span class="dv">center</span> <span class="dv">no-repeat</span><span class="op">,</span> <span class="cn">rebeccapurple</span><span class="op">;</span> </span>
-<span id="cb8-4"><a href="#cb8-4"></a>} </span></code></pre></div>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.box</span> </span><span class="token punctuation">{</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span><span class="token number">105</span>deg, <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">255</span>,<span class="token number">255</span>,<span class="token number">255</span>,<span class="token number">.2</span><span class="token punctuation">)</span> <span class="token number">39%</span>, <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">51</span>,<span class="token number">56</span>,<span class="token number">57</span>,<span class="token number">1</span><span class="token punctuation">)</span> <span class="token number">96%</span><span class="token punctuation">)</span> center center / <span class="token number">400</span>px <span class="token number">200</span>px no-repeat,
+  <span class="token url">url(big-star.png)</span> center no-repeat, rebeccapurple<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>以上是可以控制的背景所有的属性，<em>我想我们应该不会这么写代码的。</em></p>
 <h2 id="背景颜色">背景颜色</h2>
-<div class="sourceCode" id="cb9"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">.box</span> {</span>
-<span id="cb9-2"><a href="#cb9-2"></a>  <span class="kw">background-color</span>: <span class="cn">#567895</span><span class="op">;</span></span>
-<span id="cb9-3"><a href="#cb9-3"></a>}</span></code></pre></div>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.box</span> </span><span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#567895</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h2 id="背景图片">背景图片</h2>
-<div class="sourceCode" id="cb10"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">.a</span> {</span>
-<span id="cb10-2"><a href="#cb10-2"></a>  <span class="kw">background-image</span>: <span class="fu">url(</span><span class="st">balloons.jpg</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb10-3"><a href="#cb10-3"></a>}</span></code></pre></div>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.a</span> </span><span class="token punctuation">{</span>
+  <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url">url(balloons.jpg)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>此图片不会伸缩来适应大小，对于小图其会默认进行平铺，对于大图则只会显示其左上角。</li>
 <li>如果背景图片和背景颜色同时设置，则图片会在颜色的上面。</li>
 </ul>
 <h3 id="背景图片平铺">背景图片平铺</h3>
-<div class="sourceCode" id="cb11"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">.box</span> {</span>
-<span id="cb11-2"><a href="#cb11-2"></a>  <span class="kw">background-image</span>: <span class="fu">url(</span><span class="st">star.png</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb11-3"><a href="#cb11-3"></a>  <span class="kw">background-repeat</span>: <span class="dv">no-repeat</span><span class="op">;</span></span>
-<span id="cb11-4"><a href="#cb11-4"></a>}</span></code></pre></div>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.box</span> </span><span class="token punctuation">{</span>
+  <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url">url(star.png)</span><span class="token punctuation">;</span>
+  <span class="token property">background-repeat</span><span class="token punctuation">:</span> no-repeat<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li><code>no-repeat</code> — 不重复。</li>
 <li><code>repeat-x</code> —水平重复。</li>
@@ -743,11 +744,11 @@
 <li><code>repeat</code> — 在两个方向重复。</li>
 </ul>
 <h3 id="背景图片大小">背景图片大小</h3>
-<div class="sourceCode" id="cb12"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">.box</span> {</span>
-<span id="cb12-2"><a href="#cb12-2"></a>  <span class="kw">background-image</span>: <span class="fu">url(</span><span class="st">balloons.jpg</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb12-3"><a href="#cb12-3"></a>  <span class="kw">background-repeat</span>: <span class="dv">no-repeat</span><span class="op">;</span></span>
-<span id="cb12-4"><a href="#cb12-4"></a>  <span class="kw">background-size</span>: <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
-<span id="cb12-5"><a href="#cb12-5"></a>}</span></code></pre></div>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.box</span> </span><span class="token punctuation">{</span>
+  <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url">url(balloons.jpg)</span><span class="token punctuation">;</span>
+  <span class="token property">background-repeat</span><span class="token punctuation">:</span> no-repeat<span class="token punctuation">;</span>
+  <span class="token property">background-size</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><code>bachground-size</code>的值可以是百分比、绝对的值，可以使用两个分别代表宽和高。</p>
 <p>也可以使用下面的两个关键字：</p>
 <ul>
@@ -755,28 +756,27 @@
 <li><code>contain</code> — 浏览器将使图像的大小适合盒子内。在这种情况下，如果图像的长宽比与盒子的长宽比不同，则可能在图像的任何一边或顶部和底部出现间隙。</li>
 </ul>
 <h3 id="背景图像定位">背景图像定位</h3>
-<div class="sourceCode" id="cb13"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">.box</span> { </span>
-<span id="cb13-2"><a href="#cb13-2"></a>  <span class="kw">background-image</span>: <span class="fu">url(</span><span class="st">star.png</span><span class="fu">)</span><span class="op">;</span> </span>
-<span id="cb13-3"><a href="#cb13-3"></a>  <span class="kw">background-repeat</span>: <span class="dv">no-repeat</span><span class="op">;</span> </span>
-<span id="cb13-4"><a href="#cb13-4"></a>  <span class="kw">background-position</span>: <span class="dv">top</span> <span class="dv">center</span><span class="op">;</span> </span>
-<span id="cb13-5"><a href="#cb13-5"></a>} </span></code></pre></div>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.box</span> </span><span class="token punctuation">{</span>
+  <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url">url(star.png)</span><span class="token punctuation">;</span>
+  <span class="token property">background-repeat</span><span class="token punctuation">:</span> no-repeat<span class="token punctuation">;</span>
+  <span class="token property">background-position</span><span class="token punctuation">:</span> top center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><code>background-position</code>除了可以使用<code>top</code>或<code>center</code>这样的关键字外，还可以使用长度或百分比。</p>
 <p>第一个是水平值，第二个是垂直值。</p>
 <h2 id="渐变背景">渐变背景</h2>
 <p>这个实际上直接使用<code>background-image</code>来设置，只是值要放<code>linear-gradient</code>函数。</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">.a</span> {</span>
-<span id="cb14-2"><a href="#cb14-2"></a>  <span class="kw">background-image</span>: <span class="fu">linear-gradient(</span><span class="dv">105</span><span class="dt">deg</span><span class="op">,</span> rgba(<span class="dv">0</span><span class="op">,</span><span class="dv">249</span><span class="op">,</span><span class="dv">255</span><span class="op">,</span><span class="dv">1</span><span class="fu">)</span> <span class="dv">39</span><span class="dt">%</span><span class="op">,</span> <span class="fu">rgba(</span><span class="dv">51</span><span class="op">,</span><span class="dv">56</span><span class="op">,</span><span class="dv">57</span><span class="op">,</span><span class="dv">1</span><span class="fu">)</span> <span class="dv">96</span><span class="dt">%</span>)<span class="op">;</span></span>
-<span id="cb14-3"><a href="#cb14-3"></a>}</span></code></pre></div>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.a</span> </span><span class="token punctuation">{</span>
+  <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span><span class="token number">105</span>deg, <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span>,<span class="token number">249</span>,<span class="token number">255</span>,<span class="token number">1</span><span class="token punctuation">)</span> <span class="token number">39%</span>, <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">51</span>,<span class="token number">56</span>,<span class="token number">57</span>,<span class="token number">1</span><span class="token punctuation">)</span> <span class="token number">96%</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>实际上这个值一般可以通过各种渐变生成器来得到我们想要的渐变色，比如<a href="https://cssgradient.io/" target="_blank" rel="noopener">这个</a>。</p>
 <h2 id="多个背景图像">多个背景图像</h2>
 <p>使用逗号进行分割即可。其他 <code>background-*</code>属性也可以有值逗号分隔的方式，与<code>background-image</code>相同。</p>
 <blockquote>
-<p>注意这些图像会被层层叠加在一起.<br>
-注意，渐变可以和常规的背景图像很好的混合在一起。</p>
+<p>注意这些图像会被层层叠加在一起. 注意，渐变可以和常规的背景图像很好的混合在一起。</p>
 </blockquote>
-<div class="sourceCode" id="cb15"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb15-1"><a href="#cb15-1"></a>background-image<span class="in">: url(image1.png)</span><span class="op">,</span> url(image2<span class="fu">.png</span>)<span class="op">,</span> url(image3<span class="fu">.png</span>)<span class="op">,</span> url(image1<span class="fu">.png</span>);</span>
-<span id="cb15-2"><a href="#cb15-2"></a>background-repeat<span class="in">: no-repeat</span><span class="op">,</span> repeat-x<span class="op">,</span> repeat;</span>
-<span id="cb15-3"><a href="#cb15-3"></a>background-position<span class="in">: 10px 20px,  top</span> right;</span></code></pre></div>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url">url(image1.png)</span>, <span class="token url">url(image2.png)</span>, <span class="token url">url(image3.png)</span>, <span class="token url">url(image1.png)</span><span class="token punctuation">;</span>
+<span class="token property">background-repeat</span><span class="token punctuation">:</span> no-repeat, repeat-x, repeat<span class="token punctuation">;</span>
+<span class="token property">background-position</span><span class="token punctuation">:</span> <span class="token number">10</span>px <span class="token number">20</span>px,  top right<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>不同属性的每个值将与其他属性中相同位置的值匹配。例如，上面的<code>image1</code>的<code>background-repeat</code>值将是<code>no-repeat</code>。但是，当不同的属性具有不同数量的值时，会发生什么情况呢？答案是较小数量的值会循环—在上面的例子中有四个背景图像，但是只有两个背景位置值。前两个位置值将应用于前两个图像，然后它们将再次循环—image3将被赋予第一个位置值，image4将被赋予第二个位置值。</p>
 <h2 id="背景附着">背景附着</h2>
 <p>使用<code>background-attachment</code>，其有以下的值：</p>
@@ -795,13 +795,13 @@
 </ul>
 <h1 id="边框">边框</h1>
 <p>边框的属性也可以直接用一个<code>border</code>来一起声明：</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">.box</span> { </span>
-<span id="cb16-2"><a href="#cb16-2"></a>  <span class="kw">border</span>: <span class="dv">1</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">black</span><span class="op">;</span> </span>
-<span id="cb16-3"><a href="#cb16-3"></a>} </span></code></pre></div>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.box</span> </span><span class="token punctuation">{</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">1</span>px solid black<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>或者只设置一个边：</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">.box</span> { </span>
-<span id="cb17-2"><a href="#cb17-2"></a>  <span class="kw">border-top</span>: <span class="dv">1</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">black</span><span class="op">;</span> </span>
-<span id="cb17-3"><a href="#cb17-3"></a>} </span></code></pre></div>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.box</span> </span><span class="token punctuation">{</span>
+  <span class="token property">border-top</span><span class="token punctuation">:</span> <span class="token number">1</span>px solid black<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h2 id="圆角">圆角</h2>
 <p>我们可以通过<code>border-radius</code>来将方框的直角变成圆角。</p>
 <ol type="1">
@@ -811,13 +811,13 @@
 <li>如果给的值够大，是可以画圆的（<code>50%</code>）；</li>
 </ol>
 <p>例：</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">.box</span> { </span>
-<span id="cb18-2"><a href="#cb18-2"></a>  <span class="kw">border-radius</span>: <span class="dv">10</span><span class="dt">px</span><span class="op">;</span> </span>
-<span id="cb18-3"><a href="#cb18-3"></a>} </span>
-<span id="cb18-4"><a href="#cb18-4"></a></span>
-<span id="cb18-5"><a href="#cb18-5"></a><span class="fu">.box</span> { </span>
-<span id="cb18-6"><a href="#cb18-6"></a>  <span class="kw">border-top-right-radius</span>: <span class="dv">1</span><span class="dt">em</span> <span class="dv">10</span><span class="dt">%</span><span class="op">;</span> </span>
-<span id="cb18-7"><a href="#cb18-7"></a>} </span></code></pre></div>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.box</span> </span><span class="token punctuation">{</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector"><span class="token class">.box</span> </span><span class="token punctuation">{</span>
+  <span class="token property">border-top-right-radius</span><span class="token punctuation">:</span> <span class="token number">1</span>em <span class="token number">10%</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1709,7 +1709,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">36.6k</span>&nbsp;字
+                class="white-color">46.5k</span>&nbsp;字
             
             
             

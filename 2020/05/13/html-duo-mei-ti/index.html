@@ -30,7 +30,8 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="卢一云的博客" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -574,7 +575,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-25
+                    2020-05-28
                 </div>
                 
 
@@ -623,11 +624,11 @@
 <p>鼠标悬停的时候会显示，不是很重要。（一般用下面的<code>figcaption</code>）。</p>
 <h2 id="图像的说明文字">图像的说明文字</h2>
 <p>推荐使用<code>figure</code>和<code>figcaption</code>元素:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">&lt;figure&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a>    <span class="kw">&lt;img</span><span class="ot"> src=</span><span class="st">"..."</span><span class="kw">&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a>    <span class="kw">&lt;img</span><span class="ot"> src=</span><span class="st">"..."</span><span class="kw">&gt;</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a>    <span class="kw">&lt;figcaption&gt;</span>这组图片的标题<span class="kw">&lt;/figcaption&gt;</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="kw">&lt;/figure&gt;</span></span></code></pre></div>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>figure</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>...<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>...<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>figcaption</span><span class="token punctuation">></span></span>这组图片的标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>figcaption</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>figure</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><code>figure</code>中不一定只是图片，还可以是代码、音频、视频等等，其只是一个独立的内容单元，只要符合：</p>
 <ul>
 <li>用简单、直观的方式表达意图；</li>
@@ -640,17 +641,17 @@
 <p>如果图片有实际的意义，对网页的内容是有意义的，则使用html元素插入。</p>
 <h1 id="html视频">HTML视频</h1>
 <p>其使用的基本格式：</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">&lt;video</span><span class="ot"> src=</span><span class="st">"rabbit320.webm"</span><span class="ot"> controls</span><span class="kw">&gt;</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a>  <span class="kw">&lt;p&gt;</span>你的浏览器不支持 HTML5 视频。可点击<span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">"rabbit320.mp4"</span><span class="kw">&gt;</span>此链接<span class="kw">&lt;/a&gt;</span>观看<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="kw">&lt;/video&gt;</span></span></code></pre></div>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>video</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>rabbit320.webm<span class="token punctuation">"</span></span> <span class="token attr-name">controls</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>你的浏览器不支持 HTML5 视频。可点击<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>rabbit320.mp4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>此链接<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>观看<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>video</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>或</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">&lt;video</span><span class="ot"> controls width=</span><span class="st">"400"</span><span class="ot"> height=</span><span class="st">"400"</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="ot">       autoplay loop muted</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="ot">       poster=</span><span class="st">"poster.png"</span><span class="kw">&gt;</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a>  <span class="kw">&lt;source</span><span class="ot"> src=</span><span class="st">"rabbit320.mp4"</span><span class="ot"> type=</span><span class="st">"video/mp4"</span><span class="kw">&gt;</span></span>
-<span id="cb3-5"><a href="#cb3-5"></a>  <span class="kw">&lt;source</span><span class="ot"> src=</span><span class="st">"rabbit320.webm"</span><span class="ot"> type=</span><span class="st">"video/webm"</span><span class="kw">&gt;</span></span>
-<span id="cb3-6"><a href="#cb3-6"></a>  <span class="kw">&lt;p&gt;</span>你的浏览器不支持 HTML5 视频。可点击<span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">"rabbit320.mp4"</span><span class="kw">&gt;</span>此链接<span class="kw">&lt;/a&gt;</span>观看<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb3-7"><a href="#cb3-7"></a><span class="kw">&lt;/video&gt;</span></span></code></pre></div>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>video</span> <span class="token attr-name">controls</span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>400<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>400<span class="token punctuation">"</span></span>
+       <span class="token attr-name">autoplay</span> <span class="token attr-name">loop</span> <span class="token attr-name">muted</span>
+       <span class="token attr-name">poster</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>poster.png<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>source</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>rabbit320.mp4<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>video/mp4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>source</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>rabbit320.webm<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>video/webm<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>你的浏览器不支持 HTML5 视频。可点击<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>rabbit320.mp4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>此链接<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>观看<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>video</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ol type="1">
 <li><code>src</code>：类似图片；</li>
 <li><code>controls</code>：允许用户能够控制视频和音频的回放功能；</li>
@@ -665,24 +666,26 @@
 <p>因为兼容性的问题，可能某个格式的视频文件无法被浏览器播放，所以一种可行的方式是放多个不同格式的视频，让浏览器来选择。这就需要把<code>src</code>属性从<code>vedio</code>元素移到内部的<code>soruce</code>元素中，最好加上<code>type</code>属性，这个值可以查阅<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Supported_media_formats" target="_blank" rel="noopener">MIME types</a>得知。</p>
 <h1 id="html音频">HTML音频</h1>
 <p>其基本和<code>video</code>标签一致：</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">&lt;audio</span><span class="ot"> controls</span><span class="kw">&gt;</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a>  <span class="kw">&lt;source</span><span class="ot"> src=</span><span class="st">"viper.mp3"</span><span class="ot"> type=</span><span class="st">"audio/mp3"</span><span class="kw">&gt;</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a>  <span class="kw">&lt;source</span><span class="ot"> src=</span><span class="st">"viper.ogg"</span><span class="ot"> type=</span><span class="st">"audio/ogg"</span><span class="kw">&gt;</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a>  <span class="kw">&lt;p&gt;</span>你的浏览器不支持 HTML5 音频，可点击<span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">"viper.mp3"</span><span class="kw">&gt;</span>此链接<span class="kw">&lt;/a&gt;</span>收听。<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="kw">&lt;/audio&gt;</span></span></code></pre></div>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>audio</span> <span class="token attr-name">controls</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>source</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viper.mp3<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>audio/mp3<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>source</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viper.ogg<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>audio/ogg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>你的浏览器不支持 HTML5 音频，可点击<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viper.mp3<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>此链接<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>收听。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>audio</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>区别：其不支持<code>width/height</code>和<code>poster</code>属性。</p>
 <h1 id="html嵌入">HTML嵌入</h1>
-<p>Youtube视频--&gt;共享--&gt;嵌入--&gt;得到一段<code>&lt;iframe&gt;</code>代码，将这段代码加入HTML文件，有如下效果： <img src="/2020/05/13/html-duo-mei-ti/HTML多媒体_2020-05-14-09-45-19.png" alt="Youtube视频嵌入"></p>
+<p>Youtube视频--&gt;共享--&gt;嵌入--&gt;得到一段<code>&lt;iframe&gt;</code>代码，将这段代码加入HTML文件，有如下效果：</p>
+<p><img src="/2020/05/13/html-duo-mei-ti/HTML多媒体_2020-05-14-09-45-19.png" alt="Youtube视频嵌入"><br>
+</p>
 <h2 id="iframe嵌入">iframe嵌入</h2>
 <p><code>&lt;iframe&gt;</code>旨在将其他web文档嵌入当前文档中，这个web文档本身无法直接控制，但这对于某些需求足够了，比如：视频、评论系统、在线地图、广告横幅等等。</p>
 <p>以为是<code>&lt;iframe&gt;</code>的示例：</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">&lt;iframe</span><span class="ot"> src=</span><span class="st">"https://developer.mozilla.org/en-US/docs/Glossary"</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="ot">        width=</span><span class="st">"100%"</span><span class="ot"> height=</span><span class="st">"500"</span><span class="ot"> frameborder=</span><span class="st">"0"</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="ot">        allowfullscreen sandbox</span><span class="kw">&gt;</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a>  <span class="kw">&lt;p&gt;</span> <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">"https://developer.mozilla.org/en-US/docs/Glossary"</span><span class="kw">&gt;</span></span>
-<span id="cb5-5"><a href="#cb5-5"></a>    Fallback link for browsers that don't support iframes</span>
-<span id="cb5-6"><a href="#cb5-6"></a>  <span class="kw">&lt;/a&gt;</span> <span class="kw">&lt;/p&gt;</span></span>
-<span id="cb5-7"><a href="#cb5-7"></a><span class="kw">&lt;/iframe&gt;</span></span></code></pre></div>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iframe</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://developer.mozilla.org/en-US/docs/Glossary<span class="token punctuation">"</span></span>
+        <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>100%<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>500<span class="token punctuation">"</span></span> <span class="token attr-name">frameborder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span>
+        <span class="token attr-name">allowfullscreen</span> <span class="token attr-name">sandbox</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://developer.mozilla.org/en-US/docs/Glossary<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    Fallback link for browsers that don't support iframes
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>iframe</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li><code>allowfullscreen</code>：如果设置，<code>&lt;iframe&gt;</code>则可以通过全屏API设置为全屏模式（稍微超出本文的范围）。</li>
 <li><code>frameborder</code>：如果设置为1，则会告诉浏览器在此框架和其他框架之间绘制边框，这是默认行为。0删除边框。不推荐这样设置，因为在CSS中可以更好地实现相同的效果。</li>
@@ -692,18 +695,20 @@
 <li><code>sandbox</code>：该属性需要在已经支持其他<code>&lt;iframe&gt;</code>功能（例如IE 10及更高版本）但稍微更现代的浏览器上才能工作，该属性可以提高安全性设置。应该始终使用它。</li>
 </ul>
 <h2 id="embed和object">embed和object</h2>
-<p><code>&lt;embed&gt;</code>和<code>&lt;object&gt;</code>元素的功能不同于<code>&lt;iframe&gt;</code>—— 这些元素是用来嵌入多种类型的外部内容的通用嵌入工具，其中包括像Java小程序和Flash，PDF（可在浏览器中显示为一个PDF插件）这样的插件技术，甚至像视频，SVG和图像的内容。（当然，要么有更好的元素来实现，要么已经过时，碰到的机会很少了。） <img src="/2020/05/13/html-duo-mei-ti/HTML多媒体_2020-05-14-09-58-48.png" alt="embed和object的用法"></p>
+<p><code>&lt;embed&gt;</code>和<code>&lt;object&gt;</code>元素的功能不同于<code>&lt;iframe&gt;</code>—— 这些元素是用来嵌入多种类型的外部内容的通用嵌入工具，其中包括像Java小程序和Flash，PDF（可在浏览器中显示为一个PDF插件）这样的插件技术，甚至像视频，SVG和图像的内容。（当然，要么有更好的元素来实现，要么已经过时，碰到的机会很少了。）</p>
+<p><img src="/2020/05/13/html-duo-mei-ti/HTML多媒体_2020-05-14-09-58-48.png" alt="embed和object的用法"><br>
+</p>
 <p>例子1（<code>embed</code>嵌入flash影片）：</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">&lt;embed</span><span class="ot"> src=</span><span class="st">"whoosh.swf"</span><span class="ot"> quality=</span><span class="st">"medium"</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="ot">       bgcolor=</span><span class="st">"#ffffff"</span><span class="ot"> width=</span><span class="st">"550"</span><span class="ot"> height=</span><span class="st">"400"</span></span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="ot">       name=</span><span class="st">"whoosh"</span><span class="ot"> align=</span><span class="st">"middle"</span><span class="ot"> allowScriptAccess=</span><span class="st">"sameDomain"</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a><span class="ot">       allowFullScreen=</span><span class="st">"false"</span><span class="ot"> type=</span><span class="st">"application/x-shockwave-flash"</span></span>
-<span id="cb6-5"><a href="#cb6-5"></a><span class="ot">       pluginspage=</span><span class="st">"http://www.macromedia.com/go/getflashplayer"</span><span class="kw">&gt;</span></span></code></pre></div>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>embed</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>whoosh.swf<span class="token punctuation">"</span></span> <span class="token attr-name">quality</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>medium<span class="token punctuation">"</span></span>
+       <span class="token attr-name">bgcolor</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#ffffff<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>550<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>400<span class="token punctuation">"</span></span>
+       <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>whoosh<span class="token punctuation">"</span></span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>middle<span class="token punctuation">"</span></span> <span class="token attr-name">allowScriptAccess</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>sameDomain<span class="token punctuation">"</span></span>
+       <span class="token attr-name">allowFullScreen</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>application/x-shockwave-flash<span class="token punctuation">"</span></span>
+       <span class="token attr-name">pluginspage</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.macromedia.com/go/getflashplayer<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>例子2（<code>object</code>嵌入pdf）：</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">&lt;object</span><span class="ot"> data=</span><span class="st">"mypdf.pdf"</span><span class="ot"> type=</span><span class="st">"application/pdf"</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="ot">        width=</span><span class="st">"800"</span><span class="ot"> height=</span><span class="st">"1200"</span><span class="ot"> typemustmatch</span><span class="kw">&gt;</span></span>
-<span id="cb7-3"><a href="#cb7-3"></a>  <span class="kw">&lt;p&gt;</span>You don't have a PDF plugin, but you can <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">"myfile.pdf"</span><span class="kw">&gt;</span>download the PDF file.<span class="kw">&lt;/a&gt;&lt;/p&gt;</span></span>
-<span id="cb7-4"><a href="#cb7-4"></a><span class="kw">&lt;/object&gt;</span></span></code></pre></div>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>object</span> <span class="token attr-name">data</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>mypdf.pdf<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>application/pdf<span class="token punctuation">"</span></span>
+        <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>800<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1200<span class="token punctuation">"</span></span> <span class="token attr-name">typemustmatch</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>You don't have a PDF plugin, but you can <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>myfile.pdf<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>download the PDF file.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>object</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <h1 id="html矢量图">HTML矢量图</h1>
 <ul>
 <li>位图使用像素网格来定义 — 一个位图文件精确得包含了每个像素的位置和它的色彩信息。流行的位图格式包括 Bitmap (<code>.bmp</code>), PNG (<code>.png</code>), JPEG (<code>.jpg</code>), and GIF (<code>.gif</code>)。</li>
@@ -711,24 +716,24 @@
 </ul>
 <p><code>SVG</code> 是用于描述矢量图像的XML语言。 它基本上是像HTML一样的标记，只是你有许多不同的元素来定义要显示在图像中的形状，以及要应用于这些形状的效果。 SVG用于标记图形，而不是内容。 非常简单，你有一些元素来创建简单图形，如<code>&lt;circle&gt;</code> 和<code>&lt;rect&gt;</code>。更高级的SVG功能包括 <code>&lt;feColorMatrix&gt;</code>（使用变换矩阵转换颜色）<code>&lt;animate&gt;</code> （矢量图形的动画部分）和 <code>&lt;mask&gt;</code>（在图像顶部应用模板）。</p>
 <p>比如下面的例子创建了一个圆和矩形：</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">&lt;svg</span><span class="ot"> version=</span><span class="st">"1.1"</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a><span class="ot">     baseProfile=</span><span class="st">"full"</span></span>
-<span id="cb8-3"><a href="#cb8-3"></a><span class="ot">     width=</span><span class="st">"300"</span><span class="ot"> height=</span><span class="st">"200"</span></span>
-<span id="cb8-4"><a href="#cb8-4"></a><span class="ot">     xmlns=</span><span class="st">"http://www.w3.org/2000/svg"</span><span class="kw">&gt;</span></span>
-<span id="cb8-5"><a href="#cb8-5"></a>  <span class="kw">&lt;rect</span><span class="ot"> width=</span><span class="st">"100%"</span><span class="ot"> height=</span><span class="st">"100%"</span><span class="ot"> fill=</span><span class="st">"black"</span> <span class="kw">/&gt;</span></span>
-<span id="cb8-6"><a href="#cb8-6"></a>  <span class="kw">&lt;circle</span><span class="ot"> cx=</span><span class="st">"150"</span><span class="ot"> cy=</span><span class="st">"100"</span><span class="ot"> r=</span><span class="st">"90"</span><span class="ot"> fill=</span><span class="st">"blue"</span> <span class="kw">/&gt;</span></span>
-<span id="cb8-7"><a href="#cb8-7"></a><span class="kw">&lt;/svg&gt;</span></span></code></pre></div>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>svg</span> <span class="token attr-name">version</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1.1<span class="token punctuation">"</span></span>
+     <span class="token attr-name">baseProfile</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>full<span class="token punctuation">"</span></span>
+     <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>300<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>200<span class="token punctuation">"</span></span>
+     <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.w3.org/2000/svg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rect</span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>100%<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>100%<span class="token punctuation">"</span></span> <span class="token attr-name">fill</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>black<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>circle</span> <span class="token attr-name">cx</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>150<span class="token punctuation">"</span></span> <span class="token attr-name">cy</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>100<span class="token punctuation">"</span></span> <span class="token attr-name">r</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>90<span class="token punctuation">"</span></span> <span class="token attr-name">fill</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>blue<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>svg</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <svg version="1.1" baseProfile="full" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
 <rect width="100%" height="100%" fill="black"></rect> <circle cx="150" cy="100" r="90" fill="blue"></circle>
 </svg>
 <p>但用<code>svg</code>绘制复杂的图像会导致一些问题（文件太大，处理时间长等），所以储存照片等复杂精密的图像时一般还是使用位图。</p>
 <h2 id="插入方式1">插入方式1</h2>
 <p>使用<code>img</code>，像插入一张普通图片一样插入，只是需要提供<code>width</code>或<code>height</code>。</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">&lt;img</span></span>
-<span id="cb9-2"><a href="#cb9-2"></a><span class="ot">    src=</span><span class="st">"equilateral.svg"</span></span>
-<span id="cb9-3"><a href="#cb9-3"></a><span class="ot">    alt=</span><span class="st">"triangle with all three sides equal"</span></span>
-<span id="cb9-4"><a href="#cb9-4"></a><span class="ot">    height=</span><span class="st">"87px"</span></span>
-<span id="cb9-5"><a href="#cb9-5"></a><span class="ot">    width=</span><span class="st">"100px"</span> <span class="kw">/&gt;</span></span></code></pre></div>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span>
+    <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>equilateral.svg<span class="token punctuation">"</span></span>
+    <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>triangle with all three sides equal<span class="token punctuation">"</span></span>
+    <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>87px<span class="token punctuation">"</span></span>
+    <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>100px<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>优点：</p>
 <ul>
 <li>快速，熟悉的图像语法与<code>alt</code>属性中提供的内置文本等效。</li>
@@ -742,9 +747,9 @@
 </ul>
 <h2 id="插入方式2">插入方式2</h2>
 <p>这称为<strong>SVG内联</strong>或<strong>内联SVG</strong>。打开SVG文件，复制SVG代码，并将其粘贴到HTML文档中。确保您的SVG代码在<code>&lt;svg&gt;&lt;/svg&gt;</code>标签中。</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw">&lt;svg</span><span class="ot"> width=</span><span class="st">"300"</span><span class="ot"> height=</span><span class="st">"200"</span><span class="kw">&gt;</span></span>
-<span id="cb10-2"><a href="#cb10-2"></a>    <span class="kw">&lt;rect</span><span class="ot"> width=</span><span class="st">"100%"</span><span class="ot"> height=</span><span class="st">"100%"</span><span class="ot"> fill=</span><span class="st">"green"</span> <span class="kw">/&gt;</span></span>
-<span id="cb10-3"><a href="#cb10-3"></a><span class="kw">&lt;/svg&gt;</span></span></code></pre></div>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>svg</span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>300<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>200<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rect</span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>100%<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>100%<span class="token punctuation">"</span></span> <span class="token attr-name">fill</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>green<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>svg</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>优点：</p>
 <ul>
 <li>将 SVG 内联减少 HTTP 请求，可以减少加载时间。</li>
@@ -761,20 +766,20 @@
 </ul>
 <h2 id="插入方式3">插入方式3</h2>
 <p>使用<code>iframe</code>，这里提供了一种想法，但这一定不是一个好主意。</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1"></a><span class="kw">&lt;iframe</span><span class="ot"> src=</span><span class="st">"triangle.svg"</span><span class="ot"> width=</span><span class="st">"500"</span><span class="ot"> height=</span><span class="st">"500"</span><span class="ot"> sandbox</span><span class="kw">&gt;</span></span>
-<span id="cb11-2"><a href="#cb11-2"></a>    <span class="kw">&lt;img</span><span class="ot"> src=</span><span class="st">"triangle.png"</span><span class="ot"> alt=</span><span class="st">"Triangle with three unequal sides"</span> <span class="kw">/&gt;</span></span>
-<span id="cb11-3"><a href="#cb11-3"></a><span class="kw">&lt;/iframe&gt;</span></span></code></pre></div>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iframe</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>triangle.svg<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>500<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>500<span class="token punctuation">"</span></span> <span class="token attr-name">sandbox</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>triangle.png<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Triangle with three unequal sides<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>iframe</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h1 id="响应式图片">响应式图片</h1>
 <p>网页图片在电脑上看着不错，但到手机上因为屏幕大小发生了改变，我们希望图像的大小也随之发生变化，即响应式开发。</p>
 <h2 id="创建响应式的图片">创建响应式的图片</h2>
 <p>也可以使用CSS重建，但这里专注于HTML的<code>&lt;img&gt;</code>。</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb12-1"><a href="#cb12-1"></a><span class="kw">&lt;img</span><span class="ot"> srcset=</span><span class="st">"elva-fairy-320w.jpg 320w,</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a><span class="st">             elva-fairy-480w.jpg 480w,</span></span>
-<span id="cb12-3"><a href="#cb12-3"></a><span class="st">             elva-fairy-800w.jpg 800w"</span></span>
-<span id="cb12-4"><a href="#cb12-4"></a><span class="ot">     sizes=</span><span class="st">"(max-width: 320px) 280px,</span></span>
-<span id="cb12-5"><a href="#cb12-5"></a><span class="st">            (max-width: 480px) 440px,</span></span>
-<span id="cb12-6"><a href="#cb12-6"></a><span class="st">            800px"</span></span>
-<span id="cb12-7"><a href="#cb12-7"></a><span class="ot">     src=</span><span class="st">"elva-fairy-800w.jpg"</span><span class="ot"> alt=</span><span class="st">"Elva dressed as a fairy"</span><span class="kw">&gt;</span></span></code></pre></div>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">srcset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>elva-fairy-320w.jpg 320w,
+             elva-fairy-480w.jpg 480w,
+             elva-fairy-800w.jpg 800w<span class="token punctuation">"</span></span>
+     <span class="token attr-name">sizes</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>(max-width: 320px) 280px,
+            (max-width: 480px) 440px,
+            800px<span class="token punctuation">"</span></span>
+     <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>elva-fairy-800w.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Elva dressed as a fairy<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>srcset定义了我们允许浏览器选择的图像集，以及每个图像的大小，使用逗号分隔每个图像，而使用空格隔开文件名和固有宽度。</li>
 <li>sizes定义了一组媒体条件（例如屏幕宽度）并且指明当某些媒体条件为真时，什么样的图片尺寸是最佳选择—我们在之前已经讨论了一些提示。没有写媒体条件的选项表示其他都不符合时，选择此。</li>
@@ -786,17 +791,17 @@
 <p>注意: 在 HTML 文件中的 <code>&lt;head&gt;</code> 标签里， 你将会找到这一行代码 <code>&lt;meta name="viewport" content="width=device-width"&gt;</code>: 这行代码会强制地让手机浏览器采用它们真实可视窗口的宽度来加载网页（有些手机浏览器会提供不真实的可视窗口宽度, 然后加载比浏览器真实可视窗口的宽度大的宽度的网页，然后再缩小加载的页面，这样的做法对响应式图片或其他设计，没有任何帮助。我们会在未来的模块教给你更多关于这方面的知识）。</p>
 </blockquote>
 <p>当屏幕尺寸相同，但希望在不同分辨率上显示不同大小的图片，则使用下面的语法：</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb13-1"><a href="#cb13-1"></a><span class="kw">&lt;img</span><span class="ot"> srcset=</span><span class="st">"elva-fairy-320w.jpg,</span></span>
-<span id="cb13-2"><a href="#cb13-2"></a><span class="st">             elva-fairy-480w.jpg 1.5x,</span></span>
-<span id="cb13-3"><a href="#cb13-3"></a><span class="st">             elva-fairy-640w.jpg 2x"</span></span>
-<span id="cb13-4"><a href="#cb13-4"></a><span class="ot">     src=</span><span class="st">"elva-fairy-640w.jpg"</span><span class="ot"> alt=</span><span class="st">"Elva dressed as a fairy"</span><span class="kw">&gt;</span></span></code></pre></div>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">srcset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>elva-fairy-320w.jpg,
+             elva-fairy-480w.jpg 1.5x,
+             elva-fairy-640w.jpg 2x<span class="token punctuation">"</span></span>
+     <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>elva-fairy-640w.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Elva dressed as a fairy<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="美术设计问题">美术设计问题</h2>
 <p>另一个问题：有一张宽屏、大的、横向图片，在电脑上显示的很好，但当来到收集，图像会被缩小，里面的人物无法很好的显示，最好的方式是在此时使用一张小的肖像图来替代，怎么做到？</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb14-1"><a href="#cb14-1"></a><span class="kw">&lt;picture&gt;</span></span>
-<span id="cb14-2"><a href="#cb14-2"></a>  <span class="kw">&lt;source</span><span class="ot"> media=</span><span class="st">"(max-width: 799px)"</span><span class="ot"> srcset=</span><span class="st">"elva-480w-close-portrait.jpg"</span><span class="kw">&gt;</span></span>
-<span id="cb14-3"><a href="#cb14-3"></a>  <span class="kw">&lt;source</span><span class="ot"> media=</span><span class="st">"(min-width: 800px)"</span><span class="ot"> srcset=</span><span class="st">"elva-800w.jpg"</span><span class="kw">&gt;</span></span>
-<span id="cb14-4"><a href="#cb14-4"></a>  <span class="kw">&lt;img</span><span class="ot"> src=</span><span class="st">"elva-800w.jpg"</span><span class="ot"> alt=</span><span class="st">"Chris standing up holding his daughter Elva"</span><span class="kw">&gt;</span></span>
-<span id="cb14-5"><a href="#cb14-5"></a><span class="kw">&lt;/picture&gt;</span></span></code></pre></div>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>picture</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>source</span> <span class="token attr-name">media</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>(max-width: 799px)<span class="token punctuation">"</span></span> <span class="token attr-name">srcset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>elva-480w-close-portrait.jpg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>source</span> <span class="token attr-name">media</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>(min-width: 800px)<span class="token punctuation">"</span></span> <span class="token attr-name">srcset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>elva-800w.jpg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>elva-800w.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Chris standing up holding his daughter Elva<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>picture</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>上述使用的<code>img</code>是在浏览器不支持<code>picture</code>时的一个备选方案。</p>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -1681,7 +1686,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">36.6k</span>&nbsp;字
+                class="white-color">46.5k</span>&nbsp;字
             
             
             

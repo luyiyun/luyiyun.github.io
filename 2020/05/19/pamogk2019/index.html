@@ -30,7 +30,8 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="卢一云的博客" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -582,7 +583,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-25
+                    2020-05-28
                 </div>
                 
 
@@ -652,10 +653,7 @@
 <h2 id="methods">Methods</h2>
 <p><span class="math inline">\(S\)</span>表示病人集合，我们的目的是希望得到一个划分<span class="math inline">\(\{C_i\}\)</span>，<span class="math inline">\(M\)</span>表示pathways的数量，<span class="math inline">\(D\)</span>表示组学数据数量，<span class="math inline">\(N\)</span>表示病人的数量。</p>
 <h3 id="overview">overview</h3>
-<figure>
-<img src="/2020/05/19/pamogk2019/PAMOGK2019_2020-05-19-17-52-39.png" alt=""><figcaption>PAMOGK概述</figcaption>
-</figure>
-<p><br>
+<p><img src="/2020/05/19/pamogk2019/PAMOGK2019_2020-05-19-17-52-39.png" alt="PAMOGK概述"><br>
 </p>
 <p>主要包括3步：</p>
 <ol type="1">
@@ -755,9 +753,11 @@
 <p>cluster 1（预后最好的一组）的病人有更低的stage和grade，而cluster 4（预后最不好的一组）的病人有更高的stage和grade，这表明PAMOGK的亚组是有临床意义的。</p></li>
 <li><p>也可以通过<span class="math inline">\(\gamma\)</span>来判断哪个组学、哪条通路是更加重要的：</p>
 <ul>
-<li>IL-6 mediated signaling events + gene overexpression是最重要的；</li>
-<li>通过平均权重，可以得知gene expression是最重要的data type，而protein expression几乎没有影响（可能是因为RPPA数据中的genes数量太少了）；</li>
-<li>最高权重的通路是IL-6 mediated signaling events。 <img src="/2020/05/19/pamogk2019/PAMOGK2019_2020-05-20-11-55-24.png" alt="patway的贡献"></li>
+<li><p>IL-6 mediated signaling events + gene overexpression是最重要的；</p></li>
+<li><p>通过平均权重，可以得知gene expression是最重要的data type，而protein expression几乎没有影响（可能是因为RPPA数据中的genes数量太少了）；</p></li>
+<li><p>最高权重的通路是IL-6 mediated signaling events。</p>
+<p><img src="/2020/05/19/pamogk2019/PAMOGK2019_2020-05-20-11-55-24.png" alt="patway的贡献"><br>
+</p></li>
 </ul></li>
 </ol>
 <h2 id="conclusion">Conclusion</h2>
@@ -1669,7 +1669,7 @@ HTML表单是由一个或多个小部件组成的。这些小部件可以是文
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">36.6k</span>&nbsp;字
+                class="white-color">46.5k</span>&nbsp;字
             
             
             

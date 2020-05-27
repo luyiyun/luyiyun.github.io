@@ -30,7 +30,8 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="卢一云的博客" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -574,7 +575,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-25
+                    2020-05-28
                 </div>
                 
 
@@ -624,10 +625,10 @@
 <li><p>最强的权重：<code>!important</code></p>
 <p>这个实际上是层叠性的表现，在上面有说到：</p>
 <p>例：</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">.better</span> {</span>
-<span id="cb1-2"><a href="#cb1-2"></a>  <span class="kw">background-color</span>: <span class="cn">gray</span><span class="op">;</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a>  <span class="kw">border</span>: <span class="dv">none</span> <span class="at">!important</span><span class="op">;</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a>}</span></code></pre></div></li>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.better</span> </span><span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> gray<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> none <span class="token important">!important</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
 <li><p>然后是权重的计算：权重有4位数，各位数间没有进位，</p>
 <ul>
 <li>千位： 如果声明在 <code>style</code> 的属性（内联样式）则该位得一分。这样的声明没有选择器，所以它得分总是1000。</li>
@@ -637,7 +638,9 @@
 <li>通用选择器（<code>*</code>）的权重为0。</li>
 </ul>
 <p>通过运算符连接了多个选择器，则多个选择器的权重相加。</p>
-<p>例子如下： <img src="/2020/05/16/css-ceng-die-you-xian-ji-ji-cheng/CSS层叠优先级继承_2020-05-16-18-14-14.png" alt="优先级算法的例子"></p></li>
+<p>例子如下：</p>
+<p><img src="/2020/05/16/css-ceng-die-you-xian-ji-ji-cheng/CSS层叠优先级继承_2020-05-16-18-14-14.png" alt="优先级算法的例子"><br>
+</p></li>
 <li><p>最后，如果规则权重相同时，看顺序，在后面的会覆盖掉前面的。</p></li>
 </ol>
 <h1 id="继承">继承</h1>
@@ -670,35 +673,35 @@
 </blockquote></li>
 </ul>
 <p>例：</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">&lt;ul&gt;</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a>    <span class="kw">&lt;li&gt;</span>Default <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">"#"</span><span class="kw">&gt;</span>link<span class="kw">&lt;/a&gt;</span> color<span class="kw">&lt;/li&gt;</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a>    <span class="kw">&lt;li</span><span class="ot"> class=</span><span class="st">"my-class-1"</span><span class="kw">&gt;</span>Inherit the <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">"#"</span><span class="kw">&gt;</span>link<span class="kw">&lt;/a&gt;</span> color<span class="kw">&lt;/li&gt;</span></span>
-<span id="cb2-4"><a href="#cb2-4"></a>    <span class="kw">&lt;li</span><span class="ot"> class=</span><span class="st">"my-class-2"</span><span class="kw">&gt;</span>Reset the <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">"#"</span><span class="kw">&gt;</span>link<span class="kw">&lt;/a&gt;</span> color<span class="kw">&lt;/li&gt;</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a>    <span class="kw">&lt;li</span><span class="ot"> class=</span><span class="st">"my-class-3"</span><span class="kw">&gt;</span>Unset the <span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">"#"</span><span class="kw">&gt;</span>link<span class="kw">&lt;/a&gt;</span> color<span class="kw">&lt;/li&gt;</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a><span class="kw">&lt;/ul&gt;</span></span></code></pre></div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1"></a>body {</span>
-<span id="cb3-2"><a href="#cb3-2"></a>    <span class="kw">color</span>: <span class="cn">green</span><span class="op">;</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a>}</span>
-<span id="cb3-4"><a href="#cb3-4"></a></span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="co">/* 第一个列表的结果需要结合层叠性进行分析，即默认继承被</span></span>
-<span id="cb3-6"><a href="#cb3-6"></a><span class="co">浏览器的用户代理样式表覆盖 */</span></span>
-<span id="cb3-7"><a href="#cb3-7"></a></span>
-<span id="cb3-8"><a href="#cb3-8"></a><span class="co">/* 第二个列表项被设置了inherit，其沿DOM树朝root节点去寻找最近的父元素属性，</span></span>
-<span id="cb3-9"><a href="#cb3-9"></a><span class="co">找到了其直接父元素就有一个color的设置，是绿色，则进行继承，变成了绿色 */</span></span>
-<span id="cb3-10"><a href="#cb3-10"></a><span class="fu">.my-class-1</span> a {</span>
-<span id="cb3-11"><a href="#cb3-11"></a>    <span class="kw">color</span>: <span class="bu">inherit</span><span class="op">;</span></span>
-<span id="cb3-12"><a href="#cb3-12"></a>}</span>
-<span id="cb3-13"><a href="#cb3-13"></a></span>
-<span id="cb3-14"><a href="#cb3-14"></a><span class="co">/* 第三个列表项设置为initial，则直接使用initial value，不管什么元素，color</span></span>
-<span id="cb3-15"><a href="#cb3-15"></a><span class="co">属性的initial value就是black，所以被设置为黑色 */</span></span>
-<span id="cb3-16"><a href="#cb3-16"></a><span class="fu">.my-class-2</span> a {</span>
-<span id="cb3-17"><a href="#cb3-17"></a>    <span class="kw">color</span>: initial<span class="op">;</span></span>
-<span id="cb3-18"><a href="#cb3-18"></a>}</span>
-<span id="cb3-19"><a href="#cb3-19"></a></span>
-<span id="cb3-20"><a href="#cb3-20"></a><span class="co">/* 第四个列表项被设置为unset，color是一个inherited属性（不管它在哪个element）中，所以unset变成了inherit，得到了和第二个列表项相同的结果*/</span></span>
-<span id="cb3-21"><a href="#cb3-21"></a><span class="fu">.my-class-3</span> a {</span>
-<span id="cb3-22"><a href="#cb3-22"></a>    <span class="kw">color</span>: <span class="bu">unset</span><span class="op">;</span></span>
-<span id="cb3-23"><a href="#cb3-23"></a>}</span></code></pre></div>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>Default <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>link<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span> color<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>my-class-1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Inherit the <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>link<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span> color<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>my-class-2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Reset the <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>link<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span> color<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>my-class-3<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Unset the <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>link<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span> color<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">body </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/* 第一个列表的结果需要结合层叠性进行分析，即默认继承被
+浏览器的用户代理样式表覆盖 */</span>
+
+<span class="token comment" spellcheck="true">/* 第二个列表项被设置了inherit，其沿DOM树朝root节点去寻找最近的父元素属性，
+找到了其直接父元素就有一个color的设置，是绿色，则进行继承，变成了绿色 */</span>
+<span class="token selector"><span class="token class">.my-class-1</span> a </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> inherit<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/* 第三个列表项设置为initial，则直接使用initial value，不管什么元素，color
+属性的initial value就是black，所以被设置为黑色 */</span>
+<span class="token selector"><span class="token class">.my-class-2</span> a </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> initial<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/* 第四个列表项被设置为unset，color是一个inherited属性（不管它在哪个element）中，所以unset变成了inherit，得到了和第二个列表项相同的结果*/</span>
+<span class="token selector"><span class="token class">.my-class-3</span> a </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> unset<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>会有如下效果：</p>
 <p><img src="/2020/05/16/css-ceng-die-you-xian-ji-ji-cheng/CSS层叠优先级继承_2020-05-16-18-26-28.png" alt="继承示例"><br>
 </p>
@@ -1593,7 +1596,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">36.6k</span>&nbsp;字
+                class="white-color">46.5k</span>&nbsp;字
             
             
             

@@ -30,7 +30,8 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="卢一云的博客" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -574,7 +575,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-25
+                    2020-05-28
                 </div>
                 
 
@@ -605,29 +606,29 @@
             <div id="articleContent">
                 <h1 id="元素选择器">元素选择器</h1>
 <p>例：</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1"></a>span {</span>
-<span id="cb1-2"><a href="#cb1-2"></a>    <span class="kw">background-color</span>: <span class="cn">yellow</span><span class="op">;</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a>}</span>
-<span id="cb1-4"><a href="#cb1-4"></a></span>
-<span id="cb1-5"><a href="#cb1-5"></a>strong {</span>
-<span id="cb1-6"><a href="#cb1-6"></a>    <span class="kw">color</span>: <span class="cn">rebeccapurple</span><span class="op">;</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a>}</span>
-<span id="cb1-8"><a href="#cb1-8"></a></span>
-<span id="cb1-9"><a href="#cb1-9"></a>em {</span>
-<span id="cb1-10"><a href="#cb1-10"></a>    <span class="kw">color</span>: <span class="cn">rebeccapurple</span><span class="op">;</span></span>
-<span id="cb1-11"><a href="#cb1-11"></a>}</span></code></pre></div>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">span </span><span class="token punctuation">{</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> yellow<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">strong </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> rebeccapurple<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">em </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> rebeccapurple<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h1 id="类选择器">类选择器</h1>
 <p>例：</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">.highlight</span> {</span>
-<span id="cb2-2"><a href="#cb2-2"></a>    <span class="kw">background-color</span>: <span class="cn">yellow</span><span class="op">;</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a>}</span></code></pre></div>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.highlight</span> </span><span class="token punctuation">{</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> yellow<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>类选择器的优势在于灵活，可以通过给元素插入多个类实现更加节省的实现。</p>
 <p><strong>注意插入多个类的时候是空格分隔的。</strong></p>
 <h1 id="id选择器">ID选择器</h1>
 <p>例：</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1"></a><span class="pp">#one</span> {</span>
-<span id="cb3-2"><a href="#cb3-2"></a>    <span class="kw">background-color</span>: <span class="cn">yellow</span><span class="op">;</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a>}</span></code></pre></div>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token id">#one</span> </span><span class="token punctuation">{</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> yellow<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p><strong>ID只能被一个元素拥有。</strong></p>
 <h1 id="属性选择器">属性选择器</h1>
 <h2 id="存否和值选择器">存否和值选择器</h2>
@@ -635,95 +636,99 @@
 </p>
 <p>虽然属性选择器常常和元素选择器混合使用，但其是可以单独使用的。</p>
 <p>例：</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb4-1"><a href="#cb4-1"></a>li<span class="ex">[class]</span> {</span>
-<span id="cb4-2"><a href="#cb4-2"></a>    <span class="kw">font-size</span>: <span class="dv">200</span><span class="dt">%</span><span class="op">;</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a>}</span>
-<span id="cb4-4"><a href="#cb4-4"></a></span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="ex">[class</span><span class="op">=</span><span class="st">"a"</span><span class="ex">]</span> {</span>
-<span id="cb4-6"><a href="#cb4-6"></a>    <span class="kw">background-color</span>: <span class="cn">yellow</span><span class="op">;</span></span>
-<span id="cb4-7"><a href="#cb4-7"></a>}</span>
-<span id="cb4-8"><a href="#cb4-8"></a></span>
-<span id="cb4-9"><a href="#cb4-9"></a>li<span class="ex">[class</span><span class="op">~=</span><span class="st">"a"</span><span class="ex">]</span> {</span>
-<span id="cb4-10"><a href="#cb4-10"></a>    <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
-<span id="cb4-11"><a href="#cb4-11"></a>}</span></code></pre></div>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">li<span class="token attribute">[class]</span> </span><span class="token punctuation">{</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">200%</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector"><span class="token attribute">[class="a"]</span> </span><span class="token punctuation">{</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> yellow<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">li<span class="token attribute">[class~="a"]</span> </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="子字符串匹配选择器">子字符串匹配选择器</h2>
 <p><img src="/2020/05/16/css-xuan-ze-qi/CSS选择器_2020-05-16-21-27-52.png" alt="子字符串匹配选择器"><br>
 </p>
 <p>例：</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb5-1"><a href="#cb5-1"></a>li<span class="ex">[class</span><span class="op">^=</span><span class="st">"a"</span><span class="ex">]</span> {</span>
-<span id="cb5-2"><a href="#cb5-2"></a>    <span class="kw">font-size</span>: <span class="dv">200</span><span class="dt">%</span><span class="op">;</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a>}</span>
-<span id="cb5-4"><a href="#cb5-4"></a></span>
-<span id="cb5-5"><a href="#cb5-5"></a>li<span class="ex">[class</span><span class="op">$=</span><span class="st">"a"</span><span class="ex">]</span> {</span>
-<span id="cb5-6"><a href="#cb5-6"></a>    <span class="kw">background-color</span>: <span class="cn">yellow</span><span class="op">;</span></span>
-<span id="cb5-7"><a href="#cb5-7"></a>}</span>
-<span id="cb5-8"><a href="#cb5-8"></a></span>
-<span id="cb5-9"><a href="#cb5-9"></a>li<span class="ex">[class</span><span class="op">*=</span><span class="st">"a"</span><span class="ex">]</span> {</span>
-<span id="cb5-10"><a href="#cb5-10"></a>    <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
-<span id="cb5-11"><a href="#cb5-11"></a>}</span></code></pre></div>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">li<span class="token attribute">[class^="a"]</span> </span><span class="token punctuation">{</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">200%</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">li<span class="token attribute">[class$="a"]</span> </span><span class="token punctuation">{</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> yellow<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">li<span class="token attribute">[class*="a"]</span> </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="大小写不敏感">大小写不敏感</h2>
 <p>如果你想在大小写不敏感的情况下，匹配属性值的话，你可以在闭合括号之前，使用i值。这个标记告诉浏览器，要以大小写不敏感的方式匹配ASCII字符。没有了这个标记的话，值会按照文档语言对大小写的处理方式，进行匹配——HTML中是大小写敏感的。</p>
 <p>例：</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb6-1"><a href="#cb6-1"></a>li<span class="ex">[class</span><span class="op">^=</span><span class="st">"a" i</span><span class="ex">]</span> {</span>
-<span id="cb6-2"><a href="#cb6-2"></a>    <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
-<span id="cb6-3"><a href="#cb6-3"></a>}</span></code></pre></div>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">li<span class="token attribute">[class^="a" i]</span> </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h1 id="伪类选择器">伪类选择器</h1>
 <p>伪类是一个选择处于特定状态的元素的选择器，比如它们是这一类型的第一个元素的时候，或者是鼠标指针悬浮在上面的时候。它们表现得会像是你向你的文档的某个部分应用了一个类一样，帮你在你的标记文本中减少多余的类，让你的代码更灵活、更易于维护。</p>
 <p>伪类就是开头为冒号的关键字：</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb7-1"><a href="#cb7-1"></a><span class="in">:pseudo-class-name</span></span></code></pre></div>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token punctuation">:</span>pseudo-class-name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="简单伪类">简单伪类</h2>
-<div class="sourceCode" id="cb8"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb8-1"><a href="#cb8-1"></a><span class="in">:first-child</span>  <span class="co">/* 第一个元素 */</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a></span>
-<span id="cb8-3"><a href="#cb8-3"></a>article <span class="in">:first-child</span> <span class="co">/* article元素内的第一个元素 */</span></span>
-<span id="cb8-4"><a href="#cb8-4"></a></span>
-<span id="cb8-5"><a href="#cb8-5"></a>article p<span class="in">:first-child</span> <span class="co">/* article元素内的第一个p元素 */</span></span></code></pre></div>
-<div class="sourceCode" id="cb9"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb9-1"><a href="#cb9-1"></a><span class="in">:only-child</span>  <span class="co">/* 没有任何兄弟元素的元素，等价于下面的形式 */</span></span>
-<span id="cb9-2"><a href="#cb9-2"></a></span>
-<span id="cb9-3"><a href="#cb9-3"></a><span class="in">:first-child:last-child</span>  <span class="co">/* 当然，因为后面这两个用到了更多的选择器，所以权重会大一些 */</span></span>
-<span id="cb9-4"><a href="#cb9-4"></a></span>
-<span id="cb9-5"><a href="#cb9-5"></a><span class="in">:nth-child(1):nth-last-child(1)</span></span></code></pre></div>
-<div class="sourceCode" id="cb10"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb10-1"><a href="#cb10-1"></a><span class="in">:invalid</span> <span class="co">/* 表示任意内容未通过验证的 &lt;input&gt; 或其他 &lt;form&gt; 元素 . */</span></span>
-<span id="cb10-2"><a href="#cb10-2"></a></span>
-<span id="cb10-3"><a href="#cb10-3"></a><span class="co">/* 没有输入正确的值的input元素会被高亮 */</span></span>
-<span id="cb10-4"><a href="#cb10-4"></a>input<span class="in">:invalid</span> {</span>
-<span id="cb10-5"><a href="#cb10-5"></a>  <span class="kw">background-color</span>: <span class="cn">pink</span><span class="op">;</span></span>
-<span id="cb10-6"><a href="#cb10-6"></a>}</span></code></pre></div>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token punctuation">:</span>first-child  <span class="token comment" spellcheck="true">/* 第一个元素 */</span>
+
+<span class="token property">article</span> <span class="token punctuation">:</span>first-child <span class="token comment" spellcheck="true">/* article元素内的第一个元素 */</span>
+
+article <span class="token property">p</span><span class="token punctuation">:</span>first-child <span class="token comment" spellcheck="true">/* article元素内的第一个p元素 */</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token punctuation">:</span>only-child  <span class="token comment" spellcheck="true">/* 没有任何兄弟元素的元素，等价于下面的形式 */</span>
+
+<span class="token punctuation">:</span><span class="token property">first-child</span><span class="token punctuation">:</span>last-child  <span class="token comment" spellcheck="true">/* 当然，因为后面这两个用到了更多的选择器，所以权重会大一些 */</span>
+
+<span class="token punctuation">:</span><span class="token function">nth-child</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token function">nth-last-child</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token punctuation">:</span>invalid <span class="token comment" spellcheck="true">/* 表示任意内容未通过验证的 &lt;input> 或其他 &lt;form> 元素 . */</span>
+
+<span class="token comment" spellcheck="true">/* 没有输入正确的值的input元素会被高亮 */</span>
+<span class="token selector">input<span class="token pseudo-class">:invalid</span> </span><span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> pink<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>这个伪类对于突出显示用户的字段错误非常有用。</p>
 <p>......</p>
 <h2 id="用户行为伪类">用户行为伪类</h2>
 <p>一些伪类只会在用户以某种方式和文档交互的时候应用。这些用户行为伪类，有时叫做动态伪类，表现得就像是一个类在用户和元素交互的时候加到了元素上一样。案例包括：</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb11-1"><a href="#cb11-1"></a><span class="in">:hover</span>  <span class="co">/* 只会在用户将指针挪到元素上的时候才会激活，一般就是链接元素。 */</span></span></code></pre></div>
-<div class="sourceCode" id="cb12"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb12-1"><a href="#cb12-1"></a><span class="in">:focus</span>  <span class="co">/* 只会在用户使用键盘控制，选定元素的时候激活。 */</span></span></code></pre></div>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token punctuation">:</span>hover  <span class="token comment" spellcheck="true">/* 只会在用户将指针挪到元素上的时候才会激活，一般就是链接元素。 */</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token punctuation">:</span>focus  <span class="token comment" spellcheck="true">/* 只会在用户使用键盘控制，选定元素的时候激活。 */</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>......</p>
 <h1 id="伪元素选择器">伪元素选择器</h1>
 <p>伪元素以类似方式表现，不过表现得是像你往标记文本中加入全新的HTML元素一样，而不是向现有的元素上应用类。伪元素开头为双冒号<code>::</code>。</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb13-1"><a href="#cb13-1"></a><span class="in">::pseudo-element-name</span></span></code></pre></div>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token punctuation">:</span><span class="token punctuation">:</span>pseudo-element-name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>例：</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb14-1"><a href="#cb14-1"></a><span class="in">::first-line</span> <span class="co">/* 选中第一行 */</span></span></code></pre></div>
-<div class="sourceCode" id="cb15"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb15-1"><a href="#cb15-1"></a><span class="co">/* 让第一段的第一行加粗 */</span></span>
-<span id="cb15-2"><a href="#cb15-2"></a>article p<span class="in">:first-child::first-line</span> {</span>
-<span id="cb15-3"><a href="#cb15-3"></a>    <span class="kw">font-size</span>: <span class="dv">120</span><span class="dt">%</span><span class="op">;</span></span>
-<span id="cb15-4"><a href="#cb15-4"></a>    <span class="kw">font-weight</span>: <span class="dv">bold</span><span class="op">;</span></span>
-<span id="cb15-5"><a href="#cb15-5"></a>}</span></code></pre></div>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token punctuation">:</span><span class="token punctuation">:</span>first-line <span class="token comment" spellcheck="true">/* 选中第一行 */</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token comment" spellcheck="true">/* 让第一段的第一行加粗 */</span>
+<span class="token selector">article p<span class="token pseudo-class">:first-child</span><span class="token pseudo-element">::first-line</span> </span><span class="token punctuation">{</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">120%</span><span class="token punctuation">;</span>
+    <span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>关于伪元素选择器，还有一对有意思的是<code>::before</code>和<code>::after</code>，两者配合<code>content</code>属性可以做到使用CSS来加入内容：</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">.box</span><span class="in">::before</span> {</span>
-<span id="cb16-2"><a href="#cb16-2"></a>    <span class="kw">content</span>: <span class="st">"This should show before the other content."</span></span>
-<span id="cb16-3"><a href="#cb16-3"></a>}   </span></code></pre></div>
-<div class="sourceCode" id="cb17"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb17-1"><a href="#cb17-1"></a><span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">"box"</span><span class="kw">&gt;</span>Content in the box in my HTML page.<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
-<p>将出现下面的结果： <img src="/2020/05/16/css-xuan-ze-qi/CSS选择器_2020-05-16-22-07-43.png" alt="before伪元素选择器示例"></p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.box</span><span class="token pseudo-element">::before</span> </span><span class="token punctuation">{</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">"This should show before the other content."</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Content in the box in my HTML page.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>将出现下面的结果：</p>
+<p><img src="/2020/05/16/css-xuan-ze-qi/CSS选择器_2020-05-16-22-07-43.png" alt="before伪元素选择器示例"><br>
+</p>
 <p>从CSS插入文本字符串，我们并不会在Web浏览器上经常这么做，因为对于一些屏幕阅读器来说，文本是不可见的，而且对于未来别人的查找和编辑也不是很方便。</p>
 <p>这些伪类的更推荐的用法是插入一个图标，例如下面的示例加入的一个小箭头，作为一个视觉性的提示，而且我们并不希望屏幕阅读器读出它。</p>
 <p>还有就是在局部的时候使用：</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">.box</span><span class="in">::before</span> {</span>
-<span id="cb18-2"><a href="#cb18-2"></a>    <span class="kw">content</span>: <span class="st">""</span><span class="op">;</span></span>
-<span id="cb18-3"><a href="#cb18-3"></a>    <span class="kw">display</span>: <span class="dv">block</span><span class="op">;</span></span>
-<span id="cb18-4"><a href="#cb18-4"></a>    <span class="kw">width</span>: <span class="dv">100</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb18-5"><a href="#cb18-5"></a>    <span class="kw">height</span>: <span class="dv">100</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb18-6"><a href="#cb18-6"></a>    <span class="kw">background-color</span>: <span class="cn">rebeccapurple</span><span class="op">;</span></span>
-<span id="cb18-7"><a href="#cb18-7"></a>    <span class="kw">border</span>: <span class="dv">1</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">black</span><span class="op">;</span></span>
-<span id="cb18-8"><a href="#cb18-8"></a>}  </span></code></pre></div>
-<div class="sourceCode" id="cb19"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb19-1"><a href="#cb19-1"></a><span class="kw">&lt;p</span><span class="ot"> class=</span><span class="st">"box"</span><span class="kw">&gt;</span>Content in the box in my HTML page.<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
-<p>将出现下面的结果： <img src="/2020/05/16/css-xuan-ze-qi/CSS选择器_2020-05-16-22-10-29.png" alt="before伪元素选择器示例2"></p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.box</span><span class="token pseudo-element">::before</span> </span><span class="token punctuation">{</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> rebeccapurple<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">1</span>px solid black<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Content in the box in my HTML page.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>将出现下面的结果：</p>
+<p><img src="/2020/05/16/css-xuan-ze-qi/CSS选择器_2020-05-16-22-10-29.png" alt="before伪元素选择器示例2"><br>
+</p>
 <p>......</p>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -1616,7 +1621,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">36.6k</span>&nbsp;字
+                class="white-color">46.5k</span>&nbsp;字
             
             
             
