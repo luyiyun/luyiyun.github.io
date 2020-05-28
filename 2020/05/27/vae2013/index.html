@@ -692,6 +692,8 @@ proposed distribution：<span class="math inline">\(q(X)\)</span>，任意分布
 <p><em>显式的计算出ELBO意味着mean-field没有使用Monte Carlo方法去估计期望。而VAE是用MC去估计的期望，从这一部分来说，mean-field是有优势的。而且mean-field可以改为Monte Carlo版本，从而能够对任意的似然函数进行估计，但灵活性上可能会不如VAE（毕竟是神经网络）。</em></p>
 <h2 id="methods">Methods</h2>
 <h3 id="问题">1. 问题</h3>
+<p><img src="/2020/05/27/vae2013/vae2013_2020-05-28-09-04-25.png" alt="概率模型"><br>
+</p>
 <p>现在将讨论的范围限制在下面的区域内：</p>
 <ol type="1">
 <li>每个iid样本都有一个对应的latent variables；</li>

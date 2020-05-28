@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
@@ -76,6 +76,8 @@ p(H=h|X) = \frac{p(X|H=h)p(H=h)}{\int{p(X|H=s)p(H=s)}ds} \tag{1}
 <div class="slide section level1">
 
 <h3 id="隐变量模型">2. 隐变量模型</h3>
+<p><img src="vae2013_2020-05-28-09-04-25.png" alt="概率模型" /><br />
+</p>
 <p>典型的隐变量模型有：GMM（高斯混合模型）、HMM（隐马尔可夫）等。</p>
 <p>实际上，一个隐变量模型（机器学习意义上的）也可以看做是一个求后验的问题。</p>
 <p>我们有显变量<span class="math inline">\(X\)</span>，其分布依赖于一些隐变量<span class="math inline">\(H\)</span>，由隐变量得到显变量的关系式为<span class="math inline">\(p(X|H)\)</span>，如果这个关系式未知，则需要使用参数化的函数<span class="math inline">\(p_{\theta}(X|H)\)</span>来表示。我们一般需要做两个任务：</p>
