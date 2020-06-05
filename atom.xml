@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://luyiyun.online/"/>
-  <updated>2020-05-28T01:06:27.960Z</updated>
+  <updated>2020-06-05T05:45:23.573Z</updated>
   <id>https://luyiyun.online/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>vae2013/vae2013_slide</title>
-    <link href="https://luyiyun.online/2020/05/28/vae2013/vae2013-slide/"/>
-    <id>https://luyiyun.online/2020/05/28/vae2013/vae2013-slide/</id>
-    <published>2020-05-28T01:07:18.660Z</published>
-    <updated>2020-05-28T01:06:27.960Z</updated>
+    <title>UCSC Xena Python-APIs</title>
+    <link href="https://luyiyun.online/2020/06/05/ucsc-python/"/>
+    <id>https://luyiyun.online/2020/06/05/ucsc-python/</id>
+    <published>2020-06-05T04:02:49.000Z</published>
+    <updated>2020-06-05T05:45:23.573Z</updated>
     
     <summary type="html">
     
@@ -29,19 +29,181 @@
       
         
         
-          
-&lt;div class=&quot;slide titlepage&quot;&gt;
-  &lt;h1 class=&quot;title&quot;&gt;论文精读-VAE-2013&lt;/h1&gt;
-  &lt;p class=&quot;author&quot;&gt;
-Luyiyun
-  &lt;/p&gt;
-  &lt;p class=&quot;date&quot;&gt;2020-05-27
+          &lt;blockquote&gt;
+&lt;p&gt;因为网连不上，所以就放弃这一部分了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;UCSC Xena官方提供了一个包--xenaPython，可以使用python程序来获得UCSC Xena的数据。&lt;/p&gt;
+&lt;script&gt;
+       
         
       
     
     </summary>
     
     
+      <category term="Tools" scheme="https://luyiyun.online/categories/Tools/"/>
+    
+      <category term="UCSC Xena" scheme="https://luyiyun.online/categories/Tools/UCSC-Xena/"/>
+    
+    
+      <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
+    
+      <category term="Websites" scheme="https://luyiyun.online/tags/Websites/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C-primer-plus Data and C</title>
+    <link href="https://luyiyun.online/2020/06/04/cprimerplus-ch3/"/>
+    <id>https://luyiyun.online/2020/06/04/cprimerplus-ch3/</id>
+    <published>2020-06-04T07:42:05.000Z</published>
+    <updated>2020-06-05T05:45:23.738Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;以下是一个新的例子，可以判断和你体重相当的珀金会值多少钱：&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-c&quot;&gt;&lt;code class=&quot;language-c&quot;&gt;&lt;span class=&quot;token comment&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C" scheme="https://luyiyun.online/categories/C/"/>
+    
+    
+      <category term="Learning" scheme="https://luyiyun.online/tags/Learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>论文精读</title>
+    <link href="https://luyiyun.online/2020/06/04/paper-summary/"/>
+    <id>https://luyiyun.online/2020/06/04/paper-summary/</id>
+    <published>2020-06-04T03:07:20.000Z</published>
+    <updated>2020-06-05T05:45:23.732Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;方法学部分：
+&lt;ul&gt;
+&lt;li&gt;深度学习领域：
+&lt;ol type=&quot;1&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;/2020/05/27/vae2013/&quot; title=&quot;VAE原文&quot;&gt;VAE原文&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;Omics领域：
+&lt;ol
+        
+      
+    
+    </summary>
+    
+    
+      <category term="paper" scheme="https://luyiyun.online/categories/paper/"/>
+    
+    
+      <category term="Summary" scheme="https://luyiyun.online/tags/Summary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>论文精读-deepNF预测蛋白质功能-2018</title>
+    <link href="https://luyiyun.online/2020/06/03/deepnf2018/"/>
+    <id>https://luyiyun.online/2020/06/03/deepnf2018/</id>
+    <published>2020-06-03T13:58:31.000Z</published>
+    <updated>2020-06-05T05:45:23.538Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;deepnf-deep-network-fusion-for-protein-function-prediction&quot;&gt;deepNF: deep network fusion for protein function
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
+    
+      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
+    
+    
+      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
+    
+      <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UCSC Xena 搜索-高亮-过滤-分组</title>
+    <link href="https://luyiyun.online/2020/06/03/ucsc-shfs/"/>
+    <id>https://luyiyun.online/2020/06/03/ucsc-shfs/</id>
+    <published>2020-06-03T07:19:14.000Z</published>
+    <updated>2020-06-05T05:45:23.698Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;依靠上方的搜索框，可以完成一系列数据筛选工作，甚至可以创建自己的分组。&lt;/p&gt;
+&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Tools" scheme="https://luyiyun.online/categories/Tools/"/>
+    
+      <category term="UCSC Xena" scheme="https://luyiyun.online/categories/Tools/UCSC-Xena/"/>
+    
+    
+      <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
+    
+      <category term="Website" scheme="https://luyiyun.online/tags/Website/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C-primer-plus introducing C</title>
+    <link href="https://luyiyun.online/2020/06/01/cprimerplus-ch2/"/>
+    <id>https://luyiyun.online/2020/06/01/cprimerplus-ch2/</id>
+    <published>2020-06-01T03:49:31.000Z</published>
+    <updated>2020-06-05T05:45:23.772Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;简单的例子&quot;&gt;1. 简单的例子&lt;/h1&gt;
+&lt;p&gt;以下是一个简短的示例文件:&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-c&quot;&gt;&lt;code class=&quot;language-c&quot;&gt;&lt;span class=&quot;token comment&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C" scheme="https://luyiyun.online/categories/C/"/>
+    
+    
+      <category term="Learning" scheme="https://luyiyun.online/tags/Learning/"/>
     
   </entry>
   
@@ -50,7 +212,7 @@ Luyiyun
     <link href="https://luyiyun.online/2020/05/27/vae2013/"/>
     <id>https://luyiyun.online/2020/05/27/vae2013/</id>
     <published>2020-05-27T07:04:19.000Z</published>
-    <updated>2020-05-28T01:07:18.255Z</updated>
+    <updated>2020-06-05T05:45:23.506Z</updated>
     
     <summary type="html">
     
@@ -85,7 +247,7 @@ Luyiyun
     <link href="https://luyiyun.online/2020/05/25/web-xue-xi/"/>
     <id>https://luyiyun.online/2020/05/25/web-xue-xi/</id>
     <published>2020-05-25T14:48:39.000Z</published>
-    <updated>2020-05-27T17:48:17.606Z</updated>
+    <updated>2020-06-05T05:45:23.499Z</updated>
     
     <summary type="html">
     
@@ -108,11 +270,11 @@ Luyiyun
   </entry>
   
   <entry>
-    <title>UCSC Demo-低级胶质瘤和胶质母细胞瘤的分子特征</title>
-    <link href="https://luyiyun.online/2020/05/24/ucsc-demo1/"/>
-    <id>https://luyiyun.online/2020/05/24/ucsc-demo1/</id>
-    <published>2020-05-24T06:51:14.000Z</published>
-    <updated>2020-05-27T17:48:17.553Z</updated>
+    <title>UCSC Xena 数据集</title>
+    <link href="https://luyiyun.online/2020/05/25/ucsc-dataset/"/>
+    <id>https://luyiyun.online/2020/05/25/ucsc-dataset/</id>
+    <published>2020-05-25T06:04:58.000Z</published>
+    <updated>2020-06-05T05:45:23.929Z</updated>
     
     <summary type="html">
     
@@ -120,7 +282,11 @@ Luyiyun
       
         
         
-          &lt;p&gt;此部分的内容来自UCSC官方提供的&lt;a href=&quot;https://ucsc-xena.gitbook.io/project/tutorials&quot; target=&quot;_blank&quot;
+          &lt;h1 id=&quot;下载数据集&quot;&gt;下载数据集&lt;/h1&gt;
+&lt;p&gt;一共有4种方式：&lt;/p&gt;
+&lt;ol type=&quot;1&quot;&gt;
+&lt;li&gt;&lt;p&gt;spreadsheet的下拉菜单中有Download按钮，用于下载此单个column上的数据。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;整个Visual
         
       
     
@@ -129,7 +295,7 @@ Luyiyun
     
       <category term="Tools" scheme="https://luyiyun.online/categories/Tools/"/>
     
-      <category term="UCSC" scheme="https://luyiyun.online/categories/Tools/UCSC/"/>
+      <category term="UCSC Xena" scheme="https://luyiyun.online/categories/Tools/UCSC-Xena/"/>
     
     
       <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
@@ -139,11 +305,136 @@ Luyiyun
   </entry>
   
   <entry>
-    <title>UCSC Xena介绍</title>
-    <link href="https://luyiyun.online/2020/05/24/ucsc-inroduction/"/>
-    <id>https://luyiyun.online/2020/05/24/ucsc-inroduction/</id>
+    <title>UCSC Xena绘制Kaplan-Meier曲线</title>
+    <link href="https://luyiyun.online/2020/05/25/ucsc-kmplot/"/>
+    <id>https://luyiyun.online/2020/05/25/ucsc-kmplot/</id>
+    <published>2020-05-25T06:04:18.000Z</published>
+    <updated>2020-06-05T05:45:23.908Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;介绍Kaplan-Meier曲线的&lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3932959/&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Tools" scheme="https://luyiyun.online/categories/Tools/"/>
+    
+      <category term="UCSC Xena" scheme="https://luyiyun.online/categories/Tools/UCSC-Xena/"/>
+    
+    
+      <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
+    
+      <category term="Website" scheme="https://luyiyun.online/tags/Website/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UCSC Xena Visual-Spreadsheet介绍</title>
+    <link href="https://luyiyun.online/2020/05/25/ucsc-spreadsheet/"/>
+    <id>https://luyiyun.online/2020/05/25/ucsc-spreadsheet/</id>
+    <published>2020-05-25T06:04:04.000Z</published>
+    <updated>2020-06-05T05:45:23.598Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;整个可视化界面有多个动态的spreadsheets组成，任何数据都可以形成一个spreadsheet。所有的spreadsheets横向排列在一起，使得每一行是相同的一个样本，便于查看样本间的趋势。样本会被排序，顺序是先按照最左边的spreadsheet上的值排序，然后依次
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Tools" scheme="https://luyiyun.online/categories/Tools/"/>
+    
+      <category term="UCSC Xena" scheme="https://luyiyun.online/categories/Tools/UCSC-Xena/"/>
+    
+    
+      <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
+    
+      <category term="Website" scheme="https://luyiyun.online/tags/Website/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UCSC Xena Demo-针对私人数据集进行分析</title>
+    <link href="https://luyiyun.online/2020/05/24/ucsc-demo2/"/>
+    <id>https://luyiyun.online/2020/05/24/ucsc-demo2/</id>
+    <published>2020-05-24T11:08:08.000Z</published>
+    <updated>2020-06-05T05:45:23.945Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;经过，我们能够对TCGA等公开数据库进行简单的可视化处理了，但实际上UCSC Xena可以做到更多。&lt;/p&gt;
+&lt;p&gt;这里我们从GEO下载数据集GSE121720作为私人数据集，然后使用UCSC Xena进行分析。这一部分的tutorial可以见官方提供的&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Tools" scheme="https://luyiyun.online/categories/Tools/"/>
+    
+      <category term="UCSC Xena" scheme="https://luyiyun.online/categories/Tools/UCSC-Xena/"/>
+    
+    
+      <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
+    
+      <category term="Website" scheme="https://luyiyun.online/tags/Website/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UCSC Xena Demo-低级胶质瘤和胶质母细胞瘤的分子特征</title>
+    <link href="https://luyiyun.online/2020/05/24/ucsc-demo1/"/>
+    <id>https://luyiyun.online/2020/05/24/ucsc-demo1/</id>
+    <published>2020-05-24T06:51:14.000Z</published>
+    <updated>2020-06-05T05:45:23.427Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;此部分的内容来自UCSC Xena官方提供的&lt;a href=&quot;https://ucsc-xena.gitbook.io/project/tutorials&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Tools" scheme="https://luyiyun.online/categories/Tools/"/>
+    
+      <category term="UCSC Xena" scheme="https://luyiyun.online/categories/Tools/UCSC-Xena/"/>
+    
+    
+      <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
+    
+      <category term="Website" scheme="https://luyiyun.online/tags/Website/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UCSC Xena 介绍</title>
+    <link href="https://luyiyun.online/2020/05/24/ucsc-introduction/"/>
+    <id>https://luyiyun.online/2020/05/24/ucsc-introduction/</id>
     <published>2020-05-24T06:19:58.000Z</published>
-    <updated>2020-05-27T17:48:17.548Z</updated>
+    <updated>2020-06-05T05:45:23.984Z</updated>
     
     <summary type="html">
     
@@ -161,10 +452,12 @@ Luyiyun
     
       <category term="Tools" scheme="https://luyiyun.online/categories/Tools/"/>
     
-      <category term="UCSC" scheme="https://luyiyun.online/categories/Tools/UCSC/"/>
+      <category term="UCSC Xena" scheme="https://luyiyun.online/categories/Tools/UCSC-Xena/"/>
     
     
       <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
+    
+      <category term="Summary" scheme="https://luyiyun.online/tags/Summary/"/>
     
       <category term="Website" scheme="https://luyiyun.online/tags/Website/"/>
     
@@ -175,7 +468,7 @@ Luyiyun
     <link href="https://luyiyun.online/2020/05/21/gitignore-wen-jian-hu-lue-gui-ze/"/>
     <id>https://luyiyun.online/2020/05/21/gitignore-wen-jian-hu-lue-gui-ze/</id>
     <published>2020-05-21T14:02:25.000Z</published>
-    <updated>2020-05-27T17:48:17.537Z</updated>
+    <updated>2020-06-05T05:45:23.414Z</updated>
     
     <summary type="html">
     
@@ -205,7 +498,7 @@ Luyiyun
     <link href="https://luyiyun.online/2020/05/21/vae-jian-mo-pancancer2019/"/>
     <id>https://luyiyun.online/2020/05/21/vae-jian-mo-pancancer2019/</id>
     <published>2020-05-21T02:04:40.000Z</published>
-    <updated>2020-05-27T17:48:17.345Z</updated>
+    <updated>2020-06-05T05:45:23.217Z</updated>
     
     <summary type="html">
     
@@ -238,7 +531,7 @@ Luyiyun
     <link href="https://luyiyun.online/2020/05/19/pamogk2019/"/>
     <id>https://luyiyun.online/2020/05/19/pamogk2019/</id>
     <published>2020-05-19T08:57:01.000Z</published>
-    <updated>2020-05-27T17:48:17.207Z</updated>
+    <updated>2020-06-05T05:45:23.027Z</updated>
     
     <summary type="html">
     
@@ -271,7 +564,7 @@ Luyiyun
     <link href="https://luyiyun.online/2020/05/19/html-biao-dan/"/>
     <id>https://luyiyun.online/2020/05/19/html-biao-dan/</id>
     <published>2020-05-18T16:14:11.000Z</published>
-    <updated>2020-05-27T17:48:17.585Z</updated>
+    <updated>2020-06-05T05:45:23.478Z</updated>
     
     <summary type="html">
     
@@ -301,7 +594,7 @@ Luyiyun
     <link href="https://luyiyun.online/2020/05/18/css-yi-chu/"/>
     <id>https://luyiyun.online/2020/05/18/css-yi-chu/</id>
     <published>2020-05-18T15:27:25.000Z</published>
-    <updated>2020-05-27T17:48:17.325Z</updated>
+    <updated>2020-06-05T05:45:23.196Z</updated>
     
     <summary type="html">
     
@@ -330,7 +623,7 @@ Luyiyun
     <link href="https://luyiyun.online/2020/05/18/css-wen-ben/"/>
     <id>https://luyiyun.online/2020/05/18/css-wen-ben/</id>
     <published>2020-05-18T13:59:51.000Z</published>
-    <updated>2020-05-27T17:48:17.188Z</updated>
+    <updated>2020-06-05T05:45:22.980Z</updated>
     
     <summary type="html">
     
@@ -349,284 +642,6 @@ Luyiyun
       <category term="Web" scheme="https://luyiyun.online/categories/Web/"/>
     
       <category term="CSS" scheme="https://luyiyun.online/categories/Web/CSS/"/>
-    
-    
-      <category term="MDN学习" scheme="https://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS盒子模型</title>
-    <link href="https://luyiyun.online/2020/05/17/css-he-zi-mo-xing/"/>
-    <id>https://luyiyun.online/2020/05/17/css-he-zi-mo-xing/</id>
-    <published>2020-05-17T06:40:20.000Z</published>
-    <updated>2020-05-27T17:48:17.307Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;在CSS中，将所有的元素都看做是一个box。&lt;/p&gt;
-&lt;h1 id=&quot;块级盒子block-box和内联盒子inline-box&quot;&gt;块级盒子（block box）和内联盒子（inline box）&lt;/h1&gt;
-&lt;p&gt;两者在page
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Web" scheme="https://luyiyun.online/categories/Web/"/>
-    
-      <category term="CSS" scheme="https://luyiyun.online/categories/Web/CSS/"/>
-    
-    
-      <category term="MDN学习" scheme="https://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>论文精读-基于RNN的GRN-2016</title>
-    <link href="https://luyiyun.online/2020/05/17/rnn-jian-wang-2016/"/>
-    <id>https://luyiyun.online/2020/05/17/rnn-jian-wang-2016/</id>
-    <published>2020-05-17T03:00:14.000Z</published>
-    <updated>2020-05-27T17:48:17.225Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;recurrent-neural-network-based-hybrid-model-of-gene-regulatory-network&quot;&gt;Recurrent Neural Network Based Hybrid Model of Gene
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
-    
-    
-      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
-    
-      <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
-    
-      <category term="Network" scheme="https://luyiyun.online/tags/Network/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS选择器</title>
-    <link href="https://luyiyun.online/2020/05/16/css-xuan-ze-qi/"/>
-    <id>https://luyiyun.online/2020/05/16/css-xuan-ze-qi/</id>
-    <published>2020-05-16T13:06:22.000Z</published>
-    <updated>2020-05-27T17:48:17.266Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;元素选择器&quot;&gt;元素选择器&lt;/h1&gt;
-&lt;p&gt;例：&lt;/p&gt;
-&lt;pre class=&quot;line-numbers language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;span
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Web" scheme="https://luyiyun.online/categories/Web/"/>
-    
-      <category term="CSS" scheme="https://luyiyun.online/categories/Web/CSS/"/>
-    
-    
-      <category term="MDN学习" scheme="https://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS层叠优先级和继承</title>
-    <link href="https://luyiyun.online/2020/05/16/css-ceng-die-you-xian-ji-ji-cheng/"/>
-    <id>https://luyiyun.online/2020/05/16/css-ceng-die-you-xian-ji-ji-cheng/</id>
-    <published>2020-05-16T09:13:57.000Z</published>
-    <updated>2020-05-27T17:48:17.193Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;总的来说，层叠机制要先与优先级算法，默认继承最弱，指定继承则被优先级算法包括。&lt;/p&gt;
-&lt;h1
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Web" scheme="https://luyiyun.online/categories/Web/"/>
-    
-      <category term="CSS" scheme="https://luyiyun.online/categories/Web/CSS/"/>
-    
-    
-      <category term="MDN学习" scheme="https://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>论文精读-深度学习组学应用-2018综述</title>
-    <link href="https://luyiyun.online/2020/05/15/dl-in-omics2019/"/>
-    <id>https://luyiyun.online/2020/05/15/dl-in-omics2019/</id>
-    <published>2020-05-15T08:00:11.000Z</published>
-    <updated>2020-05-27T17:48:17.282Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;deep-learning-in-omics-a-survey-and-guideline&quot;&gt;Deep learning in omics: a survey and guideline&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;杂志: Briefings in
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Review" scheme="https://luyiyun.online/categories/Paper/Review/"/>
-    
-    
-      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
-    
-      <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS基础</title>
-    <link href="https://luyiyun.online/2020/05/15/css-ji-chu/"/>
-    <id>https://luyiyun.online/2020/05/15/css-ji-chu/</id>
-    <published>2020-05-15T04:01:21.000Z</published>
-    <updated>2020-05-27T17:48:17.204Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;MDN CSS
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Web" scheme="https://luyiyun.online/categories/Web/"/>
-    
-      <category term="CSS" scheme="https://luyiyun.online/categories/Web/CSS/"/>
-    
-    
-      <category term="MDN学习" scheme="https://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTML表格</title>
-    <link href="https://luyiyun.online/2020/05/14/html-biao-ge/"/>
-    <id>https://luyiyun.online/2020/05/14/html-biao-ge/</id>
-    <published>2020-05-14T15:38:49.000Z</published>
-    <updated>2020-05-27T17:48:17.197Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;主要使用到的标签：&lt;code&gt;table&lt;/code&gt;、&lt;code&gt;tr&lt;/code&gt;、&lt;code&gt;th&lt;/code&gt;、&lt;code&gt;td&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;使用表格进行布局的坏处：&lt;/p&gt;
-&lt;ol
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Web" scheme="https://luyiyun.online/categories/Web/"/>
-    
-      <category term="HTML" scheme="https://luyiyun.online/categories/Web/HTML/"/>
-    
-    
-      <category term="MDN学习" scheme="https://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTML多媒体</title>
-    <link href="https://luyiyun.online/2020/05/13/html-duo-mei-ti/"/>
-    <id>https://luyiyun.online/2020/05/13/html-duo-mei-ti/</id>
-    <published>2020-05-13T15:03:55.000Z</published>
-    <updated>2020-05-27T17:48:17.199Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;html图片&quot;&gt;HTML图片&lt;/h1&gt;
-&lt;p&gt;警告：大多数图片是有版权的。除非是以下的情况，不然不要在你的网页上使用图片：&lt;/p&gt;
-&lt;ol
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Web" scheme="https://luyiyun.online/categories/Web/"/>
-    
-      <category term="HTML" scheme="https://luyiyun.online/categories/Web/HTML/"/>
-    
-    
-      <category term="MDN学习" scheme="https://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTML基础</title>
-    <link href="https://luyiyun.online/2020/05/13/html-ji-chu/"/>
-    <id>https://luyiyun.online/2020/05/13/html-ji-chu/</id>
-    <published>2020-05-13T10:59:34.000Z</published>
-    <updated>2020-05-27T17:48:17.372Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;strong&gt;HTML (HyperText Markup Language)&lt;/strong&gt; 不是一门编程语言，而是一种用来告知浏览器如何组织页面的标记语言。HTML
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Web" scheme="https://luyiyun.online/categories/Web/"/>
-    
-      <category term="HTML" scheme="https://luyiyun.online/categories/Web/HTML/"/>
     
     
       <category term="MDN学习" scheme="https://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
