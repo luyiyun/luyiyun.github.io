@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://luyiyun.online/"/>
-  <updated>2020-06-05T05:45:23.573Z</updated>
+  <updated>2020-06-08T14:08:38.408Z</updated>
   <id>https://luyiyun.online/</id>
   
   <author>
@@ -17,11 +17,215 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>PyQt5学习</title>
+    <link href="https://luyiyun.online/2020/06/08/pyqt5-index/"/>
+    <id>https://luyiyun.online/2020/06/08/pyqt5-index/</id>
+    <published>2020-06-08T13:34:43.000Z</published>
+    <updated>2020-06-08T14:08:38.408Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;PyQt5作为一个非常成熟的GUI制作Python模块，是非常值得学习的，最重要的是我正好有这方面的需求，希望制作一个不错的博客文件管理系统。之前是使用tkinter来制作的，tkinter也很不错，非常容易上手，适合简单的应用，但问题在于对于其中一些组件的控制实在不容易，
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="https://luyiyun.online/categories/Python/"/>
+    
+      <category term="PyQt5" scheme="https://luyiyun.online/categories/Python/PyQt5/"/>
+    
+    
+      <category term="Learning" scheme="https://luyiyun.online/tags/Learning/"/>
+    
+      <category term="Qt" scheme="https://luyiyun.online/tags/Qt/"/>
+    
+      <category term="GUI" scheme="https://luyiyun.online/tags/GUI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PyQt5教程-Martin ModelView架构</title>
+    <link href="https://luyiyun.online/2020/06/08/pyqt5-tutorial-martin-ch5/"/>
+    <id>https://luyiyun.online/2020/06/08/pyqt5-tutorial-martin-ch5/</id>
+    <published>2020-06-08T06:55:57.000Z</published>
+    <updated>2020-06-08T14:08:38.426Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;我们在构建复杂的应用的时候往往会遇到ui界面和外部数据间如何交互的问题。有以下几种方式：&lt;/p&gt;
+&lt;ol
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="https://luyiyun.online/categories/Python/"/>
+    
+      <category term="PyQt5" scheme="https://luyiyun.online/categories/Python/PyQt5/"/>
+    
+    
+      <category term="Learning" scheme="https://luyiyun.online/tags/Learning/"/>
+    
+      <category term="Qt" scheme="https://luyiyun.online/tags/Qt/"/>
+    
+      <category term="GUI" scheme="https://luyiyun.online/tags/GUI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PyQt5教程-Martin 自定义组件</title>
+    <link href="https://luyiyun.online/2020/06/08/pyqt5-tutorial-martin-ch4/"/>
+    <id>https://luyiyun.online/2020/06/08/pyqt5-tutorial-martin-ch4/</id>
+    <published>2020-06-08T03:34:45.000Z</published>
+    <updated>2020-06-08T14:08:38.410Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;自定义组件的第一步，需要理解PyQt5中的bitmap（pixel-based）graphic operations，因为所有的组件其实都是利用这个东西画出来的。&lt;/p&gt;
+&lt;h1 id=&quot;qpainter和bitmap-graphics&quot;&gt;QPainter和Bitmap
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="https://luyiyun.online/categories/Python/"/>
+    
+      <category term="PyQt5" scheme="https://luyiyun.online/categories/Python/PyQt5/"/>
+    
+    
+      <category term="Learning" scheme="https://luyiyun.online/tags/Learning/"/>
+    
+      <category term="Qt" scheme="https://luyiyun.online/tags/Qt/"/>
+    
+      <category term="GUI" scheme="https://luyiyun.online/tags/GUI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PyQt5教程-Martin 扩展Signals</title>
+    <link href="https://luyiyun.online/2020/06/07/pyqt5-tutorial-martin-ch3/"/>
+    <id>https://luyiyun.online/2020/06/07/pyqt5-tutorial-martin-ch3/</id>
+    <published>2020-06-07T15:22:32.000Z</published>
+    <updated>2020-06-08T14:08:38.404Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;本章将试图通过python来对signal的行为进行更改，或者创建自定义的signals。&lt;/p&gt;
+&lt;h1
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="https://luyiyun.online/categories/Python/"/>
+    
+      <category term="PyQt5" scheme="https://luyiyun.online/categories/Python/PyQt5/"/>
+    
+    
+      <category term="Learning" scheme="https://luyiyun.online/tags/Learning/"/>
+    
+      <category term="Qt" scheme="https://luyiyun.online/tags/Qt/"/>
+    
+      <category term="GUI" scheme="https://luyiyun.online/tags/GUI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PyQt5教程-Martin Qt Creator</title>
+    <link href="https://luyiyun.online/2020/06/07/pyqt5-tutorial-martin-ch2/"/>
+    <id>https://luyiyun.online/2020/06/07/pyqt5-tutorial-martin-ch2/</id>
+    <published>2020-06-07T10:56:41.000Z</published>
+    <updated>2020-06-08T14:08:38.428Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Qt creator实际上是一个用于UI编程的IDE，也就是说其和PyCharm是一个东西，其支持C++、Python，可以直接使用它来编写GUI。但我们这里只考虑它的图形化界面搭建UI界面的部分。&lt;/p&gt;
+&lt;h1
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="https://luyiyun.online/categories/Python/"/>
+    
+      <category term="PyQt5" scheme="https://luyiyun.online/categories/Python/PyQt5/"/>
+    
+    
+      <category term="Learning" scheme="https://luyiyun.online/tags/Learning/"/>
+    
+      <category term="Qt" scheme="https://luyiyun.online/tags/Qt/"/>
+    
+      <category term="GUI" scheme="https://luyiyun.online/tags/GUI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PyQt5教程-Martin Qt的basic features</title>
+    <link href="https://luyiyun.online/2020/06/06/pyqt5-tutorial-martin-ch1/"/>
+    <id>https://luyiyun.online/2020/06/06/pyqt5-tutorial-martin-ch1/</id>
+    <published>2020-06-06T14:31:20.000Z</published>
+    <updated>2020-06-08T14:08:38.351Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;PyQt5是一个python库，用来调用Qt。Qt本身是一个C++的GUI framework。使用PyQt5，可以使得我们在不怎么损失C++的速度优势的情况下，利用Python创建一个gui应用。&lt;/p&gt;
+&lt;h1 id=&quot;基础&quot;&gt;基础&lt;/h1&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="https://luyiyun.online/categories/Python/"/>
+    
+      <category term="PyQt5" scheme="https://luyiyun.online/categories/Python/PyQt5/"/>
+    
+    
+      <category term="Learning" scheme="https://luyiyun.online/tags/Learning/"/>
+    
+      <category term="Qt" scheme="https://luyiyun.online/tags/Qt/"/>
+    
+      <category term="GUI" scheme="https://luyiyun.online/tags/GUI/"/>
+    
+  </entry>
+  
+  <entry>
     <title>UCSC Xena Python-APIs</title>
     <link href="https://luyiyun.online/2020/06/05/ucsc-python/"/>
     <id>https://luyiyun.online/2020/06/05/ucsc-python/</id>
     <published>2020-06-05T04:02:49.000Z</published>
-    <updated>2020-06-05T05:45:23.573Z</updated>
+    <updated>2020-06-08T14:08:38.279Z</updated>
     
     <summary type="html">
     
@@ -57,7 +261,7 @@
     <link href="https://luyiyun.online/2020/06/04/cprimerplus-ch3/"/>
     <id>https://luyiyun.online/2020/06/04/cprimerplus-ch3/</id>
     <published>2020-06-04T07:42:05.000Z</published>
-    <updated>2020-06-05T05:45:23.738Z</updated>
+    <updated>2020-06-08T14:08:38.341Z</updated>
     
     <summary type="html">
     
@@ -85,7 +289,7 @@
     <link href="https://luyiyun.online/2020/06/04/paper-summary/"/>
     <id>https://luyiyun.online/2020/06/04/paper-summary/</id>
     <published>2020-06-04T03:07:20.000Z</published>
-    <updated>2020-06-05T05:45:23.732Z</updated>
+    <updated>2020-06-08T14:08:38.189Z</updated>
     
     <summary type="html">
     
@@ -120,7 +324,7 @@
     <link href="https://luyiyun.online/2020/06/03/deepnf2018/"/>
     <id>https://luyiyun.online/2020/06/03/deepnf2018/</id>
     <published>2020-06-03T13:58:31.000Z</published>
-    <updated>2020-06-05T05:45:23.538Z</updated>
+    <updated>2020-06-08T14:08:38.164Z</updated>
     
     <summary type="html">
     
@@ -151,7 +355,7 @@
     <link href="https://luyiyun.online/2020/06/03/ucsc-shfs/"/>
     <id>https://luyiyun.online/2020/06/03/ucsc-shfs/</id>
     <published>2020-06-03T07:19:14.000Z</published>
-    <updated>2020-06-05T05:45:23.698Z</updated>
+    <updated>2020-06-08T14:08:38.308Z</updated>
     
     <summary type="html">
     
@@ -183,7 +387,7 @@
     <link href="https://luyiyun.online/2020/06/01/cprimerplus-ch2/"/>
     <id>https://luyiyun.online/2020/06/01/cprimerplus-ch2/</id>
     <published>2020-06-01T03:49:31.000Z</published>
-    <updated>2020-06-05T05:45:23.772Z</updated>
+    <updated>2020-06-08T14:08:38.343Z</updated>
     
     <summary type="html">
     
@@ -212,7 +416,7 @@
     <link href="https://luyiyun.online/2020/05/27/vae2013/"/>
     <id>https://luyiyun.online/2020/05/27/vae2013/</id>
     <published>2020-05-27T07:04:19.000Z</published>
-    <updated>2020-06-05T05:45:23.506Z</updated>
+    <updated>2020-06-08T14:08:38.176Z</updated>
     
     <summary type="html">
     
@@ -247,7 +451,7 @@
     <link href="https://luyiyun.online/2020/05/25/web-xue-xi/"/>
     <id>https://luyiyun.online/2020/05/25/web-xue-xi/</id>
     <published>2020-05-25T14:48:39.000Z</published>
-    <updated>2020-06-05T05:45:23.499Z</updated>
+    <updated>2020-06-08T14:08:38.079Z</updated>
     
     <summary type="html">
     
@@ -274,7 +478,7 @@
     <link href="https://luyiyun.online/2020/05/25/ucsc-dataset/"/>
     <id>https://luyiyun.online/2020/05/25/ucsc-dataset/</id>
     <published>2020-05-25T06:04:58.000Z</published>
-    <updated>2020-06-05T05:45:23.929Z</updated>
+    <updated>2020-06-08T14:08:38.319Z</updated>
     
     <summary type="html">
     
@@ -309,7 +513,7 @@
     <link href="https://luyiyun.online/2020/05/25/ucsc-kmplot/"/>
     <id>https://luyiyun.online/2020/05/25/ucsc-kmplot/</id>
     <published>2020-05-25T06:04:18.000Z</published>
-    <updated>2020-06-05T05:45:23.908Z</updated>
+    <updated>2020-06-08T14:08:38.315Z</updated>
     
     <summary type="html">
     
@@ -340,7 +544,7 @@
     <link href="https://luyiyun.online/2020/05/25/ucsc-spreadsheet/"/>
     <id>https://luyiyun.online/2020/05/25/ucsc-spreadsheet/</id>
     <published>2020-05-25T06:04:04.000Z</published>
-    <updated>2020-06-05T05:45:23.598Z</updated>
+    <updated>2020-06-08T14:08:38.282Z</updated>
     
     <summary type="html">
     
@@ -371,7 +575,7 @@
     <link href="https://luyiyun.online/2020/05/24/ucsc-demo2/"/>
     <id>https://luyiyun.online/2020/05/24/ucsc-demo2/</id>
     <published>2020-05-24T11:08:08.000Z</published>
-    <updated>2020-06-05T05:45:23.945Z</updated>
+    <updated>2020-06-08T14:08:38.323Z</updated>
     
     <summary type="html">
     
@@ -403,7 +607,7 @@
     <link href="https://luyiyun.online/2020/05/24/ucsc-demo1/"/>
     <id>https://luyiyun.online/2020/05/24/ucsc-demo1/</id>
     <published>2020-05-24T06:51:14.000Z</published>
-    <updated>2020-06-05T05:45:23.427Z</updated>
+    <updated>2020-06-08T14:08:38.253Z</updated>
     
     <summary type="html">
     
@@ -434,7 +638,7 @@
     <link href="https://luyiyun.online/2020/05/24/ucsc-introduction/"/>
     <id>https://luyiyun.online/2020/05/24/ucsc-introduction/</id>
     <published>2020-05-24T06:19:58.000Z</published>
-    <updated>2020-06-05T05:45:23.984Z</updated>
+    <updated>2020-06-08T14:08:38.337Z</updated>
     
     <summary type="html">
     
@@ -460,191 +664,6 @@
       <category term="Summary" scheme="https://luyiyun.online/tags/Summary/"/>
     
       <category term="Website" scheme="https://luyiyun.online/tags/Website/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>gitignore的文件忽略规则</title>
-    <link href="https://luyiyun.online/2020/05/21/gitignore-wen-jian-hu-lue-gui-ze/"/>
-    <id>https://luyiyun.online/2020/05/21/gitignore-wen-jian-hu-lue-gui-ze/</id>
-    <published>2020-05-21T14:02:25.000Z</published>
-    <updated>2020-06-05T05:45:23.414Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;在正常的工作中，经常使用到git，那自然.gitignore文件的使用是必须要掌握的。所幸我们一般用到的的.gitignore的规则都比较简单，而且其语法是使用的通配符语法，容易掌握，这里将它的语法进行一下归纳整理，便于之后查阅。&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;这里的内容主要参考的
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Tools" scheme="https://luyiyun.online/categories/Tools/"/>
-    
-      <category term="Git" scheme="https://luyiyun.online/categories/Tools/Git/"/>
-    
-    
-      <category term="tools" scheme="https://luyiyun.online/tags/tools/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>论文精读-使用VAE整合多组学数据进行PanCancer分析-OmiVAE2019</title>
-    <link href="https://luyiyun.online/2020/05/21/vae-jian-mo-pancancer2019/"/>
-    <id>https://luyiyun.online/2020/05/21/vae-jian-mo-pancancer2019/</id>
-    <published>2020-05-21T02:04:40.000Z</published>
-    <updated>2020-06-05T05:45:23.217Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;integrated-multi-omics-analysis-using-variational-autoencoders-application-to-pan-cancer-classification&quot;&gt;Integrated Multi-omics
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
-    
-    
-      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
-    
-      <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
-    
-      <category term="VAE" scheme="https://luyiyun.online/tags/VAE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>论文精读-PAMOGK-2019</title>
-    <link href="https://luyiyun.online/2020/05/19/pamogk2019/"/>
-    <id>https://luyiyun.online/2020/05/19/pamogk2019/</id>
-    <published>2020-05-19T08:57:01.000Z</published>
-    <updated>2020-06-05T05:45:23.027Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;pamogk-a-pathway-graph-kernel-based-multi-omics-clustering-approach-for-discovering-cancer-patient-subgroups&quot;&gt;PAMOGK: A Pathway
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
-    
-    
-      <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
-    
-      <category term="Machine Learning" scheme="https://luyiyun.online/tags/Machine-Learning/"/>
-    
-      <category term="Cluster" scheme="https://luyiyun.online/tags/Cluster/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTML表单</title>
-    <link href="https://luyiyun.online/2020/05/19/html-biao-dan/"/>
-    <id>https://luyiyun.online/2020/05/19/html-biao-dan/</id>
-    <published>2020-05-18T16:14:11.000Z</published>
-    <updated>2020-06-05T05:45:23.478Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;HTML表单是用户和web站点或应用程序之间交互的主要内容之一。它们允许用户将数据发送到web站点。大多数情况下，数据被发送到web服务器，但是web页面也可以自己拦截它并使用它。&lt;/p&gt;
-&lt;p&gt;HTML表单是由一个或多个小部件组成的。这些小部件可以是文本字段(单行或多行)
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Web" scheme="https://luyiyun.online/categories/Web/"/>
-    
-      <category term="HTML" scheme="https://luyiyun.online/categories/Web/HTML/"/>
-    
-    
-      <category term="MDN学习" scheme="https://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS溢出</title>
-    <link href="https://luyiyun.online/2020/05/18/css-yi-chu/"/>
-    <id>https://luyiyun.online/2020/05/18/css-yi-chu/</id>
-    <published>2020-05-18T15:27:25.000Z</published>
-    <updated>2020-06-05T05:45:23.196Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;我们知道，CSS中万物皆盒，因此我们可以通过给&lt;code&gt;width&lt;/code&gt;和&lt;code&gt;height&lt;/code&gt;（或者 &lt;code&gt;inline-size&lt;/code&gt; 和
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Web" scheme="https://luyiyun.online/categories/Web/"/>
-    
-      <category term="CSS" scheme="https://luyiyun.online/categories/Web/CSS/"/>
-    
-    
-      <category term="MDN学习" scheme="https://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS文本</title>
-    <link href="https://luyiyun.online/2020/05/18/css-wen-ben/"/>
-    <id>https://luyiyun.online/2020/05/18/css-wen-ben/</id>
-    <published>2020-05-18T13:59:51.000Z</published>
-    <updated>2020-06-05T05:45:22.980Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;书写模式&quot;&gt;书写模式&lt;/h1&gt;
-&lt;p&gt;CSS中的书写模式是指文本的排列方向是横向还是纵向的。&lt;code&gt;writing-mode&lt;/code&gt;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Web" scheme="https://luyiyun.online/categories/Web/"/>
-    
-      <category term="CSS" scheme="https://luyiyun.online/categories/Web/CSS/"/>
-    
-    
-      <category term="MDN学习" scheme="https://luyiyun.online/tags/MDN%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
