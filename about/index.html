@@ -454,7 +454,7 @@
 
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
-    $('.bg-cover').css('background-image', 'url(/medias/banner/2.jpg)');
+    $('.bg-cover').css('background-image', 'url(/medias/banner/5.jpg)');
 </script>
 
 
@@ -470,7 +470,7 @@
                     <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
                         
 <div class="statis">
-    <span class="count"><a href="/">46</a></span>
+    <span class="count"><a href="/">53</a></span>
     <span class="name">文章</span>
 </div>
 
@@ -484,7 +484,7 @@
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">25</a></span>
+    <span class="count"><a href="/tags">26</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -500,7 +500,7 @@
                                 <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
                                     
 <div class="statis">
-    <span class="count"><a href="/">46</a></span>
+    <span class="count"><a href="/">53</a></span>
     <span class="name">文章</span>
 </div>
 
@@ -514,7 +514,7 @@
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">25</a></span>
+    <span class="count"><a href="/tags">26</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -658,7 +658,7 @@
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,0,26,14,3,2,1],
+                data: [0,0,0,0,0,0,0,0,26,14,4,3,6],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -700,7 +700,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"C","value":2},{"name":"Web","value":11},{"name":"CSS","value":6},{"name":"Paper","value":14},{"name":"HTML","value":4},{"name":"Review","value":3},{"name":"Method","value":11},{"name":"Tools","value":11},{"name":"Python","value":6},{"name":"paper","value":1},{"name":"Blog","value":1},{"name":"UCSC Xena","value":8},{"name":"PyQt5","value":6},{"name":"Linux","value":1},{"name":"Git","value":1}],
+                data: [{"name":"Paper","value":21},{"name":"Method","value":18},{"name":"Web","value":11},{"name":"CSS","value":6},{"name":"C","value":2},{"name":"Review","value":3},{"name":"HTML","value":4},{"name":"Tools","value":11},{"name":"Blog","value":1},{"name":"paper","value":1},{"name":"Python","value":6},{"name":"PyQt5","value":6},{"name":"UCSC Xena","value":8},{"name":"Git","value":1},{"name":"Linux","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -724,7 +724,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["Omics","Deep Learning","MDN学习","Learning","Website","Qt","GUI","GNN","Unsupervised Learning","Point Cloud Segmentation"]
+                data: ["Deep Learning","Omics","MDN学习","Learning","GNN","Website","Qt","GUI","Pooling","Point Cloud Segmentation"]
             }
         ],
         yAxis: [
@@ -737,7 +737,7 @@
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [13,11,10,8,7,6,6,3,3,3],
+                data: [18,13,10,8,8,7,6,6,5,4],
                 markPoint: {
                     symbolSize: 45,
                     data: [{
@@ -903,8 +903,14 @@
         <div class="tag-chips center-align">
             
             
-            <a href="/tags/Learning/">
-                <span class="chip center-align waves-effect waves-light chip-default">Learning</span>
+            <a href="/tags/Deep-Learning/">
+                <span class="chip center-align waves-effect waves-light chip-default">Deep Learning</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Point-Cloud-Segmentation/">
+                <span class="chip center-align waves-effect waves-light chip-default">Point Cloud Segmentation</span>
             </a>
             
             
@@ -915,8 +921,8 @@
             
             
             
-            <a href="/tags/Deep-Learning/">
-                <span class="chip center-align waves-effect waves-light chip-default">Deep Learning</span>
+            <a href="/tags/Learning/">
+                <span class="chip center-align waves-effect waves-light chip-default">Learning</span>
             </a>
             
             
@@ -963,18 +969,6 @@
             
             
             
-            <a href="/tags/Molecular-Graphs/">
-                <span class="chip center-align waves-effect waves-light chip-default">Molecular Graphs</span>
-            </a>
-            
-            
-            
-            <a href="/tags/VAE/">
-                <span class="chip center-align waves-effect waves-light chip-default">VAE</span>
-            </a>
-            
-            
-            
             <a href="/tags/MDN/">
                 <span class="chip center-align waves-effect waves-light chip-default">MDN</span>
             </a>
@@ -993,14 +987,32 @@
             
             
             
+            <a href="/tags/Molecular-Graphs/">
+                <span class="chip center-align waves-effect waves-light chip-default">Molecular Graphs</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Pooling/">
+                <span class="chip center-align waves-effect waves-light chip-default">Pooling</span>
+            </a>
+            
+            
+            
             <a href="/tags/CNN/">
                 <span class="chip center-align waves-effect waves-light chip-default">CNN</span>
             </a>
             
             
             
-            <a href="/tags/Point-Cloud-Segmentation/">
-                <span class="chip center-align waves-effect waves-light chip-default">Point Cloud Segmentation</span>
+            <a href="/tags/VAE/">
+                <span class="chip center-align waves-effect waves-light chip-default">VAE</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Summary/">
+                <span class="chip center-align waves-effect waves-light chip-default">Summary</span>
             </a>
             
             
@@ -1013,12 +1025,6 @@
             
             <a href="/tags/GUI/">
                 <span class="chip center-align waves-effect waves-light chip-default">GUI</span>
-            </a>
-            
-            
-            
-            <a href="/tags/Summary/">
-                <span class="chip center-align waves-effect waves-light chip-default">Summary</span>
             </a>
             
             
@@ -1041,14 +1047,14 @@
             
             
             
-            <a href="/tags/zsh/">
-                <span class="chip center-align waves-effect waves-light chip-default">zsh</span>
+            <a href="/tags/tools/">
+                <span class="chip center-align waves-effect waves-light chip-default">tools</span>
             </a>
             
             
             
-            <a href="/tags/tools/">
-                <span class="chip center-align waves-effect waves-light chip-default">tools</span>
+            <a href="/tags/zsh/">
+                <span class="chip center-align waves-effect waves-light chip-default">zsh</span>
             </a>
             
             
@@ -1176,7 +1182,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">96.8k</span>&nbsp;字
+                class="white-color">108.5k</span>&nbsp;字
             
             
             
