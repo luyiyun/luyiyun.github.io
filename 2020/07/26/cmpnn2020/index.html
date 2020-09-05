@@ -583,7 +583,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-07-27
+                    2020-09-05
                 </div>
                 
 
@@ -693,20 +693,20 @@
 </p>
 <p>可以看到：</p>
 <ul>
-<li><p>先更新node特征：node message <span class="math inline">\(\bold{m}^{k}(v)\)</span>来自指向它的edge features <span class="math inline">\(\bold{h}^{k-1}(e_{u,v})\)</span>的聚合（这是最主要的和MPNN的不同），然后使用communicate func聚合message和原始特征更新node特征。</p></li>
-<li><p>edge特征：原始edge <span class="math inline">\(\bold{h}^0(e_{v,w})\)</span>和传递过来的edge message <span class="math inline">\(\bold{m}^k(e_{v,w})\)</span>的计算</p>
+<li><p>先更新node特征：node message <span class="math inline">\(\mathbf{m}^{k}(v)\)</span>来自指向它的edge features <span class="math inline">\(\mathbf{h}^{k-1}(e_{u,v})\)</span>的聚合（这是最主要的和MPNN的不同），然后使用communicate func聚合message和原始特征更新node特征。</p></li>
+<li><p>edge特征：原始edge <span class="math inline">\(\mathbf{h}^0(e_{v,w})\)</span>和传递过来的edge message <span class="math inline">\(\mathbf{m}^k(e_{v,w})\)</span>的计算</p>
 <ul>
-<li>考虑原始edge特征<span class="math inline">\(\bold{h}^0(e_{v,w})\)</span>，相当于提供了一个skip connect【Yang et al.2019】</li>
+<li>考虑原始edge特征<span class="math inline">\(\mathbf{h}^0(e_{v,w})\)</span>，相当于提供了一个skip connect【Yang et al.2019】</li>
 <li>非线性函数<span class="math inline">\(\sigma\)</span>是relu。</li>
 </ul>
-<p>如果是DMPNN，这里的edge message是基于所有邻接边的特征<span class="math inline">\(\{\bold{h}^{k-1}(e_{u,v}),\forall u\in N(v)/w \}\)</span>计算的。其没有考虑到其反向边特征<span class="math inline">\(\bold{h}^{k-1}(e_{w,v})\)</span>。</p>
+<p>如果是DMPNN，这里的edge message是基于所有邻接边的特征<span class="math inline">\(\{\mathbf{h}^{k-1}(e_{u,v}),\forall u\in N(v)/w \}\)</span>计算的。其没有考虑到其反向边特征<span class="math inline">\(\mathbf{h}^{k-1}(e_{w,v})\)</span>。</p>
 <blockquote>
 <p>也就是只考虑和目标edge有相同终点的edges。</p>
 </blockquote>
-<p>在CMPNN中，因为node features中已经编码上述邻接边的特征，所以我们可以直接利用它，然后再减去目标edge的反向特征<span class="math inline">\(\bold{h}^{k-1}(e_{w,v})\)</span>来作为edge message。</p></li>
+<p>在CMPNN中，因为node features中已经编码上述邻接边的特征，所以我们可以直接利用它，然后再减去目标edge的反向特征<span class="math inline">\(\mathbf{h}^{k-1}(e_{w,v})\)</span>来作为edge message。</p></li>
 </ul>
 <p>经过<span class="math inline">\(K\)</span>层的特征特征更新后，再利用edge feature得到node message，然后使用communicate func将node message、node feature和原始node feature进行整合，得到最终的node features。</p>
-<p>最后，使用一个readout函数（这里是GRU【Cho et al. (2014)】），将所有node features变换为一个向量<span class="math inline">\(\bold{z}\)</span>。之后再接fc进行分类即可。</p>
+<p>最后，使用一个readout函数（这里是GRU【Cho et al. (2014)】），将所有node features变换为一个向量<span class="math inline">\(\mathbf{z}\)</span>。之后再接fc进行分类即可。</p>
 <h3 id="message-booster">Message Booster</h3>
 <p>这里介绍上面的aggregate func。</p>
 <ul>
@@ -721,7 +721,7 @@
 <p><img src="/2020/07/26/cmpnn2020/cmpnn2020_2020-07-26-16-24-50.png"><br>
 </p>
 <blockquote>
-<p>这个公式可能写错了，实际上就是将所有node features，做了一次sum和max，然后乘起来即可。下面的公式可能更加正确： <span class="math display">\[[\sum_{u\in N(v)}{\bold{h}^{k-1}(e_{u,v})}]\odot [\max_{u\in N(v)}{\bold{h}^{k-1}(e_{u,v})}]\]</span></p>
+<p>这个公式可能写错了，实际上就是将所有node features，做了一次sum和max，然后乘起来即可。下面的公式可能更加正确： <span class="math display">\[[\sum_{u\in N(v)}{\mathbf{h}^{k-1}(e_{u,v})}]\odot [\max_{u\in N(v)}{\mathbf{h}^{k-1}(e_{u,v})}]\]</span></p>
 </blockquote>
 <blockquote>
 <p>实际上就是sum和max的结合。mean pooling是不可取的，max可能是最好的，但会丢失一些信息，sum可以进行一定的弥补。</p>
@@ -731,12 +731,12 @@
 <p>这里有3种备选方案：</p>
 <ol type="1">
 <li><p>Inner product kernel：</p>
-<p><span class="math display">\[\bold{h}^k(v)=\bold{m}^k(v)\odot\bold{h}^{k-1}(v)\]</span></p></li>
+<p><span class="math display">\[\mathbf{h}^k(v)=\mathbf{m}^k(v)\odot\mathbf{h}^{k-1}(v)\]</span></p></li>
 <li><p>Gated graph kernel【Li et al.2015】:</p>
-<p><span class="math display">\[\bold{h}^k(v)=GRU(\bold{h}^{k-1}(v), \bold{m}^k(v))\]</span></p>
+<p><span class="math display">\[\mathbf{h}^k(v)=GRU(\mathbf{h}^{k-1}(v), \mathbf{m}^k(v))\]</span></p>
 <p>GRU有更强的拟合能力，但其不是symmetric的，这和graph的性质略有不符。</p></li>
 <li><p>Multilayer Perception：</p>
-<p><span class="math display">\[\bold{h}^k(v)=\sigma(W \cdot Concat(\bold{h}^{k-1}(v), \bold{m}^k(v)))\]</span></p></li>
+<p><span class="math display">\[\mathbf{h}^k(v)=\sigma(W \cdot Concat(\mathbf{h}^{k-1}(v), \mathbf{m}^k(v)))\]</span></p></li>
 </ol>
 <h2 id="results">Results</h2>
 <h3 id="实验设置">实验设置</h3>

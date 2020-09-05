@@ -583,7 +583,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-26
+                    2020-09-05
                 </div>
                 
 
@@ -646,7 +646,7 @@
 <p>本研究针对上面两个问题，进行了如下的改进：</p>
 <ul>
 <li><p>每一层将relu替换为gated units，从而增加multiplicative units，增加NN的拟合能力：</p>
-<p><span class="math display">\[\bold{y}=tanh(W_{k,f}\star\bold{x})\odot\sigma(W_{k,g}\star\bold{x})\]</span></p>
+<p><span class="math display">\[\mathbf{y}=tanh(W_{k,f}\star\mathbf{x})\odot\sigma(W_{k,g}\star\mathbf{x})\]</span></p>
 <p>其中，<span class="math inline">\(\odot\)</span>表示element-wise product，<span class="math inline">\(\star\)</span>表示convolution，后面的是gated，使用tanh替代relu。gated units可以形成类似highway networks的效果，从而有助于模型的效能提升。</p></li>
 <li><p>针对blind spot的问题，我们使用两个convolutional network的stacks来解决这个问题：其中一个用来聚合像素点上面的行的信息（vertical stack），另一个用来聚合像素点所在行前面的像素点的信息（horizontal stack）。如果上图右下角所示，而下图展示了单层的设计：</p>
 <p><img src="/2020/08/26/condi-pixelcnn2016/condi-pixelCNN2016_2020-08-26-01-37-33.png"><br>
@@ -664,15 +664,15 @@
 </ul>
 <h3 id="conditional-pixelcnn">Conditional PixelCNN</h3>
 <p>所以现在我们需要建模的分布是：</p>
-<p><span class="math display">\[p(x|\bold{h})=\prod_{i=1}^{n^2}{p(x_i|x_1,\dots,x_{i-1},\bold{h})}\]</span></p>
-<p>这个通过在每一层都加入<span class="math inline">\(\bold{h}\)</span>的信息来实现：</p>
-<p><span class="math display">\[\bold{h}=tanh(W_{k,f}\star\bold{x}+V_{k,f}^T\bold{h})\odot\sigma(W_{k,g}\star\bold{x}+V_{k,g}^T\bold{h})\]</span></p>
-<p>这里认为<span class="math inline">\(\bold{h}\)</span>表示的是图像中有什么物体出现或者出现的内容，但并不指定物体的位置等等，所以其不包含位置信息。</p>
-<p>如果想要进行<span class="math inline">\(\bold{h}\)</span>包含位置信息的建模，可以使用下面的模型：</p>
-<p><span class="math display">\[\bold{h}=tanh(W_{k,f}\star\bold{x}+V_{k,f}\star\bold{s})\odot\sigma(W_{k,g}\star\bold{x}+V_{k,g}\star\bold{s})\]</span></p>
-<p>其中<span class="math inline">\(\bold{s}=m(\bold{h})\)</span>，<span class="math inline">\(m\)</span>是一个deconvolution，<span class="math inline">\(s\)</span>是一个长宽和<span class="math inline">\(\bold{x}\)</span>相同的特征图，<span class="math inline">\(V\)</span>是<span class="math inline">\(1\times1\)</span>卷积。</p>
+<p><span class="math display">\[p(x|\mathbf{h})=\prod_{i=1}^{n^2}{p(x_i|x_1,\dots,x_{i-1},\mathbf{h})}\]</span></p>
+<p>这个通过在每一层都加入<span class="math inline">\(\mathbf{h}\)</span>的信息来实现：</p>
+<p><span class="math display">\[\mathbf{h}=tanh(W_{k,f}\star\mathbf{x}+V_{k,f}^T\mathbf{h})\odot\sigma(W_{k,g}\star\mathbf{x}+V_{k,g}^T\mathbf{h})\]</span></p>
+<p>这里认为<span class="math inline">\(\mathbf{h}\)</span>表示的是图像中有什么物体出现或者出现的内容，但并不指定物体的位置等等，所以其不包含位置信息。</p>
+<p>如果想要进行<span class="math inline">\(\mathbf{h}\)</span>包含位置信息的建模，可以使用下面的模型：</p>
+<p><span class="math display">\[\mathbf{h}=tanh(W_{k,f}\star\mathbf{x}+V_{k,f}\star\mathbf{s})\odot\sigma(W_{k,g}\star\mathbf{x}+V_{k,g}\star\mathbf{s})\]</span></p>
+<p>其中<span class="math inline">\(\mathbf{s}=m(\mathbf{h})\)</span>，<span class="math inline">\(m\)</span>是一个deconvolution，<span class="math inline">\(s\)</span>是一个长宽和<span class="math inline">\(\mathbf{x}\)</span>相同的特征图，<span class="math inline">\(V\)</span>是<span class="math inline">\(1\times1\)</span>卷积。</p>
 <h3 id="pixelcnn-ae">PixelCNN AE</h3>
-<p>对传统的AE进行修改，将decoder部分改变为conditional PixelCNN，其接受的<span class="math inline">\(\bold{h}\)</span>是encoder的输出。</p>
+<p>对传统的AE进行修改，将decoder部分改变为conditional PixelCNN，其接受的<span class="math inline">\(\mathbf{h}\)</span>是encoder的输出。</p>
 <h2 id="results">Results</h2>
 <h3 id="unconditional-modeling">Unconditional Modeling</h3>
 <p>首先是在CIFAR-10上的结果：</p>

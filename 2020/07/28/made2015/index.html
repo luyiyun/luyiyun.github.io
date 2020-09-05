@@ -583,7 +583,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-13
+                    2020-09-05
                 </div>
                 
 
@@ -663,7 +663,7 @@ h(X) = g(B+X(W\odot M^W)) \\
 \]</span> 其中<span class="math inline">\(M^W\)</span>和<span class="math inline">\(M^V\)</span>表示masked matrices，维度分别是<span class="math inline">\(D\times K\)</span>和<span class="math inline">\(K\times D\)</span>。</p>
 <p>设<span class="math inline">\(m(k)\)</span>表示第<span class="math inline">\(k\)</span>个瓶颈层神经元连接的输入的个数（其取值是<span class="math inline">\(\{1,\cdots,D-1\}\)</span>），则两个masked matrices的设置为：</p>
 <p><span class="math display">\[
-M^W_{k,d} = \bold{1}_{m(k)\ge d} =
+M^W_{k,d} = \mathbf{1}_{m(k)\ge d} =
 \begin{cases}
     1 \quad if\ m(k)\ge d \\
     0 \quad otherwise
@@ -682,7 +682,7 @@ M^W =
 \]</span> 这时候，注意，最后一个个输入神经元<span class="math inline">\(x_D\)</span>是不会连接的。这是合理的，因为分解后的分量中并不存在以最后一个分量<span class="math inline">\(x_D\)</span>为条件的条件概率。</p>
 </blockquote>
 <p><span class="math display">\[
-M^V_{d,k} = \bold{1}_{m(k)\lt d} =
+M^V_{d,k} = \mathbf{1}_{m(k)\lt d} =
 \begin{cases}
     1 \quad if\ m(k)\lt d \\
     0 \quad otherwise
@@ -711,7 +711,7 @@ M^V =
 <p>我们将两个矩阵相乘，得到：</p>
 <p><span class="math display">\[
 M^{V,W}_{d',d}=\sum_{k=1}^K{M^V_{d',k}M^W_{k,d}}=
-\sum_{k=1}^K{\bold{1}_{d\le m(k)}\bold{1}_{m(k)\lt d'}}
+\sum_{k=1}^K{\mathbf{1}_{d\le m(k)}\mathbf{1}_{m(k)\lt d'}}
 \]</span></p>
 <p>这个元素表示的是<span class="math inline">\(d'\)</span>是否对<span class="math inline">\(d\)</span>有依赖。如果<span class="math inline">\(d'\gt d\)</span>，我们发现是存在<span class="math inline">\(m(k)\)</span>满足上面的条件的，所以上面是1，不然则上面的值为0。如果<span class="math inline">\(d'\le d\)</span>，则满足上面条件的<span class="math inline">\(m(k)\)</span>不会存在，所以这样的依赖关系也不会存在。满足了autoregressive property。</p>
 <blockquote>
@@ -724,7 +724,7 @@ M^{V,W}_{d',d}=\sum_{k=1}^K{M^V_{d',k}M^W_{k,d}}=
 <p>类似上面的想法，我们为每个神经元都分配一个最大连接数，则可以类似的在更深的网络上构建自回归模型。</p>
 <p>假设第<span class="math inline">\(l\)</span>层的weight matrix为<span class="math inline">\(W^l\)</span>，这一层的神经元个数为<span class="math inline">\(K^l\)</span>，则<span class="math inline">\(W^l\)</span>的维度是<span class="math inline">\(K^{l-1}\times K^l\)</span>，<span class="math inline">\(K^0\)</span>是输入维度。第<span class="math inline">\(l\)</span>层的第<span class="math inline">\(k\)</span>个神经元接受的连接数为<span class="math inline">\(m^l(k)\)</span>。我们进行下面的分配：</p>
 <p><span class="math display">\[
-M^{W^l}_{k',k} = \bold{1}_{m^l(k')\ge m^{l-1}(k)}=
+M^{W^l}_{k',k} = \mathbf{1}_{m^l(k')\ge m^{l-1}(k)}=
 \begin{cases}
     1 \quad if\ m^l(k')\ge m^{l-1}(k) \\
     0 \quad otherwise
@@ -732,7 +732,7 @@ M^{W^l}_{k',k} = \bold{1}_{m^l(k')\ge m^{l-1}(k)}=
 \]</span></p>
 <p>在最后一层，则使用输入维度<span class="math inline">\(D\)</span>作为输出维度：</p>
 <p><span class="math display">\[
-M^{V}_{d,k} = \bold{1}_{d\gt m^L(k)}=
+M^{V}_{d,k} = \mathbf{1}_{d\gt m^L(k)}=
 \begin{cases}
     1 \quad if\ d\gt m^L(k) \\
     0 \quad otherwise
@@ -745,7 +745,7 @@ M^{V}_{d,k} = \bold{1}_{d\gt m^L(k)}=
     &amp;=\sum_{k^1,k^2,\dots,k^L}
     {M^{W^1}_{d,k^1}M^{W^2}_{k^1,k^2}\cdots M^{W_L}_{k^{L-1},k^l}M^V_{k^L,d}} \\
     &amp;=\sum_{k^1,k^2,\dots,k^L}
-    {\bold{1}_{d\le m^1(k^1)}\bold{1}_{m^1(k^1)\le m^2(k^2)}\cdots\bold{1}_{m^{L-1}(k^{L-1})\le m^L(k^L)}\bold{1}_{m^L(k^{L})\lt d'}} \tag{1}
+    {\mathbf{1}_{d\le m^1(k^1)}\mathbf{1}_{m^1(k^1)\le m^2(k^2)}\cdots\mathbf{1}_{m^{L-1}(k^{L-1})\le m^L(k^L)}\mathbf{1}_{m^L(k^{L})\lt d'}} \tag{1}
 \end{aligned}
 \]</span></p>
 <p>有上面的式子可以知道，为了避免漏掉可能的依赖关系，则<span class="math inline">\(m^l(k)\ge \min_{k'}{m^{l-1}(k')}\)</span>。只有这样，才能保证中间的所有不等式在<span class="math inline">\(d'\gt d\)</span>时有成立的可能，从而算出来值为1。</p>

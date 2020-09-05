@@ -579,7 +579,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-29
+                    2020-09-05
                 </div>
                 
 
@@ -635,15 +635,15 @@
 <h2 id="概述">概述</h2>
 <h3 id="数学符号">数学符号</h3>
 <p>graph：<span class="math inline">\(g=(\mathcal{V}_g, \mathcal{E}_g, \mathcal{X}_g, \mathcal{A}_g)\)</span></p>
-<p>其中节点集合<span class="math inline">\(\mathcal{V}_g\)</span>，边的集合<span class="math inline">\(\mathcal{E}_g\)</span>，如果是directed edges，则<span class="math inline">\(\mathcal{E}_g=\{(u,v)|u,v\in\mathcal{V}_g\}\)</span>，如果是undirected edgs，则认为<span class="math inline">\((u,v)=(v,u)\)</span>，<span class="math inline">\(\mathcal{E}_g\)</span>同时拥有两个方向的arcs。有时候可以直接使用邻接矩阵<span class="math inline">\(\bold{A}\in{0,1}^{|\mathcal{V}_g|\times|\mathcal{V}_g|}\)</span>来表示<span class="math inline">\((\mathcal{V}_g, \mathcal{E}_g)\)</span>。</p>
-<p>节点<span class="math inline">\(v\)</span>上的特征是<span class="math inline">\(\bold{x}_v\in\mathcal{X}_g\)</span>，边<span class="math inline">\((u,v)\)</span>上的特征是<span class="math inline">\(\bold{a}_{uv}\in\mathcal{A}_g\)</span>。节点、边、整个graph的标签使用<span class="math inline">\(y_v,y_{uv},y_g\)</span>来表示。</p>
+<p>其中节点集合<span class="math inline">\(\mathcal{V}_g\)</span>，边的集合<span class="math inline">\(\mathcal{E}_g\)</span>，如果是directed edges，则<span class="math inline">\(\mathcal{E}_g=\{(u,v)|u,v\in\mathcal{V}_g\}\)</span>，如果是undirected edgs，则认为<span class="math inline">\((u,v)=(v,u)\)</span>，<span class="math inline">\(\mathcal{E}_g\)</span>同时拥有两个方向的arcs。有时候可以直接使用邻接矩阵<span class="math inline">\(\mathbf{A}\in{0,1}^{|\mathcal{V}_g|\times|\mathcal{V}_g|}\)</span>来表示<span class="math inline">\((\mathcal{V}_g, \mathcal{E}_g)\)</span>。</p>
+<p>节点<span class="math inline">\(v\)</span>上的特征是<span class="math inline">\(\mathbf{x}_v\in\mathcal{X}_g\)</span>，边<span class="math inline">\((u,v)\)</span>上的特征是<span class="math inline">\(\mathbf{a}_{uv}\in\mathcal{A}_g\)</span>。节点、边、整个graph的标签使用<span class="math inline">\(y_v,y_{uv},y_g\)</span>来表示。</p>
 <p>如果graph的节点定义了一个顺序，则称之为是ordered，反之是unordered。如果边的集合和一个自然数的集合存在双射，则称为positional，反之称为non-positional。<strong>我们关注的是unordered和non-positional的graph。</strong></p>
-<p>节点<span class="math inline">\(v\)</span>的邻域（neighborhood）定义为<span class="math inline">\(\mathcal{N}_v=\{u\mathcal{V}_g|(u,v)\in\mathcal{E}_g\}\)</span>。这个也成为了open neighborhood，有时候我们也把<span class="math inline">\(v\)</span>本身也加入其中，这时称为closed neighborhood。进一步，结合边的特征，我们可以定义特征符合条件的neighborhood<span class="math inline">\(\mathcal{N}_v^{c_k}=\{u\in\mathcal{N}_v|\bold{a}_{uv}=c_k\}\)</span>。</p>
+<p>节点<span class="math inline">\(v\)</span>的邻域（neighborhood）定义为<span class="math inline">\(\mathcal{N}_v=\{u\mathcal{V}_g|(u,v)\in\mathcal{E}_g\}\)</span>。这个也成为了open neighborhood，有时候我们也把<span class="math inline">\(v\)</span>本身也加入其中，这时称为closed neighborhood。进一步，结合边的特征，我们可以定义特征符合条件的neighborhood<span class="math inline">\(\mathcal{N}_v^{c_k}=\{u\in\mathcal{N}_v|\mathbf{a}_{uv}=c_k\}\)</span>。</p>
 <blockquote>
 <p>原始文献PDF这里应该是写错了（第6页第3行，应该是v而不是u）</p>
 <p>在图论中，neighborhood不是点的集合，而是一个subgraph，是邻接点及其与指定点的边组合成的subgraph。</p>
 </blockquote>
-<p><span class="math inline">\(l\)</span>用来表示第<span class="math inline">\(l\)</span>层或第<span class="math inline">\(l\)</span>个迭代步骤，<span class="math inline">\(\bold{h}_v^l\)</span>表示节点<span class="math inline">\(v\)</span>在第<span class="math inline">\(l\)</span>层或第<span class="math inline">\(l\)</span>个迭代步骤后得到的特征。</p>
+<p><span class="math inline">\(l\)</span>用来表示第<span class="math inline">\(l\)</span>层或第<span class="math inline">\(l\)</span>个迭代步骤，<span class="math inline">\(\mathbf{h}_v^l\)</span>表示节点<span class="math inline">\(v\)</span>在第<span class="math inline">\(l\)</span>层或第<span class="math inline">\(l\)</span>个迭代步骤后得到的特征。</p>
 <p>使用<span class="math inline">\(\Psi\)</span>来表示permutation invariant function。当其输入（一般来说输入是一个集合）的元素数量是可数时，可以大致将其写成下面的形式： <span class="math display">\[\Phi(Z)\approx\phi(\sum_{z\in Z}{\psi(z)})\]</span> 其中<span class="math inline">\(\phi\)</span>和<span class="math inline">\(\psi\)</span>是任意的函数。</p>
 <p><img src="/2020/08/28/gnngentlesurvey2020/GNNgentleSurvey2020_2020-08-28-14-06-20.png"><br>
 </p>
@@ -669,7 +669,7 @@
 <p>这一般通过<strong>在node level局部地而不是在graph level全局地建立模型</strong>来完成【98】，即考虑的是节点和其邻节点间的关系。这称为stationary assumption。</p>
 <p>但stationary assumption并没有完全解决问题，因为每个节点所拥有的邻接点的数量是变化的。所以，一般还需要<strong>使用permutation invariant function来将邻接点集合进行处理</strong>。</p></li>
 <li><p>可能存在cycle</p>
-<p>解决这个问题的方法是<strong>建立迭代机制</strong>，即<span class="math inline">\(\bold{h}_v^{l+1}\)</span>是第<span class="math inline">\(l\)</span>次迭代的邻接点特征计算得到，这样就算是有cycle存在，也可以方便被纳入其中（可以看做自我更新）。另外，迭代机制也可以很方便地集成到深度架构中。</p></li>
+<p>解决这个问题的方法是<strong>建立迭代机制</strong>，即<span class="math inline">\(\mathbf{h}_v^{l+1}\)</span>是第<span class="math inline">\(l\)</span>次迭代的邻接点特征计算得到，这样就算是有cycle存在，也可以方便被纳入其中（可以看做自我更新）。另外，迭代机制也可以很方便地集成到深度架构中。</p></li>
 </ul>
 <h3 id="context-diffusion的3种机制">context diffusion的3种机制</h3>
 <p>context指的是计算节点特征所使用的信息。<strong>context diffusion描述的是我们如何将单个节点的信息传递到整个网络中</strong>，毕竟我们不希望节点信息被只限制在它的小邻域中。</p>
@@ -696,22 +696,22 @@
 <h3 id="邻接点聚合neighborhood-aggregation">邻接点聚合（Neighborhood Aggregation）</h3>
 <p>这里我们假设graphs是non-positional，所以我们需要使用permutation invariant function。</p>
 <p>最general的形式，如下：</p>
-<p><span class="math display">\[\bold{h}_v^{l+1}=\phi^{l+1}(\bold{h}^l_v,\Psi(\{\psi(\bold{h}_u^l)|u\in\mathcal{N}_v\})) \tag{1}\]</span></p>
+<p><span class="math display">\[\mathbf{h}_v^{l+1}=\phi^{l+1}(\mathbf{h}^l_v,\Psi(\{\psi(\mathbf{h}_u^l)|u\in\mathcal{N}_v\})) \tag{1}\]</span></p>
 <ul>
 <li><p>处理graph的edges</p>
-<p>上面的公式并没有考虑到edges的特征。如果edges的属性是离散的（比如边的类型有2种），则我们可以将上面的公式1进行修改： <span class="math display">\[\bold{h}_v^{l+1}=\phi^{l+1}(\bold{h}^l_v,
-  \sum_{c_k\in\mathcal{A}}{(\Psi(\{\psi(\bold{h}_u^l)|u\in\mathcal{N}_v^{c_k}\})\cdot w_k)}) \tag{2}\]</span></p>
+<p>上面的公式并没有考虑到edges的特征。如果edges的属性是离散的（比如边的类型有2种），则我们可以将上面的公式1进行修改： <span class="math display">\[\mathbf{h}_v^{l+1}=\phi^{l+1}(\mathbf{h}^l_v,
+  \sum_{c_k\in\mathcal{A}}{(\Psi(\{\psi(\mathbf{h}_u^l)|u\in\mathcal{N}_v^{c_k}\})\cdot w_k)}) \tag{2}\]</span></p>
 <p>其中<span class="math inline">\(c_k\)</span>是边的标签，<span class="math inline">\(w_k\)</span>是该边对应的贡献度，是一个可训练的参数。NN4G、R-GCN和CGMM都实现了公式2。</p>
-<p>更general，针对边的特征是连续的： <span class="math display">\[\bold{h}_v^{l+1}=\phi^{l+1}(\bold{h}^l_v,
-  \Psi(\{e^{l+1}(\bold{a}_{uv})^T\psi(\bold{h}_u^l)|u\in\mathcal{N}_v\})) \tag{3}\]</span></p>
+<p>更general，针对边的特征是连续的： <span class="math display">\[\mathbf{h}_v^{l+1}=\phi^{l+1}(\mathbf{h}^l_v,
+  \Psi(\{e^{l+1}(\mathbf{a}_{uv})^T\psi(\mathbf{h}_u^l)|u\in\mathcal{N}_v\})) \tag{3}\]</span></p>
 <p>其中<span class="math inline">\(e^{l+1}(.)\)</span>和<span class="math inline">\(\phi\)</span>、<span class="math inline">\(\psi\)</span>一样，可以是任意的函数。</p></li>
 <li><p>注意力机制</p>
 <p>需要给与一个注意力权重，此权重由两点的特征进行计算，可以使用下面的公式描述：</p>
-<p><span class="math display">\[\bold{h}_{v}^{l+1}=\phi^{l+1}(\bold{h}_v^{l},
-  \Psi(\{\alpha_{uv}^{l+1}\cdot\psi^{l+1}(\bold{h}_u^l)|u\in\mathcal{N}_v\}))\tag{4}\]</span></p>
+<p><span class="math display">\[\mathbf{h}_{v}^{l+1}=\phi^{l+1}(\mathbf{h}_v^{l},
+  \Psi(\{\alpha_{uv}^{l+1}\cdot\psi^{l+1}(\mathbf{h}_u^l)|u\in\mathcal{N}_v\}))\tag{4}\]</span></p>
 <p>其中<span class="math inline">\(\alpha_{uv}\)</span>就是注意力权重，在GAT【102】中，其计算时没有考虑边的特征： <span class="math display">\[\alpha_{uv}^l=\frac{\exp(w_{uv}^l)}{\sum_{u'\in\mathcal{N}_v}{\exp(w_{u'v}^l)}}\]</span> <span class="math display">\[\begin{aligned}
-      w_{uv}^l&amp;=a(\bold{W}^l\bold{h}_u^l,\bold{W}^l\bold{h}_v^l) \\
-      &amp;=LeakyReLU((\bold{b})^T[\bold{W}^l\bold{h}_u^l,\bold{W}^l\bold{h}_v^l])
+      w_{uv}^l&amp;=a(\mathbf{W}^l\mathbf{h}_u^l,\mathbf{W}^l\mathbf{h}_v^l) \\
+      &amp;=LeakyReLU((\mathbf{b})^T[\mathbf{W}^l\mathbf{h}_u^l,\mathbf{W}^l\mathbf{h}_v^l])
   \end{aligned}\]</span> 其中<span class="math inline">\([:,:]\)</span>表示concatenation。另外GAT还使用了multi-head attention，即将多个注意力机制的输出concat或average。</p></li>
 <li><p>采样</p>
 <p>当graphs比较large或dense的时候，邻接点数目太多，就不适合将全部的邻接点进行处理，sampling是自然的解决这个问题的想法。</p>
@@ -737,11 +737,11 @@
 <ul>
 <li><p>adaptive，自适应</p>
 <p>参数化的、可学习的决定怎样进行pooling。</p>
-<p>DiffPool【120】，首先使用本层学习到的特征计算一个soft-membership matrix <span class="math display">\[\bold{S}^{l+1}=softmax(GNN(\bold{A}^l, \bold{H}^l))\tag{5}\]</span> 然后再使用这个matrix重新构筑graph <span class="math display">\[\bold{H}^{l+1}={\bold{S}^{l+1}}^{T}\bold{H}^l\quad\text{and}\quad
-  \bold{A}^{l+1}={\bold{S}^{l+1}}^T\bold{A}^l\bold{S}^{l+1}\]</span> 根据你想要的保留多少个节点来设置<span class="math inline">\(\bold{S}^{l+1}\)</span>的维度。因为是soft的，所以整个过程可微，同时使得经过其pooling后的graph是全连接的。</p>
-<p>TopKPool【37】，设置了一个可学习的projection vector <span class="math inline">\(p^l\)</span>来计算一个scores， <span class="math display">\[s^{l+1}=\frac{\bold{H}^lp^{l+1}}{||p^{l+1}||}\]</span> 保留这个scores排名靠前的节点和他们之间的相互联系。</p>
-<p>SAGPool【62】则在TopKPool的基础上，使用attention score替代了projection vector <span class="math display">\[s^{l+1}=\sigma(GCN(\bold{A}^l,\bold{H}^l))\]</span></p>
-<p>EdgePool【33】则将目标放在了边上，为边计算一个权重，权重靠前的边连接的两个节点会被融合成一个， <span class="math display">\[s^{l+1}((u,v)\in\mathcal{E}_g)=\sigma(\bold{w}^T[\bold{h}_v^l,\bold{h}_u^l]+\bold{b})\]</span></p></li>
+<p>DiffPool【120】，首先使用本层学习到的特征计算一个soft-membership matrix <span class="math display">\[\mathbf{S}^{l+1}=softmax(GNN(\mathbf{A}^l, \mathbf{H}^l))\tag{5}\]</span> 然后再使用这个matrix重新构筑graph <span class="math display">\[\mathbf{H}^{l+1}={\mathbf{S}^{l+1}}^{T}\mathbf{H}^l\quad\text{and}\quad
+  \mathbf{A}^{l+1}={\mathbf{S}^{l+1}}^T\mathbf{A}^l\mathbf{S}^{l+1}\]</span> 根据你想要的保留多少个节点来设置<span class="math inline">\(\mathbf{S}^{l+1}\)</span>的维度。因为是soft的，所以整个过程可微，同时使得经过其pooling后的graph是全连接的。</p>
+<p>TopKPool【37】，设置了一个可学习的projection vector <span class="math inline">\(p^l\)</span>来计算一个scores， <span class="math display">\[s^{l+1}=\frac{\mathbf{H}^lp^{l+1}}{||p^{l+1}||}\]</span> 保留这个scores排名靠前的节点和他们之间的相互联系。</p>
+<p>SAGPool【62】则在TopKPool的基础上，使用attention score替代了projection vector <span class="math display">\[s^{l+1}=\sigma(GCN(\mathbf{A}^l,\mathbf{H}^l))\]</span></p>
+<p>EdgePool【33】则将目标放在了边上，为边计算一个权重，权重靠前的边连接的两个节点会被融合成一个， <span class="math display">\[s^{l+1}((u,v)\in\mathcal{E}_g)=\sigma(\mathbf{w}^T[\mathbf{h}_v^l,\mathbf{h}_u^l]+\mathbf{b})\]</span></p></li>
 <li><p>topological，基于拓扑学的</p>
 <p>比如GRACLUS【22】使用谱聚类、NMFPool【2】基于非负矩阵分解等。</p></li>
 </ul>
@@ -761,11 +761,11 @@
 <h3 id="无监督学习">无监督学习</h3>
 <ul>
 <li><p>Link prediction</p>
-<p>试图去建立node representation，使得相邻的node之间是相似的。所以其reconstruction loss【59】可以写成 <span class="math display">\[\mathcal{L}_{reg}(g)=\sum_{(u,v)}{||\bold{h}_v-\bold{h}_u||^2}\tag{10}\]</span></p>
-<p>另外，也可以把edge看做存在或不存在，从而构建probabilistic的formulation【58】 <span class="math display">\[P((u,v)\in\mathcal{E}_g|\bold{h}_v,\bold{h}_u)=\sigma(\bold{h}_v^T\bold{h}_u)\tag{11}\]</span></p>
+<p>试图去建立node representation，使得相邻的node之间是相似的。所以其reconstruction loss【59】可以写成 <span class="math display">\[\mathcal{L}_{reg}(g)=\sum_{(u,v)}{||\mathbf{h}_v-\mathbf{h}_u||^2}\tag{10}\]</span></p>
+<p>另外，也可以把edge看做存在或不存在，从而构建probabilistic的formulation【58】 <span class="math display">\[P((u,v)\in\mathcal{E}_g|\mathbf{h}_v,\mathbf{h}_u)=\sigma(\mathbf{h}_v^T\mathbf{h}_u)\tag{11}\]</span></p>
 <p><strong>使用上面的loss，意味着你认同这样的假设：相邻的节点应该有更大的倾向被分到相同的community/class中，这称为homphily【69】。这也可以在监督学习中作为一个正则化出现。</strong></p></li>
 <li><p>Maximum Likelihood</p>
-<p>当认为neighborhood服从一定的分布时，我们可以使用极大似然法进行训练。一个典型的例子是CGMM【3】，其堆叠了simple Bayesian Networks，每一层有下面的likelihood： <span class="math display">\[\mathcal{L}(\theta|g)=\prod_{u\in\mathcal{V}_g}\sum_{i=1}^CP(y_u|Q_u=i)P(Q_u=i|\bold{q}_{\mathcal{N}_u})\]</span> 其中，<span class="math inline">\(Q_u\)</span>是每个节点的隐藏类别，一共有<span class="math inline">\(C\)</span>类别。<span class="math inline">\(\bold{q}_{\mathcal{N}_u}\)</span>是节点<span class="math inline">\(u\)</span>的所有邻接点的特征。<span class="math inline">\(y_u\)</span>是节点<span class="math inline">\(u\)</span>的一个特征。</p>
+<p>当认为neighborhood服从一定的分布时，我们可以使用极大似然法进行训练。一个典型的例子是CGMM【3】，其堆叠了simple Bayesian Networks，每一层有下面的likelihood： <span class="math display">\[\mathcal{L}(\theta|g)=\prod_{u\in\mathcal{V}_g}\sum_{i=1}^CP(y_u|Q_u=i)P(Q_u=i|\mathbf{q}_{\mathcal{N}_u})\]</span> 其中，<span class="math inline">\(Q_u\)</span>是每个节点的隐藏类别，一共有<span class="math inline">\(C\)</span>类别。<span class="math inline">\(\mathbf{q}_{\mathcal{N}_u}\)</span>是节点<span class="math inline">\(u\)</span>的所有邻接点的特征。<span class="math inline">\(y_u\)</span>是节点<span class="math inline">\(u\)</span>的一个特征。</p>
 <blockquote>
 <p>这个有点像节点分类了。</p>
 </blockquote>
@@ -773,7 +773,7 @@
 <li><p>Mutual Information</p>
 <p>最大化两个相似的graphs之间的MI作为无监督学习的loss。比如DGI【103】，其先使用corruption function（就是添加噪声等扰动操作）生成一个<span class="math inline">\(g\)</span>的扰动版本<span class="math inline">\(\widetilde{g}\)</span>，然后训练一个discriminator来识别两个图。</p></li>
 <li><p>Entropy regularization for pooling</p>
-<p>当使用adaptive pooling的时候，模型会趋向于将每个节点分给单个community。【120】使用了entropy loss来解决这个问题： <span class="math display">\[\mathcal{L}_{ent}(g)=\frac{1}{|\mathcal{V}_g|}\sum_{u\in\mathcal{V}_g}H(\bold{S}_u)\]</span> 其中<span class="math inline">\(H\)</span>表示计算entropy，<span class="math inline">\(\bold{S}\)</span>表示soft-cluster assignment matrix（公式5），<span class="math inline">\(\bold{S}_u\)</span>表示其中表示<span class="math inline">\(u\)</span>的那一行。</p></li>
+<p>当使用adaptive pooling的时候，模型会趋向于将每个节点分给单个community。【120】使用了entropy loss来解决这个问题： <span class="math display">\[\mathcal{L}_{ent}(g)=\frac{1}{|\mathcal{V}_g|}\sum_{u\in\mathcal{V}_g}H(\mathbf{S}_u)\]</span> 其中<span class="math inline">\(H\)</span>表示计算entropy，<span class="math inline">\(\mathbf{S}\)</span>表示soft-cluster assignment matrix（公式5），<span class="math inline">\(\mathbf{S}_u\)</span>表示其中表示<span class="math inline">\(u\)</span>的那一行。</p></li>
 </ul>
 <h3 id="监督学习">监督学习</h3>
 <ul>
@@ -793,7 +793,7 @@
 <h3 id="生成学习">生成学习</h3>
 <ul>
 <li><p>Graph-level decoding</p>
-<p>输入一个graph的embedding，输出一个dense probabilistic的adjacency matrix <span class="math inline">\(\widetilde{\bold{A}}\in\mathbb{R}^{k\times k}\)</span>，其中<span class="math inline">\(k\)</span>表示允许最多的节点数目，元素<span class="math inline">\(\widetilde{a}_{ij}\)</span>表示节点<span class="math inline">\(i\)</span>和<span class="math inline">\(j\)</span>间存在连接的概率。然后使用极大似然法进行训练： <span class="math display">\[\mathcal{L}_{decoder}(g)=-\log P(\widetilde{\bold{A}}|\widetilde{\bold{h}}_g)\tag{14}\]</span> 其中<span class="math inline">\(P(\widetilde{\bold{A}}|\widetilde{\bold{h}}_g)=MLP(\widetilde{\bold{h}}_g)\)</span>。</p>
+<p>输入一个graph的embedding，输出一个dense probabilistic的adjacency matrix <span class="math inline">\(\widetilde{\mathbf{A}}\in\mathbb{R}^{k\times k}\)</span>，其中<span class="math inline">\(k\)</span>表示允许最多的节点数目，元素<span class="math inline">\(\widetilde{a}_{ij}\)</span>表示节点<span class="math inline">\(i\)</span>和<span class="math inline">\(j\)</span>间存在连接的概率。然后使用极大似然法进行训练： <span class="math display">\[\mathcal{L}_{decoder}(g)=-\log P(\widetilde{\mathbf{A}}|\widetilde{\mathbf{h}}_g)\tag{14}\]</span> 其中<span class="math inline">\(P(\widetilde{\mathbf{A}}|\widetilde{\mathbf{h}}_g)=MLP(\widetilde{\mathbf{h}}_g)\)</span>。</p>
 <p>得到probabilistic adjacency matrix后，要想得到一个novel graph，有下面的3种方法：</p>
 <ul>
 <li>直接根据概率<span class="math inline">\(\widetilde{a}_{ij}\)</span>进行采样</li>
@@ -801,13 +801,13 @@
 <li>使用Gumbel-Softmax将采样过程可微【20】</li>
 </ul></li>
 <li><p>Node-level decoding</p>
-<p>即首先我们采样得到的不是graph的representation，而是很多个node的representation。然后根据这些node的representation看是否两个nodes之间有连接： <span class="math display">\[\mathcal{L}_{decoder}(g)=-\frac{1}{|\mathcal{V}_g|}\sum_{v\in\mathcal{V}_g}\sum_{u\in\mathcal{V}_g}\log P(\widetilde{a}_ij|\widetilde{\bold{h}}_u,\widetilde{\bold{h}}_v)\]</span> 其中的概率可以通过公式11的方式进行计算。这样的生成过程是permutation-invaraint的，但相对来说计算量特别大。</p></li>
+<p>即首先我们采样得到的不是graph的representation，而是很多个node的representation。然后根据这些node的representation看是否两个nodes之间有连接： <span class="math display">\[\mathcal{L}_{decoder}(g)=-\frac{1}{|\mathcal{V}_g|}\sum_{v\in\mathcal{V}_g}\sum_{u\in\mathcal{V}_g}\log P(\widetilde{a}_ij|\widetilde{\mathbf{h}}_u,\widetilde{\mathbf{h}}_v)\]</span> 其中的概率可以通过公式11的方式进行计算。这样的生成过程是permutation-invaraint的，但相对来说计算量特别大。</p></li>
 </ul>
 <p><img src="/2020/08/28/gnngentlesurvey2020/GNNgentleSurvey2020_2020-08-29-15-56-37.png"><br>
 </p>
 <ul>
 <li><p>Generative Auto-Encoder</p>
-<p>不止可以进行graph generate，还能够得到graph的embedding，原理基于VAEs。公式可以表示为： <span class="math display">\[\mathcal{L}_{AE}(g)=\mathcal{L}_{decoder}(g)+\mathcal{L}_{encoder}(g)\]</span> 其中的<span class="math inline">\(\mathcal{L}_{decoder}(g)\)</span>就是上面使用的loss，而<span class="math inline">\(\mathcal{L}_{encoder}(g)\)</span>是保证latent space的distribution和某个特定的distribution之间的相似的一个“prior” regularization。 <span class="math display">\[\mathcal{L}_{encoder}(g)=-D_{KL}[\mathcal{N}(\bold{\mu},\bold{\sigma}^2)||\mathcal{N}(\bold{0},\bold{I}))]\]</span></p>
+<p>不止可以进行graph generate，还能够得到graph的embedding，原理基于VAEs。公式可以表示为： <span class="math display">\[\mathcal{L}_{AE}(g)=\mathcal{L}_{decoder}(g)+\mathcal{L}_{encoder}(g)\]</span> 其中的<span class="math inline">\(\mathcal{L}_{decoder}(g)\)</span>就是上面使用的loss，而<span class="math inline">\(\mathcal{L}_{encoder}(g)\)</span>是保证latent space的distribution和某个特定的distribution之间的相似的一个“prior” regularization。 <span class="math display">\[\mathcal{L}_{encoder}(g)=-D_{KL}[\mathcal{N}(\mathbf{\mu},\mathbf{\sigma}^2)||\mathcal{N}(\mathbf{0},\mathbf{I}))]\]</span></p>
 <p>【14】建议可以将encoder error改为Wasserstrain loss。</p></li>
 <li><p>Generative Adversarial Networks</p>
 <p>【27】使用graph-level decoder充当G生成adjacency matrix和node label matrix，然后将这些内容送入一个discriminator中进行判断。</p>
