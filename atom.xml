@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://luyiyun.online/"/>
-  <updated>2020-09-03T05:49:09.417Z</updated>
+  <updated>2020-09-05T12:32:26.034Z</updated>
   <id>https://luyiyun.online/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>论文精读-ASAP-2020</title>
-    <link href="https://luyiyun.online/2020/09/02/paper-asap2020/"/>
-    <id>https://luyiyun.online/2020/09/02/paper-asap2020/</id>
-    <published>2020-09-02T07:51:52.000Z</published>
-    <updated>2020-09-03T05:49:09.417Z</updated>
+    <title>论文精读-HetSANN-2019</title>
+    <link href="https://luyiyun.online/2020/09/05/paper-hetsann2019/"/>
+    <id>https://luyiyun.online/2020/09/05/paper-hetsann2019/</id>
+    <published>2020-09-05T07:46:12.000Z</published>
+    <updated>2020-09-05T12:32:26.034Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,7 @@
       
         
         
-          &lt;h1 id=&quot;asap-adaptive-structure-aware-pooling-for-learning-hierarchical-graph-representations&quot;&gt;ASAP: Adaptive Structure Aware Pooling for
+          &lt;h1 id=&quot;an-attention-based-graph-neural-network-for-heterogeneous-structural-learning&quot;&gt;An Attention-based Graph Neural Network for
         
       
     
@@ -44,443 +44,6 @@
       <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
     
       <category term="GNN" scheme="https://luyiyun.online/tags/GNN/"/>
-    
-      <category term="Pooling" scheme="https://luyiyun.online/tags/Pooling/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>论文精读-EdgePool-2019</title>
-    <link href="https://luyiyun.online/2020/09/01/paper-edgepool-2019/"/>
-    <id>https://luyiyun.online/2020/09/01/paper-edgepool-2019/</id>
-    <published>2020-09-01T11:53:23.000Z</published>
-    <updated>2020-09-02T07:47:56.971Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;towards-graph-pooling-by-edge-contraction&quot;&gt;Towards Graph Pooling by Edge Contraction&lt;/h1&gt;
-&lt;h1
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
-    
-    
-      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
-    
-      <category term="GNN" scheme="https://luyiyun.online/tags/GNN/"/>
-    
-      <category term="Pooling" scheme="https://luyiyun.online/tags/Pooling/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>论文精读-SAGpool-2019</title>
-    <link href="https://luyiyun.online/2020/09/01/paper-sagpool-2019/"/>
-    <id>https://luyiyun.online/2020/09/01/paper-sagpool-2019/</id>
-    <published>2020-09-01T07:33:24.000Z</published>
-    <updated>2020-09-02T11:49:38.527Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;self-attention-graph-pooling&quot;&gt;Self-Attention Graph Pooling&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;杂志: None&lt;/li&gt;
-&lt;li&gt;IF: None&lt;/li&gt;
-&lt;li&gt;分区: None&lt;/li&gt;
-&lt;li&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
-    
-    
-      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
-    
-      <category term="GNN" scheme="https://luyiyun.online/tags/GNN/"/>
-    
-      <category term="Pooling" scheme="https://luyiyun.online/tags/Pooling/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>论文精读-Graph Unet-2019</title>
-    <link href="https://luyiyun.online/2020/09/01/paper-graphunet-2019/"/>
-    <id>https://luyiyun.online/2020/09/01/paper-graphunet-2019/</id>
-    <published>2020-09-01T03:52:01.000Z</published>
-    <updated>2020-09-01T06:59:21.043Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;graph-u-nets&quot;&gt;Graph U-Nets&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;杂志: Proceedings of Machine Learning Research&lt;/li&gt;
-&lt;li&gt;IF: None&lt;/li&gt;
-&lt;li&gt;分区:
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
-    
-    
-      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
-    
-      <category term="GNN" scheme="https://luyiyun.online/tags/GNN/"/>
-    
-      <category term="Pooling" scheme="https://luyiyun.online/tags/Pooling/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文献精读-DiffPool-2018</title>
-    <link href="https://luyiyun.online/2020/09/01/paper-diffpool2018/"/>
-    <id>https://luyiyun.online/2020/09/01/paper-diffpool2018/</id>
-    <published>2020-09-01T02:25:48.000Z</published>
-    <updated>2020-09-01T03:39:58.990Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;hierarchical-graph-representation-learning-with-differentiable-pooling&quot;&gt;Hierarchical Graph Representation Learning with
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
-    
-    
-      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
-    
-      <category term="GNN" scheme="https://luyiyun.online/tags/GNN/"/>
-    
-      <category term="Pooling" scheme="https://luyiyun.online/tags/Pooling/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>论文精读-对graph的深度学习的深度介绍-2020</title>
-    <link href="https://luyiyun.online/2020/08/28/gnngentlesurvey2020/"/>
-    <id>https://luyiyun.online/2020/08/28/gnngentlesurvey2020/</id>
-    <published>2020-08-28T03:29:33.000Z</published>
-    <updated>2020-09-05T07:25:27.126Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;a-gentle-introduction-to-deep-learning-for-graphs&quot;&gt;A Gentle Introduction to Deep Learning for Graphs&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;杂志:
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Review" scheme="https://luyiyun.online/categories/Paper/Review/"/>
-    
-    
-      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
-    
-      <category term="GNN" scheme="https://luyiyun.online/tags/GNN/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>论文精读-conditional pixelCNN-2016</title>
-    <link href="https://luyiyun.online/2020/08/26/condi-pixelcnn2016/"/>
-    <id>https://luyiyun.online/2020/08/26/condi-pixelcnn2016/</id>
-    <published>2020-08-25T17:01:16.000Z</published>
-    <updated>2020-09-05T07:25:31.605Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;conditional-image-generation-with-pixelcnn-decoders&quot;&gt;Conditional Image Generation with PixelCNN Decoders&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;杂志:
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
-    
-    
-      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
-    
-      <category term="Unsupervised Learning" scheme="https://luyiyun.online/tags/Unsupervised-Learning/"/>
-    
-      <category term="Autoregressive" scheme="https://luyiyun.online/tags/Autoregressive/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>论文精读-图神经网络的表达能力综述-2020</title>
-    <link href="https://luyiyun.online/2020/08/19/gnnexpressionsurvey2020/"/>
-    <id>https://luyiyun.online/2020/08/19/gnnexpressionsurvey2020/</id>
-    <published>2020-08-19T07:36:22.000Z</published>
-    <updated>2020-09-05T07:25:29.366Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;a-survey-on-the-expressive-power-of-graph-neural-networks&quot;&gt;A Survey on The Expressive Power of Graph Neural
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Review" scheme="https://luyiyun.online/categories/Paper/Review/"/>
-    
-    
-      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
-    
-      <category term="GNN" scheme="https://luyiyun.online/tags/GNN/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>论文精读-Attention PointNet-2019</title>
-    <link href="https://luyiyun.online/2020/07/31/attpointnet2019/"/>
-    <id>https://luyiyun.online/2020/07/31/attpointnet2019/</id>
-    <published>2020-07-31T04:26:18.000Z</published>
-    <updated>2020-08-01T13:05:41.063Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;attentional-pointnet-for-3d-object-detection-in-point-clouds&quot;&gt;Attentional PointNet for 3D-Object Detection in Point
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
-    
-    
-      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
-    
-      <category term="Point Cloud Segmentation" scheme="https://luyiyun.online/tags/Point-Cloud-Segmentation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>论文精读-MADE-2015</title>
-    <link href="https://luyiyun.online/2020/07/28/made2015/"/>
-    <id>https://luyiyun.online/2020/07/28/made2015/</id>
-    <published>2020-07-28T03:36:18.000Z</published>
-    <updated>2020-09-05T07:25:20.964Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;made-masked-autoencoder-for-distribution-estimation&quot;&gt;MADE: Masked Autoencoder for Distribution Estimation&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;杂志:
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
-    
-    
-      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
-    
-      <category term="Unsupervised Learning" scheme="https://luyiyun.online/tags/Unsupervised-Learning/"/>
-    
-      <category term="Autoregressive" scheme="https://luyiyun.online/tags/Autoregressive/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>论文精读-CMPNN-2020</title>
-    <link href="https://luyiyun.online/2020/07/26/cmpnn2020/"/>
-    <id>https://luyiyun.online/2020/07/26/cmpnn2020/</id>
-    <published>2020-07-26T03:05:48.000Z</published>
-    <updated>2020-09-05T07:24:42.463Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;communicative-representation-learning-on-attributed-molecular-graphs&quot;&gt;Communicative Representation Learning on Attributed Molecular
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
-    
-    
-      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
-    
-      <category term="GNN" scheme="https://luyiyun.online/tags/GNN/"/>
-    
-      <category term="Molecular Graphs" scheme="https://luyiyun.online/tags/Molecular-Graphs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>论文精读-pointNet++-2017</title>
-    <link href="https://luyiyun.online/2020/07/12/pointnet-plus/"/>
-    <id>https://luyiyun.online/2020/07/12/pointnet-plus/</id>
-    <published>2020-07-12T01:33:17.000Z</published>
-    <updated>2020-07-14T15:40:50.187Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;pointnet-deep-hierarchical-feature-learning-on-point-sets-in-a-metric-space&quot;&gt;PointNet++: Deep Hierarchical Feature Learning on
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
-    
-    
-      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
-    
-      <category term="Point Cloud Segmentation" scheme="https://luyiyun.online/tags/Point-Cloud-Segmentation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>论文精读-pointNet-2017</title>
-    <link href="https://luyiyun.online/2020/06/20/pointnet/"/>
-    <id>https://luyiyun.online/2020/06/20/pointnet/</id>
-    <published>2020-06-20T05:30:45.000Z</published>
-    <updated>2020-07-31T04:28:18.322Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;pointnet-deep-learning-on-point-sets-for-3d-classification-and-segmentation&quot;&gt;PointNet: Deep Learning on Point Sets for 3D
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
-    
-    
-      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
-    
-      <category term="Point Cloud Segmentation" scheme="https://luyiyun.online/tags/Point-Cloud-Segmentation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>论文精读-深度连续卷积神经网络-2018</title>
-    <link href="https://luyiyun.online/2020/06/16/paper-conticnn/"/>
-    <id>https://luyiyun.online/2020/06/16/paper-conticnn/</id>
-    <published>2020-06-16T15:52:28.000Z</published>
-    <updated>2020-07-22T03:36:51.217Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;deep-parametric-continuous-convolutional-neural-networks&quot;&gt;Deep Parametric Continuous Convolutional Neural
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
-    
-    
-      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
-    
-      <category term="Point Cloud Segmentation" scheme="https://luyiyun.online/tags/Point-Cloud-Segmentation/"/>
-    
-      <category term="CNN" scheme="https://luyiyun.online/tags/CNN/"/>
     
   </entry>
   
@@ -511,9 +74,9 @@
     
       <category term="Learning" scheme="https://luyiyun.online/tags/Learning/"/>
     
-      <category term="Qt" scheme="https://luyiyun.online/tags/Qt/"/>
-    
       <category term="GUI" scheme="https://luyiyun.online/tags/GUI/"/>
+    
+      <category term="Qt" scheme="https://luyiyun.online/tags/Qt/"/>
     
   </entry>
   
@@ -545,9 +108,9 @@
     
       <category term="Learning" scheme="https://luyiyun.online/tags/Learning/"/>
     
-      <category term="Qt" scheme="https://luyiyun.online/tags/Qt/"/>
-    
       <category term="GUI" scheme="https://luyiyun.online/tags/GUI/"/>
+    
+      <category term="Qt" scheme="https://luyiyun.online/tags/Qt/"/>
     
   </entry>
   
@@ -579,9 +142,9 @@
     
       <category term="Learning" scheme="https://luyiyun.online/tags/Learning/"/>
     
-      <category term="Qt" scheme="https://luyiyun.online/tags/Qt/"/>
-    
       <category term="GUI" scheme="https://luyiyun.online/tags/GUI/"/>
+    
+      <category term="Qt" scheme="https://luyiyun.online/tags/Qt/"/>
     
   </entry>
   
@@ -613,9 +176,9 @@
     
       <category term="Learning" scheme="https://luyiyun.online/tags/Learning/"/>
     
-      <category term="Qt" scheme="https://luyiyun.online/tags/Qt/"/>
-    
       <category term="GUI" scheme="https://luyiyun.online/tags/GUI/"/>
+    
+      <category term="Qt" scheme="https://luyiyun.online/tags/Qt/"/>
     
   </entry>
   
@@ -647,9 +210,9 @@
     
       <category term="Learning" scheme="https://luyiyun.online/tags/Learning/"/>
     
-      <category term="Qt" scheme="https://luyiyun.online/tags/Qt/"/>
-    
       <category term="GUI" scheme="https://luyiyun.online/tags/GUI/"/>
+    
+      <category term="Qt" scheme="https://luyiyun.online/tags/Qt/"/>
     
   </entry>
   
@@ -682,9 +245,416 @@
     
       <category term="Learning" scheme="https://luyiyun.online/tags/Learning/"/>
     
+      <category term="GUI" scheme="https://luyiyun.online/tags/GUI/"/>
+    
       <category term="Qt" scheme="https://luyiyun.online/tags/Qt/"/>
     
-      <category term="GUI" scheme="https://luyiyun.online/tags/GUI/"/>
+  </entry>
+  
+  <entry>
+    <title>UCSC Xena Python-APIs</title>
+    <link href="https://luyiyun.online/2020/06/05/ucsc-python/"/>
+    <id>https://luyiyun.online/2020/06/05/ucsc-python/</id>
+    <published>2020-06-05T04:02:49.000Z</published>
+    <updated>2020-06-08T14:08:38.279Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;因为网连不上，所以就放弃这一部分了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;UCSC Xena官方提供了一个包--xenaPython，可以使用python程序来获得UCSC Xena的数据。&lt;/p&gt;
+&lt;script&gt;
+       
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Tools" scheme="https://luyiyun.online/categories/Tools/"/>
+    
+      <category term="UCSC Xena" scheme="https://luyiyun.online/categories/Tools/UCSC-Xena/"/>
+    
+    
+      <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
+    
+      <category term="Websites" scheme="https://luyiyun.online/tags/Websites/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C-primer-plus Data and C</title>
+    <link href="https://luyiyun.online/2020/06/04/cprimerplus-ch3/"/>
+    <id>https://luyiyun.online/2020/06/04/cprimerplus-ch3/</id>
+    <published>2020-06-04T07:42:05.000Z</published>
+    <updated>2020-06-08T14:08:38.341Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;以下是一个新的例子，可以判断和你体重相当的珀金会值多少钱：&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-c&quot;&gt;&lt;code class=&quot;language-c&quot;&gt;&lt;span class=&quot;token comment&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C" scheme="https://luyiyun.online/categories/C/"/>
+    
+    
+      <category term="Learning" scheme="https://luyiyun.online/tags/Learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>论文精读-deepNF预测蛋白质功能-2018</title>
+    <link href="https://luyiyun.online/2020/06/03/deepnf2018/"/>
+    <id>https://luyiyun.online/2020/06/03/deepnf2018/</id>
+    <published>2020-06-03T13:58:31.000Z</published>
+    <updated>2020-06-08T14:08:38.164Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;deepnf-deep-network-fusion-for-protein-function-prediction&quot;&gt;deepNF: deep network fusion for protein function
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
+    
+      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
+    
+    
+      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
+    
+      <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UCSC Xena 搜索-高亮-过滤-分组</title>
+    <link href="https://luyiyun.online/2020/06/03/ucsc-shfs/"/>
+    <id>https://luyiyun.online/2020/06/03/ucsc-shfs/</id>
+    <published>2020-06-03T07:19:14.000Z</published>
+    <updated>2020-06-08T14:08:38.308Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;依靠上方的搜索框，可以完成一系列数据筛选工作，甚至可以创建自己的分组。&lt;/p&gt;
+&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Tools" scheme="https://luyiyun.online/categories/Tools/"/>
+    
+      <category term="UCSC Xena" scheme="https://luyiyun.online/categories/Tools/UCSC-Xena/"/>
+    
+    
+      <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
+    
+      <category term="Website" scheme="https://luyiyun.online/tags/Website/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C-primer-plus introducing C</title>
+    <link href="https://luyiyun.online/2020/06/01/cprimerplus-ch2/"/>
+    <id>https://luyiyun.online/2020/06/01/cprimerplus-ch2/</id>
+    <published>2020-06-01T03:49:31.000Z</published>
+    <updated>2020-06-08T14:08:38.343Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;简单的例子&quot;&gt;1. 简单的例子&lt;/h1&gt;
+&lt;p&gt;以下是一个简短的示例文件:&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-c&quot;&gt;&lt;code class=&quot;language-c&quot;&gt;&lt;span class=&quot;token comment&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C" scheme="https://luyiyun.online/categories/C/"/>
+    
+    
+      <category term="Learning" scheme="https://luyiyun.online/tags/Learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Web技术学习--基于MDN</title>
+    <link href="https://luyiyun.online/2020/05/25/web-xue-xi/"/>
+    <id>https://luyiyun.online/2020/05/25/web-xue-xi/</id>
+    <published>2020-05-25T14:48:39.000Z</published>
+    <updated>2020-06-08T14:08:38.079Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;一直希望学习一下Web开发技术栈，所以找了许多的视频或者书籍学习。但目前为止，我认为MDN的教程是将详实和效率平衡的最好的，而且内容紧随Web技术的发展。因此我安装其教程一步一步进行学习，并对学习的内容进行一定程度的记录，这既是一种学习的方法（通过记录能够更加夯实自己的知识
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Web" scheme="https://luyiyun.online/categories/Web/"/>
+    
+    
+      <category term="MDN" scheme="https://luyiyun.online/tags/MDN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UCSC Xena 数据集</title>
+    <link href="https://luyiyun.online/2020/05/25/ucsc-dataset/"/>
+    <id>https://luyiyun.online/2020/05/25/ucsc-dataset/</id>
+    <published>2020-05-25T06:04:58.000Z</published>
+    <updated>2020-06-08T14:08:38.319Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;下载数据集&quot;&gt;下载数据集&lt;/h1&gt;
+&lt;p&gt;一共有4种方式：&lt;/p&gt;
+&lt;ol type=&quot;1&quot;&gt;
+&lt;li&gt;&lt;p&gt;spreadsheet的下拉菜单中有Download按钮，用于下载此单个column上的数据。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;整个Visual
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Tools" scheme="https://luyiyun.online/categories/Tools/"/>
+    
+      <category term="UCSC Xena" scheme="https://luyiyun.online/categories/Tools/UCSC-Xena/"/>
+    
+    
+      <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
+    
+      <category term="Website" scheme="https://luyiyun.online/tags/Website/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UCSC Xena绘制Kaplan-Meier曲线</title>
+    <link href="https://luyiyun.online/2020/05/25/ucsc-kmplot/"/>
+    <id>https://luyiyun.online/2020/05/25/ucsc-kmplot/</id>
+    <published>2020-05-25T06:04:18.000Z</published>
+    <updated>2020-06-08T14:08:38.315Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;介绍Kaplan-Meier曲线的&lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3932959/&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Tools" scheme="https://luyiyun.online/categories/Tools/"/>
+    
+      <category term="UCSC Xena" scheme="https://luyiyun.online/categories/Tools/UCSC-Xena/"/>
+    
+    
+      <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
+    
+      <category term="Website" scheme="https://luyiyun.online/tags/Website/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UCSC Xena Visual-Spreadsheet介绍</title>
+    <link href="https://luyiyun.online/2020/05/25/ucsc-spreadsheet/"/>
+    <id>https://luyiyun.online/2020/05/25/ucsc-spreadsheet/</id>
+    <published>2020-05-25T06:04:04.000Z</published>
+    <updated>2020-06-08T14:08:38.282Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;整个可视化界面有多个动态的spreadsheets组成，任何数据都可以形成一个spreadsheet。所有的spreadsheets横向排列在一起，使得每一行是相同的一个样本，便于查看样本间的趋势。样本会被排序，顺序是先按照最左边的spreadsheet上的值排序，然后依次
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Tools" scheme="https://luyiyun.online/categories/Tools/"/>
+    
+      <category term="UCSC Xena" scheme="https://luyiyun.online/categories/Tools/UCSC-Xena/"/>
+    
+    
+      <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
+    
+      <category term="Website" scheme="https://luyiyun.online/tags/Website/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UCSC Xena Demo-针对私人数据集进行分析</title>
+    <link href="https://luyiyun.online/2020/05/24/ucsc-demo2/"/>
+    <id>https://luyiyun.online/2020/05/24/ucsc-demo2/</id>
+    <published>2020-05-24T11:08:08.000Z</published>
+    <updated>2020-06-08T14:08:38.323Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;经过，我们能够对TCGA等公开数据库进行简单的可视化处理了，但实际上UCSC Xena可以做到更多。&lt;/p&gt;
+&lt;p&gt;这里我们从GEO下载数据集GSE121720作为私人数据集，然后使用UCSC Xena进行分析。这一部分的tutorial可以见官方提供的&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Tools" scheme="https://luyiyun.online/categories/Tools/"/>
+    
+      <category term="UCSC Xena" scheme="https://luyiyun.online/categories/Tools/UCSC-Xena/"/>
+    
+    
+      <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
+    
+      <category term="Website" scheme="https://luyiyun.online/tags/Website/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UCSC Xena Demo-低级胶质瘤和胶质母细胞瘤的分子特征</title>
+    <link href="https://luyiyun.online/2020/05/24/ucsc-demo1/"/>
+    <id>https://luyiyun.online/2020/05/24/ucsc-demo1/</id>
+    <published>2020-05-24T06:51:14.000Z</published>
+    <updated>2020-06-08T14:08:38.253Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;此部分的内容来自UCSC Xena官方提供的&lt;a href=&quot;https://ucsc-xena.gitbook.io/project/tutorials&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Tools" scheme="https://luyiyun.online/categories/Tools/"/>
+    
+      <category term="UCSC Xena" scheme="https://luyiyun.online/categories/Tools/UCSC-Xena/"/>
+    
+    
+      <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
+    
+      <category term="Website" scheme="https://luyiyun.online/tags/Website/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UCSC Xena 介绍</title>
+    <link href="https://luyiyun.online/2020/05/24/ucsc-introduction/"/>
+    <id>https://luyiyun.online/2020/05/24/ucsc-introduction/</id>
+    <published>2020-05-24T06:19:58.000Z</published>
+    <updated>2020-06-08T14:08:38.337Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;http://xena.ucsc.edu&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;UCSC Xena&lt;/a&gt;主要解决两个问题：&lt;/p&gt;
+&lt;ol
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Tools" scheme="https://luyiyun.online/categories/Tools/"/>
+    
+      <category term="UCSC Xena" scheme="https://luyiyun.online/categories/Tools/UCSC-Xena/"/>
+    
+    
+      <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
+    
+      <category term="Website" scheme="https://luyiyun.online/tags/Website/"/>
+    
+      <category term="Summary" scheme="https://luyiyun.online/tags/Summary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>gitignore的文件忽略规则</title>
+    <link href="https://luyiyun.online/2020/05/21/gitignore-wen-jian-hu-lue-gui-ze/"/>
+    <id>https://luyiyun.online/2020/05/21/gitignore-wen-jian-hu-lue-gui-ze/</id>
+    <published>2020-05-21T14:02:25.000Z</published>
+    <updated>2020-06-08T14:08:38.249Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在正常的工作中，经常使用到git，那自然.gitignore文件的使用是必须要掌握的。所幸我们一般用到的的.gitignore的规则都比较简单，而且其语法是使用的通配符语法，容易掌握，这里将它的语法进行一下归纳整理，便于之后查阅。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;这里的内容主要参考的
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Tools" scheme="https://luyiyun.online/categories/Tools/"/>
+    
+      <category term="Git" scheme="https://luyiyun.online/categories/Tools/Git/"/>
+    
+    
+      <category term="tools" scheme="https://luyiyun.online/tags/tools/"/>
     
   </entry>
   
