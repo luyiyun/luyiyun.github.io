@@ -192,35 +192,6 @@
   </entry>
   
   <entry>
-    <title>vae2013/vae2013_slide</title>
-    <link href="https://luyiyun.online/2020/09/01/vae2013/vae2013-slide/"/>
-    <id>https://luyiyun.online/2020/09/01/vae2013/vae2013-slide/</id>
-    <published>2020-09-01T02:16:44.715Z</published>
-    <updated>2020-05-28T08:53:23.618Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          
-&lt;div class=&quot;slide titlepage&quot;&gt;
-  &lt;h1 class=&quot;title&quot;&gt;论文精读-VAE-2013&lt;/h1&gt;
-  &lt;p class=&quot;author&quot;&gt;
-Luyiyun
-  &lt;/p&gt;
-  &lt;p class=&quot;date&quot;&gt;2020-05-27
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>论文精读-对graph的深度学习的深度介绍-2020</title>
     <link href="https://luyiyun.online/2020/08/28/gnngentlesurvey2020/"/>
     <id>https://luyiyun.online/2020/08/28/gnngentlesurvey2020/</id>
@@ -663,6 +634,41 @@ Luyiyun
         
           &lt;p&gt;Qt creator实际上是一个用于UI编程的IDE，也就是说其和PyCharm是一个东西，其支持C++、Python，可以直接使用它来编写GUI。但我们这里只考虑它的图形化界面搭建UI界面的部分。&lt;/p&gt;
 &lt;h1
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="https://luyiyun.online/categories/Python/"/>
+    
+      <category term="PyQt5" scheme="https://luyiyun.online/categories/Python/PyQt5/"/>
+    
+    
+      <category term="Learning" scheme="https://luyiyun.online/tags/Learning/"/>
+    
+      <category term="Qt" scheme="https://luyiyun.online/tags/Qt/"/>
+    
+      <category term="GUI" scheme="https://luyiyun.online/tags/GUI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PyQt5教程-Martin Qt的basic features</title>
+    <link href="https://luyiyun.online/2020/06/06/pyqt5-tutorial-martin-ch1/"/>
+    <id>https://luyiyun.online/2020/06/06/pyqt5-tutorial-martin-ch1/</id>
+    <published>2020-06-06T14:31:20.000Z</published>
+    <updated>2020-06-08T14:08:38.351Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;PyQt5是一个python库，用来调用Qt。Qt本身是一个C++的GUI framework。使用PyQt5，可以使得我们在不怎么损失C++的速度优势的情况下，利用Python创建一个gui应用。&lt;/p&gt;
+&lt;h1 id=&quot;基础&quot;&gt;基础&lt;/h1&gt;
+&lt;h2
         
       
     
