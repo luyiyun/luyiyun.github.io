@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://luyiyun.online/"/>
-  <updated>2020-09-05T12:32:26.034Z</updated>
+  <updated>2020-09-10T12:35:13.079Z</updated>
   <id>https://luyiyun.online/</id>
   
   <author>
@@ -15,6 +15,106 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>论文精读-NICE-2014</title>
+    <link href="https://luyiyun.online/2020/09/10/paper-nice-2014/"/>
+    <id>https://luyiyun.online/2020/09/10/paper-nice-2014/</id>
+    <published>2020-09-10T01:01:50.000Z</published>
+    <updated>2020-09-10T12:35:13.079Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;nice-non-linear-independent-components-estimation&quot;&gt;NICE: NON-LINEAR INDEPENDENT COMPONENTS ESTIMATION&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;杂志: ICLR
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
+    
+    
+      <category term="Unsupervised Learning" scheme="https://luyiyun.online/tags/Unsupervised-Learning/"/>
+    
+      <category term="Machine Leanring" scheme="https://luyiyun.online/tags/Machine-Leanring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>论文精读-Transformer-2017</title>
+    <link href="https://luyiyun.online/2020/09/08/paper-transformer2017/"/>
+    <id>https://luyiyun.online/2020/09/08/paper-transformer2017/</id>
+    <published>2020-09-08T06:01:51.000Z</published>
+    <updated>2020-09-09T01:35:17.477Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;attention-is-all-you-need&quot;&gt;Attention Is All You Need&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;杂志: nips&lt;/li&gt;
+&lt;li&gt;IF: None&lt;/li&gt;
+&lt;li&gt;分区: None&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
+    
+    
+      <category term="Methods" scheme="https://luyiyun.online/tags/Methods/"/>
+    
+      <category term="Attention" scheme="https://luyiyun.online/tags/Attention/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>论文精读-DeepWalk-2014</title>
+    <link href="https://luyiyun.online/2020/09/07/paper-deepwalk2014/"/>
+    <id>https://luyiyun.online/2020/09/07/paper-deepwalk2014/</id>
+    <published>2020-09-07T01:04:30.000Z</published>
+    <updated>2020-09-07T01:56:52.239Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;deepwalk-online-learning-of-social-representations&quot;&gt;DeepWalk: Online Learning of Social Representations&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;杂志:
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
+    
+      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
+    
+    
+      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
+    
+      <category term="Graph Embedding" scheme="https://luyiyun.online/tags/Graph-Embedding/"/>
+    
+  </entry>
   
   <entry>
     <title>论文精读-HetSANN-2019</title>
@@ -566,109 +666,6 @@
         
           &lt;p&gt;自定义组件的第一步，需要理解PyQt5中的bitmap（pixel-based）graphic operations，因为所有的组件其实都是利用这个东西画出来的。&lt;/p&gt;
 &lt;h1 id=&quot;qpainter和bitmap-graphics&quot;&gt;QPainter和Bitmap
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Python" scheme="https://luyiyun.online/categories/Python/"/>
-    
-      <category term="PyQt5" scheme="https://luyiyun.online/categories/Python/PyQt5/"/>
-    
-    
-      <category term="Learning" scheme="https://luyiyun.online/tags/Learning/"/>
-    
-      <category term="Qt" scheme="https://luyiyun.online/tags/Qt/"/>
-    
-      <category term="GUI" scheme="https://luyiyun.online/tags/GUI/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PyQt5教程-Martin 扩展Signals</title>
-    <link href="https://luyiyun.online/2020/06/07/pyqt5-tutorial-martin-ch3/"/>
-    <id>https://luyiyun.online/2020/06/07/pyqt5-tutorial-martin-ch3/</id>
-    <published>2020-06-07T15:22:32.000Z</published>
-    <updated>2020-06-08T14:08:38.404Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;本章将试图通过python来对signal的行为进行更改，或者创建自定义的signals。&lt;/p&gt;
-&lt;h1
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Python" scheme="https://luyiyun.online/categories/Python/"/>
-    
-      <category term="PyQt5" scheme="https://luyiyun.online/categories/Python/PyQt5/"/>
-    
-    
-      <category term="Learning" scheme="https://luyiyun.online/tags/Learning/"/>
-    
-      <category term="Qt" scheme="https://luyiyun.online/tags/Qt/"/>
-    
-      <category term="GUI" scheme="https://luyiyun.online/tags/GUI/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PyQt5教程-Martin Qt Creator</title>
-    <link href="https://luyiyun.online/2020/06/07/pyqt5-tutorial-martin-ch2/"/>
-    <id>https://luyiyun.online/2020/06/07/pyqt5-tutorial-martin-ch2/</id>
-    <published>2020-06-07T10:56:41.000Z</published>
-    <updated>2020-06-08T14:08:38.428Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Qt creator实际上是一个用于UI编程的IDE，也就是说其和PyCharm是一个东西，其支持C++、Python，可以直接使用它来编写GUI。但我们这里只考虑它的图形化界面搭建UI界面的部分。&lt;/p&gt;
-&lt;h1
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Python" scheme="https://luyiyun.online/categories/Python/"/>
-    
-      <category term="PyQt5" scheme="https://luyiyun.online/categories/Python/PyQt5/"/>
-    
-    
-      <category term="Learning" scheme="https://luyiyun.online/tags/Learning/"/>
-    
-      <category term="Qt" scheme="https://luyiyun.online/tags/Qt/"/>
-    
-      <category term="GUI" scheme="https://luyiyun.online/tags/GUI/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PyQt5教程-Martin Qt的basic features</title>
-    <link href="https://luyiyun.online/2020/06/06/pyqt5-tutorial-martin-ch1/"/>
-    <id>https://luyiyun.online/2020/06/06/pyqt5-tutorial-martin-ch1/</id>
-    <published>2020-06-06T14:31:20.000Z</published>
-    <updated>2020-06-08T14:08:38.351Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;PyQt5是一个python库，用来调用Qt。Qt本身是一个C++的GUI framework。使用PyQt5，可以使得我们在不怎么损失C++的速度优势的情况下，利用Python创建一个gui应用。&lt;/p&gt;
-&lt;h1 id=&quot;基础&quot;&gt;基础&lt;/h1&gt;
-&lt;h2
         
       
     
