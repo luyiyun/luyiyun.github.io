@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://luyiyun.online/2020/09/30/paper-vgae2016/</loc>
+    
+    <lastmod>2020-09-30T05:16:30.217Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyiyun.online/2020/09/25/paper-gcn2019/</loc>
+    
+    <lastmod>2020-09-30T00:48:26.670Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyiyun.online/2020/09/25/paper-deepgcns2019/</loc>
+    
+    <lastmod>2020-09-25T07:00:59.961Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyiyun.online/2020/09/22/paper-pointgnn2020/</loc>
+    
+    <lastmod>2020-09-25T06:59:46.663Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyiyun.online/2020/09/13/paper-gcnclscancertype-2020/</loc>
+    
+    <lastmod>2020-09-14T03:02:53.116Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://luyiyun.online/2020/09/10/paper-nice-2014/</loc>
     
     <lastmod>2020-09-10T12:35:13.079Z</lastmod>
@@ -110,6 +145,27 @@
     <loc>https://luyiyun.online/2020/06/20/pointnet/</loc>
     
     <lastmod>2020-07-31T04:28:18.322Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyiyun.online/2020/07/27/deepbind2015/</loc>
+    
+    <lastmod>2020-07-27T09:31:06.478Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyiyun.online/2020/05/15/dl-in-omics2019/</loc>
+    
+    <lastmod>2020-07-27T05:18:23.077Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyiyun.online/2020/06/03/deepnf2018/</loc>
+    
+    <lastmod>2020-07-27T03:52:47.667Z</lastmod>
     
   </url>
   
@@ -261,41 +317,6 @@
   </url>
   
   <url>
-    <loc>https://luyiyun.online/2020/06/03/deepnf2018/</loc>
-    
-    <lastmod>2020-06-08T14:08:38.164Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://luyiyun.online/2020/05/21/vae-jian-mo-pancancer2019/</loc>
-    
-    <lastmod>2020-06-08T14:08:38.144Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://luyiyun.online/2020/05/15/dl-in-omics2019/</loc>
-    
-    <lastmod>2020-06-08T14:08:38.132Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://luyiyun.online/2020/05/17/rnn-jian-wang-2016/</loc>
-    
-    <lastmod>2020-06-08T14:08:38.097Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://luyiyun.online/2020/05/19/pamogk2019/</loc>
-    
-    <lastmod>2020-06-08T14:08:38.081Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://luyiyun.online/2020/05/25/web-xue-xi/</loc>
     
     <lastmod>2020-06-08T14:08:38.079Z</lastmod>
@@ -369,6 +390,27 @@
     <loc>https://luyiyun.online/2020/05/18/css-wen-ben/</loc>
     
     <lastmod>2020-06-08T14:08:38.025Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyiyun.online/2020/05/19/pamogk2019/</loc>
+    
+    <lastmod>2020-06-04T03:12:01.106Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyiyun.online/2020/05/21/vae-jian-mo-pancancer2019/</loc>
+    
+    <lastmod>2020-06-04T03:06:17.620Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyiyun.online/2020/05/17/rnn-jian-wang-2016/</loc>
+    
+    <lastmod>2020-06-04T03:06:11.800Z</lastmod>
     
   </url>
   

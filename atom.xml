@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://luyiyun.online/"/>
-  <updated>2020-09-10T12:35:13.079Z</updated>
+  <updated>2020-09-30T05:16:30.217Z</updated>
   <id>https://luyiyun.online/</id>
   
   <author>
@@ -15,6 +15,168 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>论文精读-变分图自编码器-2016</title>
+    <link href="https://luyiyun.online/2020/09/30/paper-vgae2016/"/>
+    <id>https://luyiyun.online/2020/09/30/paper-vgae2016/</id>
+    <published>2020-09-30T01:19:26.000Z</published>
+    <updated>2020-09-30T05:16:30.217Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;variational-graph-auto-encoders&quot;&gt;Variational Graph Auto-Encoders&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;杂志: None&lt;/li&gt;
+&lt;li&gt;IF: None&lt;/li&gt;
+&lt;li&gt;分区:
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
+    
+    
+      <category term="GNN" scheme="https://luyiyun.online/tags/GNN/"/>
+    
+      <category term="VI" scheme="https://luyiyun.online/tags/VI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>论文精读-VGCN-2019</title>
+    <link href="https://luyiyun.online/2020/09/25/paper-gcn2019/"/>
+    <id>https://luyiyun.online/2020/09/25/paper-gcn2019/</id>
+    <published>2020-09-25T07:06:46.000Z</published>
+    <updated>2020-09-30T00:48:26.670Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;variational-graph-convolutional-networks&quot;&gt;Variational Graph Convolutional Networks&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;杂志: None&lt;/li&gt;
+&lt;li&gt;IF:
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
+    
+    
+      <category term="GNN" scheme="https://luyiyun.online/tags/GNN/"/>
+    
+      <category term="semi-supervised" scheme="https://luyiyun.online/tags/semi-supervised/"/>
+    
+      <category term="VI" scheme="https://luyiyun.online/tags/VI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>论文精读-DeepGCNs-2019</title>
+    <link href="https://luyiyun.online/2020/09/25/paper-deepgcns2019/"/>
+    <id>https://luyiyun.online/2020/09/25/paper-deepgcns2019/</id>
+    <published>2020-09-25T06:12:52.000Z</published>
+    <updated>2020-09-25T07:00:59.961Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;deepgcns-can-gcns-go-as-deep-as-cnns&quot;&gt;DeepGCNs: Can GCNs Go as Deep as CNNs?&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;杂志: None&lt;/li&gt;
+&lt;li&gt;IF: None&lt;/li&gt;
+&lt;li&gt;分区:
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
+    
+    
+      <category term="Point Cloud Segmentation" scheme="https://luyiyun.online/tags/Point-Cloud-Segmentation/"/>
+    
+      <category term="GNN" scheme="https://luyiyun.online/tags/GNN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>论文精读-Point-GNN-2020</title>
+    <link href="https://luyiyun.online/2020/09/22/paper-pointgnn2020/"/>
+    <id>https://luyiyun.online/2020/09/22/paper-pointgnn2020/</id>
+    <published>2020-09-22T11:00:22.000Z</published>
+    <updated>2020-09-25T06:59:46.663Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;point-gnn-graph-neural-network-for-3d-object-detection-in-a-point-cloud&quot;&gt;Point-GNN: Graph Neural Network for 3D Object Detection in
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
+    
+    
+      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
+    
+      <category term="GNN" scheme="https://luyiyun.online/tags/GNN/"/>
+    
+      <category term="Point Cloud Detection" scheme="https://luyiyun.online/tags/Point-Cloud-Detection/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>论文精读-使用GCN对癌症进行分类-2020</title>
+    <link href="https://luyiyun.online/2020/09/13/paper-gcnclscancertype-2020/"/>
+    <id>https://luyiyun.online/2020/09/13/paper-gcnclscancertype-2020/</id>
+    <published>2020-09-13T01:32:34.000Z</published>
+    <updated>2020-09-14T03:02:53.116Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;classification-of-cancer-types-using-graph-convolutional-neural-networks&quot;&gt;Classification of Cancer Types Using Graph Convolutional
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
+    
+    
+      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
+    
+      <category term="GNN" scheme="https://luyiyun.online/tags/GNN/"/>
+    
+      <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
+    
+  </entry>
   
   <entry>
     <title>论文精读-NICE-2014</title>
@@ -457,6 +619,37 @@
   </entry>
   
   <entry>
+    <title>论文精读-DeepBind预测DNA/RNA蛋白结合位点-2015</title>
+    <link href="https://luyiyun.online/2020/07/27/deepbind2015/"/>
+    <id>https://luyiyun.online/2020/07/27/deepbind2015/</id>
+    <published>2020-07-27T03:34:46.000Z</published>
+    <updated>2020-07-27T09:31:06.478Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;predicting-the-sequence-specificities-of-dna--and-rna-binding-proteins-by-deep-learning&quot;&gt;Predicting the sequence specificities of
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
+    
+      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
+    
+    
+      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
+    
+      <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
+    
+  </entry>
+  
+  <entry>
     <title>论文精读-CMPNN-2020</title>
     <link href="https://luyiyun.online/2020/07/26/cmpnn2020/"/>
     <id>https://luyiyun.online/2020/07/26/cmpnn2020/</id>
@@ -486,202 +679,6 @@
       <category term="GNN" scheme="https://luyiyun.online/tags/GNN/"/>
     
       <category term="Molecular Graphs" scheme="https://luyiyun.online/tags/Molecular-Graphs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>论文精读-pointNet++-2017</title>
-    <link href="https://luyiyun.online/2020/07/12/pointnet-plus/"/>
-    <id>https://luyiyun.online/2020/07/12/pointnet-plus/</id>
-    <published>2020-07-12T01:33:17.000Z</published>
-    <updated>2020-07-14T15:40:50.187Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;pointnet-deep-hierarchical-feature-learning-on-point-sets-in-a-metric-space&quot;&gt;PointNet++: Deep Hierarchical Feature Learning on
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
-    
-    
-      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
-    
-      <category term="Point Cloud Segmentation" scheme="https://luyiyun.online/tags/Point-Cloud-Segmentation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>论文精读-pointNet-2017</title>
-    <link href="https://luyiyun.online/2020/06/20/pointnet/"/>
-    <id>https://luyiyun.online/2020/06/20/pointnet/</id>
-    <published>2020-06-20T05:30:45.000Z</published>
-    <updated>2020-07-31T04:28:18.322Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;pointnet-deep-learning-on-point-sets-for-3d-classification-and-segmentation&quot;&gt;PointNet: Deep Learning on Point Sets for 3D
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
-    
-    
-      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
-    
-      <category term="Point Cloud Segmentation" scheme="https://luyiyun.online/tags/Point-Cloud-Segmentation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>论文精读-深度连续卷积神经网络-2018</title>
-    <link href="https://luyiyun.online/2020/06/16/paper-conticnn/"/>
-    <id>https://luyiyun.online/2020/06/16/paper-conticnn/</id>
-    <published>2020-06-16T15:52:28.000Z</published>
-    <updated>2020-07-22T03:36:51.217Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;deep-parametric-continuous-convolutional-neural-networks&quot;&gt;Deep Parametric Continuous Convolutional Neural
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
-    
-    
-      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
-    
-      <category term="Point Cloud Segmentation" scheme="https://luyiyun.online/tags/Point-Cloud-Segmentation/"/>
-    
-      <category term="CNN" scheme="https://luyiyun.online/tags/CNN/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PyQt5学习</title>
-    <link href="https://luyiyun.online/2020/06/08/pyqt5-index/"/>
-    <id>https://luyiyun.online/2020/06/08/pyqt5-index/</id>
-    <published>2020-06-08T13:34:43.000Z</published>
-    <updated>2020-06-08T14:08:38.408Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;PyQt5作为一个非常成熟的GUI制作Python模块，是非常值得学习的，最重要的是我正好有这方面的需求，希望制作一个不错的博客文件管理系统。之前是使用tkinter来制作的，tkinter也很不错，非常容易上手，适合简单的应用，但问题在于对于其中一些组件的控制实在不容易，
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Python" scheme="https://luyiyun.online/categories/Python/"/>
-    
-      <category term="PyQt5" scheme="https://luyiyun.online/categories/Python/PyQt5/"/>
-    
-    
-      <category term="Learning" scheme="https://luyiyun.online/tags/Learning/"/>
-    
-      <category term="Qt" scheme="https://luyiyun.online/tags/Qt/"/>
-    
-      <category term="GUI" scheme="https://luyiyun.online/tags/GUI/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PyQt5教程-Martin ModelView架构</title>
-    <link href="https://luyiyun.online/2020/06/08/pyqt5-tutorial-martin-ch5/"/>
-    <id>https://luyiyun.online/2020/06/08/pyqt5-tutorial-martin-ch5/</id>
-    <published>2020-06-08T06:55:57.000Z</published>
-    <updated>2020-06-08T14:08:38.426Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;我们在构建复杂的应用的时候往往会遇到ui界面和外部数据间如何交互的问题。有以下几种方式：&lt;/p&gt;
-&lt;ol
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Python" scheme="https://luyiyun.online/categories/Python/"/>
-    
-      <category term="PyQt5" scheme="https://luyiyun.online/categories/Python/PyQt5/"/>
-    
-    
-      <category term="Learning" scheme="https://luyiyun.online/tags/Learning/"/>
-    
-      <category term="Qt" scheme="https://luyiyun.online/tags/Qt/"/>
-    
-      <category term="GUI" scheme="https://luyiyun.online/tags/GUI/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PyQt5教程-Martin 自定义组件</title>
-    <link href="https://luyiyun.online/2020/06/08/pyqt5-tutorial-martin-ch4/"/>
-    <id>https://luyiyun.online/2020/06/08/pyqt5-tutorial-martin-ch4/</id>
-    <published>2020-06-08T03:34:45.000Z</published>
-    <updated>2020-06-08T14:08:38.410Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;自定义组件的第一步，需要理解PyQt5中的bitmap（pixel-based）graphic operations，因为所有的组件其实都是利用这个东西画出来的。&lt;/p&gt;
-&lt;h1 id=&quot;qpainter和bitmap-graphics&quot;&gt;QPainter和Bitmap
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Python" scheme="https://luyiyun.online/categories/Python/"/>
-    
-      <category term="PyQt5" scheme="https://luyiyun.online/categories/Python/PyQt5/"/>
-    
-    
-      <category term="Learning" scheme="https://luyiyun.online/tags/Learning/"/>
-    
-      <category term="Qt" scheme="https://luyiyun.online/tags/Qt/"/>
-    
-      <category term="GUI" scheme="https://luyiyun.online/tags/GUI/"/>
     
   </entry>
   

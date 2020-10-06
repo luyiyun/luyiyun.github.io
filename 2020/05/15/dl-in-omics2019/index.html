@@ -579,21 +579,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-06-08
+                    2020-07-27
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3k
+                    3.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    12 分
                 </div>
                 
 
@@ -743,7 +743,7 @@
 <h3 id="编码">编码</h3>
 <ul>
 <li><p><strong>one-hot encoding</strong></p>
-<p>略</p></li>
+<p><span class="math inline">\(N\)</span>长度的DNA序列被编码为<span class="math inline">\(4\times N\)</span>的矩阵，蛋白质序列被编码成<span class="math inline">\(20\times N\)</span>的矩阵，其中的每个值是<span class="math inline">\(0\)</span>或<span class="math inline">\(1\)</span>。</p></li>
 <li><p><a href="https://en.wikipedia.org/wiki/Position-Specific_Scoring_Matrix" target="_blank" rel="noopener"><strong>position-specific scoring matrix（PSSM, PWM, PSWM）</strong></a></p>
 <p>也可以用来编码核苷酸序列或蛋白质序列，这里使用wiki的例子进行解释：</p>
 <ol type="a">
@@ -769,8 +769,14 @@ AAGGTAAGT</code></pre></li>
 </p></li>
 <li><p>然后使用其来编码数据即可。</p></li>
 </ol>
-<p>有一些现有的程序可以实现（比如PSI-BLAST），在这些算法中，其计算过程更加复杂，但基本思想是一致的。</p></li>
-<li><p><strong><a href="https://en.wikipedia.org/wiki/Point_accepted_mutation" target="_blank" rel="noopener">PAM（point accepted mutation）matrix</a> and <a href="https://en.wikipedia.org/wiki/BLOSUM" target="_blank" rel="noopener">BLOSUM（blocks substitution）matrix</a></strong></p></li>
+<p>有一些现有的程序可以实现（比如PSI-BLAST），在这些算法中，其计算过程更加复杂，但基本思想是一致的。</p>
+<blockquote>
+<p>这样编码是认为<strong>在序列的不同位置，相同的标签也应该有不同的编码</strong>。比如在序列开始的A和在序列结束时的A应该有不同的值。</p>
+<p>如果某个位置上，A出现的次数明显比CGT更多，则其自然在此位置有更高的权重。如果在另外的位置上，A出现的次数比较少，则其就有较小的权重。如果一次都没有出现，权重是<span class="math inline">\(-\infty\)</span></p>
+<p>另外，权重的大小还和类别数有关。比如在某位置上，氨基酸序列中A（丙氨酸）出现的频率是0.7，在DNA序列中A（腺嘌呤）出现的概率也是0.7，但最终氨基酸序列计算的编码要比DNA序列计算的编码大。这是因为在20分类中得到0.7的概率要比4分类更难，自然应有更高的赋值。</p>
+</blockquote></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/Point_accepted_mutation" target="_blank" rel="noopener">PAM（point accepted mutation）matrix</a> and <a href="https://en.wikipedia.org/wiki/BLOSUM" target="_blank" rel="noopener">BLOSUM（blocks substitution）matrix</a></strong></p>
+<p>这两个矩阵是序列的替换记分矩阵，常用于序列比对，即其衡量了序列上的两个值间的相似程度。那么同样的，其也可以用来作为序列的编码。详情请见</p></li>
 </ul>
 <p>除了以上3种方法外，对于蛋白质序列，还有autocovariance method和conjoint triad method 【126】方法。</p>
 <p>另外，还有一些方法致力于将多种类型的数据进行整合分析【128,49,50,98,129】。</p>
@@ -1705,7 +1711,7 @@ AAGGTAAGT</code></pre></li>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">104.7k</span>&nbsp;字
+                class="white-color">116.4k</span>&nbsp;字
             
             
             
