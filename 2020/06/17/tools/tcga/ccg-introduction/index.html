@@ -1,0 +1,1860 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="CCG以及癌症基因组学简介, math, statistics, computer, ai">
+    <meta name="description" content="数学、统计、计算机及人工智能">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>CCG以及癌症基因组学简介 | 卢一云的博客</title>
+    <link rel="icon" type="image/png" href="/favicon1.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="卢一云的博客" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo1.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">卢一云的博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>Medias</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/musics">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Musics</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/movies">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Movies</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/books">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Books</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/galleries">
+          
+          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Galleries</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo1.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">卢一云的博客</div>
+        <div class="logo-desc">
+            
+            数学、统计、计算机及人工智能
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			Medias
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/musics " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Musics</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/movies " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Movies</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/books " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Books</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/galleries " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Galleries</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">CCG以及癌症基因组学简介</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Omics/">
+                                <span class="chip bg-color">Omics</span>
+                            </a>
+                        
+                            <a href="/tags/Websites/">
+                                <span class="chip bg-color">Websites</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Tools/" class="post-category">
+                                Tools
+                            </a>
+                        
+                            <a href="/categories/Tools/CCG/" class="post-category">
+                                CCG
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-06-17
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2020-12-03
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    3.6k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    13 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>NCI，全称为The National Cancer Institute，是美国联邦政府进行癌症研究、培训的政府部门，主要任务是领导、组织、支持国家范围的癌症研究，增进科学知识，任何人们获得更久、更健康。关于NCI的更多内容可以去参考其<a href="https://www.cancer.gov/about-nci/overview" target="_blank" rel="noopener">官网的介绍</a>。</p>
+<blockquote>
+<p>NCI的团队属于NIH（美国国立卫生院，the National Institute of Health）的一部分，而NIH是HHS（卫生与公共服务部，the Department of Health and Human Services）的一个11个下属部门之一。<br>
+HHS可以看做是美国的卫生部（当然职权更大），FDA就是其下属部门之一。</p>
+</blockquote>
+<p>CCG（Center for Cancer Genomics，癌症基因组学中心）是NCI的一个机构，致力于综合不同领域的癌症基因组学研究（structural、functional、computational）来提高病人的治疗效果。CCG的项目和合作者提供了一系列癌症基因组学数据和临床数据，供全世界的癌症研究者进行研究（包括耳熟能详的TCGA）。</p>
+<p>以下内容是对<a href="https://www.cancer.gov/about-nci/organization/ccg" target="_blank" rel="noopener">CCG官方介绍</a>的整理，主要内容是癌症基因组学的介绍和CCG如何组织进行癌症基因组学研究。希望能够加深对癌症基因组学的理解，并且可以利用到CCG组织的一系列公共资源。</p>
+<h1 id="癌症基因组学综述">1. 癌症基因组学综述</h1>
+<p>cancer是一类疾病，主要原因来自于<strong>DNA的改变导致的细胞行为发生变化，一般是不可控的生长和增值（malignancy）</strong>。</p>
+<blockquote>
+<p>malignancy，是一种疾病状态，一些异常细胞不受控制的分裂并侵入到临近的组织中。malignant cells还可以通过血液或淋巴系统扩散到身体的其他部分，更常用的叫法就是癌症（cancer）。有以下几种主要的类型：</p>
+<ul>
+<li>carcinoma（癌）：始于皮肤或覆盖器官的组织（上皮性）。</li>
+<li>Sarcoma（肉瘤）：始于骨骼、软骨、脂肪、肌肉、血管或其他结缔组织或支持组织。</li>
+<li>leukemia（白血病）：来自于造血系统，导致不正常的血细胞的产生。</li>
+<li>lymphoma and multiple myeloma（淋巴瘤和多发性骨髓瘤）：源自免疫系统。</li>
+<li>central nervous system cancers（中央神经系统癌症）：源自大脑和脊髓。</li>
+</ul>
+</blockquote>
+<p><img src="/2020/06/17/tools/tcga/ccg-introduction/ccg-introduction_2020-06-17-20-29-26.png" alt="关于转移"><br>
+</p>
+<p>DNA的改变有多种类型：</p>
+<ul>
+<li><p>mutations</p>
+<blockquote>
+<p>DNA序列的任意形式的改变都被称为mutation或variant。其一般发生在细胞分裂或暴露DNA-damaging agents时，可能是有害、有益或无影响的。当mutation发生在生殖细胞中，则该突变可以遗传；当发生在其他细胞中则不可遗传。特定的突变可能会导致癌症或其他的疾病。</p>
+</blockquote></li>
+<li><p>rearrangements</p></li>
+<li><p>deletions</p></li>
+<li><p>amplifications</p></li>
+<li><p>addition or removal of chemical marks</p></li>
+</ul>
+<p><img src="/2020/06/17/tools/tcga/ccg-introduction/ccg-introduction_2020-06-17-20-30-29.png" alt="DNA图示"><br>
+</p>
+<p>这些改变一般会导致产生异常数量的蛋白质或错误的蛋白质。通常来说，多种DNA改变一起导致了cancer的发生。<strong>人在一生中累计的基因变化成为获得性或体细胞改变（acquired or somatic changes），约占癌症所有病例的90%-95%</strong>。</p>
+<p><strong>genomics</strong>，指的是对人类的整个DNA set的研究。</p>
+<ul>
+<li><p>通过对比癌症细胞和正常组织细胞的DNA或RNA序列，来研究那些genetic differences可能引起cancer。</p>
+<blockquote>
+<p>tissue的定义：一系列的细胞的组合，用来完成一个特定的功能。</p>
+</blockquote></li>
+<li><p>通过统计DNA编码的genes在正常细胞和癌症细胞间活跃性的差异，来理解到底那些蛋白质的异常或失活导致了癌症的发生。</p></li>
+</ul>
+<p>一旦癌症的发生机制被确定，科学家们就可以针对性的开发新的治疗、干预策略来治疗疾病，延长病人的寿命。其中最重要的一种手段是precision medicine。</p>
+<blockquote>
+<p>precision medicine，利用癌症细胞的genetic changes来决定患者的治疗方案。</p>
+</blockquote>
+<p>药物被设计以下面的这些方式来发挥作用：</p>
+<ul>
+<li>抑制引发癌细胞异常生长的酶的活性</li>
+<li>阻断基因表达特性</li>
+<li>阻断癌细胞中超速运转的分子信号通路</li>
+</ul>
+<blockquote>
+<p>gene expression的定义：是gene在cell中被转换成RNA或protein的过程，可以通过测量RNA、protein或protein的功能来进行定量。</p>
+</blockquote>
+<p>以上这些靶向治疗只作用于癌细胞和正常细胞的不同特性，所以其相对于传统疗法（放疗和化疗）拥有更低的毒性。以下是已经在临床应用的例子：</p>
+<ul>
+<li>Imatinib（伊马替尼，Gleevec，格列卫，就是《我不是药神》里的药），是一种用于治疗白血病的药物，对其他癌症比如皮肤癌也有一定效果。其通过抑制白血病病人体内的Bcr-Abl络氨酸激酶的过度表达来达到治疗目的，而这通常源于一段特定染色体的rearrangement。</li>
+<li>Trastuzumab（曲妥珠单抗，Herceptin，赫赛汀）控制一种过度活跃的信号通路（HER2酪氨酸激酶），由一种乳腺癌亚型中HER2基因的多个拷贝引起的。</li>
+<li>Erlotinib（埃洛替尼，Tarceva，特罗凯）和gefitinib（吉非替尼，Iressa，易瑞沙）都限制了一种蛋白（表皮生长因子，EGFR）的激活，这种蛋白在肺癌亚群中由于蛋白突变而异常活跃。</li>
+</ul>
+<p>另外，genomics research还通过定义更加精确的癌症亚型来为precision medicine做出贡献。更加精细的molecular substyle代表癌症的更加精确分类，有助于更加个体化的治疗。当前已经在临床发挥效果的癌症亚型分类有：</p>
+<ul>
+<li>乳腺癌根据分子特征被分为不同的亚组（Luminal A, Luminal B, Triple-negative/basal-like, HER2），它们的侵袭性和对治疗的反应不同。</li>
+<li>弥漫性大B细胞淋巴瘤可细分为ABC和GCB亚型，不同的患者对化疗方案和分子靶向治疗有着不同的反应。</li>
+<li>2013年，TCGA计划确定了子宫内膜癌的四种亚型（POLE ultramutated, microsatellite instability (MSI) hypermutated, copy-number (CN) low, CN high），不同亚型的患者生存率不同。这项研究已经引发了新的临床试验，研究这些亚型如何改善子宫内膜癌的临床治疗。</li>
+<li>含有ROS1基因融合的肺癌患者通常对一种名为克里佐替尼（crizotinib）的靶向治疗反应良好。</li>
+</ul>
+<blockquote>
+<p>microsatellite instability (MSI)，微卫星不稳定，一种发生在某些细胞（如癌细胞）中的变化，microsatellite（一段短而重复的DNA序列）中的重复DNA碱基的数量与遗传时的不同，这可能意味着DNA在复制的时候出现了错误。这在结直肠癌、胃癌和子宫内膜癌中最为常见，其他癌症也有。了解MSI可能有助于我们指定最佳的治疗方案。</p>
+</blockquote>
+<h1 id="ccg的研究">2. CCG的研究</h1>
+<h2 id="结构基因组学研究">2.1 结构基因组学研究</h2>
+<p>结构基因组学（structural genomics）旨在了解<strong>癌症细胞相对于正常细胞，DNA、RNA发生了怎样的变化</strong>，这里的“结构”指的就是DNA和RNA。其典型的项目就是TCGA。</p>
+<ul>
+<li><p>关键问题</p>
+<ol type="1">
+<li>哪些genes负责肿瘤的生长、转移和药物抵抗？</li>
+<li>哪些分子特征导致了某些癌症类型要比其他类型更有侵袭性？</li>
+<li>未来癌症的分子诊断应该是什么样子的？</li>
+</ol></li>
+<li><p>工具和方法</p>
+<ol type="1">
+<li>Next-generation DNA exome sequencing</li>
+<li>Next-generation DNA whole genome sequencing</li>
+<li>Total RNA sequencing</li>
+<li>Reverse phase protein array（RPPA）protein analysis</li>
+<li>Epigenomic analysis</li>
+</ol></li>
+<li><p>项目和合作</p>
+<ol type="1">
+<li><p>ALCHEMIST（辅助肺癌富集标记物鉴定及测序试验）</p>
+<p>这是一项precision medicine clinical trial，关于lung cancer，接受的病人满足下面的两种genomic特征：</p>
+<ul>
+<li><p>EGFR改变</p>
+<blockquote>
+<p>epidermal growth factor receptor（表皮生长因子受体），是在一些细胞中存在的蛋白质，其和一种称为表皮生长因子（epidermal growth factor）的物质结合，参与控制细胞分裂和生存的信号通路。<br>
+其对应gene的突变会导致某些细胞产生更多的EGFR，这可能是导致癌细胞分裂更加迅速的一个原因。<br>
+阻断表达EGFR的药物被用来治疗某些癌症。<br>
+EGFR是一种受体酪氨酸激酶，也叫做ErbB1、HER1。</p>
+</blockquote></li>
+<li><p>ALK改变</p>
+<blockquote>
+<p>间变性淋巴瘤激酶（anaplastic lymphoma kinase），在间变性大细胞淋巴瘤、神经母细胞瘤和非小细胞肺癌中常常发生变化。<br>
+ALK的改变可能会导致癌症细胞生长和扩算。<br>
+ALK是一种受体酪氨酸激酶。</p>
+</blockquote></li>
+</ul>
+<p>分别接受erlotinib和crizotinib治疗。</p>
+<p>这是CCG和NCI的Division of Cancer Treatment and Diagnosis（NCI下属的另一个组织）合作的项目。</p></li>
+<li><p>CDDP（Cancer Driver Discovery Program）</p>
+<p>CDDP旨在识别患者的驱动突变（占总突变的2%）。通过对大量病例进行测序，CDDP将具有足够的统计效能发现基因中可能驱动致癌过程的复发突变。涉及到的癌症类型有：肺癌、结肠癌和卵巢癌。</p></li>
+<li><p>CGCI（Cancer Genome Characterization Initiative）</p></li>
+<li><p>Cancer of Unknown Primary (CUP) Consortium</p></li>
+<li><p>Clinical Trial Sequencing Project (CTSP)</p></li>
+<li><p>Early Onset Malignancies Initiative (EOMI)</p></li>
+<li><p>Exceptional Responders (ER) Initiative</p>
+<p>收集了100例有对药物治疗有特殊应答（疗效特别好）的患者的基因图谱。</p></li>
+<li><p>Refractory Cancers</p></li>
+<li><p>Therapeutically Applicable Research to Generate Effective Treatments (TARGET)</p></li>
+<li><p>The Cancer Genome Atlas (TCGA)</p>
+<p>TCGA是NCI和NHGRI（美国国家人类基因组研究所）的合作项目，已经生成了33种癌症关键基因组变化的全面、多视角图谱。TCGA数据集包含超过2pb的基因组数据，可以公开获取，并帮助癌症研究社区改善癌症的预防、诊断和治疗。</p>
+<p>2018年4月，TCGA research networks发表了<a href="http://www.cell.com/consortium/pancanceratlas" target="_blank" rel="noopener">Pan-Cancer Atlas</a>，一个cross-cancer analyses研究，标志着TCGA项目的结束。</p>
+<p>关于TCGA更多的内容请参见<a href="https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga" target="_blank" rel="noopener">链接</a>和</p></li>
+</ol></li>
+</ul>
+<h2 id="功能基因组学">2.2 功能基因组学</h2>
+<p>Functional genomics research研究检查genome在癌症中的作用。通过测试从结构基因组学研究中得出的假设，或者从对癌细胞的实验中产生新的想法，功能基因组学研究揭示了癌症生物学的模式。这些模式有时可以直接转化为精确的治疗方案，比如CTD2网络的研究。</p>
+<blockquote>
+<p>简单来说，结构基因组学类似探索性研究，而功能基因组学类似机制研究。</p>
+</blockquote>
+<ul>
+<li><p>关键问题</p>
+<ol type="1">
+<li>癌症中改变的gene是如何导致癌细胞的的快速增殖和生存的？</li>
+<li>药物和新的化合物是否可以有效影响癌症异常的分子通路？</li>
+<li>病人活检产生的肿瘤模型能否用于了解治疗效果或耐药性的机制？</li>
+</ol></li>
+<li><p>工具和方法</p>
+<p>CCG的功能基因组学研究使用癌症模型进行高通量药物筛选，使用RNA干扰和CRISPR-Cas9技术进行基因干扰实验，以及许多其他全基因组技术。目前，CCG的研究人员使用癌细胞系、生长在培养皿中的肿瘤类器官培养物，或携带人类肿瘤移植物的小鼠来确定特定基因改变的影响。认识到产生癌症模型的新方法的力量，CCG正在支持发展尖端的有机体和条件重编程细胞模型，以促进安全和有效的转换功能癌症基因组学发现到临床护理。</p></li>
+<li><p>项目和合作</p>
+<ol type="1">
+<li>Cancer Target Discovery and Development (CTD2) Network</li>
+<li>Human Cancer Models Initiative (HCMI)</li>
+</ol></li>
+</ul>
+<h2 id="计算基因组学">2.3 计算基因组学</h2>
+<ul>
+<li><p>关键问题</p>
+<ol type="1">
+<li>分析从大量患者中收集的癌症基因组数据集，能增强我们发现新的癌症驱动突变的能力吗?</li>
+<li>展示癌症基因组数据的最佳方式是什么？为了让癌症研究人员能够探索和可视化大型复杂的数据集?</li>
+<li>研究者如何有效地将来自多种模式的基因组数据整合成一个关于致癌通路的统一的观点?</li>
+<li>哪些新技术提供了关于癌症机制的新观点？如单细胞DNA和RNA测序?</li>
+</ol></li>
+<li><p>工具和方法</p>
+<p>computational genomics将算法和统计模型应用到big datasets。CCG使用Genome Characterization Pipeline来生成genomic、clinical数据集，然后通过GDC（Genomic Data Commons）分享数据，并且和NCI Cloud Resources积极合作。</p></li>
+<li><p>项目和合作</p>
+<ol type="1">
+<li><p>Genomic Data Commons</p>
+<p>是CCG建立的统一的数据整合平台，其将各个研究团队提交的robust genomic data整合在一起，便于复用，并提供了一系列的可视化和分析工具。</p>
+<p>详情可见<a href="https://gdc.cancer.gov/about-gdc" target="_blank" rel="noopener">官网介绍</a>和</p></li>
+<li><p>NCI Cloud Resources</p></li>
+</ol></li>
+</ul>
+<h2 id="基因组描述管道">2.4 基因组描述管道</h2>
+<p>CCG协调美国和加拿大的研究团队，为癌症研究社区提供丰富的癌症基因组和临床数据集。其通过一个称为Genome Characterization Pipeline的高效和标准化的工作流程来实现这种协作。</p>
+<p><img src="/2020/06/17/tools/tcga/ccg-introduction/ccg-introduction_2020-06-18-00-06-58.png" alt="流程图"><br>
+</p>
+<ol type="1">
+<li><p>组织收集和预处理</p>
+<ul>
+<li>Tissue Source Sites从每个病人收集癌症组织和正常组织（大多是血液），大多数组织使用FFPE（福尔马林石蜡包埋），还有一些使用快速冷冻技术。</li>
+</ul>
+<p>CCG的Biospecimen Core Resource（BCR）有两个单位组成：</p>
+<ul>
+<li>Biospecimen Processing Center at Nationwide Children’s Hospital负责对所有的组织进行处理，分离出DNA、RNA、蛋白质和其他分析物，然后送入CCG的Genome Characterization Centers（GCC）。</li>
+<li>Clinical Data Center at Information Management Services掌管知情同意，并进行审查，保证患者的隐私安全。</li>
+</ul></li>
+<li><p>基因组特征</p>
+<ul>
+<li><p>GCC接受BCR的DNA、RNA和proteins分析物，并产生数据。不同类型的物质将在不同的单位进行测序：</p>
+<ul>
+<li>The Broad Institute负责DNA，执行全基因组测序和全外显子组测序。</li>
+<li>The University of North Carolina负责RNA，执行全RNA组测序。</li>
+<li>MD Anderson Cancer Center负责proteins，得到RPPA。</li>
+</ul></li>
+<li><p>GCC将得到的raw sequence data、相关的metadat、其他characterization data一起发送给GDC，以便于Genomic Data Analysis Network（GDAN）和癌症研究社区使用。</p></li>
+</ul></li>
+<li><p>基因组数据分析</p>
+<ul>
+<li><p>GDAN是一个CCG牵头成立由大量的研究团队（来自美国和加拿大）组成的研究范式。这些组织会收到GDC的数据并按照设计好的研究流程对GDC上的数据进行分析并发布结论。每个团队会负责其擅长的部分，比如数据预处理、癌症驱动、可视化等子课题。</p>
+<blockquote>
+<p>UCSC的Jingchun Zhu领导的团队就是其中一员，负责GDC数据的可视化展示。</p>
+</blockquote></li>
+<li><p>全球其他癌症研究团队可以从GDC中获取GDAN的分析数据来开展新颖的研究，以促进癌症基因组学的发展。</p></li>
+</ul></li>
+</ol>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Luyiyun</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://luyiyun.online/2020/06/17/tools/tcga/ccg-introduction/">https://luyiyun.online/2020/06/17/tools/tcga/ccg-introduction/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Luyiyun</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Omics/">
+                                    <span class="chip bg-color">Omics</span>
+                                </a>
+                            
+                                <a href="/tags/Websites/">
+                                    <span class="chip bg-color">Websites</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '4e7ebe26963be2b65c6c',
+        clientSecret: '6d98c54068ee323b25ad3cc4951365b0a0f9a837',
+        repo: 'luyiyun.github.io',
+        owner: 'luyiyun',
+        admin: ["luyiyun"],
+        id: '2020-06-17T17-21-09',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: '3LgoChPNG6wyjHmjSYBF587o-gzGzoHsz',
+        appKey: 'JF5J72u3hdEK2QD6vilmf6Be',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'wavatar',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '如果你没有GitHub账号，还可以在这里评论啦！'
+    });
+</script>
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2020/06/20/paper/dl/pointnet/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="论文精读-pointNet-2017">
+                        
+                        <span class="card-title">论文精读-pointNet-2017</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            一个end-to-end的点云预测和分割框架，简单但开启了一个全新的点云建模的分支。
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-20
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Paper-Method/" class="post-category">
+                                    Paper-Method
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Deep-Learning/">
+                        <span class="chip bg-color">Deep Learning</span>
+                    </a>
+                    
+                    <a href="/tags/Point-Cloud/">
+                        <span class="chip bg-color">Point Cloud</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/06/16/paper/dl/paper-conticnn/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="论文精读-深度连续卷积神经网络-2018">
+                        
+                        <span class="card-title">论文精读-深度连续卷积神经网络-2018</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            此文章提出了一种新的深度学习框架-parametric continuous CNN，其可以应用连续的卷积操作到non-grid的数据上，而且有在点云分割、运动预测的任务上得到了非常好的结果，该工作发表在CVPR上。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-16
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Paper-Method/" class="post-category">
+                                    Paper-Method
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Deep-Learning/">
+                        <span class="chip bg-color">Deep Learning</span>
+                    </a>
+                    
+                    <a href="/tags/Point-Cloud/">
+                        <span class="chip bg-color">Point Cloud</span>
+                    </a>
+                    
+                    <a href="/tags/Convolutional-Neural-Networks/">
+                        <span class="chip bg-color">Convolutional Neural Networks</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 卢一云的博客<br />'
+            + '文章作者: Lu Yiyun<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('1'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="81582182"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.3'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">Lu Yiyun</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">109.3k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "5";
+                    var startDate = "10";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/luyiyun" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:18845728185@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1035724078" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1035724078" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+
+</html>

@@ -1,0 +1,1944 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="论文精读-使用神经网络进行Time-to-Event预测-2019, math, statistics, computer, ai">
+    <meta name="description" content="数学、统计、计算机及人工智能">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>论文精读-使用神经网络进行Time-to-Event预测-2019 | 卢一云的博客</title>
+    <link rel="icon" type="image/png" href="/favicon1.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="卢一云的博客" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo1.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">卢一云的博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>Medias</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/musics">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Musics</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/movies">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Movies</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/books">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Books</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/galleries">
+          
+          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Galleries</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo1.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">卢一云的博客</div>
+        <div class="logo-desc">
+            
+            数学、统计、计算机及人工智能
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			Medias
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/musics " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Musics</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/movies " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Movies</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/books " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Books</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/galleries " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Galleries</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">论文精读-使用神经网络进行Time-to-Event预测-2019</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Deep-Learning/">
+                                <span class="chip bg-color">Deep Learning</span>
+                            </a>
+                        
+                            <a href="/tags/Survival-Analysis/">
+                                <span class="chip bg-color">Survival Analysis</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Paper/" class="post-category">
+                                Paper
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-10-12
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2020-12-03
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    5.3k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    21 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="time-to-event-prediction-with-neural-networks-and-cox-regression">Time-to-Event Prediction with Neural Networks and Cox Regression</h1>
+<ul>
+<li>杂志: None</li>
+<li>IF: None</li>
+<li>分区: None</li>
+</ul>
+<hr>
+<h2 id="introduction">Introduction</h2>
+<ol type="1">
+<li><p>本研究探索time-to-event预测的方法，其在大量的实践中有应用：</p>
+<ul>
+<li>癌症病人的生存预测</li>
+<li>客户流失</li>
+<li>机械系统的失效时间</li>
+</ul>
+<p>其更加注重可解释性。</p></li>
+<li><p>在time-to-event问题中，一个重要的特点是会出现censored data。</p></li>
+<li><p>本研究中，提出了一种将机器学习技术和生存模型结合的方法：即通过将CoxPH model扩展到NN上，并移除其比例风险假定。并提供了其一个可用的基于pytorch的package —— <a href="https://github.com/havakv/pycox" target="_blank" rel="noopener">pycox</a>。</p></li>
+</ol>
+<h3 id="相关工作">相关工作</h3>
+<ol type="1">
+<li><p>【Faraggi and Simon (1995)】首先对Cox进行了扩展，其将线性预测器更换为1-hidden-layer MLP，但其并没有超过正常的Cox models【Xiang et al., 2000; Sargent, 2001】。</p>
+<p>DeepSurv【Katzman et al. (2018)】在deep learning的框架下重现对该模型进行了实现，并在C-index上得到了更好的结果。</p>
+<p>但DeepSurv依然受到Cox model的比例假定的限制，本研究对损失函数进行了修改，可以适用于非比例假定的情况。</p>
+<p>同样相似的工作还有SurvivalNet【Yousefi et al., 2017】，其不同之处在于使用Bayesian optimization来进行超参数的调整。</p>
+<p>【Zhu et al. (2016)， Zhu et al. (2017) 】将DeepSurv中的MLP替换为CNNs来进行肺癌病理图片的生存预测。</p></li>
+<li><p>另一类进行time-to-event prediction的方法是将连续的时间离散化，从而计算给定时间段上的survival function或hazard function。</p>
+<p>【Luck et al.(2017)】提出的方法类似DeepSurv，只是其是在离散的outputs上进行的生存预测，使用的损失函数是isotonic regression loss。</p>
+<p>【Fotso (2018)】将multi-task logistic regression with NN应用到离散生存预测上。</p>
+<p>DeepHit【Lee et al. (2018) 】使用NN来估计probability mass function，并结合了log-likelihood和ranking loss。同时，该模型还可以适用于竞争风险模型的情况。</p></li>
+<li><p>另外一个非常常用的生存模型是基于tree的random survival forests（RSF）【Ishwaran et al. (2008)】。RSF使用log-rank test作为splitting criterion来建立random forest，其在叶节点上计算cumulative hazards，并在所有trees上对此进行average。所以，RSF是一种非常灵活的模型，其没有收到比例假定的限制。</p></li>
+</ol>
+<h2 id="methods">Methods</h2>
+<h3 id="生存分析">生存分析</h3>
+<p>对于某一event，其发生的时间<span class="math inline">\(T^*\)</span>是一个随机变量： <span class="math display">\[P(T^*\le t)=\int_0^tf(s)ds=F(t)\]</span> 其中<span class="math inline">\(F(t)\)</span>和<span class="math inline">\(f(t)\)</span>分别是其density 和 cumulative distribution function。</p>
+<p>对于<span class="math inline">\(F(t)\)</span>，另一个可替代的、有实际意义的概念是survival function： <span class="math display">\[S(t)=P(T^*\gt t)=1-F(t)\]</span> 还有hazard function： <span class="math display">\[h(t)=\frac{f(t)}{S(t)}=\lim_{\Delta t\to0}\frac{1}{\Delta t}
+P(t\le T^*\lt t+\Delta t|T^*\ge t)\]</span></p>
+<blockquote>
+<p>通常来说，hazard function更加能够解释生存模型的本质，拥有明确的意义，而且其限制更少：（只需要保证非负和<span class="math inline">\(\int_0^{\infty}h(t)=\infty\)</span>即可）。所以，大多数生存模型的建模是来对hazard function进行拟合。</p>
+</blockquote>
+<p>进一步，我们可以得到cumulative function： <span class="math display">\[H(t)=\int_0^th(s)ds\]</span> 我们可以得到cumulative function和survival function以下的关系： <span class="math display">\[S(t)=\exp[-H(t)]\]</span></p>
+<p>在真实数据中，我们的随访时间不足以观察到时间的发生，这会造成right censor的出现，这时我们得到的时间为<span class="math inline">\(T=min\{T^*,C^*\}\)</span>，其中<span class="math inline">\(C^*\)</span>是censoring time，同时我们得到一个indicator <span class="math inline">\(D=\mathbb{1}\{T=T^*\}\)</span>来指示时间<span class="math inline">\(T\)</span>是否是一个censored data。</p>
+<p>假设样本<span class="math inline">\(i\)</span>拥有协变量<span class="math inline">\(\mathbf{x}_i\)</span>和观测的时间<span class="math inline">\(T_i\)</span>，我们有下面的likelihood：</p>
+<p><span class="math display">\[L=\prod_i{f(T_i|\mathbf{x}_i)^{D_i}S(T_i)|\mathbf{x}_i}^{1-D_i}
+=\prod_i{h(T_i|\mathbf{x}_i)^{D_i}\exp[-H(T_i|\mathbf{x}_i)]}\tag{2}\]</span></p>
+<p>或者称为full likelihood。</p>
+<h3 id="coxph-回归">CoxPH 回归</h3>
+<p>Cox proportional hazards model【Cox, 1972】提供一个hazard function的半参数框架： <span class="math display">\[h(t|\mathbf{x})=h_0(t)\exp[g(\mathbf{x})],\quad
+g(\mathbf{x})=\beta^T\mathbf{x}\tag{3}\]</span></p>
+<p>其中<span class="math inline">\(h_0(t)\)</span>称为non-parameteric baseline hazard，<span class="math inline">\(\exp[g(mathbf{x})]\)</span>称为relative risk function。注意，这里没有intercept，其可以被包括进baseline hazard中。</p>
+<p>整个模型的拟合分为两个部分：</p>
+<ol type="1">
+<li><p>首先使用partial likelihood来求解relative risk function部分：</p>
+<p><span class="math display">\[L_{cox}=\prod_i(\frac{\exp[g(\mathbf{x}_i)]}{\sum_{j\in\mathcal{R}_i}\exp[g(\mathbf{x}_j)]})^{D_i}\tag{4}\]</span> 其中<span class="math inline">\(\mathcal{R}_i\)</span>表示那些在<span class="math inline">\(T_i\)</span>时刻还处于风险中的个体组成的集合（即在<span class="math inline">\(T_i\)</span>时刻还没有发生event而且没有删失的个体）。</p>
+<p>进一步，可以得到其negative partial log-likelihood作为loss function： <span class="math display">\[loss=\sum_i{D_i\{\log(\sum_{j\in\mathcal{R}_i}\exp[g(\mathbf{x}_i)])-g(\mathbf{x}_i)\}}\tag{5}\]</span></p>
+<p>假设最后得到的参数的估计值为<span class="math inline">\(\hat{\beta}\)</span>。</p></li>
+<li><p>第二步，使用Breslow estimator来得到cumulative baseline hazard function：</p>
+<p><span class="math display">\[\hat{H}_0(t)=\sum_{T_i\le t}\Delta\hat{H}_0(T_i)\\
+ \Delta\hat{H}_0(T_i)=\frac{D_i}{\sum_{j\in\mathcal{R}_i}\exp[\hat{g}(\mathbf{x_j})]}\tag{6}
+ \]</span></p>
+<p>如果可以，我们可以进一步通过平滑<span class="math inline">\(\hat{H}_0\)</span>的增量来得到<span class="math inline">\(\hat{h}_0\)</span>，但通常来说<span class="math inline">\(\hat{H}_0\)</span>已经能够提供我们足够的信息了。</p>
+<blockquote>
+<p>通过最大化式2，并将<span class="math inline">\(h_0(t)\)</span>看做是piecewise constant between uncensored failure times得到。</p>
+</blockquote></li>
+</ol>
+<h3 id="cox-with-sgd">Cox with SGD</h3>
+<p>Cox partial likelihood的优化一般使用Newton-Raphson's method，但利用minibatch SGD来优化的思路是非常简单的，即<strong>计算每个minibatch的loss优化即可</strong>，这和其他的loss的优化没有区别。</p>
+<p>这对于满足比例假设的loss（DeepSurv）优化是没有问题的，但如果用于后面的非比例假设的loss的优化，将造成比较大的计算量，所以这里试图来得到一个该loss的估计值，更加容易在batches上进行计算。</p>
+<ol type="1">
+<li><p>首先，假设使用一个risk set<span class="math inline">\(\mathcal{R}_i\)</span>的一个足够大的子集<span class="math inline">\(\tilde{\mathcal{R}}_i\)</span>来估计partial likelihood已经足够，这里还使用了一个weight来保证其足够大：</p>
+<p><span class="math display">\[L=\prod_i(\frac{\exp[g(\mathbf{x}_i)]}{w_i\sum_{j\in\tilde{\mathcal{R}}_i}\exp[g(\mathbf{x}_j)]})^{D_i}\tag{7}\]</span></p></li>
+<li><p>这里保证<span class="math inline">\(i\)</span>总是属于<span class="math inline">\(\tilde{\mathcal{R}}_i\)</span>的。注意，在计算梯度的时候，<span class="math inline">\(w_i\)</span>会被约去，所以其没有必要存在于loss中。另外<span class="math inline">\(D_i=0\)</span>的项也对loss没有贡献。之后，我们再除以样本的数量，得到：</p>
+<p><span class="math display">\[loss=\frac{1}{n}\sum_{i:D_i=1}\log(\sum_{j\in\tilde{\mathcal{R}}_i}\exp[g(\mathbf{x}_j-\mathbf{x}_i)])\tag{8}\]</span></p></li>
+<li><p>在后面的实验中，我们发现，<span class="math inline">\(\tilde{\mathcal{R}}_i\)</span>只有一个<span class="math inline">\(j\)</span>已经足够，所以我们得到：</p>
+<p><span class="math display">\[loss=\frac{1}{n}\sum_{i:D_i=1}\log(1+\exp[g(\mathbf{x}_j)-g(\mathbf{x}_i)]),\quad j\in\mathcal{R}_i\backslash\{i\}\tag{9}\]</span></p></li>
+</ol>
+<p>注意，式8比式5更加易于理解，因为式8固定了risk sets的大小，从而使得值可以进行比较。式9的值的范围可以进行计算：<span class="math inline">\((0, 0.693]\)</span>。</p>
+<p>其实risk set的sampling可以在流行病学研究中被设计，通过nested case-control design。其中，case即<span class="math inline">\(i\)</span>，而controls即<span class="math inline">\(j\)</span>。【Goldstein and Langholz (1992)】已经证明了对于CoxPH，sampled risk sets给出了一致的参数估计，虽然此没有在non-linear models中得到证明，但式8作为一个loss function是合理的。</p>
+<h3 id="非线性的cox">非线性的Cox</h3>
+<p>这里使用NN来构建<span class="math inline">\(g(\mathbf{x})\)</span>，而likelihood和loss都不需要改变。</p>
+<p>之后，case-control近似得到的loss（式8）使用Cox-MLP（CC）来代表，而使用原始的loss（式5）的使用Cox-MLP（DeepSurv）来代表。</p>
+<p>对于非线性模型，loss并不能保证存在唯一的解，所以这里还需要加入一个惩罚以保证输出不能距离0太远：</p>
+<p><span class="math display">\[penalty=\lambda\sum_{i:D_i=1}\sum_{j\in\tilde{\mathcal{R}}_i}|g(\mathbf{x}_j)|\]</span></p>
+<blockquote>
+<p>这个问题在实践中碰到过。</p>
+</blockquote>
+<h3 id="非比例假设的cox-time">非比例假设的Cox-Time</h3>
+<p>传统处理非比例假设的模型，做法是将将协变量分层，然后在每一层分别拟合cox模型【Klein and Moeschberger, 2003, chap. 9】，而这里我们使用参数化的方法来实现这一功能：</p>
+<p><span class="math display">\[h(t|\mathbf{x})=h_0(t)\exp[g(t,\mathbf{x})]\]</span></p>
+<p>即将时间当做一个协变量加入模型中。</p>
+<p>以上模型有类似的loss function：</p>
+<p><span class="math display">\[loss=\frac{1}{n}\sum_{i:D_i=1}\log(\sum_{j\in\tilde{\mathcal{R}}_i}\exp(g(T_i,\mathbf{x}_j)-g(T_i,\mathbf{x}_i)))\tag{12}\]</span></p>
+<p>同样，式10的penalty也要用到，只是用<span class="math inline">\(g(T_i,\mathbf{x}_j)\)</span>来替换<span class="math inline">\(g(\mathbf{x}_j)\)</span>，这个模型称为Cox-Time。</p>
+<p>主要，因为在loss中对于<span class="math inline">\(\mathbf{x}_i\)</span>和<span class="math inline">\(\mathbf{x}_j\)</span>都是使用<span class="math inline">\(T_i\)</span>进行计算，所以如果使用式5进行计算，则时间复杂度是<span class="math inline">\(O(n\cdot|\mathcal{R}_i|)=O(n^2)\)</span>。而如果使用式12进行计算，因为<span class="math inline">\(|\tilde{\mathcal{R}}_i|\)</span>是一个固定的数，所以时间复杂度是<span class="math inline">\(O(n)\)</span>。</p>
+<blockquote>
+<p>对于传统的CoxPH，因为可以只计算<span class="math inline">\(g(\mathbf{x}_j)\)</span>一次，然后在计算risk sets复用，所以其时间复杂度也是<span class="math inline">\(O(n)\)</span>。</p>
+</blockquote>
+<p>之后我们可以继续使用式6来对cumulative baseline hazard进行估计。</p>
+<h3 id="预测">预测</h3>
+<p>对于比例假设的模型，可以使用下面的公式来预测生存函数：</p>
+<p><span class="math display">\[\hat{S}(t|\mathbf{x})=\exp[-\hat{H}(t|\mathbf{x})]=
+\exp[-H_0(t)\exp(g(\mathbf{x}))]\]</span></p>
+<p>而对于非比例假定的模型，因为relative risk function部分也依赖于时间，所以必须用下面的方法来估算：</p>
+<p><span class="math display">\[\begin{aligned}
+    H(t|\mathbf{x})&amp;=\int_0^t{h_0(s)\exp[g(s,\mathbf{x})]ds} \\
+    &amp;\approx\sum_{T_i\le t}{\Delta \hat{H}_0(T_i)\exp[\hat{g}(T_i,\mathbf{x})]} \\
+    \Delta\hat{H}_0(T_i)&amp;=\frac{D_i}{\sum_{j\in\mathcal{R}_i}\exp[\hat{g}(T_i,\mathbf{x}_j)]} \tag{13}
+\end{aligned}\]</span></p>
+<h2 id="evaluation-criteria">Evaluation Criteria</h2>
+<h3 id="concordance-index">Concordance Index</h3>
+<p>C-Index【Harrell Jr et al., 1982】和ACC、AUC有着密切的关系【Ishwaran et al., 2008，Heagerty and Zheng, 2005】。简单来说，<strong>其估计了一个概率：对于随机的一对样本pair，其预测的生存时间和真实的生存时间顺序相关的概率。</strong></p>
+<p>因为C-index只依赖于预测的顺序，所以对于CoxPH model，因为其顺序不会依赖于时间的改变，所以使得使用relative risk function就可以进行评价。</p>
+<p>然后对于非比例假设的模型，就必须使用time-depend C-index【Antolini et al. (2005)】，其估计了观测<span class="math inline">\(i\)</span>和<span class="math inline">\(j\)</span>在“可比”的前提下是“一致”的概率：</p>
+<p><span class="math display">\[C^{td}=P\{\hat{S}(T_i|\mathbf{x}_i)\lt\hat{S}(T_i|\mathbf{x}_j)|T_i\lt T_j,D_i=1\}\]</span></p>
+<p>另外还进行了【Ishwaran et al. (2008, Section 5.1, step 3)】的修改，为了能够保证当预测独立于协变量<span class="math inline">\(\mathbf{x}\)</span>时，得到<span class="math inline">\(C^{td}=0.5\)</span>。</p>
+<h3 id="brier-score">Brier Score</h3>
+<p>BS本来是对于二分类的一个评价指标：</p>
+<p><span class="math display">\[BS=\frac{1}{N}\sum_i(y_i-\hat{p}_i)^2\]</span> 其中<span class="math inline">\(y_i\)</span>是标签，<span class="math inline">\(\hat{p}_i\)</span>是预测的概率。</p>
+<p>【Graf et al. (1999)】将Brier score扩展到了time-to-event data领域：</p>
+<p><span class="math display">\[BS(t)=\frac{1}{N}\sum_i^N[
+    \frac{\hat{S}(t|\mathbf{x}_i)^21\{T_i\le t,D_i=1\}}{\hat{G}(T_i)}+
+    \frac{(1-\hat{S}(t|\mathbf{x}_i))^21\{T_i\gt t\}}{\hat{G}(t)}]\]</span></p>
+<p>其中<span class="math inline">\(N\)</span>是观测的数量，<span class="math inline">\(\hat{G}(t)\)</span>是censoring survival function的Kaplan-Meier估计 <span class="math inline">\(P(C^*\lt t)\)</span>（即将删失作为event构建的生存函数），这里假设censor和event是独立的。</p>
+<p>BS可以进一步扩展为integrated Brier score：</p>
+<p><span class="math display">\[IBS=\frac{1}{t_2-t_1}\int_{t_1}^{t_2}{BS(s)ds}\]</span></p>
+<p>实践中，一般将区间进行分块来近似计算这个积分（100个分割点足够了）。</p>
+<h3 id="binomial-log-likelihood">Binomial Log-likelihood</h3>
+<p><span class="math display">\[BLL(t)=\frac{1}{N}\sum_{i=1}^N[
+    \frac{\log[1-\hat{S}(t|\mathbf{x}_i)]1\{T_i\le t,D_i=1\}}{\hat{G}(T_i)} +
+    \frac{\log[\hat{S}(t|\mathbf{x}_i)]1\{T_i\gt t\}}{\hat{G}(t)}
+]\]</span></p>
+<p>同样的，可以得到一个integrated version：</p>
+<p><span class="math display">\[IBLL=\frac{1}{t_2-t_1}\int_{t_1}^{t_2}{BLL(s)ds}\]</span></p>
+<h2 id="simulation">Simulation</h2>
+<p>模拟以验证以上提到的算法是否可行。classical cox使用Lifelines packages来实现。</p>
+<p>这里简单介绍以下模拟的方法：</p>
+<p>假设我们的模型有下面的形式： <span class="math display">\[h(t|\mathbf{x})=h_0(t)\exp[g(t,\mathbf{x})]\]</span> <span class="math inline">\(H(t|\mathbf{x})=\int_0^t{h(s|\mathbf{x})ds}\)</span>是连续的累积风险函数，<span class="math inline">\(V\)</span>是参数为1的指数分布（<span class="math inline">\(P(V\gt v)=\exp(-v)\)</span>）。则我们可以通过下面的公式来采样得到符合上述累计风险函数的生存时间：</p>
+<p><span class="math display">\[T^*=H^{-1}(V|\mathbf{x})\]</span></p>
+<blockquote>
+<p>因为<span class="math inline">\(S(t|\mathbf{x})=P(T^*\gt t|\mathbf{x})=P(H^{-1}(V|\mathbf{x})\gt t)=P(V\gt H(t|\mathbf{x}))=\exp[-H(t|\mathbf{x})]\)</span></p>
+</blockquote>
+<p>为了能够构造出<span class="math inline">\(H^{-1}\)</span>，所以一般需要<span class="math inline">\(g(t,\mathbf{x})\)</span>简单一些。</p>
+<h3 id="模拟探索损失函数8的行为">模拟探索损失函数8的行为</h3>
+<p>首先，我们探索loss function 8的行为，即不同controls samples的数量的结果和使用正常的偏似然函数（loss 5）之间的差别。</p>
+<p>模拟数据来自proportional hazards model： <span class="math display">\[h(t|\mathbf{x})=h_0(t)\exp[g(\mathbf{x})]\\
+g(\mathbf{x})=\beta^T\mathbf{x}\]</span> 其中使用constant baseline hazard <span class="math inline">\(h_0(t)=0.1\)</span>和<span class="math inline">\(\beta=[0.44,0.66,0.88]^T\)</span>，协变量采样自<span class="math inline">\(\mathcal{U}(-1, 1)\)</span>。censoring time来自constant hazard <span class="math inline">\(c(t)=\frac{1}{30}\)</span>，其和协变量的采样是独立的，并设置了截止时间为30。以上的设置大约导致了30%的删失。然后采样了10000个样本作为training，10000个样本作为test。</p>
+<p>使用loss function 8中描述的方式来拟合Cox model（称为Cox-SGD），四个模型分别是control 采样数为1, 2, 4, 8。所有的实验都重复了100次，test中的mean partial log-likelihood（MPLL）作为评价指标，结果如下图：</p>
+<p><img src="/2020/10/12/paper/omics/paper-nnandcox-2019/paper-NNandCOX-2019_2020-10-13-14-05-02.png"><br>
+</p>
+<p>我们可以看到，其对于收敛的速度并没有影响，但采样数量越多会带来更大的计算复杂度。之后，为了证明样本量的减少不会影响模拟结果，使用1000个样本的training也进行了相同的实验，其结果与上图基本一致。</p>
+<p>接下来，我们比较一下cox-SGD所拟合的参数和classical cox所拟合参数的不同。结果展示在下图中：</p>
+<p><img src="/2020/10/12/paper/omics/paper-nnandcox-2019/paper-NNandCOX-2019_2020-10-13-14-10-41.png"><br>
+</p>
+<p>在样本量较少的时候，cox-SGD拟合的参数要小一些，而且似乎control采样数越少，这个趋势越明显。但随着样本量的增加，这个基本就不存在了。</p>
+<p>最后，我们想要比较一下两个方法likelihood（full likelihood，式2）的差别。这里看的是training的likelihood，因为我们只想知道不同的方法的优化能力，而非模型的泛化能力。结果如下图所示：</p>
+<p><img src="/2020/10/12/paper/omics/paper-nnandcox-2019/paper-NNandCOX-2019_2020-10-13-14-15-18.png"><br>
+</p>
+<p>可以看到，似乎control采样数越多，cox-SGD的结果越接近classical cox，但随着样本的增加，两者的差距缩小。classical cox的MLL大约是-2.2作用，所以即使对于最小样本量下，cox-SGD所带来的影响也小于0.1%，所以这也说明了该方法的有效性。</p>
+<h3 id="非线性和非比例假设模型">非线性和非比例假设模型</h3>
+<blockquote>
+<p>该内容在Appendix C。</p>
+</blockquote>
+<p>非线性模型：</p>
+<p><span class="math display">\[g(\mathbf{x})=\beta^T\mathbf{x}+\frac{2}{3}(x_1^2+x_3^2+x_1x_2+x_1x_3+x_2x_3)\]</span></p>
+<p>cox-MLP使用的是1-hidden layer（64个节点）的模型，然后绘制了其和cox-SGD在2000个test点上的PLL散点图：</p>
+<p><img src="/2020/10/12/paper/omics/paper-nnandcox-2019/paper-NNandCOX-2019_2020-10-13-20-11-27.png"><br>
+</p>
+<p>可以看到对于非线性问题，Cox-MLP有着更好的结果。</p>
+<p>非比例假设模型：</p>
+<p><span class="math display">\[
+g(t,\mathbf{x})=a(\mathbf{x})+b(\mathbf{x})t,\\
+a(\mathbf{x})=g_{ph}(\mathbf{x})+sign(x_3),\\
+b(\mathbf{x})=|0.2(x_0+x_1)+0.5x_0x_1|
+\]</span></p>
+<p>cox-MLP和cox-Time都是用4-hidden layer的NN，每个layer是128个节点，dropout rate是0.1。其PLL的散点图为：</p>
+<p><img src="/2020/10/12/paper/omics/paper-nnandcox-2019/paper-NNandCOX-2019_2020-10-13-20-16-17.png"><br>
+</p>
+<p>进一步，我们绘制了几个样本的生存曲线，可以看到，Cox-Time拟合的效果要好于Cox-MLP：</p>
+<p><img src="/2020/10/12/paper/omics/paper-nnandcox-2019/paper-NNandCOX-2019_2020-10-13-20-17-55.png"><br>
+</p>
+<h2 id="experiments">Experiments</h2>
+<p>本部分，将使用真实数据来比较各类模型的表现。</p>
+<h3 id="小规模数据集实验">小规模数据集实验</h3>
+<h4 id="使用数据集">使用数据集</h4>
+<p><img src="/2020/10/12/paper/omics/paper-nnandcox-2019/paper-NNandCOX-2019_2020-10-13-14-22-37.png"><br>
+</p>
+<p>前三个来自【Katzman et al. (2018)】，由DeepSurv python package提供。最后一个有R package survival提供（移除了chapter协变量）。</p>
+<h4 id="使用的方法">使用的方法</h4>
+<ul>
+<li>使用control sampling的proportional Cox method：Cox-MLP(CC)</li>
+<li>使用control sampling的non-proportional Cox method：Cox-Time</li>
+<li>Classical Cox（linear）</li>
+<li>DeepHit</li>
+<li>Random Survival Rorests（RSF）</li>
+<li>Cox-MLP（MLP），此方法与DeepSurv的不同在于使用的是minibatch SGD来训练，使用的loss是式5</li>
+</ul>
+<p>关于数据集的处理：</p>
+<ul>
+<li>对于使用NN的方法，我们首先将协变量标准化，然后使用entity embedding的方法将分类协变量变为长度是其类别数一半的向量【Guo and Berkhahn, 2016】。</li>
+<li>对于Classical Cox（linear），分类协变量是one-hot的。</li>
+<li>对于RSF，协变量不做任何处理。</li>
+</ul>
+<p>对于NN的架构：</p>
+<ul>
+<li>所有的NN使用相同的架构，每一层有相同的节点数、ReLU激活、BN。</li>
+<li>使用了dropout、normalized decoupled weight decay【Loshchilov and Hutter, 2019】和early stopping来进行正则化。</li>
+<li>SGD的方法是AdamWR【Loshchilov and Hutter, 2019】，并使用【Smith (2017)】的方法来找到学习率。</li>
+</ul>
+<p>整个验证过程：</p>
+<ul>
+<li>5-CV。</li>
+<li>对于NN，每一折中，都对总共300多对参数组合进行random hyperparameter search，找到最优的参数组合，这里使用的评价指标是partial log-likelihood（比例假定的模型）和式12（Cox-Time）。</li>
+<li>而DeepHit和 RSF的超参数调整使用的是time-dependent c-index【Antolini et al., 2005】。我们也使用了RSF作者建议的超参数调整方法，即通过计算concordance of the mortality【】，这两种方法得到的模型分别称为RSF（<span class="math inline">\(C^{td}\)</span>）和RSF（Mortality）。</li>
+</ul>
+<blockquote>
+<p>这里使用的超参数的设置可以参见Appendix A1部分。</p>
+</blockquote>
+<h4 id="结果">结果</h4>
+<p><img src="/2020/10/12/paper/omics/paper-nnandcox-2019/paper-NNandCOX-2019_2020-10-13-14-44-02.png"><br>
+</p>
+<p><img src="/2020/10/12/paper/omics/paper-nnandcox-2019/paper-NNandCOX-2019_2020-10-13-14-44-22.png"><br>
+</p>
+<p><img src="/2020/10/12/paper/omics/paper-nnandcox-2019/paper-NNandCOX-2019_2020-10-13-14-44-36.png"><br>
+</p>
+<p>以上的3个tables展示了3种评价指标的结果：</p>
+<ul>
+<li><p>在C-index上，非比例假设的模型的结果要普遍好于比例假设的模型。RSF（<span class="math inline">\(C^{td}\)</span>）要好于RSF（Mortality），这可能是因为前者就是使用C-index来进行超参数调整的原因。而总的看来，Cox-Time的效果要略好于RSF，尽管其并不是使用C-index来进行的超参数调整。总的来说，似乎DeepHit表现最好，但这是其以其低效的生存预测为代价所得到的。</p>
+<blockquote>
+<p>注意，C-index高只需要保证顺序对就可以，其生存函数的预测可能是非常差的。</p>
+</blockquote></li>
+<li><p>在IBS和IBLL上，前三个数据集上Cox-Time都表现很好，在最后一个数据集上反而是以CC和DeepSurv为最高，这说明比例假定可能在此数据集上更加合适。</p>
+<p>而在这两个指标中，DeepHit的表现不好。从其loss的形式中可以看出，其综合了两方面：negative log-likelihood和ranking loss，并使用一个超参数<span class="math inline">\(\alpha\)</span>来进行调节。超参数搜索得到的<span class="math inline">\(\alpha\)</span>都偏小，即更加便偏向于使用ranking loss的部分来进行拟合，从而其得到了较好的C-index，但拟合的生存函数较差。</p></li>
+</ul>
+<h3 id="大样本数据集实验">大样本数据集实验</h3>
+<h4 id="数据集">数据集</h4>
+<p><img src="/2020/10/12/paper/omics/paper-nnandcox-2019/paper-NNandCOX-2019_2020-10-13-16-49-32.png"><br>
+</p>
+<p>WSDM KKBox's churn prediction challenge由Kaggle在2017年举办，为了预测音乐流媒体的客户流失现象。</p>
+<p>如果一个客户在上次订阅后30天内没有续订，则认为此客户流失了，这是我们的event。协变量只使用最基础的那些（共有15个）。有些客户可能在流失后又续订，这被看做是一个新的样本。最终数据集被分为train、valid和test，详细信息如上表所示。</p>
+<blockquote>
+<p>关于此数据集的详细信息可见Appendix B1部分。</p>
+</blockquote>
+<h4 id="方法">方法</h4>
+<p>使用的方法和“小样本数据集实验”中一致，但因为样本量太大，所以将classical cox替换为cox-SGD（linear）。</p>
+<p>训练NN时将学习率乘以0.8，为了稳定训练。</p>
+<p>因为样本量非常大，所以在进行超参数搜索的时候，不再包括weight decay，只是在一个小数量的合适的参数中寻找。找到的最优参数组合是：</p>
+<p><img src="/2020/10/12/paper/omics/paper-nnandcox-2019/paper-NNandCOX-2019_2020-10-13-19-04-33.png"><br>
+</p>
+<p>至于RSF，基于<span class="math inline">\(C^{th}\)</span>的模型发现每次split采样8个协变量、每个叶节点最少50个样本，基于mortality的模型发现每次split采样2个协变量、叶节点的size最小是10。500个trees足够，但其和250个trees的结果没有什么差别。</p>
+<blockquote>
+<p>这里使用的超参数的设置可以参见Appendix A2部分。</p>
+</blockquote>
+<h4 id="结果-1">结果</h4>
+<p><img src="/2020/10/12/paper/omics/paper-nnandcox-2019/paper-NNandCOX-2019_2020-10-13-19-08-13.png"><br>
+</p>
+<p>每类模型都拟合5次，并将得到的评价指标的均值作为最后的结果。可以看到，趋势和小样本时是相似的。</p>
+<p>之后，我们将每个时间点的BS计算出来（注意，这里越小越好）：</p>
+<p><img src="/2020/10/12/paper/omics/paper-nnandcox-2019/paper-NNandCOX-2019_2020-10-13-19-17-39.png"><br>
+</p>
+<p>这里可以看到，依然是DeepHit是最差的，Cox-Time是最好的。Cox-MLP(DeepSurv)在长时间的预测中表现最好。BLL的图像和BS非常类似。</p>
+<h4 id="生存曲线">生存曲线</h4>
+<p>生存分析相对于分类任务的一个优势就是，可以给出生存曲线，有着更强的解释性。比如下面是Cox-Time在test上9个样本上的估计生存曲线：</p>
+<p><img src="/2020/10/12/paper/omics/paper-nnandcox-2019/paper-NNandCOX-2019_2020-10-13-19-40-02.png"><br>
+</p>
+<p>为了能够对预测有更加general的视角，这里我们将test的预测生存曲线进行聚类。每个样本预测<span class="math inline">\(0=\tau_0\lt\tau_1\lt\cdots\lt\tau_m\)</span>这些时间点上的生存概率，然后将其作为feature进行k-means聚类，聚类数为10。各类的生存曲线在下图中：</p>
+<p><img src="/2020/10/12/paper/omics/paper-nnandcox-2019/paper-NNandCOX-2019_2020-10-13-19-38-27.png"><br>
+</p>
+<p>我们可以看到：</p>
+<ul>
+<li>第一大类（19%的样本）是一条非常稳定的曲线</li>
+<li>第二大类（18%）则有着非常高的脱落的风险</li>
+<li>许多曲线没30天都有一次波动，这可能是因为月底付费所导致的</li>
+<li>最少的那一类，则是在预定大约400天后急剧下降，查询他们的数据可以知道，这一类人大多在订阅400天后不再订阅。</li>
+</ul>
+<hr>
+<h2 id="questions">Questions</h2>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Luyiyun</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://luyiyun.online/2020/10/12/paper/omics/paper-nnandcox-2019/">https://luyiyun.online/2020/10/12/paper/omics/paper-nnandcox-2019/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Luyiyun</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Deep-Learning/">
+                                    <span class="chip bg-color">Deep Learning</span>
+                                </a>
+                            
+                                <a href="/tags/Survival-Analysis/">
+                                    <span class="chip bg-color">Survival Analysis</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '4e7ebe26963be2b65c6c',
+        clientSecret: '6d98c54068ee323b25ad3cc4951365b0a0f9a837',
+        repo: 'luyiyun.github.io',
+        owner: 'luyiyun',
+        admin: ["luyiyun"],
+        id: '2020-10-12T10-18-11',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: '3LgoChPNG6wyjHmjSYBF587o-gzGzoHsz',
+        appKey: 'JF5J72u3hdEK2QD6vilmf6Be',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'wavatar',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '如果你没有GitHub账号，还可以在这里评论啦！'
+    });
+</script>
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2020/10/14/paper/omics/paper-cnn-clscancertype-2020/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="论文精读-使用CNN对癌症进行分类-2020">
+                        
+                        <span class="card-title">论文精读-使用CNN对癌症进行分类-2020</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            探索了3种简单的CNNs模型来进行癌症种类分类，其中并没有考虑基因排序带来的影响（直接利用其名称进行排序），依然得到了95.7%的分类准确率。
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-14
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Paper/" class="post-category">
+                                    Paper
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Omics/">
+                        <span class="chip bg-color">Omics</span>
+                    </a>
+                    
+                    <a href="/tags/CNNs/">
+                        <span class="chip bg-color">CNNs</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/10/06/paper/omics/paper-gsae2018/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="论文精读-GSAE-2018">
+                        
+                        <span class="card-title">论文精读-GSAE-2018</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            本研究基于自编码器框架提出了一个无监督模型，可以将已知的gene sets信息进一步进行总结，得到gene sets的组合——supersets的表示。其利用TCGA数据集进行了验证，显示出改模型在无监督聚类、亚型分类、生存预测等任务上都表现出色。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-06
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Paper/" class="post-category">
+                                    Paper
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Deep-Learning/">
+                        <span class="chip bg-color">Deep Learning</span>
+                    </a>
+                    
+                    <a href="/tags/Omics/">
+                        <span class="chip bg-color">Omics</span>
+                    </a>
+                    
+                    <a href="/tags/AutoEncoder/">
+                        <span class="chip bg-color">AutoEncoder</span>
+                    </a>
+                    
+                    <a href="/tags/Gene-sets/">
+                        <span class="chip bg-color">Gene sets</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 卢一云的博客<br />'
+            + '文章作者: Lu Yiyun<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('1'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="81582182"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.3'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">Lu Yiyun</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">109.3k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "5";
+                    var startDate = "10";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/luyiyun" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:18845728185@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1035724078" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1035724078" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+
+</html>

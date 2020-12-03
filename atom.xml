@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://luyiyun.online/"/>
-  <updated>2020-09-30T05:16:30.217Z</updated>
+  <updated>2020-12-03T12:02:22.514Z</updated>
   <id>https://luyiyun.online/</id>
   
   <author>
@@ -17,11 +17,165 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>论文精读-Integrated Gradients-2017</title>
+    <link href="https://luyiyun.online/2020/10/15/paper/dl/paper-integratedgradients-2017/"/>
+    <id>https://luyiyun.online/2020/10/15/paper/dl/paper-integratedgradients-2017/</id>
+    <published>2020-10-15T05:48:04.000Z</published>
+    <updated>2020-12-03T12:02:22.514Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;axiomatic-attribution-for-deep-networks&quot;&gt;Axiomatic Attribution for Deep Networks&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;杂志: None&lt;/li&gt;
+&lt;li&gt;IF:
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Paper-Method" scheme="https://luyiyun.online/categories/Paper-Method/"/>
+    
+    
+      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
+    
+      <category term="Interpreting" scheme="https://luyiyun.online/tags/Interpreting/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>论文精读-使用CNN对癌症进行分类-2020</title>
+    <link href="https://luyiyun.online/2020/10/14/paper/omics/paper-cnn-clscancertype-2020/"/>
+    <id>https://luyiyun.online/2020/10/14/paper/omics/paper-cnn-clscancertype-2020/</id>
+    <published>2020-10-14T06:25:00.000Z</published>
+    <updated>2020-12-03T12:02:21.808Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;convolutional-neural-network-models-for-cancer-type-prediction-based-on-gene-expression&quot;&gt;Convolutional neural network models for
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
+    
+    
+      <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
+    
+      <category term="CNNs" scheme="https://luyiyun.online/tags/CNNs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>论文精读-使用神经网络进行Time-to-Event预测-2019</title>
+    <link href="https://luyiyun.online/2020/10/12/paper/omics/paper-nnandcox-2019/"/>
+    <id>https://luyiyun.online/2020/10/12/paper/omics/paper-nnandcox-2019/</id>
+    <published>2020-10-12T02:18:11.000Z</published>
+    <updated>2020-12-03T12:02:21.934Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;time-to-event-prediction-with-neural-networks-and-cox-regression&quot;&gt;Time-to-Event Prediction with Neural Networks and Cox
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
+    
+    
+      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
+    
+      <category term="Survival Analysis" scheme="https://luyiyun.online/tags/Survival-Analysis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>论文精读-GSAE-2018</title>
+    <link href="https://luyiyun.online/2020/10/06/paper/omics/paper-gsae2018/"/>
+    <id>https://luyiyun.online/2020/10/06/paper/omics/paper-gsae2018/</id>
+    <published>2020-10-06T08:22:52.000Z</published>
+    <updated>2020-12-03T12:02:21.905Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;gsae-an-autoencoder-with-embedded-gene-set-nodes-for-genomics-functional-characterization&quot;&gt;GSAE: an autoencoder with embedded
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
+    
+    
+      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
+    
+      <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
+    
+      <category term="AutoEncoder" scheme="https://luyiyun.online/tags/AutoEncoder/"/>
+    
+      <category term="Gene sets" scheme="https://luyiyun.online/tags/Gene-sets/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>论文精读-使用gene表达数据进行癌症分类-2018</title>
+    <link href="https://luyiyun.online/2020/10/06/paper/omics/paper-cnn-yan-chong-fen-lei-2018/"/>
+    <id>https://luyiyun.online/2020/10/06/paper/omics/paper-cnn-yan-chong-fen-lei-2018/</id>
+    <published>2020-10-06T06:00:02.000Z</published>
+    <updated>2020-12-03T12:02:21.835Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;deep-learning-based-tumor-type-classification-using-gene-expression-data&quot;&gt;Deep Learning Based Tumor Type Classification Using Gene
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
+    
+    
+      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
+    
+      <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
+    
+      <category term="CNNs" scheme="https://luyiyun.online/tags/CNNs/"/>
+    
+  </entry>
+  
+  <entry>
     <title>论文精读-变分图自编码器-2016</title>
-    <link href="https://luyiyun.online/2020/09/30/paper-vgae2016/"/>
-    <id>https://luyiyun.online/2020/09/30/paper-vgae2016/</id>
+    <link href="https://luyiyun.online/2020/09/30/paper/dl/paper-vgae2016/"/>
+    <id>https://luyiyun.online/2020/09/30/paper/dl/paper-vgae2016/</id>
     <published>2020-09-30T01:19:26.000Z</published>
-    <updated>2020-09-30T05:16:30.217Z</updated>
+    <updated>2020-12-03T12:02:23.019Z</updated>
     
     <summary type="html">
     
@@ -40,21 +194,25 @@
     </summary>
     
     
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
+      <category term="Paper-Method" scheme="https://luyiyun.online/categories/Paper-Method/"/>
     
     
-      <category term="GNN" scheme="https://luyiyun.online/tags/GNN/"/>
+      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
     
-      <category term="VI" scheme="https://luyiyun.online/tags/VI/"/>
+      <category term="Unsupervised Learning" scheme="https://luyiyun.online/tags/Unsupervised-Learning/"/>
+    
+      <category term="Graph Neural networks" scheme="https://luyiyun.online/tags/Graph-Neural-networks/"/>
+    
+      <category term="Variational Inferece" scheme="https://luyiyun.online/tags/Variational-Inferece/"/>
     
   </entry>
   
   <entry>
     <title>论文精读-VGCN-2019</title>
-    <link href="https://luyiyun.online/2020/09/25/paper-gcn2019/"/>
-    <id>https://luyiyun.online/2020/09/25/paper-gcn2019/</id>
+    <link href="https://luyiyun.online/2020/09/25/paper/dl/paper-gcn2019/"/>
+    <id>https://luyiyun.online/2020/09/25/paper/dl/paper-gcn2019/</id>
     <published>2020-09-25T07:06:46.000Z</published>
-    <updated>2020-09-30T00:48:26.670Z</updated>
+    <updated>2020-12-03T12:02:22.415Z</updated>
     
     <summary type="html">
     
@@ -72,23 +230,25 @@
     </summary>
     
     
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
+      <category term="Paper-Method" scheme="https://luyiyun.online/categories/Paper-Method/"/>
     
     
-      <category term="GNN" scheme="https://luyiyun.online/tags/GNN/"/>
+      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
     
-      <category term="semi-supervised" scheme="https://luyiyun.online/tags/semi-supervised/"/>
+      <category term="Graph Neural Networks" scheme="https://luyiyun.online/tags/Graph-Neural-Networks/"/>
     
-      <category term="VI" scheme="https://luyiyun.online/tags/VI/"/>
+      <category term="Semi-Supervised Learning" scheme="https://luyiyun.online/tags/Semi-Supervised-Learning/"/>
+    
+      <category term="Variational Inference" scheme="https://luyiyun.online/tags/Variational-Inference/"/>
     
   </entry>
   
   <entry>
     <title>论文精读-DeepGCNs-2019</title>
-    <link href="https://luyiyun.online/2020/09/25/paper-deepgcns2019/"/>
-    <id>https://luyiyun.online/2020/09/25/paper-deepgcns2019/</id>
+    <link href="https://luyiyun.online/2020/09/25/paper/dl/paper-deepgcns2019/"/>
+    <id>https://luyiyun.online/2020/09/25/paper/dl/paper-deepgcns2019/</id>
     <published>2020-09-25T06:12:52.000Z</published>
-    <updated>2020-09-25T07:00:59.961Z</updated>
+    <updated>2020-12-03T12:02:22.209Z</updated>
     
     <summary type="html">
     
@@ -107,21 +267,23 @@
     </summary>
     
     
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
+      <category term="Paper-Method" scheme="https://luyiyun.online/categories/Paper-Method/"/>
     
     
-      <category term="Point Cloud Segmentation" scheme="https://luyiyun.online/tags/Point-Cloud-Segmentation/"/>
+      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
     
-      <category term="GNN" scheme="https://luyiyun.online/tags/GNN/"/>
+      <category term="Graph Neural Netowrks" scheme="https://luyiyun.online/tags/Graph-Neural-Netowrks/"/>
+    
+      <category term="Point Cloud" scheme="https://luyiyun.online/tags/Point-Cloud/"/>
     
   </entry>
   
   <entry>
     <title>论文精读-Point-GNN-2020</title>
-    <link href="https://luyiyun.online/2020/09/22/paper-pointgnn2020/"/>
-    <id>https://luyiyun.online/2020/09/22/paper-pointgnn2020/</id>
+    <link href="https://luyiyun.online/2020/09/22/paper/dl/paper-pointgnn2020/"/>
+    <id>https://luyiyun.online/2020/09/22/paper/dl/paper-pointgnn2020/</id>
     <published>2020-09-22T11:00:22.000Z</published>
-    <updated>2020-09-25T06:59:46.663Z</updated>
+    <updated>2020-12-03T12:02:22.738Z</updated>
     
     <summary type="html">
     
@@ -136,23 +298,23 @@
     </summary>
     
     
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
+      <category term="Paper-Method" scheme="https://luyiyun.online/categories/Paper-Method/"/>
     
     
       <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
     
-      <category term="GNN" scheme="https://luyiyun.online/tags/GNN/"/>
+      <category term="Point Cloud" scheme="https://luyiyun.online/tags/Point-Cloud/"/>
     
-      <category term="Point Cloud Detection" scheme="https://luyiyun.online/tags/Point-Cloud-Detection/"/>
+      <category term="Graph Nueral Networks" scheme="https://luyiyun.online/tags/Graph-Nueral-Networks/"/>
     
   </entry>
   
   <entry>
     <title>论文精读-使用GCN对癌症进行分类-2020</title>
-    <link href="https://luyiyun.online/2020/09/13/paper-gcnclscancertype-2020/"/>
-    <id>https://luyiyun.online/2020/09/13/paper-gcnclscancertype-2020/</id>
+    <link href="https://luyiyun.online/2020/09/13/paper/omics/paper-gcnclscancertype-2020/"/>
+    <id>https://luyiyun.online/2020/09/13/paper/omics/paper-gcnclscancertype-2020/</id>
     <published>2020-09-13T01:32:34.000Z</published>
-    <updated>2020-09-14T03:02:53.116Z</updated>
+    <updated>2020-12-03T12:02:21.868Z</updated>
     
     <summary type="html">
     
@@ -172,18 +334,18 @@
     
       <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
     
-      <category term="GNN" scheme="https://luyiyun.online/tags/GNN/"/>
-    
       <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
+    
+      <category term="GNN" scheme="https://luyiyun.online/tags/GNN/"/>
     
   </entry>
   
   <entry>
     <title>论文精读-NICE-2014</title>
-    <link href="https://luyiyun.online/2020/09/10/paper-nice-2014/"/>
-    <id>https://luyiyun.online/2020/09/10/paper-nice-2014/</id>
+    <link href="https://luyiyun.online/2020/09/10/paper/dl/paper-nice-2014/"/>
+    <id>https://luyiyun.online/2020/09/10/paper/dl/paper-nice-2014/</id>
     <published>2020-09-10T01:01:50.000Z</published>
-    <updated>2020-09-10T12:35:13.079Z</updated>
+    <updated>2020-12-03T12:02:22.536Z</updated>
     
     <summary type="html">
     
@@ -200,21 +362,23 @@
     </summary>
     
     
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
+      <category term="Paper-Method" scheme="https://luyiyun.online/categories/Paper-Method/"/>
     
     
       <category term="Unsupervised Learning" scheme="https://luyiyun.online/tags/Unsupervised-Learning/"/>
     
-      <category term="Machine Leanring" scheme="https://luyiyun.online/tags/Machine-Leanring/"/>
+      <category term="Deep Leanring" scheme="https://luyiyun.online/tags/Deep-Leanring/"/>
+    
+      <category term="Flow Models" scheme="https://luyiyun.online/tags/Flow-Models/"/>
     
   </entry>
   
   <entry>
     <title>论文精读-Transformer-2017</title>
-    <link href="https://luyiyun.online/2020/09/08/paper-transformer2017/"/>
-    <id>https://luyiyun.online/2020/09/08/paper-transformer2017/</id>
+    <link href="https://luyiyun.online/2020/09/08/paper/dl/paper-transformer2017/"/>
+    <id>https://luyiyun.online/2020/09/08/paper/dl/paper-transformer2017/</id>
     <published>2020-09-08T06:01:51.000Z</published>
-    <updated>2020-09-09T01:35:17.477Z</updated>
+    <updated>2020-12-03T12:02:22.960Z</updated>
     
     <summary type="html">
     
@@ -236,21 +400,23 @@
     </summary>
     
     
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
+      <category term="Paper-Method" scheme="https://luyiyun.online/categories/Paper-Method/"/>
     
     
-      <category term="Methods" scheme="https://luyiyun.online/tags/Methods/"/>
+      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
     
       <category term="Attention" scheme="https://luyiyun.online/tags/Attention/"/>
+    
+      <category term="Natural Language Processing" scheme="https://luyiyun.online/tags/Natural-Language-Processing/"/>
     
   </entry>
   
   <entry>
     <title>论文精读-DeepWalk-2014</title>
-    <link href="https://luyiyun.online/2020/09/07/paper-deepwalk2014/"/>
-    <id>https://luyiyun.online/2020/09/07/paper-deepwalk2014/</id>
+    <link href="https://luyiyun.online/2020/09/07/paper/dl/paper-deepwalk2014/"/>
+    <id>https://luyiyun.online/2020/09/07/paper/dl/paper-deepwalk2014/</id>
     <published>2020-09-07T01:04:30.000Z</published>
-    <updated>2020-09-07T01:56:52.239Z</updated>
+    <updated>2020-12-03T12:02:22.243Z</updated>
     
     <summary type="html">
     
@@ -267,12 +433,12 @@
     </summary>
     
     
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
+      <category term="Paper-Method" scheme="https://luyiyun.online/categories/Paper-Method/"/>
     
     
       <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
+    
+      <category term="Unsupervised Learning" scheme="https://luyiyun.online/tags/Unsupervised-Learning/"/>
     
       <category term="Graph Embedding" scheme="https://luyiyun.online/tags/Graph-Embedding/"/>
     
@@ -280,10 +446,10 @@
   
   <entry>
     <title>论文精读-HetSANN-2019</title>
-    <link href="https://luyiyun.online/2020/09/05/paper-hetsann2019/"/>
-    <id>https://luyiyun.online/2020/09/05/paper-hetsann2019/</id>
+    <link href="https://luyiyun.online/2020/09/05/paper/dl/paper-hetsann2019/"/>
+    <id>https://luyiyun.online/2020/09/05/paper/dl/paper-hetsann2019/</id>
     <published>2020-09-05T07:46:12.000Z</published>
-    <updated>2020-09-05T12:32:26.034Z</updated>
+    <updated>2020-12-03T12:02:22.467Z</updated>
     
     <summary type="html">
     
@@ -298,23 +464,21 @@
     </summary>
     
     
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
+      <category term="Paper-Method" scheme="https://luyiyun.online/categories/Paper-Method/"/>
     
     
       <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
     
-      <category term="GNN" scheme="https://luyiyun.online/tags/GNN/"/>
+      <category term="Graph Neural Networks" scheme="https://luyiyun.online/tags/Graph-Neural-Networks/"/>
     
   </entry>
   
   <entry>
     <title>论文精读-ASAP-2020</title>
-    <link href="https://luyiyun.online/2020/09/02/paper-asap2020/"/>
-    <id>https://luyiyun.online/2020/09/02/paper-asap2020/</id>
+    <link href="https://luyiyun.online/2020/09/02/paper/dl/paper-asap2020/"/>
+    <id>https://luyiyun.online/2020/09/02/paper/dl/paper-asap2020/</id>
     <published>2020-09-02T07:51:52.000Z</published>
-    <updated>2020-09-03T05:49:09.417Z</updated>
+    <updated>2020-12-03T12:02:22.147Z</updated>
     
     <summary type="html">
     
@@ -329,14 +493,12 @@
     </summary>
     
     
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
+      <category term="Paper-Method" scheme="https://luyiyun.online/categories/Paper-Method/"/>
     
     
       <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
     
-      <category term="GNN" scheme="https://luyiyun.online/tags/GNN/"/>
+      <category term="Graph Neural Networks" scheme="https://luyiyun.online/tags/Graph-Neural-Networks/"/>
     
       <category term="Pooling" scheme="https://luyiyun.online/tags/Pooling/"/>
     
@@ -344,10 +506,10 @@
   
   <entry>
     <title>论文精读-EdgePool-2019</title>
-    <link href="https://luyiyun.online/2020/09/01/paper-edgepool-2019/"/>
-    <id>https://luyiyun.online/2020/09/01/paper-edgepool-2019/</id>
+    <link href="https://luyiyun.online/2020/09/01/paper/dl/paper-edgepool-2019/"/>
+    <id>https://luyiyun.online/2020/09/01/paper/dl/paper-edgepool-2019/</id>
     <published>2020-09-01T11:53:23.000Z</published>
-    <updated>2020-09-02T07:47:56.971Z</updated>
+    <updated>2020-12-03T12:02:22.370Z</updated>
     
     <summary type="html">
     
@@ -363,14 +525,12 @@
     </summary>
     
     
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
+      <category term="Paper-Method" scheme="https://luyiyun.online/categories/Paper-Method/"/>
     
     
       <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
     
-      <category term="GNN" scheme="https://luyiyun.online/tags/GNN/"/>
+      <category term="Graph Neural Networks" scheme="https://luyiyun.online/tags/Graph-Neural-Networks/"/>
     
       <category term="Pooling" scheme="https://luyiyun.online/tags/Pooling/"/>
     
@@ -378,10 +538,10 @@
   
   <entry>
     <title>论文精读-SAGpool-2019</title>
-    <link href="https://luyiyun.online/2020/09/01/paper-sagpool-2019/"/>
-    <id>https://luyiyun.online/2020/09/01/paper-sagpool-2019/</id>
+    <link href="https://luyiyun.online/2020/09/01/paper/dl/paper-sagpool-2019/"/>
+    <id>https://luyiyun.online/2020/09/01/paper/dl/paper-sagpool-2019/</id>
     <published>2020-09-01T07:33:24.000Z</published>
-    <updated>2020-09-02T11:49:38.527Z</updated>
+    <updated>2020-12-03T12:02:22.854Z</updated>
     
     <summary type="html">
     
@@ -401,14 +561,12 @@
     </summary>
     
     
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
+      <category term="Paper-Method" scheme="https://luyiyun.online/categories/Paper-Method/"/>
     
     
       <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
     
-      <category term="GNN" scheme="https://luyiyun.online/tags/GNN/"/>
+      <category term="Graph Neural Networks" scheme="https://luyiyun.online/tags/Graph-Neural-Networks/"/>
     
       <category term="Pooling" scheme="https://luyiyun.online/tags/Pooling/"/>
     
@@ -416,10 +574,10 @@
   
   <entry>
     <title>论文精读-Graph Unet-2019</title>
-    <link href="https://luyiyun.online/2020/09/01/paper-graphunet-2019/"/>
-    <id>https://luyiyun.online/2020/09/01/paper-graphunet-2019/</id>
+    <link href="https://luyiyun.online/2020/09/01/paper/dl/paper-graphunet-2019/"/>
+    <id>https://luyiyun.online/2020/09/01/paper/dl/paper-graphunet-2019/</id>
     <published>2020-09-01T03:52:01.000Z</published>
-    <updated>2020-09-01T06:59:21.043Z</updated>
+    <updated>2020-12-03T12:02:22.437Z</updated>
     
     <summary type="html">
     
@@ -438,14 +596,14 @@
     </summary>
     
     
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
+      <category term="Paper-Method" scheme="https://luyiyun.online/categories/Paper-Method/"/>
     
     
       <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
     
-      <category term="GNN" scheme="https://luyiyun.online/tags/GNN/"/>
+      <category term="Graph Neural Networks" scheme="https://luyiyun.online/tags/Graph-Neural-Networks/"/>
+    
+      <category term="Unsupervised Learning" scheme="https://luyiyun.online/tags/Unsupervised-Learning/"/>
     
       <category term="Pooling" scheme="https://luyiyun.online/tags/Pooling/"/>
     
@@ -453,10 +611,10 @@
   
   <entry>
     <title>文献精读-DiffPool-2018</title>
-    <link href="https://luyiyun.online/2020/09/01/paper-diffpool2018/"/>
-    <id>https://luyiyun.online/2020/09/01/paper-diffpool2018/</id>
+    <link href="https://luyiyun.online/2020/09/01/paper/dl/paper-diffpool2018/"/>
+    <id>https://luyiyun.online/2020/09/01/paper/dl/paper-diffpool2018/</id>
     <published>2020-09-01T02:25:48.000Z</published>
-    <updated>2020-09-01T03:39:58.990Z</updated>
+    <updated>2020-12-03T12:02:22.331Z</updated>
     
     <summary type="html">
     
@@ -471,14 +629,12 @@
     </summary>
     
     
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
+      <category term="Paper-Method" scheme="https://luyiyun.online/categories/Paper-Method/"/>
     
     
       <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
     
-      <category term="GNN" scheme="https://luyiyun.online/tags/GNN/"/>
+      <category term="Graph Neural Networks" scheme="https://luyiyun.online/tags/Graph-Neural-Networks/"/>
     
       <category term="Pooling" scheme="https://luyiyun.online/tags/Pooling/"/>
     
@@ -486,10 +642,10 @@
   
   <entry>
     <title>论文精读-对graph的深度学习的深度介绍-2020</title>
-    <link href="https://luyiyun.online/2020/08/28/gnngentlesurvey2020/"/>
-    <id>https://luyiyun.online/2020/08/28/gnngentlesurvey2020/</id>
+    <link href="https://luyiyun.online/2020/08/28/paper/dl/gnngentlesurvey2020/"/>
+    <id>https://luyiyun.online/2020/08/28/paper/dl/gnngentlesurvey2020/</id>
     <published>2020-08-28T03:29:33.000Z</published>
-    <updated>2020-09-05T07:25:27.126Z</updated>
+    <updated>2020-12-03T12:02:22.093Z</updated>
     
     <summary type="html">
     
@@ -506,179 +662,12 @@
     </summary>
     
     
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Review" scheme="https://luyiyun.online/categories/Paper/Review/"/>
+      <category term="Paper-Review" scheme="https://luyiyun.online/categories/Paper-Review/"/>
     
     
       <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
     
-      <category term="GNN" scheme="https://luyiyun.online/tags/GNN/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>论文精读-conditional pixelCNN-2016</title>
-    <link href="https://luyiyun.online/2020/08/26/condi-pixelcnn2016/"/>
-    <id>https://luyiyun.online/2020/08/26/condi-pixelcnn2016/</id>
-    <published>2020-08-25T17:01:16.000Z</published>
-    <updated>2020-09-05T07:25:31.605Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;conditional-image-generation-with-pixelcnn-decoders&quot;&gt;Conditional Image Generation with PixelCNN Decoders&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;杂志:
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
-    
-    
-      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
-    
-      <category term="Unsupervised Learning" scheme="https://luyiyun.online/tags/Unsupervised-Learning/"/>
-    
-      <category term="Autoregressive" scheme="https://luyiyun.online/tags/Autoregressive/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>论文精读-Attention PointNet-2019</title>
-    <link href="https://luyiyun.online/2020/07/31/attpointnet2019/"/>
-    <id>https://luyiyun.online/2020/07/31/attpointnet2019/</id>
-    <published>2020-07-31T04:26:18.000Z</published>
-    <updated>2020-08-01T13:05:41.063Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;attentional-pointnet-for-3d-object-detection-in-point-clouds&quot;&gt;Attentional PointNet for 3D-Object Detection in Point
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
-    
-    
-      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
-    
-      <category term="Point Cloud Segmentation" scheme="https://luyiyun.online/tags/Point-Cloud-Segmentation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>论文精读-MADE-2015</title>
-    <link href="https://luyiyun.online/2020/07/28/made2015/"/>
-    <id>https://luyiyun.online/2020/07/28/made2015/</id>
-    <published>2020-07-28T03:36:18.000Z</published>
-    <updated>2020-09-05T07:33:03.172Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;made-masked-autoencoder-for-distribution-estimation&quot;&gt;MADE: Masked Autoencoder for Distribution Estimation&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;杂志:
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
-    
-    
-      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
-    
-      <category term="Unsupervised Learning" scheme="https://luyiyun.online/tags/Unsupervised-Learning/"/>
-    
-      <category term="Autoregressive" scheme="https://luyiyun.online/tags/Autoregressive/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>论文精读-DeepBind预测DNA/RNA蛋白结合位点-2015</title>
-    <link href="https://luyiyun.online/2020/07/27/deepbind2015/"/>
-    <id>https://luyiyun.online/2020/07/27/deepbind2015/</id>
-    <published>2020-07-27T03:34:46.000Z</published>
-    <updated>2020-07-27T09:31:06.478Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;predicting-the-sequence-specificities-of-dna--and-rna-binding-proteins-by-deep-learning&quot;&gt;Predicting the sequence specificities of
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
-    
-    
-      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
-    
-      <category term="Omics" scheme="https://luyiyun.online/tags/Omics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>论文精读-CMPNN-2020</title>
-    <link href="https://luyiyun.online/2020/07/26/cmpnn2020/"/>
-    <id>https://luyiyun.online/2020/07/26/cmpnn2020/</id>
-    <published>2020-07-26T03:05:48.000Z</published>
-    <updated>2020-09-05T07:24:42.463Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;communicative-representation-learning-on-attributed-molecular-graphs&quot;&gt;Communicative Representation Learning on Attributed Molecular
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Paper" scheme="https://luyiyun.online/categories/Paper/"/>
-    
-      <category term="Method" scheme="https://luyiyun.online/categories/Paper/Method/"/>
-    
-    
-      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
-    
-      <category term="GNN" scheme="https://luyiyun.online/tags/GNN/"/>
-    
-      <category term="Molecular Graphs" scheme="https://luyiyun.online/tags/Molecular-Graphs/"/>
+      <category term="Graph Neural Networks" scheme="https://luyiyun.online/tags/Graph-Neural-Networks/"/>
     
   </entry>
   
