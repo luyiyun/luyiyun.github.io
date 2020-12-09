@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://luyiyun.online/"/>
-  <updated>2020-12-03T12:02:22.514Z</updated>
+  <updated>2020-12-09T08:57:39.538Z</updated>
   <id>https://luyiyun.online/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>EM算法详解</title>
+    <link href="https://luyiyun.online/2020/12/08/methods/methods-em/"/>
+    <id>https://luyiyun.online/2020/12/08/methods/methods-em/</id>
+    <published>2020-12-08T02:37:52.000Z</published>
+    <updated>2020-12-09T08:57:39.538Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;这段时间研究了一下EM算法，发现之前对于EM算法的理解有些偏差，这一段时间的实践和学习让我对EM算法的理解又近了一步，所以这里写个文章记录一下。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Methods" scheme="https://luyiyun.online/categories/Methods/"/>
+    
+    
+      <category term="EM" scheme="https://luyiyun.online/tags/EM/"/>
+    
+  </entry>
   
   <entry>
     <title>论文精读-Integrated Gradients-2017</title>
@@ -601,9 +631,9 @@
     
       <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
     
-      <category term="Graph Neural Networks" scheme="https://luyiyun.online/tags/Graph-Neural-Networks/"/>
-    
       <category term="Unsupervised Learning" scheme="https://luyiyun.online/tags/Unsupervised-Learning/"/>
+    
+      <category term="Graph Neural Networks" scheme="https://luyiyun.online/tags/Graph-Neural-Networks/"/>
     
       <category term="Pooling" scheme="https://luyiyun.online/tags/Pooling/"/>
     
@@ -637,37 +667,6 @@
       <category term="Graph Neural Networks" scheme="https://luyiyun.online/tags/Graph-Neural-Networks/"/>
     
       <category term="Pooling" scheme="https://luyiyun.online/tags/Pooling/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>论文精读-对graph的深度学习的深度介绍-2020</title>
-    <link href="https://luyiyun.online/2020/08/28/paper/dl/gnngentlesurvey2020/"/>
-    <id>https://luyiyun.online/2020/08/28/paper/dl/gnngentlesurvey2020/</id>
-    <published>2020-08-28T03:29:33.000Z</published>
-    <updated>2020-12-03T12:02:22.093Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;a-gentle-introduction-to-deep-learning-for-graphs&quot;&gt;A Gentle Introduction to Deep Learning for Graphs&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;杂志:
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Paper-Review" scheme="https://luyiyun.online/categories/Paper-Review/"/>
-    
-    
-      <category term="Deep Learning" scheme="https://luyiyun.online/tags/Deep-Learning/"/>
-    
-      <category term="Graph Neural Networks" scheme="https://luyiyun.online/tags/Graph-Neural-Networks/"/>
     
   </entry>
   

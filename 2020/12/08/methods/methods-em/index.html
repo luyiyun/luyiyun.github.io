@@ -1,0 +1,1924 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="EM算法详解, math, statistics, computer, ai">
+    <meta name="description" content="数学、统计、计算机及人工智能">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>EM算法详解 | 卢一云的博客</title>
+    <link rel="icon" type="image/png" href="/favicon1.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="卢一云的博客" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo1.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">卢一云的博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>Medias</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/musics">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Musics</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/movies">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Movies</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/books">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Books</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/galleries">
+          
+          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Galleries</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo1.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">卢一云的博客</div>
+        <div class="logo-desc">
+            
+            数学、统计、计算机及人工智能
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			Medias
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/musics " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Musics</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/movies " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Movies</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/books " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Books</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/galleries " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Galleries</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">EM算法详解</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/EM/">
+                                <span class="chip bg-color">EM</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Methods/" class="post-category">
+                                Methods
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-12-08
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2020-12-09
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    3.3k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    14 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <blockquote>
+<p>这段时间研究了一下EM算法，发现之前对于EM算法的理解有些偏差，这一段时间的实践和学习让我对EM算法的理解又近了一步，所以这里写个文章记录一下。</p>
+</blockquote>
+<h1 id="背景">背景</h1>
+<p>EM算法（Expectation Maximization）要解决的问题是：<strong>如何估计模型的参数。</strong></p>
+<p>存在一批观察数据，我们希望通过一个参数模型来对其进行描述，通过这批数据得到该模型的参数的估计。针对该问题，最常见的方法就是<strong>极大似然法</strong>：</p>
+<p><span class="math display">\[\hat{\theta}=\argmax_{\theta}{\sum_{i=1}^N{L_{\theta}(x_i)}}=
+\argmax_{\theta}{\sum_{i=1}^N{\log p_{\theta}(x_i)}}\tag{1}\]</span></p>
+<p>我们可以通过微积分的方式求解<span class="math inline">\(1\)</span>：</p>
+<p><span class="math display">\[\sum_{i=1}^N{\frac{\partial L_\theta(x_i)}{\partial\theta}}=0\]</span></p>
+<p>很多情况下这种方式已经是足够用了。但是，另外的很多情况下，我们的参数模型是非常复杂的，上面这种直接的求解方法可能并不能用。比如，<strong>如果我们的参数模型是存在一个隐含变量<span class="math inline">\(z_i\)</span>的话</strong>，就无法直接使用上面的方法了。</p>
+<blockquote>
+<p>存在一个隐含变量的情况下，我们来计算一下对数似然函数的导数：</p>
+<p><span class="math display">\[
+\begin{aligned}
+\sum_{i=1}^N{\frac{\partial L_\theta(x_i)}{\partial\theta}}
+&amp;=\sum_{i=1}^N{\frac{1}{p_{\theta}(x_i)}\frac{\partial p_{\theta}(x_i)}{\partial\theta}}\\
+&amp;\propto\sum_{i=1}^N{
+  \frac{1}{p_{\theta}(x_i)}\sum_{z}
+  \frac{\partial p_{\theta}(x_i|z_i)}{\partial\theta}\qquad\text{这里假设先验是均匀的}
+}
+\end{aligned}
+\]</span></p>
+<p>因为有隐变量的存在，我们会额外出现一个求和号<span class="math inline">\(\sum_z\)</span>（或积分），这就会使得我们无法继续处理下去。比如若<span class="math inline">\(p_{\theta}\)</span>是正态分布，则一般来说在进行对数似然的计算时可以化简计算。但这里因为有求和号的存在，我们无法再像之前那样处理，即便这个<span class="math inline">\(z\)</span>是一个服从伯努利分布的二分类变量，更别提多分类或者连续分布变量了。</p>
+</blockquote>
+<p>EM算法便善于解决上面的这种存在隐变量的问题，其思路是使用启发式的迭代方法：固定参数来估计隐含变量<span class="math inline">\(z_i\)</span>（E step），固定隐含变量<span class="math inline">\(z_i\)</span>估计参数（M step）。这样不断迭代下去，直至算法收敛。</p>
+<p>其实，k-means算法就可以算作EM算法的一个特例：计算每个样本属于哪个簇的过程就是E step；重新更新每个簇的质心的过程就是M step。</p>
+<h1 id="推导">推导</h1>
+<blockquote>
+<p>推导有两种思路：即通过Jensen不等式和KL散度，我对KL散度比较熟，所以以这条思路为主。</p>
+</blockquote>
+<p>因为组成iid样本，我们先对单独一个样本进行分析：</p>
+<p><span class="math display">\[\log p_{\theta}(x_i) =\log p_{\theta}(x_i,z_i)-\log p_{\theta}(z_i|x_i)\]</span></p>
+<p>这里我们引入一个变分分布<span class="math inline">\(q_{\phi}(z_i)\)</span>，将上式进行变换得到：</p>
+<p><span class="math display">\[
+\begin{aligned}
+    \log p_{\theta}(x_i)&amp;=\mathbb{E}_{q_{\phi}(z_i)}[\log p_{\theta}(x_i)] \\
+    &amp;=\mathbb{E}_{q_{\phi}(z_i)}[
+        \frac{\log p_{\theta}(x_i,z_i)}{q_{\phi}(z_i)}] -
+        \mathbb{E}_{q_{\phi}(z_i)}[
+            \frac{\log p_{\theta}(z_i|x_i)}{q_{\phi}(z_i)}] \\
+    &amp;=\mathbb{E}_{q_{\phi}(z_i)}[
+        \frac{\log p_{\theta}(x_i,z_i)}{q_{\phi}(z_i)}] +
+        KL(q_{\phi}(z_i)||p_{\theta}(z_i|x_i)) \\
+    &amp;\ge \mathbb{E}_{q_{\phi}(z_i)}[
+        \frac{\log p_{\theta}(x_i,z_i)}{q_{\phi}(z_i)}] \\
+    &amp;= ELBO(x_i, z_i, \theta, \phi)
+\end{aligned}
+\]</span></p>
+<p>这时，我们可以看到，当<span class="math inline">\(KL(q_{\phi}(z_i)||p_{\theta}(z_i|x_i))=0\)</span>，即<span class="math inline">\(q_{\phi}(z_i)=p_{\theta}(z_i|x_i)\)</span>时，ELBO等于对数似然。</p>
+<blockquote>
+<p>基于Jensen不等式的推导：</p>
+<p><span class="math display">\[
+\begin{aligned}
+    \log p_{\theta}(x_i)&amp;=\sum_{z_i}\log p_{\theta}(x_i,z_i) \\
+    &amp;=\sum_{z_i}\log q_{\phi}(z_i)[
+        \frac{p_{\theta}(x_i,z_i)}{q_{\phi}(z_i)}] \\
+    &amp;\ge \sum_{z_i}q_{\phi}(z_i)\log [
+        \frac{p_{\theta}(x_i,z_i)}{q_{\phi}(z_i)}] \\
+    &amp;= \mathbb{E}_{q_{\phi}(z_i)}[\frac{\log p_{\theta}(x_i,z_i)}{q_{\phi}(z_i)}] \\
+    &amp;= ELBO(x_i, z_i, \theta, \phi)
+\end{aligned}
+\]</span></p>
+<p>这里使用的jensen不等式是：如果<span class="math inline">\(f\)</span>是一个凸函数，则有<span class="math inline">\(f(\mathbb{E}(X))\le\mathbb{E}(f(X))\)</span>，等号成立当且仅当随机变量<span class="math inline">\(X\)</span>是个常数随机变量。对数函数是一个上凸函数，所以结论反过来即可。</p>
+<p>根据上面的例子，我们知道当且仅当下面的条件成立的时候，ELBO和对数似然相等，即：</p>
+<p><span class="math display">\[ \frac{p_{\theta}(x_i,z_i)}{q_{\phi}(z_i)}=c \]</span></p>
+<p>又因为<span class="math inline">\(\sum_z{q_{\phi}(z)}=1\)</span>，得到：</p>
+<p><span class="math display">\[
+\begin{aligned}
+    q_{\phi}(z_i)&amp;=\frac{p_{\theta}(x_i,z_i)}{c} \\
+    &amp;=\frac{p_{\theta}(x_i,z_i)}{c\sum_z{q_{\phi}(z)}} \\
+    &amp;=\frac{p_{\theta}(x_i,z_i)}{c\sum_z{\frac{p_\theta(x_i,z_i)}{c}}} \\
+    &amp;=\frac{p_{\theta}(x_i,z_i)}{\sum_z{p_\theta(x_i,z_i)}} \\
+    &amp;=\frac{p_{\theta}(x_i,z_i)}{p_\theta(x_i)} \\
+    &amp;=p_{\theta}(z_i|x_i)
+\end{aligned}
+\]</span></p>
+<p>我们可以看到，基于Jensen的过程和基于KL散度的过程是殊途同归的。</p>
+</blockquote>
+<p>根据上面的公式，我们可以给出一个启发式的想法：</p>
+<ol type="1">
+<li><p>首先我们求出在当前<span class="math inline">\(\theta_1\)</span>下的后验分布<span class="math inline">\(p_{\theta_1}(z_i|x_i)\)</span>，将其作为变分分布<span class="math inline">\(q_{\phi}(z_i)\)</span>，则此时<span class="math inline">\(ELBO_1\)</span>就是当前<span class="math inline">\(\theta_1\)</span>下的对数似然。</p></li>
+<li><p>我们固定变分分布，改变<span class="math inline">\(\theta\)</span>来最大化<span class="math inline">\(ELBO\)</span>，得到新的<span class="math inline">\(\theta_2\)</span>和<span class="math inline">\(ELBO_2\)</span>。</p>
+<p>注意，当前<span class="math inline">\(\theta_2\)</span>下对应的对数似然一定是大于<span class="math inline">\(\theta_1\)</span>的对数似然的。因为<span class="math inline">\(\theta_2\)</span>的对数似然一定是大于等于<span class="math inline">\(ELBO_2\)</span>（不管变分分布是什么，ELOB都小于等于对数似然）；而<span class="math inline">\(ELBO_2\)</span>一定大于<span class="math inline">\(ELBO_1\)</span>（最大化操作保证）；<span class="math inline">\(ELBO_1\)</span>就是<span class="math inline">\(\theta_1\)</span>下的对数似然。所以上述操作保证了<span class="math inline">\(\theta\)</span>的变化一直在使其对应的对数似然提高的。</p></li>
+</ol>
+<p>由此，我们得到了EM算法。</p>
+<blockquote>
+<p>以上过程实际上证明了EM算法是一直在使对数似然函数值变大的。而很容易也知道，对数似然函数是有上界的（一定不会大于0），则可知<strong>EM算法一定收敛到一个稳定点</strong>。</p>
+</blockquote>
+<p>这里最大化ELBO的步骤还可以进一步简化一下：</p>
+<p><span class="math display">\[
+\begin{aligned}
+    ELBO(x_i, z_i, \theta, \phi)
+    &amp;=\mathbb{E}_{q_{\phi}(z_i)}[
+        \frac{\log p_{\theta}(x_i,z_i)}{q_{\phi}(z_i)}] \\
+    &amp;=\mathbb{E}_{q_{\phi}(z_i)}[
+        \log p_{\theta}(x_i,z_i)]+H(q_{\phi}(z_i))
+\end{aligned}
+\]</span></p>
+<p>注意到，后面变分分布的熵不和<span class="math inline">\(\theta\)</span>有关，所以我们寻找最大化<span class="math inline">\(\theta\)</span>的ELBO的时候其没有贡献，可以去掉。另外将所有样本都考虑到：</p>
+<p><span class="math display">\[
+\hat{\theta}=\argmax_{\theta}\sum_i^N\mathbb{E}_{q_{\phi}(z_i)}[\log p_{\theta}(x_i,z_i)]
+\]</span></p>
+<p>所以，我们求解的实际上是对数联合分布的期望，所以EM算法的第一个步骤是Expectation（期望）。求出来后，改变<span class="math inline">\(\theta\)</span>来最大化这个期望，即Maximization（最大化）。</p>
+<blockquote>
+<p>通过上面的推导，我们知道EM算法和VI（variational inference，变分推断）真的很像，其不同点在于：</p>
+<p>VI将变分分布也参数化，也需要通过最大化ELBO来得到的，此时是固定<span class="math inline">\(\theta\)</span>改变<span class="math inline">\(\phi\)</span>来实现的，这时候使ELBO最大（达到对数似然）的变分分布正好就是后验分布。</p>
+<p>EM则需要显式的知道后验分布怎么算，直接算出来。</p>
+<p>另外，VI使用的ELBO，而EM使用更加简化的对数联合概率期望。</p>
+</blockquote>
+<h1 id="算法流程">算法流程</h1>
+<ul>
+<li>输入数据：<span class="math inline">\(x=(x_1, x_2, \cdots, x_N)\)</span></li>
+<li>隐变量：<span class="math inline">\(z_i\)</span></li>
+<li>最大迭代次数：<span class="math inline">\(J\)</span></li>
+</ul>
+<ol type="1">
+<li><p>初始化模型参数<span class="math inline">\(\theta_0\)</span>；</p></li>
+<li><p>开始EM算法迭代：</p>
+<ol type="a">
+<li>E step：计算后验分布作为变分分布，并由此计算对数联合分布的期望<span class="math inline">\(\sum_i^N\mathbb{E}_{p_{\theta_i}(z_i|x_i)}[\log p_{\theta_i}(x_i,z_i)]\)</span>。</li>
+<li>M step：最大化上面的期望，得到新的参数估计<span class="math inline">\(\theta_{i+1}\)</span>。</li>
+<li>如果<span class="math inline">\(\theta_{i+1}\)</span>对应的对数联合分布期望变化不大或达到设定的最大迭代次数<span class="math inline">\(J\)</span>，则输出此参数，否则回到a。</li>
+</ol></li>
+</ol>
+<blockquote>
+<p>在一些时候，我们也称得到后验分布的过程是E step，计算对数联合分布期望并最大化它的过程是M step。这时候更加注重强调隐变量<span class="math inline">\(z\)</span>的作用。</p>
+</blockquote>
+<h2 id="注意事项">注意事项</h2>
+<p>EM算法对于初值是非常敏感的，这一点上和Kmeans算法特别相似。为了解决这个问题，有下面的一些研究：</p>
+<ol type="1">
+<li>Blömer J, Bujna K. Simple methods for initializing the EM algorithm for Gaussian mixture models[J]. CoRR, 2013.</li>
+<li>Chen F. An Improved EM algorithm[J]. arXiv preprint arXiv:1305.0626, 2013.</li>
+<li>Kwedlo W. (2013) A New Method for Random Initialization of the EM Algorithm for Multivariate Gaussian Mixture Learning. In: Burduk R., Jackowski K., Kurzynski M., Wozniak M., Zolnierek A. (eds) Proceedings of the 8th International Conference on Computer Recognition Systems CORES 2013. Advances in Intelligent Systems and Computing, vol 226. Springer, Heidelberg.</li>
+</ol>
+<p>有兴趣的可以拜读一下。</p>
+<blockquote>
+<p>来自<a href="https://zhuanlan.zhihu.com/p/40991784" target="_blank" rel="noopener">Microstrong的知乎</a>。</p>
+</blockquote>
+<h1 id="高斯混合模型gmm">高斯混合模型（GMM）</h1>
+<p>GMM是一个概率模型，其认为数据来自多个高斯分布的混合，其可以表示为：</p>
+<p><span class="math display">\[p(x)=\sum_{i=1}^C{f(x|z=i)g(z)}\]</span></p>
+<p>其中<span class="math inline">\(z\)</span>服从的是一个Categorical distribution的随机变量，分类数量为<span class="math inline">\(C\)</span>，表示有C个高斯分布。<span class="math inline">\(f(x|z=i)\)</span>是第<span class="math inline">\(i\)</span>个高斯分布的密度函数。我们的样本是<span class="math inline">\(x_i\)</span>是<span class="math inline">\(x\)</span>的采样。</p>
+<p>这是一个典型的具有隐变量的问题，非常适合使用EM算法来解决。</p>
+<h2 id="公式推导">公式推导</h2>
+<p>首先，我们需要估计的参数就是每个高斯分布的参数和分类分布的参数<span class="math inline">\(\theta=\{\mu_j,\sigma_j,\gamma_j|j=1,\dots,C\}\)</span>：</p>
+<p><span class="math display">\[g(z=j)=\gamma_j,\quad\sum_j\gamma_j=1\]</span> <span class="math display">\[f(x|z=j)=\frac{1}{\sqrt{2\pi}\sigma_j}\exp(-\frac{(x-\mu_j)^2}{2\sigma_j^2})\]</span></p>
+<p>对于E step，关键在于知道<span class="math inline">\(p_{\theta}(z_i|x_i)\)</span>。这个可以通过贝叶斯公式得到：</p>
+<p><span class="math display">\[
+\begin{aligned}
+w_{ij}=q_{\phi}(z_i=j|x_i)=p_{\theta}(z_i=j|x_i)
+&amp;=\frac{p_{\theta}(x_i|z_i=j)\gamma_j}
+{\sum_{j}p_{\theta}(x_i|z_i=j)\gamma_j}
+\end{aligned}
+\]</span></p>
+<p>之后，我们计算对数联合概率期望：</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;\sum_i^N\mathbb{E}_{p_{\theta}(z_i|x_i)}[\log p_{\theta}(x_i,z_i)] \\
+=\quad&amp;\sum_i^N\mathbb{E}_{p_{\theta}(z_i|x_i)}
+[\log p_{\theta}(x_i|z_i)g(z_i)] \\
+=\quad&amp;\sum_i^N\sum_{j=1}^C[\log (p_{\theta}(x_i|z_i=j)\gamma_j)
+p_{\theta}(z_i=j|x_i)] \\
+=\quad&amp;\sum_i^N\sum_{j=1}^Cw_{ij}\times(\log\gamma_j +
+[-\log(\sqrt{2\pi}\sigma_j)-\frac{(x_i-\mu_j)^2}{2\sigma^2_j}])
+\end{aligned}
+\]</span></p>
+<p>注意到，尽管<span class="math inline">\(p_{\theta}(z_i|x_i)\)</span>也有参数下标，但这里其实表示的是变分分布的位置，所以在下面的M step中是不动的，使用<span class="math inline">\(w_{ij}\)</span>来表示。</p>
+<p>对于M step，我们可以通过微积分求极值的方式得到参数的估计。首先是分类分布的参数：</p>
+<p><span class="math display">\[\gamma_j=\frac{\sum_{i=1}^Nw_{ij}}{\sum_{j=1}^C\sum_{i=1}^Nw_{ij}}\]</span></p>
+<blockquote>
+<p>注意到，这里有约束条件<span class="math inline">\(\sum_j\gamma_j=1\)</span>，利用<span class="math inline">\(\gamma_C=1-\sum_{j=1}^{C-1}\gamma_j\)</span>或拉格朗日乘子法可以得到上面的结论。</p>
+<p>令<span class="math inline">\(W_j=\sum_{i=1}^Nw_{ij}\)</span>，则我们要最大化的其实是</p>
+<p><span class="math display">\[\sum_{j=1}^CW_j\log\gamma_j\]</span> 这是一个交叉熵。</p>
+<p>我们首先使用<span class="math inline">\(\gamma_C=1-\sum_{j=1}^{C-1}\gamma_j\)</span>，然后求导（这里不需加入<span class="math inline">\(\gt0\)</span>的约束了，<span class="math inline">\(\log\)</span>的定义域决定了不能<span class="math inline">\(\le0\)</span>）：</p>
+<p><span class="math display">\[
+\begin{aligned}
+\frac{\partial \sum_{j=1}^{C-1}[W_j\log\gamma_j]+W_C\log(1-\sum_i^{C-1}\gamma_i)}
+{\partial\gamma_j}&amp;=\frac{W_j}{\gamma_j}-\frac{W_C}{1-\sum_{i=1}^{C-1}\gamma_j}
+\end{aligned}
+\]</span> 其中<span class="math inline">\(j=1,\cdots,C-1\)</span>。然后令其等于0，得到： <span class="math display">\[\frac{W_j}{W_C}=\frac{\gamma_j}{\gamma_C},\quad j=1,\cdots,C-1\]</span> 其中<span class="math inline">\(\gamma_C=1-\sum_{i=1}^{C-1}\gamma_j\)</span>。我们将以上<span class="math inline">\(C-1\)</span>个式子加总，再加<span class="math inline">\(1\)</span>，得到 <span class="math display">\[\frac{\sum_jW_j}{W_C}=\frac{1}{\gamma_C}\]</span> 得到<span class="math inline">\(\gamma_C=\frac{W_C}{\sum_jW_j}\)</span>，进而得到<span class="math inline">\(\gamma_j=\frac{W_j}{\sum_jW_j}\)</span>。</p>
+<p>如果使用拉格朗日乘子法，则是最大化下面的式子</p>
+<p><span class="math display">\[\sum_{j=1}^CW_j\log\gamma_j+\lambda(\sum_{j=1}^C\gamma_j-1)\]</span></p>
+<p>求导得到：</p>
+<p><span class="math display">\[
+\begin{aligned}
+\frac{W_j}{\gamma_j}+\lambda&amp;=0 \\
+\sum_{j=1}^C\gamma_j&amp;=1
+\end{aligned}
+\]</span></p>
+<p>继续</p>
+<p><span class="math display">\[
+\begin{aligned}
+    \gamma_j=-\frac{W_j}{\lambda} \\
+    -\frac{\sum_jW_j}{\lambda}=1 \\
+    \lambda=-\sum_jW_j \\
+    \gamma_j=\frac{W_j}{\sum_jW_j}
+\end{aligned}
+\]</span></p>
+<p>得到了相同的结果。</p>
+</blockquote>
+<p>接下来是均值：</p>
+<p><span class="math display">\[\hat{\mu_j}=\frac{\sum_i{w_{ij}x_i}}{\sum_i{w_{ij}}}\]</span></p>
+<p>可以看到，这里的均值的估计就是以后验概率为权重的样本均值。</p>
+<p>然后是方差的估计，这里的估计要分为两种情况：</p>
+<ul>
+<li><p>组间方差不等：</p>
+<p><span class="math display">\[\hat{\sigma_j}=\frac{\sum_i{w_{ij}(x_j-\hat{\mu_j})^2}}
+  {\sum_i{w_{ij}}}\]</span></p></li>
+<li><p>组间方差相等： <span class="math display">\[\hat{\sigma}=
+  \frac{\sum_j\sum_i{w_{ij}(x_j-\hat{\mu_j})^2}}
+  {\sum_j\sum_i{w_{ij}}}\]</span></p></li>
+</ul>
+<h2 id="代码实现">代码实现</h2>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># E step</span>
+<span class="token keyword">def</span> <span class="token function">_e_step</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> X<span class="token punctuation">,</span> gammas_<span class="token punctuation">,</span> mus_<span class="token punctuation">,</span> sigmas_<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
+    The Expectation step.
+    Compute the posterior distribution and expectation of joint
+        distribution.
+    """</span>
+    logp <span class="token operator">=</span> ss<span class="token punctuation">.</span>norm<span class="token punctuation">.</span>logpdf<span class="token punctuation">(</span>X<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> None<span class="token punctuation">]</span><span class="token punctuation">,</span> mus_<span class="token punctuation">,</span> sigmas_<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># p(x|z)</span>
+    <span class="token keyword">if</span> self<span class="token punctuation">.</span>gamma_type <span class="token operator">==</span> <span class="token string">"full"</span><span class="token punctuation">:</span>
+        logp <span class="token operator">=</span> logp <span class="token operator">+</span> np<span class="token punctuation">.</span>log<span class="token punctuation">(</span>gammas_<span class="token punctuation">)</span>
+    logpsum <span class="token operator">=</span> logsumexp<span class="token punctuation">(</span>logp<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+    logp_norm <span class="token operator">=</span> logp <span class="token operator">-</span> logpsum<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> None<span class="token punctuation">]</span>               <span class="token comment" spellcheck="true"># p(z|x)</span>
+    <span class="token keyword">return</span> logp_norm<span class="token punctuation">,</span> <span class="token punctuation">(</span>logp <span class="token operator">*</span> np<span class="token punctuation">.</span>exp<span class="token punctuation">(</span>logp_norm<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>sum<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># M step</span>
+<span class="token keyword">def</span> <span class="token function">_m_step</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> X<span class="token punctuation">,</span> logp<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
+    The Maximization step.
+    Maximize the expectation of joint distribution and compute the new
+        parameters.
+    """</span>
+    <span class="token comment" spellcheck="true"># 1. prepare</span>
+    p <span class="token operator">=</span> np<span class="token punctuation">.</span>exp<span class="token punctuation">(</span>logp<span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true"># get rid of having NaN</span>
+    psum <span class="token operator">=</span> p<span class="token punctuation">.</span>sum<span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">10</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>finfo<span class="token punctuation">(</span>p<span class="token punctuation">.</span>dtype<span class="token punctuation">)</span><span class="token punctuation">.</span>eps
+    <span class="token comment" spellcheck="true"># 2. compute the parameters of categorical distribution</span>
+    <span class="token keyword">if</span> self<span class="token punctuation">.</span>gamma_type <span class="token operator">==</span> <span class="token string">"full"</span><span class="token punctuation">:</span>
+        gammas_ <span class="token operator">=</span> psum <span class="token operator">/</span> psum<span class="token punctuation">.</span>sum<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        gammas_ <span class="token operator">=</span> np<span class="token punctuation">.</span>ones<span class="token punctuation">(</span>self<span class="token punctuation">.</span>n_components<span class="token punctuation">)</span> <span class="token operator">/</span> self<span class="token punctuation">.</span>n_components
+    <span class="token comment" spellcheck="true"># 3. compute the mean of gaussian components</span>
+    mus_ <span class="token operator">=</span> <span class="token punctuation">(</span>p <span class="token operator">*</span> X<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> None<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span>sum<span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">/</span> psum
+    <span class="token comment" spellcheck="true"># 4. compute the stdandard deviations of gaussian components</span>
+    <span class="token keyword">if</span> self<span class="token punctuation">.</span>sigma_type <span class="token operator">==</span> <span class="token string">"full"</span><span class="token punctuation">:</span>
+        sigmas2_ <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>X<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> None<span class="token punctuation">]</span> <span class="token operator">-</span> mus_<span class="token punctuation">)</span> <span class="token operator">**</span> <span class="token number">2</span> <span class="token operator">*</span> p<span class="token punctuation">)</span><span class="token punctuation">.</span>sum<span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">/</span> psum
+        sigmas_ <span class="token operator">=</span> np<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span>sigmas2_<span class="token punctuation">)</span>
+    <span class="token keyword">elif</span> self<span class="token punctuation">.</span>sigma_type <span class="token operator">==</span> <span class="token string">"equal"</span><span class="token punctuation">:</span>
+        sigmas2_ <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>X<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> None<span class="token punctuation">]</span> <span class="token operator">-</span> mus_<span class="token punctuation">)</span> <span class="token operator">**</span> <span class="token number">2</span> <span class="token operator">*</span> p<span class="token punctuation">)</span><span class="token punctuation">.</span>sum<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">/</span> psum<span class="token punctuation">.</span>sum<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        sigmas1_ <span class="token operator">=</span> np<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span>sigmas2_<span class="token punctuation">)</span>
+        sigmas_ <span class="token operator">=</span> np<span class="token punctuation">.</span>full<span class="token punctuation">(</span>self<span class="token punctuation">.</span>n_components<span class="token punctuation">,</span> sigmas1_<span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        sigmas_ <span class="token operator">=</span> self<span class="token punctuation">.</span>sigmas
+    <span class="token keyword">return</span> gammas_<span class="token punctuation">,</span> mus_<span class="token punctuation">,</span> sigmas_<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="em算法的收敛性">EM算法的收敛性</h1>
+<ul>
+<li>在上面推导的部分，我其实已经证明了，EM算法一定会收敛到一个稳定点。<a href="https://www.cnblogs.com/pinard/p/6912636.html" target="_blank" rel="noopener">刘建平Pinard的博客</a>也有一个证明，大家可以一起看一下。</li>
+<li>EM算法并不能保证收敛到极大似然解，其很有可能陷入局部最优值。这很大程度上取决了初始值的设置。</li>
+</ul>
+<h1 id="参考">参考</h1>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm" target="_blank" rel="noopener">Wiki</a></li>
+<li><a href="https://www.cnblogs.com/pinard/p/6912636.html" target="_blank" rel="noopener">EM算法原理总结-刘建平Pinard</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/40991784" target="_blank" rel="noopener">EM算法详解-Microstrong</a></li>
+<li><a href="https://www.cnblogs.com/mindpuzzle/archive/2013/04/05/2998746.html" target="_blank" rel="noopener">EM算法学习(Expectation Maximization Algorithm)-MindPuzzle</a></li>
+<li><a href="https://link.zhihu.com/?target=http%3A//web.mit.edu/6.435/www/Dempster77.pdf">Maximum Likelihood from Incomplete Data via the EM Algorithm（原文）</a></li>
+<li><a href="https://xuewen.cnki.net/CJFD-BJDZ198703000.html" target="_blank" rel="noopener">EM算法的收敛性</a></li>
+</ul>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Luyiyun</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://luyiyun.online/2020/12/08/methods/methods-em/">https://luyiyun.online/2020/12/08/methods/methods-em/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Luyiyun</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/EM/">
+                                    <span class="chip bg-color">EM</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '4e7ebe26963be2b65c6c',
+        clientSecret: '6d98c54068ee323b25ad3cc4951365b0a0f9a837',
+        repo: 'luyiyun.github.io',
+        owner: 'luyiyun',
+        admin: ["luyiyun"],
+        id: '2020-12-08T10-37-52',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: '3LgoChPNG6wyjHmjSYBF587o-gzGzoHsz',
+        appKey: 'JF5J72u3hdEK2QD6vilmf6Be',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'wavatar',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '如果你没有GitHub账号，还可以在这里评论啦！'
+    });
+</script>
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/12/08/methods/methods-em/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="EM算法详解">
+                        
+                        <span class="card-title">EM算法详解</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+这段时间研究了一下EM算法，发现之前对于EM算法的理解有些偏差，这一段时间的实践和学习让我对EM算法的理解又近了一步，所以这里写个文章记录一下。
+
+背景
+EM算法（Expectation Maximization）要解决的问题是：如何估计
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-08
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Methods/" class="post-category">
+                                    Methods
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/EM/">
+                        <span class="chip bg-color">EM</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/10/15/paper/dl/paper-integratedgradients-2017/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="论文精读-Integrated Gradients-2017">
+                        
+                        <span class="card-title">论文精读-Integrated Gradients-2017</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            该研究受经济学中的研究启发，基于满足几条基本的性质来设计了一种深度学习模型的可解释性方法，拥有非常好的理论基础，并在多个模型上进行了实验。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-15
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Paper-Method/" class="post-category">
+                                    Paper-Method
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Deep-Learning/">
+                        <span class="chip bg-color">Deep Learning</span>
+                    </a>
+                    
+                    <a href="/tags/Interpreting/">
+                        <span class="chip bg-color">Interpreting</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 卢一云的博客<br />'
+            + '文章作者: Lu Yiyun<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('1'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="81582182"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.3'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">Lu Yiyun</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">112.6k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "5";
+                    var startDate = "10";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/luyiyun" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:18845728185@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1035724078" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1035724078" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+
+</html>
